@@ -186,7 +186,7 @@ export default function TestimonialSlider() {
           className="text-3xl md:text-4xl  lg:text-[50px] leading-tight lg:leading-[60px] text-white mb-5 ">
           <GsapTextAnimation mainText={"What Our Clients Say <br/> About TechBeeps"} mainClass="flex flex-wrap justify-center " />
         </h2>
-        <p>
+        <p className='hero-sub'>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
         </p>
       </div>
@@ -197,12 +197,6 @@ export default function TestimonialSlider() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        {/* Left Gradient Overlay - Creates the black fade effect */}
-        <div className="absolute left-0 top-0 bottom-0 w-[15%] md:w-[25%] bg-gradient-to-r from-black via-black/90 to-transparent z-10 pointer-events-none" />
-
-        {/* Right Gradient Overlay - Creates the black fade effect */}
-        <div className="absolute right-0 top-0 bottom-0 w-[15%] md:w-[25%] bg-gradient-to-l from-black via-black/90 to-transparent z-10 pointer-events-none" />
-
         {/* Track Container */}
         <div
           className="w-full flex select-none"

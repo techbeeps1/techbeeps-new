@@ -10,9 +10,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { IoArrowForwardOutline } from "react-icons/io5";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import GsapTextAnimation from "./components/GsapTextAnimation";
-export default function Home() {
-  const heroRef = useRef<HTMLDivElement>(null); 
+import ButtonSwipUp from "./components/ButtonSwipUp";
+import ContentSwipUp from "./components/ContentSwipUp";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
+export default function Home() {  
   const cards = [
     {id:"ui-1",
       title: "UI/UX Design",
@@ -112,34 +118,11 @@ export default function Home() {
       ? projects
       : projects.filter((item) => item.category === active);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      
-      gsap.from(".hero-sub", {
-        y: 40,
-        opacity: 0,
-        duration: 1,
-        ease: "power4.out",
-        delay: 1.2,
-      });
-      gsap.from(".hero-btn", {
-        y: 40,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power4.out",
-        delay: 1.5,
-      });
-    }, heroRef);
-
-    return () => ctx.revert();
-  }, []);
-
 
   return (
     <>
       <Header />
-      <section ref={heroRef}   className="relative min-h-screen flex items-center justify-center text-center overflow-hidden bg-[#05010f] text-white">
+      <section className="relative min-h-screen pt-[200px] pb-[100px] flex items-center justify-center text-center overflow-hidden bg-[#05010f] text-white">
         <Image
           src="/bg-img.png"
           alt="BG Banner"
@@ -159,21 +142,26 @@ export default function Home() {
 
             </h1>
            
+            <ContentSwipUp >
+             We help startups and enterprises build AI tools, Ecommerce platforms and scalable digital products.
+            </ContentSwipUp >
      
-     
-            <p className="text-base hero-sub md:text-lg lg:text-[20px] max-w-2xl mx-auto">
+            {/* <p className="text-base hero-sub md:text-lg lg:text-[20px] overflow-hidden">
               We help startups and enterprises build AI tools, Ecommerce
               platforms and scalable digital products.
-            </p>
+            </p> */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-7.5 mt-8 lg:mt-12.5">
-              <button className="w-full hero-btn sm:w-auto px-6 py-3.5 cursor-pointer flex justify-center items-center group hover:bg-primary hover:text-white duration-400 gap-2.5 bg-white text-black rounded-[50px]">
-                Get Started
-                <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
-              </button>
-              <button className="w-full hero-btn sm:w-auto px-6 py-3.5 cursor-pointer flex justify-center items-center text-white group hover:bg-primary duration-400 gap-2.5 bg-transparent border border-primary  rounded-[50px]">
-                Our Services
-                <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
-              </button>
+
+              <ButtonSwipUp  className="bg-white text-black hover:text-white" url={"/contact"}>
+      
+              Get Started
+                    <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" /> 
+             </ButtonSwipUp>
+     
+              <ButtonSwipUp  className="bg-transparent text-white hover:text-white border-primary border " url={"/services"}>
+             Our Services 
+               <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" /> 
+              </ButtonSwipUp>
             </div>
             <div className="text-[30px] mx-auto mt-12.5 font-bold bg-primary h-15 w-15 leading-8.75 flex items-center justify-center rounded-full">
               AI
@@ -192,7 +180,7 @@ export default function Home() {
                
                 <GsapTextAnimation mainText={"Services and Solutions <br/> We Provide"} mainClass="flex flex-wrap "/>
               </h2>
-              <p className="text-sm md:text-base">
+              <p className="text-sm md:text-base hero-sub">
                 help you to build website company that is modern, user friendly,
                 good CEO, and Clean design
               </p>
@@ -270,15 +258,16 @@ export default function Home() {
                
                 <GsapTextAnimation mainText={"Featured Portfolio: Design & <br/> AI Innovations"} mainClass="flex flex-wrap "/>
               </h2>
-              <p className="text-sm md:text-base">
+              <p className="text-sm md:text-base hero-sub">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's.
               </p>
-            </div>
-            <button className="px-6 py-3.5 mt-4 md:mt-0 cursor-pointer flex items-center group hover:bg-primary hover:text-white duration-400 gap-2.5 bg-white text-black rounded-[50px]">
+            </div>            
+             <ButtonSwipUp  className="bg-white text-black hover:text-white" url={"/portfolio"}>
+      
               Our Portfolio
-              <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
-            </button>
+                    <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" /> 
+             </ButtonSwipUp>
           </div>
           <div className="bg-black text-white ">
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-20.75">
@@ -332,10 +321,12 @@ export default function Home() {
                         className="absolute inset-0 flex rounded-[10px] items-center justify-center 
                 bg-black/41 backdrop-blur-md opacity-0 group-hover:opacity-100 transition"
                       >
-                        <button className="px-6 py-3.5 cursor-pointer flex items-center group/button hover:bg-primary hover:text-white duration-400 gap-2.5 bg-white text-black rounded-[50px]">
+                        
+                         <ButtonSwipUp  className="bg-white text-black hover:text-white" url={"/portfolio"}>
+      
                           Explore Portfolio
-                          <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover/button:rotate-0" />
-                        </button>
+                          <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover/button:rotate-0" /> 
+                        </ButtonSwipUp>
                       </div>
                     </div>
 
@@ -373,25 +364,25 @@ export default function Home() {
                
                 <GsapTextAnimation mainText={"What We Promise for <br/> Successful Project"} mainClass="flex flex-wrap "/>
               </h2>
-              <p>
+              <p className="hero-sub">
                 We have developed a streamlined software delivery process, encompassing project planning, agile methodologies.
               </p>
             </div>
 
             <ul className="space-y-5">
-              <li className="flex gap-4 items-start">
+              <li className="flex gap-4 items-start hero-sub ">
                 <BsCheckAll className="text-primary w-[40px] h-[40px] shrink-0 mt-0.5" />
                 <p>
                   TechBeeps biggest concern when choosing a technology is how it fits our customer's needs.
                 </p>
               </li>
-              <li className="flex gap-4 items-start">
+              <li className="flex gap-4 items-start hero-sub">
                 <BsCheckAll className="text-primary w-[40px] h-[40px] shrink-0 mt-0.5" />
                 <p>
                   Our customers' time is their money, so completing every project on time is one of company's biggest priorities.
                 </p>
               </li>
-              <li className="flex gap-4 items-start">
+              <li className="flex gap-4 items-start hero-sub">
                 <BsCheckAll className="text-primary w-[40px] h-[40px] shrink-0 mt-0.5" />
                 <p>
                   We promise that we never have any commercial incentive while choosing a technology or approach, we base our decision only.
@@ -399,11 +390,12 @@ export default function Home() {
               </li>
             </ul>
 
-            <div className="pt-2">
-              <button className="px-6 py-3.5 cursor-pointer flex items-center group hover:bg-primary hover:text-white duration-400 gap-2.5 bg-white text-black rounded-[50px] font-medium">
-                Explore More
-                <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
-              </button>
+            <div className="pt-2">              
+              <ButtonSwipUp  className="bg-white w-fit text-black hover:text-white" url={"/contact"}>
+      
+              Explore More
+                    <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" /> 
+             </ButtonSwipUp>
             </div>
           </div>
 

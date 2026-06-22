@@ -25,7 +25,7 @@ export default function LogoMarquee() {
                
                 <GsapTextAnimation mainText={"Trusted by Companies"} mainClass="flex flex-wrap justify-center "/>
               </h2>
-        <p className="text-gray-300 max-w-4xl mx-auto text-sm md:text-[16px] leading-relaxed">
+        <p className="text-white max-w-4xl mx-auto text-sm md:text-[16px] leading-relaxed hero-sub">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. Lorem Ipsum is
           simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
         </p>
