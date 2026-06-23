@@ -37,3 +37,28 @@ body {
   width: 100%;
 }
 
+/* Custom premium scrollbar utility */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(133, 76, 255, 0.3) rgba(255, 255, 255, 0.02);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(133, 76, 255, 0.35); /* primary brand color with opacity */
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(133, 76, 255, 0.6);
+}
+

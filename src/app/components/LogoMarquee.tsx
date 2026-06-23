@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import GsapTextAnimation from "./GsapTextAnimation";
+import ContentSwipUp from "./ContentSwipUp";
 
 const logos = [
   "/logo-1.png",
@@ -25,10 +26,11 @@ export default function LogoMarquee() {
                
                 <GsapTextAnimation mainText={"Trusted by Companies"} mainClass="flex flex-wrap justify-center "/>
               </h2>
-        <p className="text-white max-w-4xl mx-auto text-sm md:text-[16px] leading-relaxed hero-sub">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. Lorem Ipsum is
-          simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
-        </p>
+              <ContentSwipUp className="max-w-4xl mx-auto w-full">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. Lorem Ipsum is
+                  simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
+              </ContentSwipUp>
+
       </div>
 
       <div className="relative w-full flex overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-[150px] before:bg-gradient-to-r before:from-[#05010f] before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-[150px] after:bg-gradient-to-l after:from-[#05010f] after:to-transparent">

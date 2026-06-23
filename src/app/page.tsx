@@ -142,7 +142,7 @@ export default function Home() {
 
             </h1>
            
-            <ContentSwipUp >
+            <ContentSwipUp className="md:text-[20px]">
              We help startups and enterprises build AI tools, Ecommerce platforms and scalable digital products.
             </ContentSwipUp >
      
@@ -179,11 +179,12 @@ export default function Home() {
                 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white "              >
                
                 <GsapTextAnimation mainText={"Services and Solutions <br/> We Provide"} mainClass="flex flex-wrap "/>
-              </h2>
-              <p className="text-sm md:text-base hero-sub">
+              </h2>              
+              <ContentSwipUp className="max-w-[500px] w-full">
                 help you to build website company that is modern, user friendly,
                 good CEO, and Clean design
-              </p>
+              </ContentSwipUp>
+              
             </div>
             <div className="flex gap-3">
               <button
@@ -257,11 +258,11 @@ export default function Home() {
                 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white "              >
                
                 <GsapTextAnimation mainText={"Featured Portfolio: Design & <br/> AI Innovations"} mainClass="flex flex-wrap "/>
-              </h2>
-              <p className="text-sm md:text-base hero-sub">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
+              </h2>             
+              <ContentSwipUp className="max-w-[500px] w-full">
+                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's.
-              </p>
+              </ContentSwipUp>
             </div>            
              <ButtonSwipUp  className="bg-white text-black hover:text-white" url={"/portfolio"}>
       
@@ -363,30 +364,30 @@ export default function Home() {
                 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white "              >
                
                 <GsapTextAnimation mainText={"What We Promise for <br/> Successful Project"} mainClass="flex flex-wrap "/>
-              </h2>
-              <p className="hero-sub">
-                We have developed a streamlined software delivery process, encompassing project planning, agile methodologies.
-              </p>
+              </h2>            
+               <ContentSwipUp>
+                  We have developed a streamlined software delivery process, encompassing project planning, agile methodologies.
+               </ContentSwipUp>
             </div>
 
             <ul className="space-y-5">
               <li className="flex gap-4 items-start hero-sub ">
                 <BsCheckAll className="text-primary w-[40px] h-[40px] shrink-0 mt-0.5" />
-                <p>
+                <ContentSwipUp>
                   TechBeeps biggest concern when choosing a technology is how it fits our customer's needs.
-                </p>
+                </ContentSwipUp>
               </li>
               <li className="flex gap-4 items-start hero-sub">
                 <BsCheckAll className="text-primary w-[40px] h-[40px] shrink-0 mt-0.5" />
-                <p>
+                <ContentSwipUp>
                   Our customers' time is their money, so completing every project on time is one of company's biggest priorities.
-                </p>
+                </ContentSwipUp>
               </li>
               <li className="flex gap-4 items-start hero-sub">
                 <BsCheckAll className="text-primary w-[40px] h-[40px] shrink-0 mt-0.5" />
-                <p>
+                <ContentSwipUp>
                   We promise that we never have any commercial incentive while choosing a technology or approach, we base our decision only.
-                </p>
+                </ContentSwipUp>
               </li>
             </ul>
 

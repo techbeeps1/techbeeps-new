@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import GsapTextAnimation from './GsapTextAnimation';
+import ContentSwipUp from './ContentSwipUp';
 
 const testimonials = [
   {
@@ -186,9 +187,11 @@ export default function TestimonialSlider() {
           className="text-3xl md:text-4xl  lg:text-[50px] leading-tight lg:leading-[60px] text-white mb-5 ">
           <GsapTextAnimation mainText={"What Our Clients Say <br/> About TechBeeps"} mainClass="flex flex-wrap justify-center " />
         </h2>
-        <p className='hero-sub'>
+
+        <ContentSwipUp className="max-w-[1000px] mx-auto  w-full">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
-        </p>
+        </ContentSwipUp>
+
       </div>
 
       {/* Slider Section */}

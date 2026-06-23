@@ -30,10 +30,10 @@ export default function Header() {
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-6 text-white">
             <li><Link href="/" className="hover:text-primary duration-400">Home</Link></li>
-            <li><Link href="#" className="hover:text-primary duration-400">About</Link></li>
+            <li><Link href="/about-us" className="hover:text-primary duration-400">About</Link></li>
             <li><Link href="/services" className="hover:text-primary duration-400">Services</Link></li>
-            <li><Link href="#" className="hover:text-primary duration-400">Portfolio</Link></li>
-            <li><Link href="#" className="hover:text-primary duration-400">Contact Us</Link></li>
+            <li><Link href="/portfolio" className="hover:text-primary duration-400">Portfolio</Link></li>
+            <li><Link href="/contact-us" className="hover:text-primary duration-400">Contact Us</Link></li>
           </ul>
         </nav>
 
@@ -67,10 +67,10 @@ export default function Header() {
             <nav>
               <ul className="flex flex-col items-center gap-8 text-2xl font-medium text-white">
                 <li><Link href="/" onClick={() => setIsOpen(false)} className="hover:text-primary duration-400">Home</Link></li>
-                <li><Link href="#" onClick={() => setIsOpen(false)} className="hover:text-primary duration-400">About</Link></li>
+                <li><Link href="/about-us" onClick={() => setIsOpen(false)} className="hover:text-primary duration-400">About</Link></li>
                 <li><Link href="/services" onClick={() => setIsOpen(false)} className="hover:text-primary duration-400">Services</Link></li>
-                <li><Link href="#" onClick={() => setIsOpen(false)} className="hover:text-primary duration-400">Portfolio</Link></li>
-                <li><Link href="#" onClick={() => setIsOpen(false)} className="hover:text-primary duration-400">Contact Us</Link></li>
+                <li><Link href="/portfolio" onClick={() => setIsOpen(false)} className="hover:text-primary duration-400">Portfolio</Link></li>
+                <li><Link href="/contact-us" onClick={() => setIsOpen(false)} className="hover:text-primary duration-400">Contact Us</Link></li>
               </ul>
             </nav>            
             <ButtonSwipUp  className="bg-white text-black hover:text-white mt-10" url={"tel:+91 141 452 3119"}>

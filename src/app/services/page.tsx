@@ -8,6 +8,7 @@ import { IoArrowForwardOutline } from "react-icons/io5";
 import TestimonialSlider from "../components/TestimonialSlider";
 import LogoMarquee from "../components/LogoMarquee";
 import GsapTextAnimation from "../components/GsapTextAnimation";
+import ContentSwipUp from "../components/ContentSwipUp";
 
 const servicesData = [
   {
@@ -79,9 +80,9 @@ export default function ServicesPage() {
             <h1 className="text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[97px] text-white mb-4 lg:mb-6">
               <GsapTextAnimation mainText={"Innovative IT Solutions for <br/> Modern Businesses "}  mainClass="flex flex-wrap "/>
             </h1>            
-            <p className="text-base md:text-lg lg:text-[20px] leading-snug lg:leading-[26px] text-white">
+            <ContentSwipUp className="md:text-[20px]" top="100">
               We help businesses grow with AI-powered solutions, scalable web development, and high-performing e-commerce platforms.
-            </p>
+            </ContentSwipUp>
           </div>
         </div>
       </section>

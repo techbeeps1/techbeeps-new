@@ -7,7 +7,7 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-export default function ContentSwipUp({ className='', children}:{ className?: string, children: ReactNode }  ) {
+export default function ContentSwipUp({ className='', top="85", children}:{ className?: string,top?:string, children: ReactNode }  ) {
    const ContentRef = useRef<HTMLDivElement>(null);
  useEffect(() => {
     if (!ContentRef.current) return;
@@ -23,7 +23,7 @@ export default function ContentSwipUp({ className='', children}:{ className?: st
                 delay: index === 0 ? 1.2 : 0,
                 scrollTrigger: {
                   trigger: elem,
-                  start: "top 85%",
+                  start: `top ${top}%`,
                   toggleActions: "play none none none",
                 }
               }
@@ -33,7 +33,7 @@ export default function ContentSwipUp({ className='', children}:{ className?: st
 
   return (
     <div ref={ContentRef}>
-    <p className={`${className} hero-sub overflow-hidden text-white`}>
+    <p className={`${className} hero-sub overflow-hidden text-white leading-[28px]`}>
       {children}   
       </p>
 
