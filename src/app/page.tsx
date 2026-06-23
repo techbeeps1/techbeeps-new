@@ -152,7 +152,7 @@ export default function Home() {
             </p> */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-7.5 mt-8 lg:mt-12.5">
 
-              <ButtonSwipUp  className="bg-white text-black hover:text-white" url={"/contact"}>
+              <ButtonSwipUp  className="bg-white text-black hover:text-white" url={"/contact-us"}>
       
               Get Started
                     <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" /> 
@@ -189,16 +189,16 @@ export default function Home() {
             <div className="flex gap-3">
               <button
                 onClick={prev}
-                className="w-12.5 h-12.5 cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 hover:bg-primary duration-400"
+                className="w-12.5 h-12.5  cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 hover:bg-primary duration-400"
               >
-                <IoArrowForwardOutline className="h-5.5 w-5.5 -rotate-180" />
+                <IoArrowForwardOutline className="h-5.5 w-5.5 -rotate-180 text-white" />
               </button>
 
               <button
                 onClick={next}
                 className="w-12.5 h-12.5 cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 hover:bg-primary duration-400"
               >
-                <IoArrowForwardOutline className="h-5.5 w-5.5" />
+                <IoArrowForwardOutline className="h-5.5 w-5.5 text-white" />
               </button>
             </div>
           </div>
@@ -241,7 +241,7 @@ export default function Home() {
                     onClick={next}
                     className="w-12.5 h-12.5 backdrop-blur-[10px] group  absolute bottom-3.75 left-3.75 cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 hover:bg-primary duration-400"
                   >
-                    <IoArrowForwardOutline className="h-5.5 w-5.5 -rotate-45 group-hover:rotate-0 duration-400" />
+                    <IoArrowForwardOutline className="h-5.5 w-5.5 -rotate-45 text-white group-hover:rotate-0 duration-400" />
                   </button>
                 </div>
               ))}
@@ -392,7 +392,7 @@ export default function Home() {
             </ul>
 
             <div className="pt-2">              
-              <ButtonSwipUp  className="bg-white w-fit text-black hover:text-white" url={"/contact"}>
+              <ButtonSwipUp  className="bg-white w-fit text-black hover:text-white" url={"/contact-us"}>
       
               Explore More
                     <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" /> 

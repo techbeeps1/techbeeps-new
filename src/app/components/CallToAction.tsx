@@ -19,7 +19,7 @@ export default function CallToAction() {
           </ContentSwipUp>
           
           <div className="flex flex-row items-center justify-center gap-7.5 mt-10">          
-            <ButtonSwipUp  className="bg-white w-fit text-black hover:text-white" url={"/contact"}>
+            <ButtonSwipUp  className="bg-white w-fit text-black hover:text-white" url={"/contact-us"}>
                   
                          Get a Quote
                                 <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" /> 

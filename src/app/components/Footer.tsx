@@ -23,19 +23,19 @@ export default function Footer() {
               Techbeeps Services provides IT solutions. Such as Web development, Website design, application design and many more. We create an exclusive website for digital success and growth.
             </p>
             <div className="flex items-center gap-3">
-              <Link href="#" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
+              <Link href="https://www.facebook.com/techbeepss/" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
                 <FaFacebookF className="w-4 h-4" />
               </Link>
-              <Link href="#" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
+              <Link href="https://x.com/techbeepss" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
                 <FaXTwitter className="w-4 h-4" />
               </Link>
-              <Link href="#" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
+              <Link href="https://www.instagram.com/techbeeps/" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
                 <FaInstagram className="w-4 h-4" />
               </Link>
-              <Link href="#" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
+              <Link href="https://www.youtube.com/@techbeepss" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
                 <FaYoutube className="w-4 h-4" />
               </Link>
-              <Link href="#" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
+              <Link href="https://www.linkedin.com/company/techbeeps/posts/?feedView=all" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
                 <FaLinkedinIn className="w-4 h-4" />
               </Link>
             </div>
@@ -43,31 +43,34 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-[#E5DFFF] text-[22px] font-medium mb-6">Services</h3>
+            <h3 className="bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_42%,#FFFFFF_59%,#BE9FFF_100%)] 
+  bg-clip-text text-transparent text-[22px] font-medium mb-6">Services</h3>
             <ul className="space-y-3">
               <li><Link href="#" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">AI Solutions</Link></li>
               <li><Link href="#" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Python</Link></li>
               <li><Link href="#" className="ttext-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Shopify Development</Link></li>
               <li><Link href="#" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Mobile App development</Link></li>
               <li><Link href="#" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Web Development</Link></li>
-              <li><Link href="#" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">UI/UX Design</Link></li>
+              <li><Link href="/services/ui-ux-design" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">UI/UX Design</Link></li>
             </ul>
           </div>
 
           {/* Company */}
           <div>
-            <h3 className="text-[#E5DFFF] text-[22px] font-medium mb-6">Company</h3>
+            <h3 className="bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_42%,#FFFFFF_59%,#BE9FFF_100%)] 
+  bg-clip-text text-transparent text-[22px] font-medium mb-6">Company</h3>
             <ul className="space-y-3">
-              <li><Link href="#" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">About Us</Link></li>
-              <li><Link href="#" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Portfolio</Link></li>
+              <li><Link href="/about-us" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">About Us</Link></li>
+              <li><Link href="/portfolio" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Portfolio</Link></li>
               <li><Link href="#" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Team</Link></li>
-              <li><Link href="#" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Contact</Link></li>
+              <li><Link href="/contact-us" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Contact</Link></li>
             </ul>
           </div>
 
           {/* Connect */}
           <div>
-            <h3 className="text-[#E5DFFF] text-[22px] font-medium mb-6">Connect</h3>
+            <h3 className="bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_42%,#FFFFFF_59%,#BE9FFF_100%)] 
+  bg-clip-text text-transparent text-[22px] font-medium mb-6">Connect</h3>
             <ul className="space-y-4">
               <li className="grid grid-cols-[80px_1fr] text-[15px] leading-[24px] font-normal text-white">
                 <span>Phone</span>
