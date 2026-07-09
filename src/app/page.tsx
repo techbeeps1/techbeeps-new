@@ -26,31 +26,31 @@ export default function Home() {
       id: "ui-1",
       title: "UI/UX Design",
       desc: "At TechBeeps Services, we create stunning, user-focused designs.",
-      image: "/service_uiux.png",
+      image: "/service_uiux .webp",
     },
     {
       id: "mobile-2",
       title: "Mobile App Development",
       desc: "We offer full-cycle mobile app development services, which means that.",
-      image: "/service_mobile.png",
+      image: "/service_mobile_v3.webp",
     },
     {
       id: "web-3",
       title: "Web Development",
       desc: "Get the best online presence through our customized web development.",
-      image: "/service_web.png",
+      image: "/service_web.webp",
     },
     {
       id: "ai-4",
       title: "AI Solutions",
       desc: "At TechBeeps, we are transforming the way businesses use technology.",
-      image: "/service_ai.png",
+      image: "/service_ai.webp",
     },
     {
       id: "shopify-5", 
       title: "Shopify Development",
       desc: "Upgrade your online presence with Best Shopify development company.",
-      image: "/service_shopify.png",
+      image: "/service_shopify.webp",
     },
   ];
 
