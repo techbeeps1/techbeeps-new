@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ButtonSwipUp from "../ButtonSwipUp";
+import AiButton from "../AiButton";
 
 const containerVariants = {
   hidden: {},
@@ -25,7 +26,7 @@ const menuVariants = {
     opacity: 1, 
     x: 0, 
     transition: { 
-      type: "spring",
+      type: "spring" as const,
       stiffness: 160,
       damping: 22
     } 
@@ -53,6 +54,7 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-6 text-white">
+            <AiButton/>
             <li><Link href="/" className="hover:text-primary duration-400">Home</Link></li>
             <li><Link href="/about-us" className="hover:text-primary duration-400">About</Link></li>
             <li><Link href="/services" className="hover:text-primary duration-400">Services</Link></li>

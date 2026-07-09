@@ -18,7 +18,7 @@ const logos = [
 
 export default function LogoMarquee() {
   return (
-    <section className="py-20 bg-[#05010f] text-white overflow-hidden relative">
+    <section className="py-25 border-t border-white/12  text-white overflow-hidden relative z-1">
       <div className="container mx-auto text-center mb-16 space-y-4">        
         
           <h2
@@ -33,7 +33,7 @@ export default function LogoMarquee() {
 
       </div>
 
-      <div className="relative w-full flex overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-[150px] before:bg-gradient-to-r before:from-[#05010f] before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-[150px] after:bg-gradient-to-l after:from-[#05010f] after:to-transparent">
+      <div className="relative w-full flex">
         <motion.div
           className="flex whitespace-nowrap items-center w-max"
           animate={{ x: ["0%", "-50%"] }}

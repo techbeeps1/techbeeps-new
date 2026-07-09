@@ -180,7 +180,7 @@ export default function TestimonialSlider() {
   const activeDotIndex = currentIndex % originalLength;
 
   return (
-    <section className=" py-20 overflow-hidden relative font-sans">
+    <section className=" border-t border-white/12 py-25 overflow-hidden relative z-1 font-sans">
       {/* Header Section */}
       <div className="max-w-6xl mx-auto px-4 text-center mb-16 relative z-20">
         <h2

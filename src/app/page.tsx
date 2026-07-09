@@ -14,35 +14,43 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import GsapTextAnimation from "./components/GsapTextAnimation";
 import ButtonSwipUp from "./components/ButtonSwipUp";
 import ContentSwipUp from "./components/ContentSwipUp";
+import DevelopmentSlider from "./components/DevelopmentSlider";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
+
 export default function Home() {  
   const cards = [
-    {id:"ui-1",
+    {
+      id: "ui-1",
       title: "UI/UX Design",
       desc: "At TechBeeps Services, we create stunning, user-focused designs.",
+      image: "/service_uiux.png",
     },
     {
-      id:"mobile-2",
+      id: "mobile-2",
       title: "Mobile App Development",
       desc: "We offer full-cycle mobile app development services, which means that.",
+      image: "/service_mobile.png",
     },
     {
-      id:"web-3",
+      id: "web-3",
       title: "Web Development",
       desc: "Get the best online presence through our customized web development.",
+      image: "/service_web.png",
     },
     {
-      id:"ai-4",
+      id: "ai-4",
       title: "AI Solutions",
       desc: "At TechBeeps, we are transforming the way businesses use technology.",
+      image: "/service_ai.png",
     },
     {
-      id:"shopify-5", 
+      id: "shopify-5", 
       title: "Shopify Development",
       desc: "Upgrade your online presence with Best Shopify development company.",
+      image: "/service_shopify.png",
     },
   ];
 
@@ -129,9 +137,7 @@ export default function Home() {
           fill
           priority
           className="object-cover"
-        />
-        <div className="absolute bottom-10 lg:bottom-29 -left-20 lg:-left-55 bg-[#504CFF] blur-[120px] lg:blur-[190px] w-[300px] h-[300px] lg:w-211.25 lg:h-121.75 opacity-40 lg:opacity-100"></div>
-        <div className="absolute top-10 lg:top-46.75 -right-20 lg:right-0 bg-primary blur-[120px] lg:blur-[190px] w-[300px] h-[300px] lg:w-230.25 lg:h-103.25 opacity-40 lg:opacity-100"></div>
+        />        
         <div className="container">
           <div className="space-y-6.25 relative z-1">
             <h1
@@ -144,12 +150,7 @@ export default function Home() {
            
             <ContentSwipUp className="md:text-[20px]">
              We help startups and enterprises build AI tools, Ecommerce platforms and scalable digital products.
-            </ContentSwipUp >
-     
-            {/* <p className="text-base hero-sub md:text-lg lg:text-[20px] overflow-hidden">
-              We help startups and enterprises build AI tools, Ecommerce
-              platforms and scalable digital products.
-            </p> */}
+            </ContentSwipUp >     
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-7.5 mt-8 lg:mt-12.5">
 
               <ButtonSwipUp  className="bg-white text-black hover:text-white" url={"/contact-us"}>
@@ -162,16 +163,13 @@ export default function Home() {
              Our Services 
                <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" /> 
               </ButtonSwipUp>
-            </div>
-            <div className="text-[30px] mx-auto mt-12.5 font-bold bg-primary h-15 w-15 leading-8.75 flex items-center justify-center rounded-full">
-              AI
-            </div>
+            </div>           
           </div>
         </div>
       </section>     
 
       {/* Services */}
-      <section className="py-25">
+      <section className="py-25 relative z-1 border-t border-white/12">
         <div className=" container mb-10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-5 mb-8.75">
             <div className="space-y-3 md:space-y-5">
@@ -219,27 +217,30 @@ export default function Home() {
                 <div
                   key={card.id}
                   className="min-w-[85vw] sm:min-w-91 rounded-[15px] relative 
-              bg-[linear-gradient(180deg,#120D25_58%,#291D58_100%)] 
+              bg-[linear-gradient(180deg,#120D25_58%,#291D58_100%)] flex flex-col justify-between h-[420px] overflow-hidden
               "
                 >
-                  <div className="space-y-3.75 mb-5 px-6 pt-8.5">
+                  <div className="space-y-3.75 mb-4 px-6 pt-8">
                     <h3
                       className="text-[25px] leading-7.5 bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_42%,#FFFFFF_59%,#BE9FFF_100%)] 
   bg-clip-text text-transparent"
                     >
                       {card.title}
                     </h3>
-                    <p className="leading-6.25">{card.desc}</p>
+                    <p className="leading-6.25 text-white/80">{card.desc}</p>
                   </div>
-                  <Image
-                    src="/laptop.png"
-                    alt="Service Img"
-                    width={364}
-                    height={364}
-                  />
+                  <div className="w-full flex justify-center mt-auto">
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      width={340}
+                      height={220}
+                      className="object-contain transition-transform duration-500 hover:scale-105 pointer-events-none"
+                    />
+                  </div>
                   <button
                     onClick={next}
-                    className="w-12.5 h-12.5 backdrop-blur-[10px] group  absolute bottom-3.75 left-3.75 cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 hover:bg-primary duration-400"
+                    className="w-12.5 h-12.5 backdrop-blur-[10px] group absolute bottom-3.75 left-3.75 cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 hover:bg-primary duration-400 z-10"
                   >
                     <IoArrowForwardOutline className="h-5.5 w-5.5 -rotate-45 text-white group-hover:rotate-0 duration-400" />
                   </button>
@@ -250,7 +251,7 @@ export default function Home() {
         </div>
       </section>
       {/* Portfolio */}
-      <section>
+      <section className="relative z-1 py-25 border-t border-white/12">
         <div className=" container">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-5 mb-8.75">
             <div className="space-y-3 md:space-y-5">              
@@ -264,13 +265,13 @@ export default function Home() {
                 industry. Lorem Ipsum has been the industry's.
               </ContentSwipUp>
             </div>            
-             <ButtonSwipUp  className="bg-white text-black hover:text-white" url={"/portfolio"}>
+             <ButtonSwipUp  className=" text-black hover:text-white bg-white" url={"/portfolio"}>
       
               Our Portfolio
                     <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" /> 
              </ButtonSwipUp>
           </div>
-          <div className="bg-black text-white ">
+          <div className=" text-white ">
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-20.75">
               {/* LEFT SIDEBAR */}
               <div className="w-full lg:w-62.5 flex lg:flex-col gap-3 overflow-x-auto pb-4 lg:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
@@ -306,7 +307,7 @@ export default function Home() {
                         ease: [0.16, 1, 0.3, 1],
                         delay: index * 0.08 
                       }}
-                      className="transform-gpu"
+                      className="transform-gpu bg-white/6 rounded-[10px]"
                       style={{ transformStyle: "preserve-3d" }}
                     >
                       {/* IMAGE */}
@@ -332,7 +333,7 @@ export default function Home() {
                     </div>
 
                     {/* CONTENT */}
-                    <div className="mt-6.25 space-y-4">
+                    <div className="mt-6.25 space-y-4 px-[20px] pb-[20px]">
                       <h3 className="font-semibold text-[20px]">
                         {item.title}
                       </h3>
@@ -352,10 +353,26 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Development Service  */}
+       <section className="border-t border-white/12 text-white py-25 relative z-1 overflow-hidden">
+        <div className="max-w-[1320px] mx-auto px-4 text-center mb-10">
+          <div className="space-y-6">             
+            <h2 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white">
+              <GsapTextAnimation mainText={"Custom Web & App Development Solutions <br/> Built for Success"} mainClass="flex flex-wrap justify-center"/>
+            </h2>            
+            <ContentSwipUp className="text-center mx-auto max-w-5xl">
+              Empower your business with innovative web and mobile applications designed to deliver exceptional user experiences. Our expert team combines cutting-edge technology, AI integration, and modern design to help your brand scale with confidence.
+            </ContentSwipUp>
+          </div>
+        </div>
+        <div className="w-full">
+          <DevelopmentSlider />
+        </div>
+      </section>
       <TestimonialSlider />
 
       {/* Promise Section */}
-      <section className="bg-black text-white py-24">
+      <section className="border-t border-white/12 text-white py-25 relative z-1">
         <div className="max-w-[1320px] mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
           {/* Left Content */}
           <div className="flex-1 space-y-10">
@@ -420,6 +437,10 @@ export default function Home() {
       </section>
       <LogoMarquee />      
       <CallToAction />
+      <div className="fixed inset-0 z-0 overflow-hidden">
+        <div className="blur-circle absolute -left-[100px] -top-[100px] rounded-full opacity-[0.50]  bg-[#504CFF] blur-[120px] md:w-[600px] md:h-[600px] w-[300px] h-[500px]"></div>
+        <div className="blur-circle absolute -right-[100px] -bottom-[150px] rounded-full opacity-[0.50]  bg-primary blur-[120px] md:w-[600px] md:h-[600px] w-[300px] h-[500px]"></div>
+      </div>
       <Footer />
     </>
   );

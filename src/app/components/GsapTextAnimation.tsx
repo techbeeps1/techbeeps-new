@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -9,7 +9,6 @@ if (typeof window !== "undefined") {
 
 export default function GsapTextAnimation({mainText, mainClass='', textHighlightIndex=[]}: {mainText: string, textHighlightIndex?: number[], mainClass?: string}  ) {
   const heroRef = useRef<HTMLDivElement>(null);
-
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -46,8 +45,6 @@ export default function GsapTextAnimation({mainText, mainClass='', textHighlight
                 </span>
                  ))}
                </span>
-
-
 
               ))}
             </span>

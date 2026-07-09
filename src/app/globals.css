@@ -62,3 +62,114 @@ body {
   background: rgba(133, 76, 255, 0.6);
 }
 
+.radial-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(.4);
+  border-radius: 9999px;
+  background: #854cff;
+  filter: blur(30px);
+  animation: radialZoom 4s ease-in-out infinite alternate;
+}
+
+@keyframes radialZoom {
+  from {
+    transform: translate(-50%, -50%) scale(.4);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.6);
+  }
+}
+
+.anistar{
+  offset-path:path("M -50 0 A 50 50 0 0 1 50 0");
+  offset-distance:0%;
+  offset-rotate:0deg;
+  opacity:0;
+  animation:starArc 3s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+.anistar2{
+  offset-path:path("M 0 0 A 30 40 0 0 1 0 -43");
+  offset-distance:0%;
+  offset-rotate:0deg;
+  opacity:0;
+  animation:starArc2 3s cubic-bezier(.6,0,.4,1) infinite;
+}
+.blur-circle{ 
+  animation: float 10s infinite ease-in-out alternate;
+}
+
+  
+
+@keyframes starArc{
+  0%{
+    opacity:0;
+    offset-distance:0%;
+  }
+  80%{
+    opacity:1;
+    offset-distance:50%;
+  }
+  100%{
+    opacity:0;
+    offset-distance:50%;
+  }
+}
+
+@keyframes starArc2{
+  0%{
+    opacity:0;
+    offset-distance:0%;
+  }
+  80%{
+    opacity:1;
+    offset-distance:50%;
+  }
+  100%{
+    opacity:0;
+    offset-distance:50%;
+  }
+}
+@keyframes float{
+  from
+  {transform:translateY(0px) translateX(0px);}
+to
+{transform:translateY(40px) translateX(20px);}
+
+}
+@keyframes rotateBorder
+{100%{transform:rotate(360deg);}
+}
+
+/* Premium Gradient Border Card */
+.premium-gradient-border {
+  position: relative;
+  border: 1.5px solid transparent;
+  background: linear-gradient(180deg, rgba(13, 10, 27, 0.95) 0%, rgba(6, 2, 20, 0.98) 100%) padding-box,
+              linear-gradient(135deg, #00f0ff 0%, #854cff 50%, #d800ff 100%) border-box;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px -10px rgba(0, 240, 255, 0.1), 0 20px 50px -15px rgba(133, 76, 255, 0.08);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.premium-gradient-border:hover {
+  box-shadow: 0 12px 50px -5px rgba(0, 240, 255, 0.15), 0 25px 60px -10px rgba(133, 76, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Hide scrollbar for slider track */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
