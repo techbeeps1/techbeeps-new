@@ -229,7 +229,7 @@ export default function DevelopmentSlider() {
             {extendedData.map((card) => (
               <div
                 key={card.id}
-                className="p-[4px] relative rounded-[20px] overflow-hidden shrink-0 w-full md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-72px)/4)] flex flex-col before:content-[''] before:absolute before:w-[250%] before:h-[250%] before:-top-[75%] before:-left-[75%] before:bg-[conic-gradient(from_0deg,transparent,#af8df5,transparent,#8b5cf6,transparent,#af8df5,transparent)] before:animate-[rotateBorder_15s_linear_infinite] before:z-0"
+                className="p-[4px] relative rounded-[20px] overflow-hidden shrink-0 w-full md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] 2xl:w-[calc((100%-72px)/4)] flex flex-col before:content-[''] before:absolute before:w-[250%] before:h-[250%] before:-top-[75%] before:-left-[75%] before:bg-[conic-gradient(from_0deg,transparent,#af8df5,transparent,#8b5cf6,transparent,#af8df5,transparent)] before:animate-[rotateBorder_15s_linear_infinite] before:z-0"
               >
                 {/* Image Section */}
                 <div className="relative w-full aspect-[4/3] rounded-t-[16px] overflow-hidden bg-black z-1">
@@ -243,8 +243,8 @@ export default function DevelopmentSlider() {
                     unoptimized
                   />                  
                 </div> 
-                <div className="pt-5 px-2.5 pb-2.5 rounded-b-[16px] bg-[#0d0a1b]/90 z-1 flex-1 flex flex-col justify-between">              
-                  <div className="px-6 pt-5 pb-3">
+                <div className="pt-5 px-2.5 pb-2.5 rounded-b-[16px] bg-[#0d0a1b]/96 z-1 flex-1 flex flex-col justify-between">              
+                  <div className="px-4 pt-3 pb-3">
                     <h3 className="text-[19px] md:text-[21px] font-bold text-white leading-tight">
                       {card.title}
                     </h3>
