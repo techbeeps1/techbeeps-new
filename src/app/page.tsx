@@ -15,42 +15,43 @@ import GsapTextAnimation from "./components/GsapTextAnimation";
 import ButtonSwipUp from "./components/ButtonSwipUp";
 import ContentSwipUp from "./components/ContentSwipUp";
 import DevelopmentSlider from "./components/DevelopmentSlider";
+import Link from "next/link";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-export default function Home() {  
+export default function Home() {
   const cards = [
     {
       id: "ui-1",
       title: "UI/UX Design",
-      desc: "At TechBeeps Services, we create stunning, user-focused designs.",
-      image: "/service_uiux .webp",
+      desc: "At TechBeeps Services, we create stunning, user-focused designs.",
+      image: "/ui_ux_card.png",
     },
     {
       id: "mobile-2",
       title: "Mobile App Development",
       desc: "We offer full-cycle mobile app development services, which means that.",
-      image: "/service_mobile_v3.webp",
+      image: "/mobile_app_dev_card.png",
     },
     {
       id: "web-3",
       title: "Web Development",
       desc: "Get the best online presence through our customized web development.",
-      image: "/service_web.webp",
+      image: "/web_dev_card.png",
     },
     {
       id: "ai-4",
       title: "AI Solutions",
-      desc: "At TechBeeps, we are transforming the way businesses use technology.",
-      image: "/service_ai.webp",
+      desc: "At TechBeeps, we are transforming the way businesses use technology.",
+      image: "/ai_solution_card.png",
     },
     {
-      id: "shopify-5", 
+      id: "shopify-5",
       title: "Shopify Development",
       desc: "Upgrade your online presence with Best Shopify development company.",
-      image: "/service_shopify.webp",
+      image: "/shopify_dev_card.png",
     },
   ];
 
@@ -137,36 +138,36 @@ export default function Home() {
           fill
           priority
           className="object-cover"
-        />        
+        />
         <div className="container">
           <div className="space-y-6.25 relative z-1">
             <h1
-              className="text-4xl hero-char md:text-6xl lg:text-[105px] leading-tight lg:leading-[120px]  bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_42%,#FFFFFF_59%,#BE9FFF_100%)] 
-  bg-clip-text text-white "
+              className="text-4xl hero-char md:text-6xl lg:text-[105px] leading-tight lg:leading-[120px]  
+   text-white "
             >
- <GsapTextAnimation mainText={"Build AI-Powered Digital Solutions For Modern Businesses"} textHighlightIndex={[1]}  mainClass="flex flex-wrap justify-center "/>
+              <GsapTextAnimation mainText={"Build AI-Powered Digital Solutions For Modern Businesses"} textHighlightIndex={[1]} mainClass="flex flex-wrap justify-center " />
 
             </h1>
-           
+
             <ContentSwipUp className="md:text-[20px]">
-             We help startups and enterprises build AI tools, Ecommerce platforms and scalable digital products.
-            </ContentSwipUp >     
+              We help startups and enterprises build AI tools, Ecommerce platforms and scalable digital products.
+            </ContentSwipUp >
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-7.5 mt-8 lg:mt-12.5">
 
-              <ButtonSwipUp  className="bg-white text-black hover:text-white" url={"/contact-us"}>
-      
-              Get Started
-                    <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" /> 
-             </ButtonSwipUp>
-     
-              <ButtonSwipUp  className="bg-transparent text-white hover:text-white border-primary border " url={"/services"}>
-             Our Services 
-               <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" /> 
+              <ButtonSwipUp className="bg-white text-black hover:text-white" url={"/contact-us"}>
+
+                Get Started
+                <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
               </ButtonSwipUp>
-            </div>           
+
+              <ButtonSwipUp className="bg-transparent text-white hover:text-white border-primary border " url={"/services"}>
+                Our Services
+                <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
+              </ButtonSwipUp>
+            </div>
           </div>
         </div>
-      </section>     
+      </section>
 
       {/* Services */}
       <section className="py-25 relative z-1 border-t border-white/12">
@@ -175,14 +176,14 @@ export default function Home() {
             <div className="space-y-3 md:space-y-5">
               <h2
                 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white "              >
-               
-                <GsapTextAnimation mainText={"Services and Solutions <br/> We Provide"} mainClass="flex flex-wrap "/>
-              </h2>              
+
+                <GsapTextAnimation mainText={"Services and Solutions <br/> We Provide"} mainClass="flex flex-wrap " />
+              </h2>
               <ContentSwipUp className="max-w-[500px] w-full">
                 help you to build website company that is modern, user friendly,
                 good CEO, and Clean design
               </ContentSwipUp>
-              
+
             </div>
             <div className="flex gap-3">
               <button
@@ -217,7 +218,7 @@ export default function Home() {
                 <div
                   key={card.id}
                   className="min-w-[85vw] sm:min-w-91 rounded-[15px] relative 
-              bg-[linear-gradient(180deg,#120D25_58%,#291D58_100%)] flex flex-col justify-between h-[420px] overflow-hidden
+              bg-[linear-gradient(180deg,#120D25_58%,#291D58_100%)] flex flex-col justify-between overflow-hidden
               "
                 >
                   <div className="space-y-3.75 mb-4 px-6 pt-8">
@@ -229,21 +230,23 @@ export default function Home() {
                     </h3>
                     <p className="leading-6.25 text-white/80">{card.desc}</p>
                   </div>
-                  <div className="w-full flex justify-center mt-auto">
+                  <div className="w-full">
                     <Image
                       src={card.image}
                       alt={card.title}
                       width={340}
                       height={220}
-                      className="object-contain transition-transform duration-500 hover:scale-105 pointer-events-none"
+                      style={{ mixBlendMode: "screen" }}
+                      className=" mix-blend-screen w-full transition-transform duration-500 hover:scale-105 pointer-events-none drop-shadow-[0_10px_25px_rgba(151,149,255,0.3)]"
                     />
                   </div>
-                  <button
+                  <Link
                     onClick={next}
                     className="w-12.5 h-12.5 backdrop-blur-[10px] group absolute bottom-3.75 left-3.75 cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 hover:bg-primary duration-400 z-10"
+                    href={`/services/mobile-app-development`}
                   >
                     <IoArrowForwardOutline className="h-5.5 w-5.5 -rotate-45 text-white group-hover:rotate-0 duration-400" />
-                  </button>
+                  </Link>
                 </div>
               ))}
             </motion.div>
@@ -254,22 +257,22 @@ export default function Home() {
       <section className="relative z-1 py-25 border-t border-white/12">
         <div className=" container">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-5 mb-8.75">
-            <div className="space-y-3 md:space-y-5">              
+            <div className="space-y-3 md:space-y-5">
               <h2
                 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white "              >
-               
-                <GsapTextAnimation mainText={"Featured Portfolio: Design & <br/> AI Innovations"} mainClass="flex flex-wrap "/>
-              </h2>             
+
+                <GsapTextAnimation mainText={"Featured Portfolio: Design & <br/> AI Innovations"} mainClass="flex flex-wrap " />
+              </h2>
               <ContentSwipUp className="max-w-[500px] w-full">
-                 Lorem Ipsum is simply dummy text of the printing and typesetting
+                Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's.
               </ContentSwipUp>
-            </div>            
-             <ButtonSwipUp  className=" text-black hover:text-white bg-white" url={"/portfolio"}>
-      
+            </div>
+            <ButtonSwipUp className=" text-black hover:text-white bg-white" url={"/portfolio"}>
+
               Our Portfolio
-                    <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" /> 
-             </ButtonSwipUp>
+              <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
+            </ButtonSwipUp>
           </div>
           <div className=" text-white ">
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-20.75">
@@ -280,11 +283,10 @@ export default function Home() {
                     key={cat}
                     onClick={() => setActive(cat)}
                     className={`shrink-0 lg:w-full flex text-sm lg:text-lg cursor-pointer group font-medium outline-none focus:outline-none focus:ring-0 justify-between items-center px-4 py-2.5 lg:p-2.5 rounded-[50px] lg:rounded-md duration-500
-              ${
-                active === cat
-                  ? "bg-primary text-white"
-                  : "bg-white/10 lg:bg-transparent lg:border-b lg:border-white/10 hover:bg-primary"
-              }`}
+              ${active === cat
+                        ? "bg-primary text-white"
+                        : "bg-white/10 lg:bg-transparent lg:border-b lg:border-white/10 hover:bg-primary"
+                      }`}
                   >
                     {cat}
                     <BsArrowRightCircle className="hidden lg:block -rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
@@ -302,51 +304,51 @@ export default function Home() {
                       initial={{ opacity: 0, rotateX: -15, y: 40, scale: 0.95, filter: "blur(10px)" }}
                       animate={{ opacity: 1, rotateX: 0, y: 0, scale: 1, filter: "blur(0px)" }}
                       exit={{ opacity: 0, rotateX: 15, y: -40, scale: 0.95, filter: "blur(10px)" }}
-                      transition={{ 
-                        duration: 0.8, 
+                      transition={{
+                        duration: 0.8,
                         ease: [0.16, 1, 0.3, 1],
-                        delay: index * 0.08 
+                        delay: index * 0.08
                       }}
                       className="transform-gpu bg-white/6 rounded-[10px]"
                       style={{ transformStyle: "preserve-3d" }}
                     >
                       {/* IMAGE */}
                       <div className="relative group ">
-                      <img
-                        src={item.image}
-                        alt=""
-                        className="w-full rounded-[10px]"
-                      />
+                        <img
+                          src={item.image}
+                          alt=""
+                          className="w-full rounded-[10px]"
+                        />
 
-                      {/* HOVER OVERLAY */}
-                      <div
-                        className="absolute inset-0 flex rounded-[10px] items-center justify-center 
+                        {/* HOVER OVERLAY */}
+                        <div
+                          className="absolute inset-0 flex rounded-[10px] items-center justify-center 
                 bg-black/41 backdrop-blur-md opacity-0 group-hover:opacity-100 transition"
-                      >
-                        
-                         <ButtonSwipUp  className="bg-white text-black hover:text-white" url={"/portfolio"}>
-      
-                          Explore Portfolio
-                          <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover/button:rotate-0" /> 
-                        </ButtonSwipUp>
-                      </div>
-                    </div>
+                        >
 
-                    {/* CONTENT */}
-                    <div className="mt-6.25 space-y-4 px-[20px] pb-[20px]">
-                      <h3 className="font-semibold text-[20px]">
-                        {item.title}
-                      </h3>
-                      <p>Lorem ipsum is simply dummy text of the printing...</p>
+                          <ButtonSwipUp className="bg-white text-black hover:text-white" url={"/portfolio"}>
 
-                      <div className="flex gap-2 flex-wrap">
-                        <span className="text-sm bg-white/9 px-4.5 py-2 rounded-md">
-                          {item.category}
-                        </span>
+                            Explore Portfolio
+                            <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover/button:rotate-0" />
+                          </ButtonSwipUp>
+                        </div>
                       </div>
-                    </div>
-                  </motion.div>
-                ))}
+
+                      {/* CONTENT */}
+                      <div className="mt-6.25 space-y-4 px-[20px] pb-[20px]">
+                        <h3 className="font-semibold text-[20px]">
+                          {item.title}
+                        </h3>
+                        <p>Lorem ipsum is simply dummy text of the printing...</p>
+
+                        <div className="flex gap-2 flex-wrap">
+                          <span className="text-sm bg-white/9 px-4.5 py-2 rounded-md">
+                            {item.category}
+                          </span>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
                 </AnimatePresence>
               </motion.div>
             </div>
@@ -354,12 +356,12 @@ export default function Home() {
         </div>
       </section>
       {/* Development Service  */}
-       <section className="border-t border-white/12 text-white py-25 relative z-1 overflow-hidden">
+      <section className="border-t border-white/12 text-white py-25 relative z-1 overflow-hidden">
         <div className="max-w-[1320px] mx-auto px-4 text-center mb-10">
-          <div className="space-y-6">             
+          <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white">
-              <GsapTextAnimation mainText={"Custom Web & App Development Solutions <br/> Built for Success"} mainClass="flex flex-wrap justify-center"/>
-            </h2>            
+              <GsapTextAnimation mainText={"Custom Web & App Development Solutions <br/> Built for Success"} mainClass="flex flex-wrap justify-center" />
+            </h2>
             <ContentSwipUp className="text-center mx-auto max-w-5xl">
               Empower your business with innovative web and mobile applications designed to deliver exceptional user experiences. Our expert team combines cutting-edge technology, AI integration, and modern design to help your brand scale with confidence.
             </ContentSwipUp>
@@ -376,15 +378,15 @@ export default function Home() {
         <div className="max-w-[1320px] mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
           {/* Left Content */}
           <div className="flex-1 space-y-10">
-            <div className="space-y-6">             
+            <div className="space-y-6">
               <h2
                 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white "              >
-               
-                <GsapTextAnimation mainText={"What We Promise for <br/> Successful Project"} mainClass="flex flex-wrap "/>
-              </h2>            
-               <ContentSwipUp>
-                  We have developed a streamlined software delivery process, encompassing project planning, agile methodologies.
-               </ContentSwipUp>
+
+                <GsapTextAnimation mainText={"What We Promise for <br/> Successful Project"} mainClass="flex flex-wrap " />
+              </h2>
+              <ContentSwipUp>
+                We have developed a streamlined software delivery process, encompassing project planning, agile methodologies.
+              </ContentSwipUp>
             </div>
 
             <ul className="space-y-5">
@@ -408,12 +410,12 @@ export default function Home() {
               </li>
             </ul>
 
-            <div className="pt-2">              
-              <ButtonSwipUp  className="bg-white w-fit text-black hover:text-white" url={"/contact-us"}>
-      
-              Explore More
-                    <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" /> 
-             </ButtonSwipUp>
+            <div className="pt-2">
+              <ButtonSwipUp className="bg-white w-fit text-black hover:text-white" url={"/contact-us"}>
+
+                Explore More
+                <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
+              </ButtonSwipUp>
             </div>
           </div>
 
@@ -427,7 +429,7 @@ export default function Home() {
                 height={414}
                 className="w-full h-auto object-cover rounded-[20px] "
               />
-              <div 
+              <div
                 className="absolute inset-0 rounded-[20px] pointer-events-none"
                 style={{ background: "linear-gradient(270deg, #000000 2.88%, rgba(7, 7, 7, 0) 48.12%, #070707 98.14%)" }}
               />
@@ -435,7 +437,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <LogoMarquee />      
+      <LogoMarquee />
       <CallToAction />
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div className="blur-circle absolute -left-[100px] -top-[100px] rounded-full opacity-[0.50]  bg-[#504CFF] blur-[120px] md:w-[600px] md:h-[600px] w-[300px] h-[500px]"></div>

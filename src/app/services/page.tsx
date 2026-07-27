@@ -9,43 +9,44 @@ import TestimonialSlider from "../components/TestimonialSlider";
 import LogoMarquee from "../components/LogoMarquee";
 import GsapTextAnimation from "../components/GsapTextAnimation";
 import ContentSwipUp from "../components/ContentSwipUp";
+import Link from "next/link";
 
 const servicesData = [
   {
     title: "UI/UX Design",
-    desc: "At TechBeeps Services, we create stunning, user-focused designs.",
-    tags: ["Web Development", "App Development", "Figma Design"],
-    image: "/laptop.png",
+    desc: "At TechBeeps Services, we create stunning, intuitive, and user-focused designs.",
+    tags: ["UI/UX", "Figma Design", "Prototyping"],
+    image: "/ui_ux_card.png",
   },
   {
     title: "Mobile App Development",
-    desc: "We offer full-cycle mobile app development services, which means that.",
-    tags: ["Web Development", "App Development", "Figma Design"],
-    image: "/laptop.png",
+    desc: "We offer full-cycle mobile app development services for iOS and Android.",
+    tags: ["React Native", "Flutter", "iOS & Android"],
+    image: "/mobile_app_dev_card.png",
   },
   {
     title: "Web Development",
-    desc: "Get the best online presence through our customized web development.",
-    tags: ["Web Development", "App Development", "Figma Design"],
-    image: "/laptop.png",
+    desc: "Get the best online presence through our customized, high-performance web development.",
+    tags: ["Next.js", "React.js", "Full Stack"],
+    image: "/web_dev_card.png",
   },
   {
     title: "AI Solutions",
-    desc: "At TechBeeps, we are transforming the way businesses use technology.",
-    tags: ["Web Development", "App Development", "Figma Design"],
-    image: "/laptop.png",
+    desc: "At TechBeeps, we are transforming the way businesses use technology through AI.",
+    tags: ["AI Agents", "LLM Integration", "Automation"],
+    image: "/ai_solution_card.png",
   },
   {
     title: "Shopify Development",
-    desc: "Upgrade your online presence with Best Shopify development company.",
-    tags: ["Web Development", "App Development", "Figma Design"],
-    image: "/laptop.png",
+    desc: "Upgrade your online store presence with high-converting custom Shopify development.",
+    tags: ["E-Commerce", "Shopify Plus", "Custom Themes"],
+    image: "/shopify_dev_card.png",
   },
   {
-    title: "Python",
-    desc: "From web development to AI-powered automation, we deliver tailored.",
-    tags: ["Web Development", "App Development", "Figma Design"],
-    image: "/laptop.png",
+    title: "Python Development",
+    desc: "From web backends to AI-powered automation, we deliver tailored Python solutions.",
+    tags: ["Python", "FastAPI", "Data Scraping"],
+    image: "/service_python_new.png",
   },
 ];
 
@@ -78,8 +79,8 @@ export default function ServicesPage() {
         <div className="container relative z-10 px-4 mt-auto">
           <div className="backdrop-blur-[25px] rounded-[30px] p-6 md:p-8 lg:p-[40px] bg-[#868686]/10 ">
             <h1 className="text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[97px] text-white mb-4 lg:mb-6">
-              <GsapTextAnimation mainText={"Innovative IT Solutions for <br/> Modern Businesses "}  mainClass="flex flex-wrap "/>
-            </h1>            
+              <GsapTextAnimation mainText={"Innovative IT Solutions for <br/> Modern Businesses "} mainClass="flex flex-wrap " />
+            </h1>
             <ContentSwipUp className="md:text-[20px]" top="100">
               We help businesses grow with AI-powered solutions, scalable web development, and high-performing e-commerce platforms.
             </ContentSwipUp>
@@ -92,7 +93,7 @@ export default function ServicesPage() {
         <div className="container px-4 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {servicesData.map((service, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 80, filter: "blur(10px)" }}
                 whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -115,22 +116,23 @@ export default function ServicesPage() {
                     ))}
                   </div>
                 </div>
-                
+
                 {/* Image */}
                 <div className="w-full sm:w-[40%] flex justify-center pb-8 sm:pb-0 transform-gpu transition-transform duration-700 ease-out group-hover/card:scale-105 group-hover/card:-translate-y-2">
-                  <Image 
-                    src={service.image} 
-                    alt={service.title} 
-                    width={291} 
-                    height={274} 
-                    className="w-[70%] sm:w-full max-w-[200px] lg:max-w-none h-auto object-contain drop-shadow-2xl"
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    width={291}
+                    height={274}
+                    style={{ mixBlendMode: "screen" }}
+                    className="w-[70%] sm:w-full max-w-[200px] lg:max-w-none h-auto object-contain mix-blend-screen drop-shadow-[0_10px_25px_rgba(151,149,255,0.3)]"
                   />
                 </div>
 
                 {/* Arrow Button */}
-                <button className="w-10 h-10 lg:w-12.5 lg:h-12.5 backdrop-blur-[10px] absolute bottom-4 right-4 lg:bottom-[16px] lg:right-[16px] cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 group-hover/card:bg-primary duration-400 z-20 group">
+                <Link href={`/services/mobile-app-development`} className="w-10 h-10 lg:w-12.5 lg:h-12.5 backdrop-blur-[10px] absolute bottom-4 right-4 lg:bottom-[16px] lg:right-[16px] cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 group-hover/card:bg-primary duration-400 z-20 group">
                   <IoArrowForwardOutline className="h-5 w-5 -rotate-45 group-hover/card:rotate-0 duration-400 text-white" />
-                </button>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -145,7 +147,7 @@ export default function ServicesPage() {
 
       {/* Adding CallToAction as a placeholder for the next sections */}
       <CallToAction />
-      
+
       <Footer />
     </>
   );
