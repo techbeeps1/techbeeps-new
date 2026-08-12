@@ -21,6 +21,40 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
+function HomeServiceCard({ card, next }: { card: any; next: () => void }) {
+  return (
+    <div
+      className="min-w-[85vw] sm:min-w-91 rounded-[15px] relative bg-[linear-gradient(180deg,#120D25_58%,#291D58_100%)] flex flex-col justify-between overflow-hidden group"
+    >
+      <div className="space-y-3.75 mb-4 px-6 pt-8">
+        <h3 className="text-[25px] leading-7.5 bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_42%,#FFFFFF_59%,#BE9FFF_100%)] bg-clip-text text-transparent">
+          {card.title}
+        </h3>
+        <p className="leading-6.25 text-white/80">{card.desc}</p>
+      </div>
+      <div className="w-full overflow-hidden">
+        <div className="w-full relative">
+          <Image
+            src={card.image}
+            alt={card.title}
+            width={340}
+            height={220}
+            style={{ mixBlendMode: "screen" }}
+            className="mix-blend-screen w-full pointer-events-none drop-shadow-[0_10px_25px_rgba(151,149,255,0.3)]"
+          />
+        </div>
+      </div>
+      <Link
+        onClick={next}
+        className="w-12.5 h-12.5 backdrop-blur-[10px] group/btn absolute bottom-3.75 left-3.75 cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 hover:bg-primary duration-400 z-10"
+        href={`/services/ui-ux-design`}
+      >
+        <IoArrowForwardOutline className="h-5.5 w-5.5 -rotate-45 text-white group-hover/btn:rotate-0 duration-400" />
+      </Link>
+    </div>
+  );
+}
+
 export default function Home() {
   const cards = [
     {
@@ -152,15 +186,15 @@ export default function Home() {
             <ContentSwipUp className="md:text-[20px]">
               We help startups and enterprises build AI tools, Ecommerce platforms and scalable digital products.
             </ContentSwipUp >
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-7.5 mt-8 lg:mt-12.5">
+            <div className="flex flex-row items-center justify-center gap-4 sm:gap-7.5 mt-8 lg:mt-12.5">
 
-              <ButtonSwipUp className="bg-white text-black hover:text-white" url={"/contact-us"}>
+              <ButtonSwipUp className="bg-white sm:text-base text-[15px] text-black hover:text-white" url={"/contact-us"}>
 
                 Get Started
                 <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
               </ButtonSwipUp>
 
-              <ButtonSwipUp className="bg-transparent text-white hover:text-white border-primary border " url={"/services"}>
+              <ButtonSwipUp className="bg-transparent sm:text-base text-[15px] text-white hover:text-white border-primary border " url={"/services"}>
                 Our Services
                 <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
               </ButtonSwipUp>
@@ -214,40 +248,8 @@ export default function Home() {
                 ease: "easeInOut",
               }}
             >
-              {cards.map((card, i) => (
-                <div
-                  key={card.id}
-                  className="min-w-[85vw] sm:min-w-91 rounded-[15px] relative 
-              bg-[linear-gradient(180deg,#120D25_58%,#291D58_100%)] flex flex-col justify-between overflow-hidden
-              "
-                >
-                  <div className="space-y-3.75 mb-4 px-6 pt-8">
-                    <h3
-                      className="text-[25px] leading-7.5 bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_42%,#FFFFFF_59%,#BE9FFF_100%)] 
-  bg-clip-text text-transparent"
-                    >
-                      {card.title}
-                    </h3>
-                    <p className="leading-6.25 text-white/80">{card.desc}</p>
-                  </div>
-                  <div className="w-full">
-                    <Image
-                      src={card.image}
-                      alt={card.title}
-                      width={340}
-                      height={220}
-                      style={{ mixBlendMode: "screen" }}
-                      className=" mix-blend-screen w-full transition-transform duration-500 hover:scale-105 pointer-events-none drop-shadow-[0_10px_25px_rgba(151,149,255,0.3)]"
-                    />
-                  </div>
-                  <Link
-                    onClick={next}
-                    className="w-12.5 h-12.5 backdrop-blur-[10px] group absolute bottom-3.75 left-3.75 cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 hover:bg-primary duration-400 z-10"
-                    href={`/services/mobile-app-development`}
-                  >
-                    <IoArrowForwardOutline className="h-5.5 w-5.5 -rotate-45 text-white group-hover:rotate-0 duration-400" />
-                  </Link>
-                </div>
+              {cards.map((card) => (
+                <HomeServiceCard key={card.id} card={card} next={next} />
               ))}
             </motion.div>
           </div>

@@ -8,35 +8,37 @@ if (typeof window !== "undefined") {
 }
 
 export default function ContentSwipUp({ className='', top="85", children}:{ className?: string,top?:string, children: ReactNode }  ) {
-   const ContentRef = useRef<HTMLDivElement>(null);
- useEffect(() => {
+  const ContentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
     if (!ContentRef.current) return;
 
-    gsap.utils.toArray<HTMLElement>(".hero-sub").forEach((elem, index) => {
-            gsap.fromTo(elem, 
-              { y: 40, opacity: 0 },
-              {
-                y: 0,
-                opacity: 1,
-                duration: 2,
-                ease: "power4.out",
-                delay: index === 0 ? 1.2 : 0,
-                scrollTrigger: {
-                  trigger: elem,
-                  start: `top ${top}%`,
-                  toggleActions: "play none none none",
-                }
-              }
-            );
-          });
-  }, []);
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ContentRef.current, 
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.5,
+          ease: "power4.out",
+          scrollTrigger: {
+            trigger: ContentRef.current,
+            start: `top ${top}%`,
+            toggleActions: "play none none none",
+          }
+        }
+      );
+    }, ContentRef);
+
+    return () => ctx.revert();
+  }, [top]);
 
   return (
     <div ref={ContentRef}>
-    <p className={`${className} hero-sub overflow-hidden text-white leading-[28px]`}>
-      {children}   
+      <p className={`${className} hero-sub overflow-hidden text-white leading-[28px]`}>
+        {children}   
       </p>
-
-   </div>
+    </div>
   );
 }

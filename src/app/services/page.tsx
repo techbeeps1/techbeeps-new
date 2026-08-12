@@ -10,6 +10,7 @@ import LogoMarquee from "../components/LogoMarquee";
 import GsapTextAnimation from "../components/GsapTextAnimation";
 import ContentSwipUp from "../components/ContentSwipUp";
 import Link from "next/link";
+import AppDevelopmentCard from "../components/AppDevelopmentCard";
 
 const servicesData = [
   {
@@ -46,7 +47,7 @@ const servicesData = [
     title: "Python Development",
     desc: "From web backends to AI-powered automation, we deliver tailored Python solutions.",
     tags: ["Python", "FastAPI", "Data Scraping"],
-    image: "/service_python_new.png",
+    image: "/python_dev_card.png",
   },
 ];
 
@@ -99,40 +100,14 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: (index % 2) * 0.2 }}
-                className="relative rounded-[20px] bg-[linear-gradient(90deg,#291D58_0%,#120D25_34%)] overflow-hidden px-[20px] py-[30px] lg:px-[25px] lg:py-[20px] flex flex-col sm:flex-row justify-between gap-6 sm:gap-5 items-center group/card"
               >
-                <div className="w-full sm:w-[55%] space-y-4 relative z-10">
-                  <h3 className="text-[22px] lg:text-[28px] leading-snug bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_42%,#FFFFFF_59%,#BE9FFF_100%)] bg-clip-text text-transparent">
-                    {service.title}
-                  </h3>
-                  <p className="text-white text-sm md:text-[16px] leading-[22px] lg:leading-[26px]">
-                    {service.desc}
-                  </p>
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {service.tags.map((tag, i) => (
-                      <span key={i} className="bg-white/10 px-[14px] py-[6px] lg:px-[18px] lg:py-[8px] rounded-[6px] text-xs lg:text-sm text-white">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Image */}
-                <div className="w-full sm:w-[40%] flex justify-center pb-8 sm:pb-0 transform-gpu transition-transform duration-700 ease-out group-hover/card:scale-105 group-hover/card:-translate-y-2">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    width={291}
-                    height={274}
-                    style={{ mixBlendMode: "screen" }}
-                    className="w-[70%] sm:w-full max-w-[200px] lg:max-w-none h-auto object-contain mix-blend-screen drop-shadow-[0_10px_25px_rgba(151,149,255,0.3)]"
-                  />
-                </div>
-
-                {/* Arrow Button */}
-                <Link href={`/services/mobile-app-development`} className="w-10 h-10 lg:w-12.5 lg:h-12.5 backdrop-blur-[10px] absolute bottom-4 right-4 lg:bottom-[16px] lg:right-[16px] cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 group-hover/card:bg-primary duration-400 z-20 group">
-                  <IoArrowForwardOutline className="h-5 w-5 -rotate-45 group-hover/card:rotate-0 duration-400 text-white" />
-                </Link>
+                <AppDevelopmentCard
+                  title={service.title}
+                  desc={service.desc}
+                  tags={service.tags}
+                  image={service.image}
+                  href={`/services/ui-ux-design`}
+                />
               </motion.div>
             ))}
           </div>

@@ -11,23 +11,29 @@ export default function GsapTextAnimation({ mainText, mainClass = '', textHighli
   const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(".hero-char",
-        { y: 100, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          stagger: 0.05,
-          ease: "power4.out",
-          delay: 0.1,
-          scrollTrigger: {
-            trigger: heroRef.current,
-            start: "top 85%", // Triggers when the top of the element hits 85% down the viewport
-          }
-        }
-      );
+    if (!heroRef.current) return;
 
+    const ctx = gsap.context(() => {
+      const chars = heroRef.current?.querySelectorAll(".hero-char");
+      if (chars && chars.length > 0) {
+        gsap.fromTo(
+          chars,
+          { y: 100, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            stagger: 0.03,
+            ease: "power4.out",
+            delay: 0.1,
+            scrollTrigger: {
+              trigger: heroRef.current,
+              start: "top 85%",
+              toggleActions: "play none none none",
+            }
+          }
+        );
+      }
     }, heroRef);
 
     return () => ctx.revert();

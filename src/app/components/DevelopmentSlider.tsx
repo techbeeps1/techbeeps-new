@@ -76,6 +76,62 @@ const servicesData = [
   },
 ];
 
+function DevelopmentSliderCard({ card }: { card: any }) {
+  return (
+    <div
+      className="p-[4px] group relative rounded-[20px] overflow-hidden shrink-0 w-full md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] 2xl:w-[calc((100%-72px)/4)] flex flex-col before:content-[''] before:absolute before:w-[250%] before:h-[250%] before:-top-[75%] before:-left-[75%] before:bg-[conic-gradient(from_0deg,transparent,#af8df5,transparent,#8b5cf6,transparent,#af8df5,transparent)] before:animate-[rotateBorder_15s_linear_infinite] before:z-0 cursor-pointer"
+    >
+      {/* Image Section */}
+      <div className="relative w-full aspect-[4/3] rounded-t-[16px] overflow-hidden bg-black z-1">
+        <div className="w-full h-full relative overflow-hidden">
+          <Image
+            src={card.image}
+            alt={card.title}
+            width={1024}
+            height={1024}
+            className="object-cover h-full w-full pointer-events-none absolute top-0 left-0 bottom-0 right-0 z-1 translate-x-1/2 scale-x-[2] opacity-0 blur-[10px] group-hover:blur-[0px] transition-all duration-500 ease group-hover:translate-x-0 group-hover:scale-x-100 group-hover:opacity-100"
+            priority
+            unoptimized
+          />
+          <Image
+            src={card.image}
+            alt={card.title}
+            width={1024}
+            height={1024}
+            className="object-cover h-full w-full pointer-events-none blur-[0px] group-hover:opacity-0 group-hover:blur-[10px] group-hover:-translate-x-1/2 group-hover:scale-x-[2] transition-all duration-500 ease"
+            priority
+            unoptimized
+          />
+        </div>
+      </div>
+      <div className="pt-5 px-2.5 pb-2.5 rounded-b-[16px] bg-[#0d0a1b]/96 z-1 flex-1 flex flex-col justify-between">
+        <div className="px-4 pt-3 pb-3">
+          <h3 className="text-[18px] 2xl:text-[21px] font-bold text-white leading-tight">
+            {card.title}
+          </h3>
+        </div>
+        <div className="flex-1 flex flex-col justify-end">
+          {card.features.map((feature: any, idx: number) => {
+            const Icon = feature.icon;
+            return (
+              <div key={idx} className="w-full">
+                {/* Thin divider line before every item */}
+                <div className="h-[1px] w-full bg-white/[0.08]" />
+                <div className="flex items-center gap-4 py-3 px-6 text-white/90">
+                  <Icon className="w-4.5 h-4.5 text-white/70 shrink-0" />
+                  <span className="text-[14px] md:text-[15px] font-medium leading-normal tracking-wide">
+                    {feature.name}
+                  </span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function DevelopmentSlider() {
   const extendedData = [
     ...servicesData,
@@ -102,7 +158,7 @@ export default function DevelopmentSlider() {
     if (containerRef.current && trackRef.current) {
       const containerWidth = containerRef.current.offsetWidth;
       const trackWidth = trackRef.current.scrollWidth;
-      
+
       const firstCard = trackRef.current.children[0] as HTMLElement;
       if (firstCard) {
         const style = window.getComputedStyle(trackRef.current);
@@ -110,7 +166,7 @@ export default function DevelopmentSlider() {
         const w = firstCard.offsetWidth + gap;
         setCardWidth(w);
       }
-      
+
       setMaxDrag(Math.max(0, trackWidth - containerWidth));
     }
   };
@@ -154,31 +210,31 @@ export default function DevelopmentSlider() {
   const handleDragEnd = (event: any, info: any) => {
     const dragOffset = info.offset.x;
     const dragVelocity = info.velocity.x;
-    
+
     // Combine distance and velocity to predict final position
     const projectedDrag = dragOffset + dragVelocity * 0.15;
-    
+
     // Snappy sensitivity threshold (40px on mobile is very comfortable)
     const threshold = Math.min(40, cardWidth / 6);
-    
+
     let newIndex = index;
-    
+
     if (projectedDrag < -threshold) {
       newIndex = index + 1;
     } else if (projectedDrag > threshold) {
       newIndex = index - 1;
     }
-    
+
     const visibleCount = getVisibleCount();
     const maxIndex = Math.max(0, extendedData.length - visibleCount);
-    
+
     // Clamp the new index
     newIndex = Math.max(0, Math.min(newIndex, maxIndex));
-    
+
     // Enforce sliding at most 1 card per gesture for a clean slide show
     if (newIndex > index + 1) newIndex = index + 1;
     if (newIndex < index - 1) newIndex = index - 1;
-    
+
     setIndex(newIndex);
   };
 
@@ -207,90 +263,49 @@ export default function DevelopmentSlider() {
       </div>
 
       {/* Drag Track Window */}
-      <div 
-        ref={containerRef} 
+      <div
+        ref={containerRef}
         className="mx-5 md:mx-[77px] lg:mx-[85px] overflow-hidden"
       >
-          <motion.div
-            ref={trackRef}
-            drag="x"
-            dragConstraints={{ left: -maxDrag, right: 0 }}
-            dragElastic={0.15}
-            onDragEnd={handleDragEnd}
-            animate={controls}
-            transition={{
-              type: "spring",
-              stiffness: 100,
-              damping: 20,
-              mass: 0.8,
-            }}
-            className="flex gap-6  w-full"
-          >
-            {extendedData.map((card) => (
-              <div
-                key={card.id}
-                className="p-[4px] relative rounded-[20px] overflow-hidden shrink-0 w-full md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] 2xl:w-[calc((100%-72px)/4)] flex flex-col before:content-[''] before:absolute before:w-[250%] before:h-[250%] before:-top-[75%] before:-left-[75%] before:bg-[conic-gradient(from_0deg,transparent,#af8df5,transparent,#8b5cf6,transparent,#af8df5,transparent)] before:animate-[rotateBorder_15s_linear_infinite] before:z-0"
-              >
-                {/* Image Section */}
-                <div className="relative w-full aspect-[4/3] rounded-t-[16px] overflow-hidden bg-black z-1">
-                  <Image
-                    src={card.image}
-                    alt={card.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover pointer-events-none transition-transform duration-700 hover:scale-105"
-                    priority
-                    unoptimized
-                  />                  
-                </div> 
-                <div className="pt-5 px-2.5 pb-2.5 rounded-b-[16px] bg-[#0d0a1b]/96 z-1 flex-1 flex flex-col justify-between">              
-                  <div className="px-4 pt-3 pb-3">
-                    <h3 className="text-[18px] 2xl:text-[21px] font-bold text-white leading-tight">
-                      {card.title}
-                    </h3>
-                  </div>
-                  <div className="flex-1 flex flex-col justify-end">
-                    {card.features.map((feature, idx) => {
-                      const Icon = feature.icon;
-                      return (
-                        <div key={idx} className="w-full">
-                          {/* Thin divider line before every item */}
-                          <div className="h-[1px] w-full bg-white/[0.08]" />
-                          <div className="flex items-center gap-4 py-3 px-6 text-white/90">
-                            <Icon className="w-4.5 h-4.5 text-white/70 shrink-0" />
-                            <span className="text-[14px] md:text-[15px] font-medium leading-normal tracking-wide">
-                              {feature.name}
-                            </span>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-
-        {/* Indicator Dots for Mobile */}
-        <div className="flex md:hidden justify-center items-center gap-2.5 mt-8 pointer-events-auto">
-          {servicesData.map((_, i) => {
-            const isActive = index % servicesData.length === i;
-            return (
-              <button
-                key={i}
-                onClick={() => {
-                  const isSecondHalf = index >= servicesData.length;
-                  setIndex(i + (isSecondHalf ? servicesData.length : 0));
-                }}
-                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                  isActive ? "w-6 bg-primary" : "w-2 bg-white/25 hover:bg-white/40"
-                }`}
-                aria-label={`Go to slide ${i + 1}`}
-              />
-            );
-          })}
-        </div>
+        <motion.div
+          ref={trackRef}
+          drag="x"
+          dragConstraints={{ left: -maxDrag, right: 0 }}
+          dragElastic={0.15}
+          onDragEnd={handleDragEnd}
+          animate={controls}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+            mass: 0.8,
+          }}
+          className="flex gap-6  w-full"
+        >
+          {extendedData.map((card) => (
+            <DevelopmentSliderCard key={card.id} card={card} />
+          ))}
+        </motion.div>
       </div>
+
+      {/* Indicator Dots for Mobile */}
+      <div className="flex md:hidden justify-center items-center gap-2.5 mt-8 pointer-events-auto">
+        {servicesData.map((_, i) => {
+          const isActive = index % servicesData.length === i;
+          return (
+            <button
+              key={i}
+              onClick={() => {
+                const isSecondHalf = index >= servicesData.length;
+                setIndex(i + (isSecondHalf ? servicesData.length : 0));
+              }}
+              className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${isActive ? "w-6 bg-primary" : "w-2 bg-white/25 hover:bg-white/40"
+                }`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          );
+        })}
+      </div>
+    </div>
   );
 }

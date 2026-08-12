@@ -19,7 +19,7 @@
   }
 }
 html {
-  scroll-behavior: smooth;
+  /* Scroll behavior managed by Lenis smooth scroll */
 }
 
 
