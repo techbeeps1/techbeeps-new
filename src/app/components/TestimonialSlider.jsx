@@ -245,7 +245,7 @@ export default function TestimonialSlider() {
                   </p>
                   <div className="flex justify-between items-end">
                     <div>
-                      <h4 className="font-semibold text-white leading-[26px]">{t.name}</h4>
+                      <h3 className="font-semibold text-white leading-[26px]">{t.name}</h3>
                       <p className="text-[#9C9C9C] text-sm leading-[26px]">{t.handle}</p>
                     </div>
                     <div className="flex gap-1 text-[#FF5C00] pb-1">
