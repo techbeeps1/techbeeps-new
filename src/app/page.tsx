@@ -16,6 +16,7 @@ import ButtonSwipUp from "./components/ButtonSwipUp";
 import ContentSwipUp from "./components/ContentSwipUp";
 import DevelopmentSlider from "./components/DevelopmentSlider";
 import Link from "next/link";
+import { area } from "framer-motion/client";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -45,6 +46,7 @@ function HomeServiceCard({ card, next }: { card: any; next: () => void }) {
         </div>
       </div>
       <Link
+        aria-label={card.area}
         onClick={next}
         className="w-12.5 h-12.5 backdrop-blur-[10px] group/btn absolute bottom-3.75 left-3.75 cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 hover:bg-primary duration-400 z-10"
         href={`/services/ui-ux-design`}
@@ -62,30 +64,35 @@ export default function Home() {
       title: "UI/UX Design",
       desc: "At TechBeeps Services, we create stunning, user-focused designs.",
       image: "/ui_ux_card.png",
+      area: "/services/ui-ux-design"
     },
     {
       id: "mobile-2",
       title: "Mobile App Development",
       desc: "We offer full-cycle mobile app development services, which means that.",
       image: "/mobile_app_dev_card.png",
+      area: "/services/mobile-app-development"
     },
     {
       id: "web-3",
       title: "Web Development",
       desc: "Get the best online presence through our customized web development.",
       image: "/web_dev_card.png",
+      area: "/services/web-development"
     },
     {
       id: "ai-4",
       title: "AI Solutions",
       desc: "At TechBeeps, we are transforming the way businesses use technology.",
       image: "/ai_solution_card.png",
+      area: "/services/ai-solutions"
     },
     {
       id: "shopify-5",
       title: "Shopify Development",
       desc: "Upgrade your online presence with Best Shopify development company.",
       image: "/shopify_dev_card.png",
+      area: "/services/shopify-development"
     },
   ];
 
@@ -221,6 +228,7 @@ export default function Home() {
             </div>
             <div className="flex gap-3">
               <button
+                aria-label="Go to previous service slider"
                 onClick={prev}
                 className="w-12.5 h-12.5  cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 hover:bg-primary duration-400"
               >
@@ -228,6 +236,7 @@ export default function Home() {
               </button>
 
               <button
+                aria-label="Go to next service slider"
                 onClick={next}
                 className="w-12.5 h-12.5 cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 hover:bg-primary duration-400"
               >
