@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20">
-          
+
           {/* Logo & Description */}
           <div className="space-y-6">
             <Image
@@ -23,19 +23,19 @@ export default function Footer() {
               Techbeeps Services provides IT solutions. Such as Web development, Website design, application design and many more. We create an exclusive website for digital success and growth.
             </p>
             <div className="flex items-center gap-3">
-              <Link href="https://www.facebook.com/techbeepss/" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
+              <Link aria-label="Techbeeps Facebook" href="https://www.facebook.com/techbeepss/" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
                 <FaFacebookF className="w-4 h-4" />
               </Link>
-              <Link href="https://x.com/techbeepss" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
+              <Link aria-label="Techbeeps X" href="https://x.com/techbeepss" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
                 <FaXTwitter className="w-4 h-4" />
               </Link>
-              <Link href="https://www.instagram.com/techbeeps/" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
+              <Link aria-label="Techbeeps Instagram" href="https://www.instagram.com/techbeeps/" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
                 <FaInstagram className="w-4 h-4" />
               </Link>
-              <Link href="https://www.youtube.com/@techbeepss" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
+              <Link aria-label="Techbeeps Youtube" href="https://www.youtube.com/@techbeepss" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
                 <FaYoutube className="w-4 h-4" />
               </Link>
-              <Link href="https://www.linkedin.com/company/techbeeps/posts/?feedView=all" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
+              <Link aria-label="Techbeeps Linkedin" href="https://www.linkedin.com/company/techbeeps/posts/?feedView=all" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary hover:border-primary duration-300">
                 <FaLinkedinIn className="w-4 h-4" />
               </Link>
             </div>
