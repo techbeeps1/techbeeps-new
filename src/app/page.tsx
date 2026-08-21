@@ -168,7 +168,7 @@ export default function Home() {
       <section className="relative min-h-screen pt-[200px] pb-[100px] flex items-center justify-center text-center overflow-hidden bg-[#05010f] text-white">
         <Image
           src="/bg-img.png"
-          alt="BG Banner"
+          alt="TechBeeps AI-Powered Digital Solutions Hero Banner"
           fill
           priority
           className="object-cover"
@@ -214,7 +214,7 @@ export default function Home() {
                 <GsapTextAnimation mainText={"Services and Solutions <br/> We Provide"} mainClass="flex flex-wrap " />
               </h2>
               <ContentSwipUp className="max-w-[500px] w-full">
-                help you to build website company that is modern, user friendly,
+                Help you to build website company that is modern, user friendly,
                 good CEO, and Clean design
               </ContentSwipUp>
 
@@ -259,13 +259,13 @@ export default function Home() {
       <section className="relative z-1 py-25 border-t border-white/12">
         <div className=" container">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-5 mb-8.75">
-            <div className="space-y-3 md:space-y-5">
+            <div className="space-y-3 md:space-y-5 lg:w-auto md:w-[70%] w-full">
               <h2
                 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white "              >
 
                 <GsapTextAnimation mainText={"Featured Portfolio: Design & <br/> AI Innovations"} mainClass="flex flex-wrap " />
               </h2>
-              <ContentSwipUp className="max-w-[500px] w-full">
+              <ContentSwipUp className="max-w-[500px] w-full lg:w-auto md:w-[28%] w-full">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's.
               </ContentSwipUp>
@@ -318,7 +318,7 @@ export default function Home() {
                       <div className="relative group ">
                         <img
                           src={item.image}
-                          alt=""
+                          alt={item.title}
                           className="w-full rounded-[10px]"
                         />
 
@@ -426,7 +426,7 @@ export default function Home() {
             <div className="relative shadow-2xl border border-white/5">
               <Image
                 src="/promise.jpg"
-                alt="promise"
+                alt="TechBeeps Commitment to Quality and Client Satisfaction"
                 width={621}
                 height={414}
                 className="w-full h-auto object-cover rounded-[20px] "

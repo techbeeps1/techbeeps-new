@@ -88,7 +88,7 @@ export default function AboutUs() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/services-bg.jpg"
-            alt="Services Background"
+            alt="TechBeeps About Us Hero Background"
             fill
             priority
             className="object-cover object-top"
@@ -162,7 +162,7 @@ export default function AboutUs() {
                   <div className="relative shadow-2xl border border-white/5">
                     <Image
                       src="/about-img.jpg"
-                      alt="About"
+                      alt="About TechBeeps - Digital Solutions and Client Satisfaction"
                       width={621}
                       height={414}
                       className="w-full h-auto object-cover rounded-[20px] "

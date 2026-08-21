@@ -8,7 +8,7 @@ import { BsArrowRightCircle, BsCheckAll } from "react-icons/bs";
 import GsapTextAnimation from "@/app/components/GsapTextAnimation";
 const faqs = [
     {
-        question: "What is a UI UX design agency?",
+        question: "What is a UI UX desig  tn agency?",
         answer: "A UI /UX app development agency is chargeable for developing consumer experiences that enhance digital merchandise, making them simpler to apply and extra enjoyable for customers. Such organizations may help corporations in building personal interfaces that can be simple to grasp via builders and might encourage customers to agree with them on various wishes, preferences, and business goals. The evaluation does not recommend any precise organization and does not assure the same consequences for every consumer. It is vital to base the selection of an employer on individual requirements, alternatives, and commercial enterprise objectives, as opposed to just focusing on personal enjoyment and consumer interface layout."
     },
     {
@@ -31,7 +31,7 @@ const faqs = [
 
 const uiUxServices = [
     {
-        title: "Custom Web Design & Development",
+        itle: "Custom Web Design & Development",
         desc: "We create UI and UX design custom websites with great attention to creativity and detail. We design websites specifically for you. Make sure the digital experience for your brand is smooth and stands out.",
         image: "/icon-1.svg",
     },
@@ -72,7 +72,7 @@ export default function ServicesPage() {
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/services-bg.jpg"
-                        alt="Services Background"
+                        alt="TechBeeps UI/UX Design Services Background"
                         fill
                         priority
                         className="object-cover object-top"
@@ -111,7 +111,7 @@ export default function ServicesPage() {
                     {/* Section Heading */}
                     <div className="text-center max-w-4xl mx-auto mb-16 space-y-4">
                         <h2 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white">
-                            <GsapTextAnimation mainText={"Our Ui Ux Design Services <br/> and UX Consulting"} mainClass="flex flex-wrap justify-center" />
+                            <GsapTextAnimation mainText={"Our Ui/Ux Design Services <br/> and Ux Consulting"} mainClass="flex flex-wrap justify-center" />
                         </h2>
                         <p className="text-white text-sm md:text-base leading-snug lg:leading-[28px] max-w-[1000px] mx-auto">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
@@ -148,7 +148,7 @@ export default function ServicesPage() {
                                                     src={item.image}
                                                     width={32}
                                                     height={32}
-                                                    alt="icon"
+                                                    alt={`${item.title} icon`}
                                                     className="w-[24px] lg:w-[32px] h-auto relative z-10 transition-transform duration-500 group-hover:scale-110"
                                                 />
                                             </div>
@@ -218,7 +218,7 @@ export default function ServicesPage() {
                         <div className="relative shadow-2xl border border-white/5">
                             <Image
                                 src="/promise.jpg"
-                                alt="promise"
+                                alt="TechBeeps Commitment to Quality and Client Satisfaction"
                                 width={621}
                                 height={414}
                                 className="w-full h-auto object-cover rounded-[20px] "

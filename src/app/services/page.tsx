@@ -61,7 +61,7 @@ export default function ServicesPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/services-bg.jpg"
-            alt="Services Background"
+            alt="TechBeeps Services Hero Background"
             fill
             priority
             className="object-cover object-top"

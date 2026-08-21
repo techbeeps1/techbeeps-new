@@ -79,7 +79,7 @@ const servicesData = [
 function DevelopmentSliderCard({ card }: { card: any }) {
   return (
     <div
-      className="p-[4px] group relative rounded-[20px] overflow-hidden shrink-0 w-full md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] 2xl:w-[calc((100%-72px)/4)] flex flex-col before:content-[''] before:absolute before:w-[250%] before:h-[250%] before:-top-[75%] before:-left-[75%] before:bg-[conic-gradient(from_0deg,transparent,#af8df5,transparent,#8b5cf6,transparent,#af8df5,transparent)] before:animate-[rotateBorder_15s_linear_infinite] before:z-0 cursor-pointer"
+      className="p-[4px] group relative rounded-[20px] overflow-hidden shrink-0 w-full md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] 2xl:w-[calc((100%-72px)/4)] flex flex-col before:content-[''] before:absolute before:w-[250%] before:h-[250%] before:-top-[75%] before:-left-[75%] before:bg-[conic-gradient(from_0deg,transparent,#af8df5,transparent,#8b5cf6,transparent,#af8df5,transparent)] before:animate-[rotateBorder_15s_linear_infinite] before:z-0"
     >
       {/* Image Section */}
       <div className="relative w-full aspect-[4/3] rounded-t-[16px] overflow-hidden bg-black z-1">
@@ -110,7 +110,7 @@ function DevelopmentSliderCard({ card }: { card: any }) {
             {card.title}
           </h3>
         </div>
-        <div className="flex-1 flex flex-col justify-end">
+        <div className="flex-1 flex flex-col">
           {card.features.map((feature: any, idx: number) => {
             const Icon = feature.icon;
             return (

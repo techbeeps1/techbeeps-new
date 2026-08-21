@@ -296,7 +296,7 @@ export default function ContactUs() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/services-bg.jpg"
-            alt="Services Background"
+            alt="TechBeeps Contact Us Hero Background"
             fill
             priority
             className="object-cover object-top"
@@ -458,7 +458,7 @@ export default function ContactUs() {
                               <div className="w-5.5 h-5.5 rounded-full overflow-hidden border border-white/10 shrink-0 relative flex items-center justify-center bg-white/5">
                                 <img
                                   src={`https://flagcdn.com/w40/${selectedCountry.id}.png`}
-                                  alt={selectedCountry.name}
+                                  alt={`${selectedCountry.name} flag`}
                                   className="w-full h-full object-cover scale-[1.1]"
                                 />
                               </div>
@@ -515,7 +515,7 @@ export default function ContactUs() {
                                     <div className="w-5.5 h-5.5 rounded-full overflow-hidden border border-white/10 shrink-0 relative flex items-center justify-center bg-white/5">
                                       <img
                                         src={`https://flagcdn.com/w40/${country.id}.png`}
-                                        alt={country.name}
+                                        alt={`${country.name} flag`}
                                         className="w-full h-full object-cover scale-[1.1]"
                                         loading="lazy"
                                       />

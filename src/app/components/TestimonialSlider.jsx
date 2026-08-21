@@ -232,7 +232,7 @@ export default function TestimonialSlider() {
               >
                 <img
                   src={t.image}
-                  alt={t.name}
+                  alt={`Client testimonial - ${t.name}`}
                   height={202}
                   width={190}
                   className="rounded-[10px] shrink-0"
