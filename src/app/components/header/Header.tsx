@@ -47,6 +47,7 @@ export default function Header() {
             alt="TechBeeps Logo"          
             width={245}
             height={40}
+            priority
             className="w-[180px] sm:w-[245px] h-auto"                  
           />
         </Link>

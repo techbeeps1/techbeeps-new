@@ -12,7 +12,10 @@ function LenisGsapSync() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       gsap.registerPlugin(ScrollTrigger);
-      ScrollTrigger.refresh();
+      const timer = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 500);
+      return () => clearTimeout(timer);
     }
   }, []);
 

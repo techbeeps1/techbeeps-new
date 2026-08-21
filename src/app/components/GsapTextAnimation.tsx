@@ -13,30 +13,31 @@ export default function GsapTextAnimation({ mainText, mainClass = '', textHighli
   useEffect(() => {
     if (!heroRef.current) return;
 
-    const ctx = gsap.context(() => {
-      const chars = heroRef.current?.querySelectorAll(".hero-char");
-      if (chars && chars.length > 0) {
-        gsap.fromTo(
-          chars,
-          { y: 100, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            stagger: 0.03,
-            ease: "power4.out",
-            delay: 0.1,
+    let ctx: gsap.Context | undefined;
+    const rafId = requestAnimationFrame(() => {
+      ctx = gsap.context(() => {
+        const chars = heroRef.current?.querySelectorAll(".hero-char");
+        if (chars && chars.length > 0) {
+          gsap.from(chars, {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.02,
+            ease: "power3.out",
             scrollTrigger: {
               trigger: heroRef.current,
-              start: "top 85%",
+              start: "top 90%",
               toggleActions: "play none none none",
-            }
-          }
-        );
-      }
-    }, heroRef);
+            },
+          });
+        }
+      }, heroRef);
+    });
 
-    return () => ctx.revert();
+    return () => {
+      cancelAnimationFrame(rafId);
+      ctx?.revert();
+    };
   }, []);
   return (
     <span ref={heroRef} className={`${mainClass}`} >

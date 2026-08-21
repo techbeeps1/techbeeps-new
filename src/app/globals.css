@@ -26,7 +26,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto), Arial, Helvetica, sans-serif;
 }
 .container{
   max-width: 1480px;
@@ -69,39 +69,44 @@ body {
   height: 130px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) scale(.4);
+  transform: translate(-50%, -50%) scale(.4) translateZ(0);
   border-radius: 9999px;
   background: #854cff;
   filter: blur(30px);
   animation: radialZoom 4s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 @keyframes radialZoom {
   from {
-    transform: translate(-50%, -50%) scale(.4);
+    transform: translate(-50%, -50%) scale(.4) translateZ(0);
   }
   to {
-    transform: translate(-50%, -50%) scale(1.6);
+    transform: translate(-50%, -50%) scale(1.6) translateZ(0);
   }
 }
 
-.anistar{
-  offset-path:path("M -50 0 A 50 50 0 0 1 50 0");
-  offset-distance:0%;
-  offset-rotate:0deg;
-  opacity:0;
-  animation:starArc 3s cubic-bezier(.6,0,.4,1) infinite;
+.anistar {
+  offset-path: path("M -50 0 A 50 50 0 0 1 50 0");
+  offset-distance: 0%;
+  offset-rotate: 0deg;
+  opacity: 0;
+  animation: starArc 3s cubic-bezier(.6,0,.4,1) infinite;
+  will-change: transform, opacity;
 }
 
-.anistar2{
-  offset-path:path("M 0 0 A 30 40 0 0 1 0 -43");
-  offset-distance:0%;
-  offset-rotate:0deg;
-  opacity:0;
-  animation:starArc2 3s cubic-bezier(.6,0,.4,1) infinite;
+.anistar2 {
+  offset-path: path("M 0 0 A 30 40 0 0 1 0 -43");
+  offset-distance: 0%;
+  offset-rotate: 0deg;
+  opacity: 0;
+  animation: starArc2 3s cubic-bezier(.6,0,.4,1) infinite;
+  will-change: transform, opacity;
 }
-.blur-circle{ 
+.blur-circle { 
   animation: float 10s infinite ease-in-out alternate;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
   

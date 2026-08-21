@@ -87,20 +87,18 @@ function DevelopmentSliderCard({ card }: { card: any }) {
           <Image
             src={card.image}
             alt={card.title}
-            width={1024}
-            height={1024}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, (max-width: 1536px) 33vw, 25vw"
+            loading="lazy"
             className="object-cover h-full w-full pointer-events-none absolute top-0 left-0 bottom-0 right-0 z-1 translate-x-1/2 scale-x-[2] opacity-0 blur-[10px] group-hover:blur-[0px] transition-all duration-500 ease group-hover:translate-x-0 group-hover:scale-x-100 group-hover:opacity-100"
-            priority
-            unoptimized
           />
           <Image
             src={card.image}
             alt={card.title}
-            width={1024}
-            height={1024}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, (max-width: 1536px) 33vw, 25vw"
+            loading="lazy"
             className="object-cover h-full w-full pointer-events-none blur-[0px] group-hover:opacity-0 group-hover:blur-[10px] group-hover:-translate-x-1/2 group-hover:scale-x-[2] transition-all duration-500 ease"
-            priority
-            unoptimized
           />
         </div>
       </div>

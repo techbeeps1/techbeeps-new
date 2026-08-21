@@ -4,7 +4,9 @@ import "./globals.css";
 import SmoothScroll from "./components/SmoothScroll";
 const roboto = Roboto({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
@@ -19,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className={`${roboto.className} min-h-full flex flex-col`}>
+      <body className={`${roboto.variable} ${roboto.className} min-h-full flex flex-col font-sans`}>
         <SmoothScroll>
           {children}
         </SmoothScroll>

@@ -1,10 +1,8 @@
 "use client";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { BsArrowRightCircle, BsCheckAll } from "react-icons/bs";
 import Header from "./components/header/Header";
-import TestimonialSlider from "./components/TestimonialSlider";
-import LogoMarquee from "./components/LogoMarquee";
-import CallToAction from "./components/CallToAction";
 import Footer from "./components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -14,9 +12,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import GsapTextAnimation from "./components/GsapTextAnimation";
 import ButtonSwipUp from "./components/ButtonSwipUp";
 import ContentSwipUp from "./components/ContentSwipUp";
-import DevelopmentSlider from "./components/DevelopmentSlider";
 import Link from "next/link";
-import { area } from "framer-motion/client";
+import HeroLiningBackground from "./components/HeroLiningBackground";
+
+// Dynamic chunking for below-the-fold heavy components (SSR preserved for SEO & zero visual shift)
+const DevelopmentSlider = dynamic(() => import("./components/DevelopmentSlider"), { ssr: true });
+const TestimonialSlider = dynamic(() => import("./components/TestimonialSlider"), { ssr: true });
+const LogoMarquee = dynamic(() => import("./components/LogoMarquee"), { ssr: true });
+const CallToAction = dynamic(() => import("./components/CallToAction"), { ssr: true });
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -96,32 +99,32 @@ export default function Home() {
     {
       title: "Techbeeps CRM",
       category: "Web Development",
-      image: "/portfolio-img-1.jpg",
+      image: "/portfolio-img-1.jpg",      
     },
     {
       title: "Empowering Legal Solutions",
       category: "Web Development",
-      image: "/portfolio-img-2.jpg",
+      image: "/portfolio-img-2.jpg",      
     },
     {
       title: "Ananta Mobile App Development",
       category: "App Development",
-      image: "/portfolio-img-3.jpg",
+      image: "/portfolio-img-3.jpg",      
     },
     {
       title: "Optimal Rating",
       category: "Mean Stack",
-      image: "/portfolio-img-4.jpg",
+      image: "/portfolio-img-4.jpg",      
     },
     {
       title: "eCommerce Marketplace",
       category: "Shopify",
-      image: "/portfolio-img-5.jpg",
+      image: "/portfolio-img-5.jpg",      
     },
     {
       title: "Passamani & Letang PLLC",
       category: "React.js",
-      image: "/portfolio-img-6.jpg",
+      image: "/portfolio-img-6.jpg",      
     },
   ];
   // ✅ ADD THIS
@@ -137,13 +140,7 @@ export default function Home() {
     <>
       <Header />
       <section className="relative min-h-screen pt-[200px] pb-[100px] flex items-center justify-center text-center overflow-hidden bg-[#05010f] text-white">
-        <Image
-          src="/bg-img.png"
-          alt="TechBeeps AI-Powered Digital Solutions Hero Banner"
-          fill
-          priority
-          className="object-cover"
-        />
+        <HeroLiningBackground />
         <div className="container">
           <div className="space-y-6.25 relative z-1">
             <h1
@@ -238,6 +235,8 @@ export default function Home() {
                         alt={card.title}
                         width={340}
                         height={220}
+                        loading="lazy"
+                        sizes="(max-width: 640px) 85vw, 364px"
                         style={{ mixBlendMode: "screen" }}
                         className="mix-blend-screen w-full pointer-events-none drop-shadow-[0_10px_25px_rgba(151,149,255,0.3)]"
                       />
@@ -318,10 +317,14 @@ export default function Home() {
                     >
                       {/* IMAGE */}
                       <div className="relative group ">
-                        <img
+                        <Image
                           src={item.image}
                           alt={item.title}
-                          className="w-full rounded-[10px]"
+                          width={400}
+                          height={260}
+                          loading="lazy"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="w-full h-auto object-cover rounded-[10px]"
                         />
 
                         {/* HOVER OVERLAY */}
@@ -431,6 +434,8 @@ export default function Home() {
                 alt="TechBeeps Commitment to Quality and Client Satisfaction"
                 width={621}
                 height={414}
+                loading="lazy"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="w-full h-auto object-cover rounded-[20px] "
               />
               <div
