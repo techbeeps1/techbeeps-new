@@ -31,7 +31,7 @@ const faqs = [
 
 const uiUxServices = [
     {
-        itle: "Custom Web Design & Development",
+        title: "Custom Web Design & Development",
         desc: "We create UI and UX design custom websites with great attention to creativity and detail. We design websites specifically for you. Make sure the digital experience for your brand is smooth and stands out.",
         image: "/icon-1.svg",
     },

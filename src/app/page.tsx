@@ -31,35 +31,35 @@ export default function Home() {
       title: "UI/UX Design",
       desc: "At TechBeeps Services, we create stunning, user-focused designs.",
       image: "/ui_ux_card.png",
-      area: "/services/ui-ux-design"
+      url: "/services/ui-ux-design",
     },
     {
       id: "mobile-2",
       title: "Mobile App Development",
       desc: "We offer full-cycle mobile app development services, which means that.",
       image: "/mobile_app_dev_card.png",
-      area: "/services/mobile-app-development"
+      url: "/services/mobile-app-development",
     },
     {
       id: "web-3",
       title: "Web Development",
       desc: "Get the best online presence through our customized web development.",
       image: "/web_dev_card.png",
-      area: "/services/web-development"
+      url: "/services/web-development",
     },
     {
       id: "ai-4",
       title: "AI Solutions",
       desc: "At TechBeeps, we are transforming the way businesses use technology.",
       image: "/ai_solution_card.png",
-      area: "/services/ai-solutions"
+      url: "/services/ai-solutions",
     },
     {
       id: "shopify-5",
       title: "Shopify Development",
       desc: "Upgrade your online presence with Best Shopify development company.",
       image: "/shopify_dev_card.png",
-      area: "/services/shopify-development"
+      url: "/services/shopify-development",
     },
   ];
 
@@ -99,32 +99,32 @@ export default function Home() {
     {
       title: "Techbeeps CRM",
       category: "Web Development",
-      image: "/portfolio-img-1.jpg",      
+      image: "/portfolio-img-1.jpg",
     },
     {
       title: "Empowering Legal Solutions",
       category: "Web Development",
-      image: "/portfolio-img-2.jpg",      
+      image: "/portfolio-img-2.jpg",
     },
     {
       title: "Ananta Mobile App Development",
       category: "App Development",
-      image: "/portfolio-img-3.jpg",      
+      image: "/portfolio-img-3.jpg",
     },
     {
       title: "Optimal Rating",
       category: "Mean Stack",
-      image: "/portfolio-img-4.jpg",      
+      image: "/portfolio-img-4.jpg",
     },
     {
       title: "eCommerce Marketplace",
       category: "Shopify",
-      image: "/portfolio-img-5.jpg",      
+      image: "/portfolio-img-5.jpg",
     },
     {
       title: "Passamani & Letang PLLC",
       category: "React.js",
-      image: "/portfolio-img-6.jpg",      
+      image: "/portfolio-img-6.jpg",
     },
   ];
   // ✅ ADD THIS
@@ -243,10 +243,9 @@ export default function Home() {
                     </div>
                   </div>
                   <Link
-                    aria-label={card.area}
                     onClick={next}
                     className="w-12.5 h-12.5 backdrop-blur-[10px] group/btn absolute bottom-3.75 left-3.75 cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 hover:bg-primary duration-400 z-10"
-                    href={`/services/ui-ux-design`}
+                    href={card.url}
                   >
                     <IoArrowForwardOutline className="h-5.5 w-5.5 -rotate-45 text-white group-hover/btn:rotate-0 duration-400" />
                   </Link>
@@ -266,7 +265,7 @@ export default function Home() {
 
                 <GsapTextAnimation mainText={"Featured Portfolio: Design & <br/> AI Innovations"} mainClass="flex flex-wrap " />
               </h2>
-              <ContentSwipUp className="max-w-[500px] w-full lg:w-auto md:w-[28%] w-full">
+              <ContentSwipUp className="max-w-[500px] w-full lg:w-auto w-full">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's.
               </ContentSwipUp>

@@ -150,10 +150,7 @@ export default function Header() {
                         <AiButton className="scale-[0.35] mr-0" />
                       </div>
                       <span className="text-lg font-medium text-white group-hover:text-primary transition-all duration-300 tracking-wide flex items-center gap-2">
-                        AI Solutions
-                        <span className="text-[10px] uppercase font-semibold px-2 py-0.5 rounded-full bg-primary/25 text-[#d8c2ff] border border-primary/40">
-                          Highlight
-                        </span>
+                        AI Solutions                      
                       </span>
                     </Link>
                   </motion.li>
