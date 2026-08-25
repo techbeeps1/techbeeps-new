@@ -44,7 +44,7 @@ export default function GsapTextAnimation({ mainText, mainClass = '', textHighli
 
       {mainText.split(" ").map((word, wordIdx) => (
         word == '<br/>' ?
-          <span key={word + wordIdx} className="w-full"></span>
+          <span key={word + wordIdx} className="sm:w-full w-auto  "></span>
           : <span key={word + wordIdx} className={`mr-2 flex overflow-hidden ${textHighlightIndex.includes(wordIdx) ? 'text-primary' : ""}`}>
             {word.split("").map((char, charIdx) => (
               <span key={charIdx + word} className="hero-char inline-block ">

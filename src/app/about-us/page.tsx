@@ -24,7 +24,7 @@ const countersData = [
   },
   {
     label: "Happy Clients ",
-    value: 78 ,
+    value: 78,
     suffix: "%",
   },
   {
@@ -53,10 +53,10 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
       const animateCount = (timestamp: number) => {
         if (!startTime) startTime = timestamp;
         const progress = Math.min((timestamp - startTime) / duration, 1);
-        
+
         // Easing function: easeOutQuad
         const easeProgress = progress * (2 - progress);
-        
+
         setCount(Math.floor(easeProgress * value));
 
         if (progress < 1) {
@@ -107,10 +107,10 @@ export default function AboutUs() {
         <div className="container relative z-10 px-4 mt-auto">
           <div className="backdrop-blur-[25px] rounded-[30px] p-6 md:p-8 lg:p-[40px] bg-[#868686]/10 ">
             <h1 className="text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[97px] text-white mb-4 lg:mb-6">
-              <GsapTextAnimation mainText={"About Us"}  mainClass="flex flex-wrap "/>
-            </h1>            
+              <GsapTextAnimation mainText={"About Us"} mainClass="flex flex-wrap " />
+            </h1>
             <ContentSwipUp className="md:text-[20px]" top="100">
-              Our goal is to assist businesses in swiftly embracing new technologies, unraveling intricate challenges that arise in the course of digital progress, and coordinating continuous innovation efforts. 
+              Our goal is to assist businesses in swiftly embracing new technologies, unraveling intricate challenges that arise in the course of digital progress, and coordinating continuous innovation efforts.
             </ContentSwipUp>
           </div>
         </div>
@@ -123,13 +123,11 @@ export default function AboutUs() {
             {countersData.map((item, index) => (
               <div
                 key={index}
-                className={`bg-[#111113] border border-white/5 rounded-[20px] py-9 px-6 text-center transition-all duration-355 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 ${
-                  index === 4 ? "col-span-2 md:col-span-1" : ""
-                }`}
+                className={`bg-[#111113] border border-white/5 rounded-[20px] py-9 px-6 text-center transition-all duration-355 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 ${index === 4 ? "col-span-2 md:col-span-1" : ""
+                  }`}
               >
-                <span className={`text-[12px] md:text-sm font-semibold tracking-wider text-white/50 mb-3 block ${
-                  item.isMixedCase ? "" : "uppercase"
-                }`}>
+                <span className={`text-[12px] md:text-sm font-semibold tracking-wider text-white/50 mb-3 block ${item.isMixedCase ? "" : "uppercase"
+                  }`}>
                   {item.label}
                 </span>
                 <div className="text-[36px] sm:text-[42px] lg:text-[50px] font-bold text-white leading-none font-sans">
@@ -142,47 +140,47 @@ export default function AboutUs() {
       </section>
       <section className="bg-black text-white">
         <div className="container">
-              <div className=" flex flex-col lg:flex-row items-center gap-16">
-                {/* Left Content */}
-                <div className="flex-1 space-y-10">
-                  <div className="space-y-6">             
-                    <h2
-                      className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white "              >
-                     
-                      <GsapTextAnimation mainText={"We Focus on the Needs to <br/> Provide 100% Satisfaction"} mainClass="flex flex-wrap "/>
-                    </h2>            
-                     <ContentSwipUp>
-                        We focus on the needs of our clients to provide 100% satisfaction. Our acceptance as a reputed web designing company lays within our core of services, i.e. Website Designing, Graphics Designing, Ecommerce Websites, PHP Web Development, CMS Systems, Laravel Development, ERP and CRM Development, API development and Integration, WordPress Templates, theme development, plugin development, etc. We combines web & native mobile applications using hybrid platform. We also offers nativemobile application development for both Android and iOS.
-                     </ContentSwipUp>
-                  </div>                
-                </div>
-      
-                {/* Right Image */}
-                <div className="flex-1 w-full">
-                  <div className="relative shadow-2xl border border-white/5">
-                    <Image
-                      src="/about-img.jpg"
-                      alt="About TechBeeps - Digital Solutions and Client Satisfaction"
-                      width={621}
-                      height={414}
-                      className="w-full h-auto object-cover rounded-[20px] "
-                    />
-                    <div 
-                      className="absolute inset-0 rounded-[20px] pointer-events-none"
-                      style={{ background: "linear-gradient(270deg, #000000 2.88%, rgba(7, 7, 7, 0) 48.12%, #070707 98.14%)" }}
-                    />
-                  </div>
-                </div>
+          <div className=" flex flex-col lg:flex-row items-center gap-16">
+            {/* Left Content */}
+            <div className="flex-1 space-y-10">
+              <div className="space-y-6">
+                <h2
+                  className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white "              >
+
+                  <GsapTextAnimation mainText={"We Focus on the Needs to <br/> Provide 100% Satisfaction"} mainClass="flex flex-wrap " />
+                </h2>
+                <ContentSwipUp>
+                  We focus on the needs of our clients to provide 100% satisfaction. Our acceptance as a reputed web designing company lays within our core of services, i.e. Website Designing, Graphics Designing, Ecommerce Websites, PHP Web Development, CMS Systems, Laravel Development, ERP and CRM Development, API development and Integration, WordPress Templates, theme development, plugin development, etc. We combines web & native mobile applications using hybrid platform. We also offers nativemobile application development for both Android and iOS.
+                </ContentSwipUp>
               </div>
+            </div>
+
+            {/* Right Image */}
+            <div className="flex-1 w-full">
+              <div className="relative shadow-2xl border border-white/5">
+                <Image
+                  src="/about-img.jpg"
+                  alt="About TechBeeps - Digital Solutions and Client Satisfaction"
+                  width={621}
+                  height={414}
+                  className="w-full h-auto object-cover rounded-[20px] "
+                />
+                <div
+                  className="absolute inset-0 rounded-[20px] pointer-events-none"
+                  style={{ background: "linear-gradient(270deg, #000000 2.88%, rgba(7, 7, 7, 0) 48.12%, #070707 98.14%)" }}
+                />
               </div>
-            </section>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* TestimonialSlider */}
       <TestimonialSlider />
 
       {/* Adding CallToAction as a placeholder for the next sections */}
       <CallToAction />
-      
+
       <Footer />
     </>
   );

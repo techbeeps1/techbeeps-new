@@ -11,6 +11,7 @@ import GsapTextAnimation from "../components/GsapTextAnimation";
 import ContentSwipUp from "../components/ContentSwipUp";
 import Link from "next/link";
 import AppDevelopmentCard from "../components/AppDevelopmentCard";
+import { url } from "inspector";
 
 const servicesData = [
   {
@@ -18,36 +19,42 @@ const servicesData = [
     desc: "At TechBeeps Services, we create stunning, intuitive, and user-focused designs.",
     tags: ["UI/UX", "Figma Design", "Prototyping"],
     image: "/ui_ux_card.png",
+    url: "/services/ui-ux-design",
   },
   {
     title: "Mobile App Development",
     desc: "We offer full-cycle mobile app development services for iOS and Android.",
     tags: ["React Native", "Flutter", "iOS & Android"],
     image: "/mobile_app_dev_card.png",
+    url: "/services/mobile-app-development",
   },
   {
     title: "Web Development",
     desc: "Get the best online presence through our customized, high-performance web development.",
     tags: ["Next.js", "React.js", "Full Stack"],
     image: "/web_dev_card.png",
+    url: "/services/web-development",
   },
   {
     title: "AI Solutions",
     desc: "At TechBeeps, we are transforming the way businesses use technology through AI.",
     tags: ["AI Agents", "LLM Integration", "Automation"],
     image: "/ai_solution_card.png",
+    url: "/services/ai-solutions",
   },
   {
     title: "Shopify Development",
     desc: "Upgrade your online store presence with high-converting custom Shopify development.",
     tags: ["E-Commerce", "Shopify Plus", "Custom Themes"],
     image: "/shopify_dev_card.png",
+    url: "/services/shopify-development",
   },
   {
     title: "Python Development",
     desc: "From web backends to AI-powered automation, we deliver tailored Python solutions.",
     tags: ["Python", "FastAPI", "Data Scraping"],
     image: "/python_dev_card.png",
+    url: "/services/python-development",
   },
 ];
 
@@ -106,7 +113,7 @@ export default function ServicesPage() {
                   desc={service.desc}
                   tags={service.tags}
                   image={service.image}
-                  href={`/services/ui-ux-design`}
+                  href={service.url}
                 />
               </motion.div>
             ))}

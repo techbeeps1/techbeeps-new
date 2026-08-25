@@ -102,7 +102,7 @@ function DevelopmentSliderCard({ card }: { card: any }) {
           />
         </div>
       </div>
-      <div className="pt-5 px-2.5 pb-2.5 rounded-b-[16px] bg-[#0d0a1b]/96 z-1 flex-1 flex flex-col justify-between">
+      <div className="pt-5 px-2.5 pb-2.5 rounded-b-[16px] bg-[#0d0a1b]/85 z-1 flex-1 flex flex-col justify-between">
         <div className="px-4 pt-3 pb-3">
           <h3 className="text-[18px] 2xl:text-[21px] font-bold text-white leading-tight">
             {card.title}

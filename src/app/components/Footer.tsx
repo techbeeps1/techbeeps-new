@@ -46,11 +46,11 @@ export default function Footer() {
             <h3 className="bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_42%,#FFFFFF_59%,#BE9FFF_100%)] 
   bg-clip-text text-transparent text-[22px] font-medium mb-6">Services</h3>
             <ul className="space-y-3">
-              <li><Link href="#" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">AI Solutions</Link></li>
-              <li><Link href="#" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Python</Link></li>
-              <li><Link href="#" className="ttext-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Shopify Development</Link></li>
-              <li><Link href="#" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Mobile App development</Link></li>
-              <li><Link href="#" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Web Development</Link></li>
+              <li><Link href="/services/ai-solutions" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">AI Solutions</Link></li>
+              <li><Link href="/services/python-development" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Python</Link></li>
+              <li><Link href="/services/shopify-development" className="ttext-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Shopify Development</Link></li>
+              <li><Link href="/services/mobile-app-development" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Mobile App development</Link></li>
+              <li><Link href="/services/web-development" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Web Development</Link></li>
               <li><Link href="/services/ui-ux-design" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">UI/UX Design</Link></li>
             </ul>
           </div>
@@ -78,7 +78,7 @@ export default function Footer() {
               </li>
               <li className="grid grid-cols-[80px_1fr] text-[15px] leading-[24px] font-normal text-white hover:text-primary duration-300">
                 <span>Whatsapp</span>
-                <span>: <Link href="tel:+918112269797">+91 811 226 9797</Link></span>
+                <span>: <Link href="https://wa.me/+918112269797" aria-label="Whatsapp">+91 811 226 9797</Link></span>
               </li>
               <li className="grid grid-cols-[80px_1fr] text-[15px] leading-[24px] font-normal text-white hover:text-primary duration-300">
                 <span>Email</span>
