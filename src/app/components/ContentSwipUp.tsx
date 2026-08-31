@@ -25,6 +25,7 @@ export default function ContentSwipUp({ className = '', top = "85", children }: 
             trigger: ContentRef.current,
             start: `top ${top}%`,
             toggleActions: "play none none none",
+            once: true,
           },
         });
       }, ContentRef);
