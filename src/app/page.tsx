@@ -210,7 +210,7 @@ export default function Home() {
           <div className="overflow-hidden">
             <motion.div
               className="flex gap-6"
-              animate={{ x: -index * 320 }}             
+              animate={{ x: -index * 320 }}
               transition={{
                 type: "tween",
                 duration: 0.9,
@@ -276,7 +276,7 @@ export default function Home() {
             </ButtonSwipUp>
           </div>
           <div className=" text-white ">
-            <div className="flex flex-col lg:flex-row gap-10 lg:gap-20.75">             
+            <div className="flex flex-col lg:flex-row gap-10 lg:gap-20.75">
               <div className="w-full lg:w-62.5 flex lg:flex-col gap-3 overflow-x-auto pb-4 lg:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                 {categories.map((cat) => (
                   <button
@@ -309,7 +309,7 @@ export default function Home() {
                       }}
                       className="transform-gpu bg-white/6 rounded-[10px]"
                       style={{ transformStyle: "preserve-3d" }}
-                    >                     
+                    >
                       <div className="relative group ">
                         <Image
                           src={item.image}
@@ -320,7 +320,7 @@ export default function Home() {
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           className="w-full h-auto object-cover rounded-[10px]"
                         />
-                        <div
+                        {/* <div
                           className="absolute inset-0 flex rounded-[10px] items-center justify-center 
                 bg-black/41 backdrop-blur-md opacity-0 group-hover:opacity-100 transition"
                         >
@@ -328,7 +328,7 @@ export default function Home() {
                             Explore Portfolio
                             <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover/button:rotate-0" />
                           </ButtonSwipUp>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="mt-6.25 space-y-4 px-[20px] pb-[20px]">
                         <h3 className="font-semibold text-[20px]">
@@ -366,9 +366,9 @@ export default function Home() {
           <DevelopmentSlider />
         </div>
       </section>
-      <TestimonialSlider />      
+      <TestimonialSlider />
       <section className="border-t border-white/12 text-white py-25 relative z-1">
-        <div className="max-w-[1320px] mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">         
+        <div className="max-w-[1320px] mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1 space-y-10">
             <div className="space-y-6">
               <h2

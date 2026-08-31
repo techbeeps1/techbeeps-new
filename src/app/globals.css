@@ -203,4 +203,35 @@ to
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 
+/* 3D Card Flip & Blueprint Grid Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.tech-grid-bg {
+  background-image: linear-gradient(to right, rgba(80, 76, 255, 0.12) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(80, 76, 255, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.tech-grid-bg-dense {
+  background-image: linear-gradient(to right, rgba(133, 76, 255, 0.18) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(133, 76, 255, 0.18) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+
 

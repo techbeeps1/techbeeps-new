@@ -57,7 +57,7 @@ const projects = [
     category: "Shopify",
     tags: ["Shopify", "E-commerce"],
     image: "/indeshop-img.jpg",
-  },   
+  },
 ];
 
 export default function Portfolio() {
@@ -66,10 +66,10 @@ export default function Portfolio() {
   const filteredProjects = activeCategory === "All"
     ? projects
     : projects.filter(
-        (project) =>
-          project.category === activeCategory ||
-          project.tags.includes(activeCategory)
-      );
+      (project) =>
+        project.category === activeCategory ||
+        project.tags.includes(activeCategory)
+    );
 
   return (
     <>
@@ -99,8 +99,8 @@ export default function Portfolio() {
         <div className="container relative z-10 px-4 mt-auto">
           <div className="backdrop-blur-[25px] rounded-[30px] p-6 md:p-8 lg:p-[40px] bg-[#868686]/10 ">
             <h1 className="text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[97px] text-white mb-4 lg:mb-6">
-              <GsapTextAnimation mainText={"Our Portfolio"}  mainClass="flex flex-wrap "/>
-            </h1>            
+              <GsapTextAnimation mainText={"Our Portfolio"} mainClass="flex flex-wrap " />
+            </h1>
             <ContentSwipUp className="md:text-[20px]" top="100">
               At TechBeeps Services, we create intelligent, user-focused digital experiences that blend stunning design with high performance. Using a data-driven and AI-powered approach, we design fast, intuitive, and scalable websites and apps tailored to your users. Our solutions enhance engagement, improve usability, and drive real business growth.
             </ContentSwipUp>
@@ -111,18 +111,17 @@ export default function Portfolio() {
       {/* Portfolio Grid Section */}
       <section className="py-20 bg-[#05010f] text-white relative z-10">
         <div className="container px-4">
-          
+
           {/* Categories Tab Bar */}
           <div className="flex flex-wrap gap-2.5 sm:gap-3.5 mb-12 sm:mb-16">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-[15px] py-[5px] rounded-xl text-sm md:text-base lg:text-lg font-medium transition-all duration-400 cursor-pointer outline-none focus:outline-none focus:ring-0 border ${
-                  activeCategory === cat
+                className={`px-[15px] py-[5px] rounded-xl text-sm md:text-base lg:text-lg font-medium transition-all duration-400 cursor-pointer outline-none focus:outline-none focus:ring-0 border ${activeCategory === cat
                     ? "bg-primary text-white border-primary shadow-lg shadow-primary/20"
                     : "bg-transparent text-white border-white/20 hover:bg-primary hover:text-white hover:border-primary"
-                }`}
+                  }`}
               >
                 {cat}
               </button>
@@ -130,8 +129,8 @@ export default function Portfolio() {
           </div>
 
           {/* Portfolio Grid with Framer Motion Layout Animations */}
-          <motion.div 
-            layout 
+          <motion.div
+            layout
             className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10"
             style={{ perspective: 1500 }}
           >
@@ -143,10 +142,10 @@ export default function Portfolio() {
                   initial={{ opacity: 0, rotateX: -10, y: 50, scale: 0.95 }}
                   animate={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }}
                   exit={{ opacity: 0, rotateX: 10, y: -50, scale: 0.95 }}
-                  transition={{ 
-                    duration: 0.6, 
+                  transition={{
+                    duration: 0.6,
                     ease: [0.16, 1, 0.3, 1],
-                    delay: index * 0.05 
+                    delay: index * 0.05
                   }}
                   className="w-full aspect-[4/3] relative rounded-[32px] overflow-hidden group border border-white/5 bg-[#120D25]"
                 >
@@ -158,7 +157,7 @@ export default function Portfolio() {
                       fill
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     />
-                    
+
                   </div>
 
                   {/* Translucent overlay bottom bar */}
@@ -168,11 +167,11 @@ export default function Portfolio() {
                         {item.title}
                       </h3>
                     </div>
-                    
-                    {/* Action Arrow Icon in Circle */}
+
+                    {/* Action Arrow Icon in Circle 
                     <div className="w-11 h-11 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center text-white bg-white/5 transition-all duration-400 group-hover:bg-primary group-hover:border-primary group-hover:shadow-lg group-hover:shadow-primary/20 shrink-0">
                       <IoArrowForwardOutline className="h-5.5 w-5.5 -rotate-45 transition-transform duration-400 group-hover:rotate-0" />
-                    </div>
+                    </div>*/}
                   </div>
                 </motion.div>
               ))}
@@ -186,7 +185,7 @@ export default function Portfolio() {
 
       {/* Adding CallToAction as a placeholder for the next sections */}
       <CallToAction />
-      
+
       <Footer />
     </>
   );

@@ -206,10 +206,10 @@ export default function ServicesPage() {
                         </ul>
 
                         <div className="pt-2">
-                            <button className="px-6 py-3.5 cursor-pointer flex items-center group hover:bg-primary hover:text-white duration-400 gap-2.5 bg-white text-black rounded-[50px] font-medium">
+                            {/* <button className="px-6 py-3.5 cursor-pointer flex items-center group hover:bg-primary hover:text-white duration-400 gap-2.5 bg-white text-black rounded-[50px] font-medium">
                                 Explore More
                                 <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
-                            </button>
+                            </button> */}
                         </div>
                     </div>
 

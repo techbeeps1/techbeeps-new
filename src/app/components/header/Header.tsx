@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import { PiPhoneCallLight } from "react-icons/pi";
-import { 
-  IoMenuOutline, 
-  IoCloseOutline, 
+import {
+  IoMenuOutline,
+  IoCloseOutline,
   IoChevronDownOutline,
   IoArrowForwardOutline
 } from "react-icons/io5";
@@ -36,14 +36,14 @@ const containerVariants: Variants = {
 
 const menuVariants: Variants = {
   hidden: { opacity: 0, x: 25 },
-  visible: { 
-    opacity: 1, 
-    x: 0, 
-    transition: { 
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
       type: "spring" as const,
       stiffness: 160,
       damping: 22,
-    }, 
+    },
   },
 };
 
@@ -74,13 +74,13 @@ const dropdownContainerVariants: Variants = {
 
 const dropdownItemVariants: Variants = {
   hidden: { opacity: 0, x: -10 },
-  visible: { 
-    opacity: 1, 
-    x: 0, 
-    transition: { 
-      duration: 0.22, 
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.22,
       ease: [0.16, 1, 0.3, 1],
-    }, 
+    },
   },
 };
 
@@ -121,19 +121,19 @@ export default function Header() {
   return (
     <header className="w-full py-7.5 absolute top-0 z-50">
       <div className="container flex justify-between items-center relative z-50">
-        
+
         {/* Logo */}
         <Link href="/">
           <Image
             src="/techbeepsLogo.svg"
-            alt="TechBeeps Logo"          
+            alt="TechBeeps Logo"
             width={245}
             height={40}
             priority
-            className="w-[180px] sm:w-[245px] h-auto"                  
+            className="w-[180px] sm:w-[245px] h-auto"
           />
         </Link>
-        
+
         {/* Desktop Navigation */}
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-6 text-white text-[15px]">
@@ -150,17 +150,23 @@ export default function Header() {
                 <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary rounded-full transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
+            <li>
+              <Link href="/our-team" className="group relative py-2 text-white hover:text-primary transition-colors duration-300">
+                Our Team
+                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary rounded-full transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            </li>
 
             {/* Services Premium Dropdown */}
-            <li 
+            <li
               className="relative"
               ref={dropdownRef}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
               <div className="flex items-center gap-1.5 py-2 cursor-pointer group">
-                <Link 
-                  href="/services" 
+                <Link
+                  href="/services"
                   className={`transition-colors duration-300 relative ${servicesDropdownOpen ? "text-primary" : "text-white group-hover:text-primary"}`}
                 >
                   Services
@@ -175,8 +181,8 @@ export default function Header() {
                   className="p-0.5 rounded-full hover:bg-white/10 transition-colors focus:outline-none"
                   aria-label="Toggle Services Dropdown"
                 >
-                  <IoChevronDownOutline 
-                    className={`w-3.5 h-3.5 transition-transform duration-300 ${servicesDropdownOpen ? "rotate-180 text-primary scale-110" : "text-white/70 group-hover:text-primary"}`} 
+                  <IoChevronDownOutline
+                    className={`w-3.5 h-3.5 transition-transform duration-300 ${servicesDropdownOpen ? "rotate-180 text-primary scale-110" : "text-white/70 group-hover:text-primary"}`}
                   />
                 </button>
               </div>
@@ -207,7 +213,7 @@ export default function Header() {
                             >
                               {/* Hover Background Gradient */}
                               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-                              
+
                               {/* Left Glowing Accent Indicator */}
                               <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[3px] h-0 bg-primary group-hover:h-3/5 transition-all duration-300 rounded-r shadow-[0_0_8px_#854CFF]" />
 
@@ -245,9 +251,9 @@ export default function Header() {
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden lg:flex">          
+        <div className="hidden lg:flex">
           <ButtonSwipUp className="bg-white text-black hover:text-white" url={"tel:+91 141 452 3119"}>
-            <PiPhoneCallLight className="h-5 w-5 "/>+91 141 452 3119                        
+            <PiPhoneCallLight className="h-5 w-5 " />+91 141 452 3119
           </ButtonSwipUp>
         </div>
 
@@ -256,8 +262,8 @@ export default function Header() {
           <div className="flex items-center justify-center w-10 h-10 overflow-visible">
             <AiButton className="scale-[0.38] mr-0" />
           </div>
-          <button 
-            onClick={() => setIsOpen(!isOpen)} 
+          <button
+            onClick={() => setIsOpen(!isOpen)}
             className="text-white flex items-center justify-center w-10 h-10 cursor-pointer"
             aria-label="Toggle Menu"
           >
@@ -312,7 +318,7 @@ export default function Header() {
               </div>
 
               {/* Drawer Navigation Links */}
-              <motion.nav 
+              <motion.nav
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -330,7 +336,7 @@ export default function Header() {
                         <AiButton className="scale-[0.35] mr-0" />
                       </div>
                       <span className="text-base sm:text-lg font-medium text-white group-hover:text-primary transition-all duration-300 tracking-wide flex items-center gap-2">
-                        AI Solutions                      
+                        AI Solutions
                       </span>
                     </Link>
                   </motion.li>
@@ -380,9 +386,8 @@ export default function Header() {
                         aria-label="Expand Services"
                       >
                         <IoChevronDownOutline
-                          className={`w-5 h-5 transition-transform duration-300 ${
-                            mobileServicesOpen ? "rotate-180 text-primary" : ""
-                          }`}
+                          className={`w-5 h-5 transition-transform duration-300 ${mobileServicesOpen ? "rotate-180 text-primary" : ""
+                            }`}
                         />
                       </button>
                     </div>
@@ -455,7 +460,7 @@ export default function Header() {
                 {/* Mobile Call CTA */}
                 <div>
                   <ButtonSwipUp className="w-full bg-white text-black hover:text-white justify-center" url={"tel:+91 141 452 3119"}>
-                    <PiPhoneCallLight className="h-5 w-5 "/>+91 141 452 3119                        
+                    <PiPhoneCallLight className="h-5 w-5 " />+91 141 452 3119
                   </ButtonSwipUp>
                 </div>
 

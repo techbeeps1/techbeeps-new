@@ -4,55 +4,53 @@ import Footer from "../../components/Footer";
 import CallToAction from "../../components/CallToAction";
 import FaqAccordion from "../../components/FaqAccordion";
 import LogoMarquee from "../../components/LogoMarquee";
+import ButtonSwipUp from "../../components/ButtonSwipUp";
 import { BsArrowRightCircle, BsCheckAll } from "react-icons/bs";
-import { FaPhp, FaLaravel, FaNodeJs } from "react-icons/fa6";
+import { FaCommentDots, FaRobot, FaArrowTrendUp } from "react-icons/fa6";
 import GsapTextAnimation from "@/app/components/GsapTextAnimation";
 const faqs = [
     {
-        question: "What does a website design & development consultant do?",
-        answer: "A website design and development consultant combines technical and creative expertise. They optimize online presence. They analyze what the clients need. They create strategies that are customized for each client & small business website development. We will oversee the implementation of websites that are easy to use. We play a crucial role in making sure everything runs smoothly. We create an attractive design to help you succeed online."
+        question: "Discovery & Requirement Analysis",
+        answer: "We begin by understanding your business goals, user challenges, and system requirements to identify the best-fit AI solution."
     },
     {
-        question: "How do I become a developer consultant?",
-        answer: "To become a developer consultant, you need to learn coding languages. To gain a deep understanding of the industry, and to develop strong communication skills. Stay updated on emerging technologies. Build a strong portfolio. Network within the developer community. We provide specialized problem-solving abilities and client-focused solutions. To succeed in this exciting and fulfilling web development solutions."
+        question: "Selecting the Right AI Model",
+        answer: "Based on your use case, we choose the most suitable AI model or API—such as OpenAI, Claude, or Gemini—to ensure optimal performance and scalability."
     },
     {
-        question: "How to prepare before partnering with a web development company?",
-        answer: "Before you partner with a best web development company usa, make sure you know your project goals, budget, and timeline. Research potential firms. Review portfolios. Check client testimonials. Tell them what you expect. Ask how they will develop it. Make sure they communicate clearly. Make sure they are experts. Check what technology they use. Talk about ongoing support. Being well-prepared guarantees a successful collaboration."
+        question: "Custom AI Solution Development",
+        answer: "Our experienced developers build your solution—be it a web application, WordPress plugin, or custom integration—aligned with your business logic and user needs."
     },
     {
-        question: "How long does it take to complete a UI/UX design project?",
-        answer: "The time required to complete ui ux development services can vary depending on the complexity of the project, the size of the group, and the scope of the work. According to the provided search outcomes, a normal UI/UX layout venture can take anywhere from three to five months. However, the timeline may be condensed or prolonged based totally on the venture’s specific requirements and constraints. The UX design technique typically consists of several stages, consisting of research, strategy, design, prototyping, and trying out. Each level can take various quantities of time, depending on the mission’s complexity and the crew’s length. For instance, studies and strategy can take up to a month, while design and prototyping can take up to two months. Testing and iteration can take a month or more, depending on the quantity of checking-out rounds required."
+        question: "Testing, Tuning & Validation",
+        answer: "We conduct thorough testing, validate the AI responses, and fine-tune the model integration to ensure accuracy, reliability, and security."
     },
     {
-        question: "How long does a web development project take to complete from start to finish?",
-        answer: "The timeline for a web development project varies based on complexity and features. Simple websites may take a few weeks, while complex applications could span several months. Factors like client feedback, scope changes, and team efficiency influence the duration. Clear communication and meticulous planning expedite the process."
+        question: "Deployment & Ongoing Support",
+        answer: "Once ready, we deploy your AI-powered solution with complete documentation and offer continuous support, updates, and maintenance to keep things running smoothly."
     },
-    {
-        question: "What are the 5 benefits of custom website design and development?",
-        answer: "Custom website design and development offer a tailored online presence, ensuring unique brand representation. This enhances user experience, boosts SEO, and enables efficient navigation. Tailored functionalities cater to specific business needs, fostering scalability. Ultimately, a custom website sets businesses apart, instills credibility, and maximizes online potential."
-    }
+
 ];
 
 const AiSolutionsServices = [
     {
-        title: "PHP",
-        desc: "PHP is a powerful scripting language that creates dynamic web content. PHP is a flexible and simple programming language that is widely used in PHP Development Services . It can adapt to diverse needs. The community support is extensive. We make sure websites work well for many different uses.",
-        icon: FaPhp,
+        title: "AutoReply AI ",
+        desc: "Automatically replies to blog comments using AI.",
+        icon: FaCommentDots,
     },
     {
-        title: "Laravel",
-        desc: "Laravel, a prominent PHP web application framework, prioritizes elegance and simplicity. It has streamlined features for routing, caching, and authentication. This facilitates efficient and expressive web development. Laravel Development Services is a sophisticated choice. It seamlessly meets modern demands. It ensures a smooth development experience with its comprehensive tools and features.",
-        icon: FaLaravel,
+        title: "ReplyPilot AI",
+        desc: "A conversational chatbot that engages users in real-time.",
+        icon: FaRobot,
     },
     {
-        title: "NodeJs",
-        desc: "Node.js, leveraging the V8 JavaScript engine, revolutionizes server-side JavaScript execution. Its event-driven, non-blocking architecture enhances scalability and real-time application performance. Our Node.js Development services is ideal for building efficient and responsive web applications. It drives innovation in modern web development, ensuring optimal performance and responsiveness.",
-        icon: FaNodeJs,
+        title: "Sales Analytics for WooCommerce",
+        desc: "Predictive analytics for eCommerce sales performance.",
+        icon: FaArrowTrendUp,
     },
 ];
 
-export default function WebDevelopmentPage() {
+export default function AiSolutionsPage() {
     return (
         <>
             <Header />
@@ -82,10 +80,10 @@ export default function WebDevelopmentPage() {
                     <div className="backdrop-blur-[25px] rounded-[30px] p-6 md:p-8 lg:p-[40px] bg-[#868686]/10 ">
                         <h1 className="text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[97px] text-white mb-4 lg:mb-6">
 
-                            <GsapTextAnimation mainText={"Web Development"} mainClass="flex flex-wrap" />
+                            <GsapTextAnimation mainText={"AI Solutions"} mainClass="flex flex-wrap" />
                         </h1>
                         <p className="text-base lg:text-[20px] leading-snug lg:leading-[30px] text-white ">
-                            Boost your online presence with our customized web development solutions. Our experts use the latest technology to create user-friendly, responsive, and high-performing websites. With innovative designs and smooth functionality, we help attract more users and drive business growth.
+                            At TechBeeps, we are transforming the way businesses use technology by delivering innovative and intelligent AI development solutions across a wide range of platforms. In today’s fast-paced digital world, automation, personalization, and smart decision-making are essential. That’s why we specialize in building custom AI-powered tools that integrate seamlessly into your existing systems—whether they are web platforms, SaaS applications, or eCommerce stores
                         </p>
                     </div>
                 </div>
@@ -101,10 +99,11 @@ export default function WebDevelopmentPage() {
                     {/* Section Heading */}
                     <div className="text-center max-w-4xl mx-auto mb-16 space-y-4">
                         <h2 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white">
-                            <GsapTextAnimation mainText={"Custom Web Development Services"} mainClass="flex flex-wrap justify-center" />
+                            <GsapTextAnimation mainText={"We’ve already launched three powerful AI-based WordPress plugins:"} mainClass="flex flex-wrap justify-center" />
                         </h2>
                         <p className="text-white text-sm md:text-base leading-snug lg:leading-[28px] max-w-[1000px] mx-auto">
-                            Start your digital journey with TechBeeps through our professional **custom website development services**. We create dynamic, responsive, and user-friendly websites tailored to your brand. With innovative ideas and the latest technologies, we deliver powerful functionality and engaging designs that enhance user experiences, attract audiences, and strengthen your online presence.
+                            Our development expertise spans across PHP, Node.js, Laravel, Python, Shopify, and WordPress. From advanced web applications to custom plugins, we create solutions that are scalable, efficient, and tailored to your unique goals.
+                            Whether you’re looking to automate customer support through chatbots, auto-respond to user inputs, or gain deeper insights with AI-enhanced analytics, we’ve got the tools and experience to deliver.
                         </p>
                     </div>
 
@@ -161,51 +160,55 @@ export default function WebDevelopmentPage() {
                         <div className="space-y-6">
                             <h2 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white ">
                                 <br className="hidden md:block" />
-                                <GsapTextAnimation mainText={"Leading Web Development Company in the USA"} mainClass="flex flex-wrap" />
+                                <GsapTextAnimation mainText={"Why Choose TechBeeps for AI Development?"} mainClass="flex flex-wrap" />
                             </h2>
-                            <p>
-                                At Techbeeps we offer every custom website development service you need to build a full-blown web-based product, such as:
-                            </p>
+
                         </div>
 
                         <ul className="space-y-5">
                             <li className="flex gap-4 items-center">
                                 <BsCheckAll className="text-primary w-[40px] h-[40px] shrink-0 mt-0.5" />
                                 <p>
-                                    Website Development
+                                    Custom, scalable, and secure solutions
                                 </p>
                             </li>
                             <li className="flex gap-4 items-center">
                                 <BsCheckAll className="text-primary w-[40px] h-[40px] shrink-0 mt-0.5" />
                                 <p>
-                                    Web Application Development
+                                    Deep understanding of modern LLMs and APIs
                                 </p>
                             </li>
                             <li className="flex gap-4 items-center">
                                 <BsCheckAll className="text-primary w-[40px] h-[40px] shrink-0 mt-0.5" />
                                 <p>
-                                    E-commerce Solutions Development
+                                    Post-deployment support and updates
                                 </p>
                             </li>
                             <li className="flex gap-4 items-center">
                                 <BsCheckAll className="text-primary w-[40px] h-[40px] shrink-0 mt-0.5" />
                                 <p>
-                                    Dedicated Content Management System Development
+                                    In-house experience with real AI WordPress plugins
                                 </p>
                             </li>
                             <li className="flex gap-4 items-center">
                                 <BsCheckAll className="text-primary w-[40px] h-[40px] shrink-0 mt-0.5" />
                                 <p>
-                                    No-code Development & Low-code Development
+                                    Affordable pricing with enterprise-grade quality
+                                </p>
+                            </li>
+                            <li className="flex gap-4 items-center">
+                                <BsCheckAll className="text-primary w-[40px] h-[40px] shrink-0 mt-0.5" />
+                                <p>
+                                    Affordable pricing with enterprise-grade quality
                                 </p>
                             </li>
                         </ul>
 
                         <div className="pt-2">
-                            <button className="px-6 py-3.5 cursor-pointer flex items-center group hover:bg-primary hover:text-white duration-400 gap-2.5 bg-white text-black rounded-[50px] font-medium">
+                            {/* <button className="px-6 py-3.5 cursor-pointer flex items-center group hover:bg-primary hover:text-white duration-400 gap-2.5 bg-white text-black rounded-[50px] font-medium">
                                 Explore More
                                 <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
-                            </button>
+                            </button> */}
                         </div>
                     </div>
 
@@ -233,7 +236,7 @@ export default function WebDevelopmentPage() {
                     <div className="mb-16 flex flex-col lg:flex-row gap-10 lg:gap-16">
                         <div className="w-full lg:w-[40%]">
                             <h2 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white ">
-                                <GsapTextAnimation mainText={"Frequently Asked Questions"} mainClass="flex flex-wrap" />
+                                <GsapTextAnimation mainText={"Our AI Development Process"} mainClass="flex flex-wrap" />
                             </h2>
                         </div>
                         <div className="w-full lg:w-[60%]">
@@ -241,6 +244,51 @@ export default function WebDevelopmentPage() {
                         </div>
                     </div>
 
+                </div>
+            </section>
+            {/* Promise Section */}
+            <section className="bg-black text-white py-10">
+                <div className="max-w-[1320px] mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
+                    {/* Right content */}
+                    <div className="flex-1 w-full">
+                        <div className="relative shadow-2xl border border-white/5">
+                            <Image
+                                src="/Migration.jpg"
+                                alt="TechBeeps Commitment to Quality and Client Satisfaction"
+                                width={621}
+                                height={414}
+                                className="w-full h-auto object-cover rounded-[20px] "
+                            />
+                            <div
+                                className="absolute inset-0 rounded-[20px] pointer-events-none"
+                                style={{ background: "linear-gradient(270deg, #000000 2.88%, rgba(7, 7, 7, 0) 48.12%, #070707 98.14%)" }}
+                            />
+                        </div>
+                    </div>
+                    {/* Left Image */}
+                    <div className="flex-1 space-y-10">
+                        <div className="space-y-6">
+                            <h2 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white ">
+                                <br className="hidden md:block" />
+                                <GsapTextAnimation mainText={"Hire Our Developer"} mainClass="flex flex-wrap" />
+                            </h2>
+                            <h3 className="text-[22px] leading-[30px]">Are You Looking for Experienced AI Developer Experts?</h3>
+                            <p>
+                                our skilled AI developers bring deep expertise in building intelligent, custom solutions tailored to your needs. From smart automation to seamless AI integrations, we ensure clean code, reliable performance, and on-time delivery. Partner with us to future-proof your digital journey with AI at its core.
+                            </p>
+
+                        </div>
+
+                        <div className="pt-2">
+                            <ButtonSwipUp className=" text-black hover:text-white bg-white w-50" url={"/contact-us"}>
+
+                                Hire Developer
+                                <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
+                            </ButtonSwipUp>
+
+                        </div>
+
+                    </div>
                 </div>
             </section>
             {/* Adding CallToAction as a placeholder for the next sections */}
