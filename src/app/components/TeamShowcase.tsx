@@ -147,9 +147,8 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
       >
         {/* ================= FRONT SIDE (Portrait Card) ================= */}
         <div
-          className={`absolute inset-0 backface-hidden rounded-[24px] overflow-hidden border border-white/10 group-hover:border-indigo-500/40 shadow-[0_20px_50px_rgba(0,0,0,0.8)] bg-gradient-to-b from-[#16123a] via-[#0d0924] to-[#04020e] flex flex-col justify-end transition-all duration-300 ${
-            isFlipped ? "pointer-events-none opacity-0" : "pointer-events-auto opacity-100"
-          }`}
+          className={`absolute inset-0 backface-hidden rounded-[24px] overflow-hidden border border-white/10 group-hover:border-indigo-500/40 shadow-[0_20px_50px_rgba(0,0,0,0.8)] bg-gradient-to-b from-[#16123a] via-[#0d0924] to-[#04020e] flex flex-col justify-end transition-all duration-300 ${isFlipped ? "pointer-events-none opacity-0" : "pointer-events-auto opacity-100"
+            }`}
         >
           {/* Ambient Blue Halo Behind Subject */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(66,85,255,0.25)_0%,rgba(15,10,40,0.1)_55%,transparent_75%)] pointer-events-none" />
