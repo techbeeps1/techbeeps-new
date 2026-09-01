@@ -20,7 +20,7 @@ const repeatedLogos = [...logos, ...logos, ...logos, ...logos];
 
 export default function LogoMarquee() {
   return (
-    <section className="py-25 border-t border-white/12 text-white overflow-hidden relative z-1">
+    <section className="py-25 border-y-1 border-white/12 text-white overflow-hidden relative z-1">
       <div className="container mx-auto text-center mb-16 space-y-4">
         <h2 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white">
           <GsapTextAnimation

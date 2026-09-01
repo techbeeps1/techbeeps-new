@@ -1,0 +1,133 @@
+{
+  "slug": "python-development",
+  "title": "Python Development",
+  "seo": {
+    "title": "Python Development Services | TechBeeps",
+    "description": "From web backends and microservices to AI integration and data automation, TechBeeps delivers robust, scalable Python solutions.",
+    "keywords": [
+      "Python Development",
+      "Django",
+      "FastAPI",
+      "Python AI Backend",
+      "Data Automation",
+      "Python Web Services"
+    ]
+  },
+  "hero": {
+    "title": "Driving Business Growth with Scalable Python Solutions",
+    "desc": "From robust web development to intelligent AI-powered automation, we deliver customized Python solutions designed to streamline operations, drive innovation, and accelerate your business growth in today’s digital landscape.",
+    "bgImage": "/services-bg.jpg",
+    "bgImageAlt": "TechBeeps Python Development Background"
+  },
+  "offeringsSection": {
+    "title": "Our Python Services",
+    "desc": "Comprehensive Python development services to power your digital transformation.",
+    "items": [
+      {
+        "title": "Web Application Development",
+        "desc": "Custom web applications using Django, Flask, and FastAPI frameworks for optimal performance and scalability.",
+        "icon": "FaGlobe",
+        "points": [
+          "E-commerce platforms",
+          "Content management systems",
+          "Progressive web apps"
+        ]
+      },
+      {
+        "title": "API Development & Integration",
+        "desc": "RESTful APIs and GraphQL services with seamless third-party integrations for enhanced functionality.",
+        "icon": "FaPlug",
+        "points": [
+          "REST API development",
+          "GraphQL implementation",
+          "Third-party integrations"
+        ]
+      },
+      {
+        "title": "Data Science & Machine Learning",
+        "desc": "Advanced analytics, predictive modeling, and AI solutions to unlock insights from your data.",
+        "icon": "FaBrain",
+        "points": [
+          "Predictive analytics",
+          "Machine learning models",
+          "Data visualization"
+        ]
+      },
+      {
+        "title": "Automation & Scripting",
+        "desc": "Streamline business processes with custom automation solutions and intelligent scripting.",
+        "icon": "FaGears",
+        "points": [
+          "Process automation",
+          "Data migration scripts",
+          "Task scheduling"
+        ]
+      },
+      {
+        "title": "Cloud-Based Python Solutions",
+        "desc": "Scalable cloud deployments on AWS, Azure, and GCP with containerization and microservices.",
+        "icon": "FaCloud",
+        "points": [
+          "Cloud migration",
+          "Containerization",
+          "Microservices architecture"
+        ]
+      },
+      {
+        "title": "Python Consulting & Code Review",
+        "desc": "Expert consultation, code audits, and optimization services to improve existing Python applications.",
+        "icon": "FaCode",
+        "points": [
+          "Code optimization",
+          "Security audits",
+          "Performance tuning"
+        ]
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Why Partner with TechBeeps for Python?",
+    "desc": "We engineer high-performance backend architectures built for scalability, reliability, and security.",
+    "bullets": [
+      "Clean, modular, and well-documented Python codebases",
+      "Expertise in modern async frameworks like FastAPI & AsyncIO",
+      "Seamless integration with LLMs, Vector DBs, and Cloud Infrastructure",
+      "Enterprise-grade security and automated unit/integration testing"
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Python Engineering"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "Web Application Development",
+        "answer": "We build secure, high-performance, and scalable web applications using modern Python frameworks. Our solutions are tailored to your unique business requirements, whether you need a custom web application, e-commerce platform, content management system, or a progressive web app. We focus on creating seamless user experiences, reliable functionality, and flexible architectures that support long-term business growth."
+      },
+      {
+        "question": "API Development & Integration",
+        "answer": "We develop secure, scalable, and high-performance APIs that enable seamless communication between applications and services. From RESTful APIs and GraphQL implementations to third-party integrations and comprehensive API documentation, we create reliable solutions that enhance functionality and improve system connectivity. Our expertise includes integrating payment gateways, social media platforms, cloud services, analytics tools, and other essential business systems to build a connected and efficient digital ecosystem."
+      },
+      {
+        "question": "Data Science & Machine Learning",
+        "answer": "We turn complex data into meaningful, actionable insights through advanced data analytics and machine learning solutions. Our services include predictive modeling, intelligent machine learning algorithms, data visualization, and custom analytical solutions that help businesses identify trends, make informed decisions, optimize processes, and drive measurable growth."
+      },
+      {
+        "question": "Do you provide API integration and migration services?",
+        "answer": "Yes, we handle legacy backend migrations to modern Python microservices, third-party API integrations, and secure payment / webhook implementations."
+      },
+      {
+        "question": "Automation & Scripting",
+        "answer": "Streamline your business operations with smart automation and scripting solutions that reduce manual work, minimize errors, and improve overall efficiency. We create customized automation systems to handle repetitive tasks, simplify data migration and processing, automate scheduled workflows, generate reports, manage emails and files, and optimize day-to-day business processes. Our solutions are designed to save valuable time, improve accuracy, and help your team focus on more productive and business-critical activities."
+      },
+      {
+        "question": "Cloud-Based Python Solutions",
+        "answer": "Deploy and manage scalable Python applications in the cloud with modern, reliable, and flexible infrastructure. We build cloud-ready solutions using containerization and microservices architecture to ensure better performance, scalability, and easier maintenance. Our approach enables applications to handle growing workloads efficiently with automated scaling and streamlined cloud deployment."
+      },
+      {
+        "question": "Python Consulting & Code Review",
+        "answer": "Improve the quality, security, and performance of your existing Python applications with expert consulting and comprehensive code reviews. We analyze your code structure, identify performance bottlenecks and security vulnerabilities, optimize database operations, evaluate architecture and design patterns, and recommend practical improvements. Our review process also focuses on testing strategies and best practices to create clean, secure, maintainable, and reliable Python applications."
+      }
+    ]
+  }
+}

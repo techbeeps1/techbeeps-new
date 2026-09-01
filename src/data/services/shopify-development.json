@@ -1,0 +1,98 @@
+{
+  "slug": "shopify-development",
+  "title": "Shopify Development",
+  "seo": {
+    "title": "Shopify Development Services | TechBeeps",
+    "description": "Upgrade your eCommerce store with high-converting custom Shopify development, Shopify Plus setups, and bespoke theme and app solutions.",
+    "keywords": [
+      "Shopify Development",
+      "Shopify Plus",
+      "E-Commerce Development",
+      "Custom Shopify Themes",
+      "Shopify Apps"
+    ]
+  },
+  "hero": {
+    "title": "Shopify Development",
+    "desc": "Transform your online store with a professional Shopify development solution tailored to your brand and business goals. Our experienced team specializes in creating customized, high-performing e-commerce stores with modern designs, seamless functionality, and innovative features. From custom Shopify development to app integrations and store enhancements, we deliver scalable solutions that improve user experience, drive engagement, and help your business grow online.",
+    "bgImage": "/services-bg.jpg",
+    "bgImageAlt": "TechBeeps Shopify Development Background"
+  },
+  "offeringsSection": {
+    "title": "Comprehensive Shopify Development Services",
+    "desc": "From bespoke theme architecture to headless commerce and private Shopify apps, our development team creates tailored eCommerce experiences that maximize sales and provide effortless store management.",
+    "items": [
+      {
+        "title": "Shopify Online Store Development",
+        "desc": "Build a high-performing Shopify store tailored to your brand and business goals. We create responsive, user-friendly, and conversion-focused online stores with seamless functionality and a polished shopping experience.",
+        "icon": "SiShopify"
+      },
+      {
+        "title": "Shopify Theme Customization & Development",
+        "desc": "Create a unique storefront with custom Shopify theme development and tailored design solutions. We customize your theme to match your brand identity while improving usability, performance, and customer engagement.",
+        "icon": "TbPalette"
+      },
+      {
+        "title": "Shopify Custom App Development",
+        "desc": "Extend your Shopify store with custom apps built around your specific business requirements. We develop powerful and scalable solutions that add new functionality, automate processes, and improve your store’s overall capabilities.",
+        "icon": "TbApps"
+      },
+      {
+        "title": "Shopify Integration Services",
+        "desc": "Connect your Shopify store with essential third-party tools, platforms, and business systems. Our integration solutions streamline workflows, synchronize data, and create a more efficient and connected e-commerce ecosystem.",
+        "icon": "TbPlugConnected"
+      },
+      {
+        "title": "Shopify Store Migration Services",
+        "desc": "Move your existing e-commerce store to Shopify with a secure and well-planned migration process. We help transfer your products, customer data, content, and essential store functionality while minimizing disruption to your business.",
+        "icon": "TbArrowsExchange"
+      },
+      {
+        "title": "Shopify Maintenance & Technical Support",
+        "desc": "Keep your Shopify store secure, stable, and performing at its best with ongoing maintenance and technical support. We handle troubleshooting, updates, performance improvements, and technical issues to ensure a smooth shopping experience.",
+        "icon": "TbTools"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Why Choose TechBeeps for Shopify Development?",
+    "desc": "We build scalable, high-converting stores designed to turn visitors into repeat customers.",
+    "bullets": [
+      "Optimized for high speed and mobile commerce performance",
+      "Seamless integration with ERPs, CRMs, and payment gateways",
+      "Zero-downtime store migrations and SEO preservation",
+      "Full ongoing support, security monitoring, and conversion tuning"
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Commitment to Quality and Client Satisfaction"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "How much does it cost to outsource an eCommerce project to a Shopify web development company?",
+        "answer": "The cost of outsourcing an eCommerce mission to a Shopify web development employer can vary depending on the specific necessities of the undertaking and the extent of know-how and services supplied via the improvement team. It’s essential to speak about your task necessities and budget with potential improvement organizations to get a clean knowledge of the fee and make sure that it aligns with your enterprise dreams."
+      },
+      {
+        "question": "How will I keep a check on the progress of my Shopify website development project?",
+        "answer": "It could efficiently screen the development of your Shopify website development undertaking, live informed approximately the popularity of obligations and milestones, and ensure that the assignment stays on the right track to fulfill your expectancies and deadlines. Regular communique, collaboration, and remarks are key to a success assignment control and transport."
+      },
+      {
+        "question": "How long does it take for a Shopify web development company to deliver the live project?",
+        "answer": "The time frame for turning in a live Shopify venture can vary from numerous weeks to a few months, depending on the complexity of the undertaking and the particular requirements of the consumer. It’s vital for the Shopify net development employer and the patron to speak efficaciously and collaborate carefully in the course of the assignment to make sure that it remains heading in the right direction and meets the agreed-upon timeline and expectations. The time it takes for a Shopify internet improvement organization to deliver a live mission can vary significantly depending on several factors, including the complexity of the mission, the scope of labor, the supply of assets, and the specific necessities of the consumer."
+      },
+      {
+        "question": "Does a Shopify web development company offer post-development support?",
+        "answer": "Yes, most Shopify internet improvement groups provide post-improvement aid. This aid can encompass bug fixes, updates, preservation, and troubleshooting. The period and quantity of submit-development assistance can vary depending on the organization and the precise challenge. Some agencies may provide ongoing assistance for a set period, while others can also provide assistance on an as-wanted basis. It is crucial to speak about the post-development guide with your selected Shopify internet development agency earlier than beginning the project to make sure that you are aware of the level of guide in order to be supplied and any related charges."
+      },
+      {
+        "question": "Why To Choose Techbeeps As Your Shopify web development company?",
+        "answer": "Techbeeps, as your Shopify net improvement organization, gives numerous benefits that assist you in building a successful online store. Selecting Techbeeps as your Shopify web improvement organization ensures that you acquire a customized, extraordinary, and dependable Shopify solution that drives fulfillment in your online commercial enterprise. Their information, experience, commitment to excellence, and willpower to create consumer pride make them a trusted associate for Shopify web development projects of any length or complexity."
+      },
+      {
+        "question": "Can I avail Shopify web development services for minor changes?",
+        "answer": "Yes, you may avail Shopify internet development offerings for minor modifications to your Shopify website. Many Shopify internet improvement groups provide services particularly tailor-made to cope with minor modifications, updates, or changes to Shopify websites. These offerings are normally referred to as “Shopify maintenance and help” or “Shopify website updates."
+      }
+    ]
+  }
+}
