@@ -16,11 +16,11 @@ export default function OurTeam() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/services-bg.jpg"
-            alt="TechBeeps About Us Hero Background"
+            src="/team-hero-bg.jpg"
+            alt="TechBeeps Our Team Hero Background"
             fill
             priority
-            className="object-cover object-top"
+            className="object-cover object-center"
           />
           {/* Dark Overlay Gradient to blend with the rest of the site */}
           <div className="absolute inset-0 bg-[linear-gradient(90deg,#000000_0%,rgba(0, 0, 0, 0.18)_20%,rgba(0,0,0,0)_54%,#000000_100%)]"></div>

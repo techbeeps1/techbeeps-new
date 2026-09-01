@@ -62,7 +62,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><Link href="/about-us" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">About Us</Link></li>
               <li><Link href="/portfolio" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Portfolio</Link></li>
-              <li><Link href="#" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Team</Link></li>
+              <li><Link href="/our-team" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Team</Link></li>
               <li><Link href="/contact-us" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Contact</Link></li>
             </ul>
           </div>
@@ -80,7 +80,7 @@ export default function Footer() {
                 <span>Whatsapp</span>
                 <span>: <Link href="https://wa.me/+918112269797" aria-label="Whatsapp">+91 811 226 9797</Link></span>
               </li>
-              <li className="grid grid-cols-[80px_1fr] text-[15px] leading-[24px] font-normal text-white hover:text-primary duration-300">
+              <li className="grid 2xl:grid-cols-[80px_1fr] md:grid-cols-[60px_1fr] grid-cols-[40px_1fr] text-[15px] leading-[24px] font-normal text-white hover:text-primary duration-300">
                 <span>Email</span>
                 <Link href="mailto:tech.beeps@outlook.com">: tech.beeps@outlook.com</Link>
               </li>

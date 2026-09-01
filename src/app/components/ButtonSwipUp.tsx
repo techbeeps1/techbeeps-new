@@ -39,6 +39,7 @@ export default function ButtonSwipUp({ className = '', url = "/", children }: { 
             trigger: buttonRef.current,
             start: "top 90%",
             toggleActions: "play none none none",
+            once: true,
           },
         });
       }, buttonRef);

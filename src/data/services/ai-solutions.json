@@ -1,0 +1,83 @@
+{
+  "slug": "ai-solutions",
+  "title": "AI Solutions",
+  "seo": {
+    "title": "AI Solutions & Custom AI Development | TechBeeps",
+    "description": "Transform your business with intelligent AI development solutions across web platforms, SaaS applications, and WordPress plugins by TechBeeps.",
+    "keywords": ["AI Solutions", "Custom AI Development", "WordPress AI Plugins", "LLM Integration", "AI Automation"]
+  },
+  "hero": {
+    "title": "AI Solutions",
+    "desc": "At TechBeeps, we are transforming the way businesses use technology by delivering innovative and intelligent AI development solutions across a wide range of platforms. In today’s fast-paced digital world, automation, personalization, and smart decision-making are essential. That’s why we specialize in building custom AI-powered tools that integrate seamlessly into your existing systems—whether they are web platforms, SaaS applications, or eCommerce stores",
+    "bgImage": "/services-bg.jpg",
+    "bgImageAlt": "TechBeeps AI Solutions Services Background"
+  },
+  "offeringsSection": {
+    "title": "We’ve already launched three powerful AI-based WordPress plugins:",
+    "desc": "Our development expertise spans across PHP, Node.js, Laravel, Python, Shopify, and WordPress. From advanced web applications to custom plugins, we create solutions that are scalable, efficient, and tailored to your unique goals. Whether you’re looking to automate customer support through chatbots, auto-respond to user inputs, or gain deeper insights with AI-enhanced analytics, we’ve got the tools and experience to deliver.",
+    "items": [
+      {
+        "title": "AutoReply AI ",
+        "desc": "Automatically replies to blog comments using AI.",
+        "icon": "FaCommentDots"
+      },
+      {
+        "title": "ReplyPilot AI",
+        "desc": "A conversational chatbot that engages users in real-time.",
+        "icon": "FaRobot"
+      },
+      {
+        "title": "Sales Analytics for WooCommerce",
+        "desc": "Predictive analytics for eCommerce sales performance.",
+        "icon": "FaArrowTrendUp"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Why Choose TechBeeps for AI Development?",
+    "bullets": [
+      "Custom, scalable, and secure solutions",
+      "Deep understanding of modern LLMs and APIs",
+      "Post-deployment support and updates",
+      "In-house experience with real AI WordPress plugins",
+      "Affordable pricing with enterprise-grade quality",
+      "End-to-end integration and custom workflows"
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Commitment to Quality and Client Satisfaction"
+  },
+  "faqSection": {
+    "title": "Our AI Development Process",
+    "faqs": [
+      {
+        "question": "Discovery & Requirement Analysis",
+        "answer": "We begin by understanding your business goals, user challenges, and system requirements to identify the best-fit AI solution."
+      },
+      {
+        "question": "Selecting the Right AI Model",
+        "answer": "Based on your use case, we choose the most suitable AI model or API—such as OpenAI, Claude, or Gemini—to ensure optimal performance and scalability."
+      },
+      {
+        "question": "Custom AI Solution Development",
+        "answer": "Our experienced developers build your solution—be it a web application, WordPress plugin, or custom integration—aligned with your business logic and user needs."
+      },
+      {
+        "question": "Testing, Tuning & Validation",
+        "answer": "We conduct thorough testing, validate the AI responses, and fine-tune the model integration to ensure accuracy, reliability, and security."
+      },
+      {
+        "question": "Deployment & Ongoing Support",
+        "answer": "Once ready, we deploy your AI-powered solution with complete documentation and offer continuous support, updates, and maintenance to keep things running smoothly."
+      }
+    ]
+  },
+  "hireDeveloperSection": {
+    "title": "Hire Our Developer",
+    "subtitle": "Are You Looking for Experienced AI Developer Experts?",
+    "desc": "our skilled AI developers bring deep expertise in building intelligent, custom solutions tailored to your needs. From smart automation to seamless AI integrations, we ensure clean code, reliable performance, and on-time delivery. Partner with us to future-proof your digital journey with AI at its core.",
+    "buttonText": "Hire Developer",
+    "buttonUrl": "/contact-us",
+    "image": "/Migration.jpg",
+    "imageAlt": "TechBeeps Commitment to Quality and Client Satisfaction"
+  }
+}
