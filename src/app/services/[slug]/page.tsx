@@ -16,6 +16,12 @@ export async function generateStaticParams() {
   }));
 }
 
+import {
+  createBreadcrumbsSchema,
+  createServiceSchema,
+  SITE_URL,
+} from "@/lib/seo-config";
+
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
   const { slug } = await params;
   const service = getService(slug);
@@ -26,13 +32,42 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     };
   }
 
+  const rawTitle = service.seo?.title || service.title;
+  const title = rawTitle.includes("TechBeeps")
+    ? rawTitle.replace(/\s*\|\s*TechBeeps(\s*Services)?/gi, "").trim()
+    : rawTitle;
+  const description = service.seo?.description || service.hero.desc;
+  const canonicalUrl = `${SITE_URL}/services/${slug}`;
+  const ogImage = service.hero.bgImage
+    ? `${SITE_URL}${service.hero.bgImage}`
+    : `${SITE_URL}/services-bg.jpg`;
+
   return {
-    title: service.seo?.title || `${service.title} | TechBeeps`,
-    description: service.seo?.description || service.hero.desc,
+    title,
+    description,
     keywords: service.seo?.keywords,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
-      title: service.seo?.title || `${service.title} | TechBeeps`,
-      description: service.seo?.description || service.hero.desc,
+      title,
+      description,
+      url: canonicalUrl,
+      type: "website",
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: service.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
     },
   };
 }
@@ -45,5 +80,34 @@ export default async function ServicePage({ params }: ServicePageProps) {
     notFound();
   }
 
-  return <ServiceTemplate service={service} />;
+  const serviceSchema = createServiceSchema({
+    title: service.title,
+    description: service.hero.desc,
+    slug: service.slug,
+    image: service.hero.bgImage,
+  });
+
+  const breadcrumbSchema = createBreadcrumbsSchema([
+    { name: "Home", item: "/" },
+    { name: "Services", item: "/services" },
+    { name: service.title, item: `/services/${service.slug}` },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <ServiceTemplate service={service} />
+    </>
+  );
 }

@@ -1,59 +1,87 @@
-"use client";
-import Image from "next/image";
-import Header from "../components/header/Header";
-import Footer from "../components/Footer";
-import CallToAction from "../components/CallToAction";
-import GsapTextAnimation from "../components/GsapTextAnimation";
-import ContentSwipUp from "../components/ContentSwipUp";
-import TeamShowcase from "../components/TeamShowcase";
+import { Metadata } from "next";
+import OurTeamClient from "./OurTeamClient";
+import { getAllTeamMembers } from "@/lib/team";
+import {
+  SITE_URL,
+  createBreadcrumbsSchema,
+  ORGANIZATION_SCHEMA,
+} from "@/lib/seo-config";
 
-export default function OurTeam() {
+export const metadata: Metadata = {
+  title: "Meet Our Team - Tech Leaders, Architects & Designers",
+  description:
+    "Meet the skilled software engineers, full-stack developers, cloud architects, and UI/UX designers powering digital innovation at TechBeeps Services.",
+  alternates: {
+    canonical: `${SITE_URL}/our-team`,
+  },
+  openGraph: {
+    title: "Meet Our Team | Tech Leaders, Architects & Designers | TechBeeps",
+    description:
+      "Meet the skilled software engineers, full-stack developers, cloud architects, and UI/UX designers powering digital innovation at TechBeeps Services.",
+    url: `${SITE_URL}/our-team`,
+    type: "website",
+    images: [
+      {
+        url: "/team-hero-bg.jpg",
+        width: 1200,
+        height: 630,
+        alt: "TechBeeps Team",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Meet Our Team | TechBeeps Services",
+    description:
+      "Meet the skilled engineering and leadership team at TechBeeps Services.",
+    images: ["/team-hero-bg.jpg"],
+  },
+};
+
+export default function OurTeamPage() {
+  const teamMembers = getAllTeamMembers();
+
+  const teamCollectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": `${SITE_URL}/our-team#webpage`,
+    url: `${SITE_URL}/our-team`,
+    name: "TechBeeps Engineering Team & Leadership",
+    description:
+      "Meet the leadership, software developers, and architects at TechBeeps Services.",
+    publisher: ORGANIZATION_SCHEMA,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: teamMembers.map((member, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `${SITE_URL}/our-team/${member.slug}`,
+        name: member.name,
+        description: member.role,
+      })),
+    },
+  };
+
+  const breadcrumbsSchema = createBreadcrumbsSchema([
+    { name: "Home", item: "/" },
+    { name: "Our Team", item: "/our-team" },
+  ]);
+
   return (
     <>
-      <Header />
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-end justify-center pb-[90px] pt-32 lg:pb-20 bg-[#05010f] overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/team-hero-bg.jpg"
-            alt="TechBeeps Our Team Hero Background"
-            fill
-            priority
-            className="object-cover object-center"
-          />
-          {/* Dark Overlay Gradient to blend with the rest of the site */}
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,#000000_0%,rgba(0, 0, 0, 0.18)_20%,rgba(0,0,0,0)_54%,#000000_100%)]"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#05010f]/80 via-transparent to-[#05010f]/80"></div>
-          <div className="absolute inset-0 bg-black/20"></div>
-
-          {/* Subtle Glow Gradients (Low Opacity) */}
-          <div className="absolute bottom-0 lg:bottom-10 -left-20 lg:-left-40 bg-[#504CFF] blur-[120px] lg:blur-[190px] w-[300px] h-[300px] lg:w-[700px] lg:h-[500px] opacity-20 lg:opacity-30 pointer-events-none rounded-full"></div>
-          <div className="absolute top-0 lg:top-20 -right-20 lg:-right-20 bg-primary blur-[120px] lg:blur-[190px] w-[300px] h-[300px] lg:w-[700px] lg:h-[500px] opacity-20 lg:opacity-30 pointer-events-none rounded-full"></div>
-        </div>
-
-        {/* Content Box */}
-        <div className="container relative z-10 px-4 mt-auto">
-          <div className="backdrop-blur-[25px] rounded-[30px] p-6 md:p-8 lg:p-[40px] bg-[#868686]/10 ">
-            <h1 className="text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[97px] text-white mb-4 lg:mb-6">
-              <GsapTextAnimation mainText={"Our Team"} mainClass="flex flex-wrap " />
-            </h1>
-            <ContentSwipUp className="md:text-[20px]" top="100">
-              At TechBeeps, we promise more than just IT services—we promise growth, innovation, and long-term success. Our goal is to empower businesses with the latest digital solutions that streamline operations, enhance customer engagement, and drive measurable results.
-
-              We don’t just deliver projects; we build partnerships based on trust, transparency, and excellence. From web development to digital transformation, we ensure every solution is tailored to meet your unique business needs.
-            </ContentSwipUp>
-          </div>
-        </div>
-      </section>
-
-      {/* Interactive Team Showcase Section with 3D Flip Effects & Blueprint Bio */}
-      <TeamShowcase />
-
-      {/* Adding CallToAction */}
-      <CallToAction />
-
-      <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(teamCollectionSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbsSchema),
+        }}
+      />
+      <OurTeamClient />
     </>
   );
 }

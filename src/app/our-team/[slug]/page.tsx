@@ -34,6 +34,12 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
 
+import {
+  SITE_URL,
+  createPersonSchema,
+  createBreadcrumbsSchema,
+} from "@/lib/seo-config";
+
 export async function generateMetadata({
   params,
 }: TeamMemberPageProps): Promise<Metadata> {
@@ -46,13 +52,38 @@ export async function generateMetadata({
     };
   }
 
+  const title = `${member.name} - ${member.role} | TechBeeps Team`;
+  const description = `${member.name} is a ${member.role} at TechBeeps. ${member.bio}`;
+  const canonicalUrl = `${SITE_URL}/our-team/${slug}`;
+  const ogImage = member.image.startsWith("http")
+    ? member.image
+    : `${SITE_URL}${member.image}`;
+
   return {
-    title: `${member.name} - ${member.role} | TechBeeps Team`,
-    description: member.bio,
+    title,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
-      title: `${member.name} - ${member.role} | TechBeeps`,
-      description: member.bio,
-      images: [member.image],
+      title,
+      description,
+      url: canonicalUrl,
+      type: "profile",
+      images: [
+        {
+          url: ogImage,
+          width: 800,
+          height: 800,
+          alt: member.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
     },
   };
 }
@@ -72,8 +103,34 @@ export default async function TeamMemberDetailsPage({
     .filter((m) => m.slug !== member.slug)
     .slice(0, 3);
 
+  const personSchema = createPersonSchema({
+    name: member.name,
+    jobTitle: member.role,
+    slug: member.slug,
+    bio: member.bio,
+    image: member.image,
+  });
+
+  const breadcrumbsSchema = createBreadcrumbsSchema([
+    { name: "Home", item: "/" },
+    { name: "Our Team", item: "/our-team" },
+    { name: member.name, item: `/our-team/${member.slug}` },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(personSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbsSchema),
+        }}
+      />
       <Header />
 
       <main className="bg-[#05010f] text-white min-h-screen pt-32 pb-24 overflow-hidden relative">

@@ -8,15 +8,40 @@ import BlogGrid from "../components/blog/BlogGrid";
 import BlogPagination from "../components/blog/BlogPagination";
 import { getBlogPosts, normalizePostForCard } from "@/lib/wordpress";
 
+import {
+  SITE_URL,
+  createBreadcrumbsSchema,
+  DEFAULT_OG_IMAGE,
+} from "@/lib/seo-config";
+
 export const metadata: Metadata = {
-  title: "Blog & Tech Insights | TechBeeps Services",
+  title: "Blog & Tech Insights - Engineering Articles",
   description:
     "Explore the latest insights on AI Solutions, Cloud Architecture, Full Stack Web Development, Mobile Apps, and Modern Engineering from the TechBeeps team.",
+  alternates: {
+    canonical: `${SITE_URL}/blog`,
+  },
   openGraph: {
     title: "Blog & Tech Insights | TechBeeps Services",
     description:
       "Explore the latest insights on AI Solutions, Cloud Architecture, Full Stack Web Development, Mobile Apps, and Modern Engineering from the TechBeeps team.",
+    url: `${SITE_URL}/blog`,
     type: "website",
+    images: [
+      {
+        url: "/team-hero-bg.jpg",
+        width: 1200,
+        height: 630,
+        alt: "TechBeeps Blog and Engineering Insights",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog & Tech Insights | TechBeeps Services",
+    description:
+      "Explore the latest insights on AI Solutions, Cloud Architecture, Full Stack Web Development, and Mobile Apps.",
+    images: ["/team-hero-bg.jpg"],
   },
 };
 
@@ -38,8 +63,38 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
   const cardsData = posts.map(normalizePostForCard);
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${SITE_URL}/blog#blog`,
+    name: "TechBeeps Insights",
+    description:
+      "Engineering and technology blog covering AI, Next.js, Cloud, and Mobile development.",
+    url: `${SITE_URL}/blog`,
+    publisher: {
+      "@id": `${SITE_URL}/#organization`,
+    },
+  };
+
+  const breadcrumbsSchema = createBreadcrumbsSchema([
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(blogSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbsSchema),
+        }}
+      />
       <Header />
 
       {/* Hero Section */}

@@ -96,8 +96,8 @@ export default function Footer() {
             2026 © Techbeeps Services. All Rights Reserved.
           </p>
           <div className="flex gap-6">
-            <Link href="#" className="text-white hover:text-primary text-[13px] duration-300">Privacy Policy</Link>
-            <Link href="#" className="text-white hover:text-primary text-[13px] duration-300">Terms & Conditions</Link>
+            <Link href="/privacy-policy" className="text-white hover:text-primary text-[13px] duration-300">Privacy Policy</Link>
+            <Link href="/terms-and-conditions" className="text-white hover:text-primary text-[13px] duration-300">Terms & Conditions</Link>
           </div>
         </div>
       </div>

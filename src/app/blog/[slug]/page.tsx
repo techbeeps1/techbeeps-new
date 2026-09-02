@@ -37,6 +37,12 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
 
+import {
+  SITE_URL,
+  createBlogPostSchema,
+  createBreadcrumbsSchema,
+} from "@/lib/seo-config";
+
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
@@ -58,18 +64,23 @@ export async function generateMetadata({
     yoast?.description || normalized.excerpt || "TechBeeps Engineering Article";
   const ogImage =
     yoast?.og_image?.[0]?.url || normalized.featuredImage;
+  const canonicalUrl = `${SITE_URL}/blog/${slug}`;
 
   return {
     title: pageTitle,
     description: pageDescription,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: pageTitle,
       description: pageDescription,
+      url: canonicalUrl,
       type: "article",
       publishedTime: post.date,
       modifiedTime: post.modified,
       authors: [normalized.authorName],
-      images: ogImage ? [{ url: ogImage }] : undefined,
+      images: ogImage ? [{ url: ogImage, width: 1200, height: 630, alt: normalized.title }] : undefined,
     },
     twitter: {
       card: "summary_large_image",
@@ -90,10 +101,38 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const normalized = normalizePostForCard(post);
   const relatedPosts = await getRelatedPosts(post.id, 3);
-  const currentUrl = `https://techbeeps.com/blog/${slug}`;
+  const currentUrl = `${SITE_URL}/blog/${slug}`;
+
+  const articleSchema = createBlogPostSchema({
+    headline: normalized.title,
+    description: normalized.excerpt || normalized.title,
+    slug: normalized.slug,
+    datePublished: post.date,
+    dateModified: post.modified,
+    authorName: normalized.authorName,
+    image: normalized.featuredImage,
+  });
+
+  const breadcrumbSchema = createBreadcrumbsSchema([
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: normalized.title, item: `/blog/${normalized.slug}` },
+  ]);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       <Header />
 
       {/* Hero / Header Section */}
