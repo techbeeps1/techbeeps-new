@@ -6,7 +6,7 @@ interface BlogDetailContentProps {
 }
 
 /**
- * Clean WordPress raw HTML from escaped slashes, harsh legacy styling, and format CTA banners
+ * Clean WordPress raw HTML from escaped slashes, harsh legacy styling, and format CTA banners & columns
  */
 function sanitizeContentHtml(rawHtml: string = ""): string {
   if (!rawHtml) return "";
@@ -17,10 +17,10 @@ function sanitizeContentHtml(rawHtml: string = ""): string {
     .replace(/\\&#8220;/g, '"')
     .replace(/\\&#8221;/g, '"')
     .replace(/\\&#039;/g, "'")
-    .replace(/\\'/g, "'")
+    .replace(/\\&quot;/g, "")
+    .replace(/&quot;/g, "")
     .replace(/\\"/g, '"')
-    .replace(/\\&quot;/g, '"')
-    .replace(/&quot;/g, '"')
+    .replace(/\\'/g, "'")
     .replace(/\\/g, "")
     // Fix legacy WordPress contact links to modern site route
     .replace(/https?:\/\/(www\.)?techbeeps\.co\.in\/contacts?\/?/gi, "/contact-us");
@@ -87,7 +87,13 @@ export default function BlogDetailContent({
           [&_td]:p-3.5 [&_td]:border [&_td]:border-white/10 [&_td]:text-gray-300
           [&_.wp-block-button]:my-8 [&_.wp-block-button]:text-center
           [&_.wp-block-button__link]:inline-flex [&_.wp-block-button__link]:items-center [&_.wp-block-button__link]:gap-2 [&_.wp-block-button__link]:px-6 [&_.wp-block-button__link]:py-3.5 [&_.wp-block-button__link]:rounded-full [&_.wp-block-button__link]:bg-primary [&_.wp-block-button__link]:text-white [&_.wp-block-button__link]:font-semibold [&_.wp-block-button__link]:no-underline [&_.wp-block-button__link]:shadow-lg [&_.wp-block-button__link]:hover:scale-105 [&_.wp-block-button__link]:transition-all
-          [&_.wp-block-columns]:grid [&_.wp-block-columns]:grid-cols-1 [&_.wp-block-columns]:sm:grid-cols-2 [&_.wp-block-columns]:gap-6 [&_.wp-block-columns]:my-8"
+          [&_.wp-block-columns]:grid [&_.wp-block-columns]:grid-cols-1 [&_.wp-block-columns]:sm:grid-cols-2 [&_.wp-block-columns]:gap-6 [&_.wp-block-columns]:my-10 [&_.wp-block-columns]:items-stretch
+          [&_.wp-block-column]:w-full [&_.wp-block-column]:min-w-0 [&_.wp-block-column]:flex [&_.wp-block-column]:flex-col
+          [&_.wp-block-column_figure]:my-0 [&_.wp-block-column_figure]:h-full [&_.wp-block-column_figure]:flex [&_.wp-block-column_figure]:flex-col
+          [&_.wp-block-column_img]:w-full [&_.wp-block-column_img]:h-full [&_.wp-block-column_img]:object-cover [&_.wp-block-column_img]:rounded-2xl [&_.wp-block-column_img]:my-0 [&_.wp-block-column_img]:aspect-[3/2]
+          [&_.wp-block-gallery]:grid [&_.wp-block-gallery]:grid-cols-1 [&_.wp-block-gallery]:sm:grid-cols-2 [&_.wp-block-gallery]:gap-6 [&_.wp-block-gallery]:my-10
+          [&_.wp-block-gallery_figure]:my-0
+          [&_.wp-block-gallery_img]:w-full [&_.wp-block-gallery_img]:h-full [&_.wp-block-gallery_img]:object-cover [&_.wp-block-gallery_img]:rounded-2xl [&_.wp-block-gallery_img]:my-0"
         dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
       />
 
