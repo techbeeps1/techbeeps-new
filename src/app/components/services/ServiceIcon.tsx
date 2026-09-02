@@ -22,6 +22,8 @@ import {
   FaDatabase,
   FaMicrochip,
   FaWordpress,
+  FaMagento,
+  FaWhatsapp,
 } from "react-icons/fa6";
 import {
   TbDeviceMobileCode,
@@ -46,6 +48,10 @@ import {
   TbPuzzle,
   TbDeviceDesktopCode,
   TbGauge,
+  TbEyeCheck,
+  TbAccessible,
+  TbShieldCheck,
+  TbBrandWhatsapp,
 } from "react-icons/tb";
 import {
   SiShopify,
@@ -56,6 +62,8 @@ import {
   SiFastapi,
   SiWoocommerce,
   SiWoo,
+  SiAngular,
+  SiPrestashop,
 } from "react-icons/si";
 import { BsGear, BsCodeSlash, BsTerminal, BsCloud, BsCpu } from "react-icons/bs";
 import { IconType } from "react-icons";
@@ -89,6 +97,8 @@ const iconRegistry: Record<string, IconType> = {
   FaDatabase,
   FaMicrochip,
   FaWordpress,
+  FaMagento,
+  FaWhatsapp,
   TbDeviceMobileCode,
   TbPalette,
   TbDeviceMobileUp,
@@ -111,6 +121,10 @@ const iconRegistry: Record<string, IconType> = {
   TbPuzzle,
   TbDeviceDesktopCode,
   TbGauge,
+  TbEyeCheck,
+  TbAccessible,
+  TbShieldCheck,
+  TbBrandWhatsapp,
   SiShopify,
   SiNextdotjs,
   SiFlutter,
@@ -119,6 +133,8 @@ const iconRegistry: Record<string, IconType> = {
   SiFastapi,
   SiWoocommerce,
   SiWoo,
+  SiAngular,
+  SiPrestashop,
   BsGear,
   BsCodeSlash,
   BsTerminal,

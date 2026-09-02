@@ -1,0 +1,95 @@
+{
+  "slug": "responsive-web-design",
+  "title": "Responsive Web Design",
+  "seo": {
+    "title": "Responsive Web Design Services | TechBeeps",
+    "description": "Expert responsive web design services to create mobile-friendly, fast, and user-focused websites that deliver seamless experiences across all devices.",
+    "keywords": [
+      "Responsive Web Design",
+      "Mobile Friendly Web Design",
+      "Adaptive Web Design",
+      "UI UX Responsive Design",
+      "Cross Device Compatibility",
+      "Web Design Services"
+    ]
+  },
+  "hero": {
+    "title": "Responsive Web Design Services",
+    "desc": "Techbeeps is a top Responsive Web Design Services firm. We excel at creating flexible, creative, and pixel-perfect web designs that adjust seamlessly across all screen sizes and devices, guaranteeing superior user experience and higher search rankings.",
+    "bgImage": "/services-bg.jpg",
+    "bgImageAlt": "TechBeeps Responsive Web Design Background"
+  },
+  "offeringsSection": {
+    "title": "Key Features of Responsive Web Design Services",
+    "desc": "Engaging, mobile-optimized, and future-ready responsive web experiences tailored for every screen.",
+    "items": [
+      {
+        "title": "Multi-Device Compatibility",
+        "desc": "Fluid layouts that automatically adapt and display flawlessly across smartphones, tablets, laptops, and large desktop monitors.",
+        "icon": "TbDeviceDesktopCode"
+      },
+      {
+        "title": "Enhanced User Experience",
+        "desc": "Intuitive navigation, thumb-friendly touch targets, readable typography, and effortless browsing on any device.",
+        "icon": "TbPalette"
+      },
+      {
+        "title": "Better Search Engine Rankings",
+        "desc": "Google favors mobile-first responsive websites. Our designs satisfy Core Web Vitals to boost your organic search performance.",
+        "icon": "FaArrowTrendUp"
+      },
+      {
+        "title": "Global Reach & Accessibility",
+        "desc": "Ensuring your digital presence is accessible, fast-loading, and usable for audiences worldwide across varied network speeds.",
+        "icon": "TbWorld"
+      },
+      {
+        "title": "Cost & Maintenance Efficiency",
+        "desc": "A single responsive codebase eliminates the need for separate mobile websites, reducing maintenance costs and time.",
+        "icon": "TbTools"
+      },
+      {
+        "title": "Future-Readiness & Speed Optimization",
+        "desc": "Modern CSS Grid and Flexbox architectures designed to adapt to new device screen sizes and resolutions seamlessly.",
+        "icon": "TbGauge"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Why Choose Techbeeps for Responsive Web Design Services?",
+    "desc": "We build adaptable, high-performing websites that captivate users on mobile, tablet, and desktop.",
+    "bullets": [
+      "Fluid Grid Systems: Flexible proportion-based layouts that adjust gracefully to any viewport width.",
+      "Retina & 4K Display Support: Crystal-clear vector graphics and typography on high-resolution screens.",
+      "Touch & Gesture Optimization: Swipeable galleries, mobile menus, and intuitive tap gestures.",
+      "SEO-First Architecture: Compliant with Google mobile-first indexing to maximize organic traffic."
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Commitment to Quality and Client Satisfaction"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "How is responsive web design different from mobile-friendly web design?",
+        "answer": "A mobile-friendly site displays on mobile but may require pinch-to-zoom. A responsive website dynamically rearranges its layout, images, and content to fit the exact screen dimensions of the viewing device."
+      },
+      {
+        "question": "What is the difference between adaptive design and responsive design?",
+        "answer": "Responsive design uses fluid grids and CSS media queries to adapt continuously to any screen size. Adaptive design uses static layouts for predefined screen breakpoints."
+      },
+      {
+        "question": "Can responsive design improve my website’s search engine rankings?",
+        "answer": "Yes! Google uses mobile-first indexing, meaning it ranks sites based on their mobile version. Fast, responsive websites rank significantly higher in search results."
+      },
+      {
+        "question": "How long does it take to make our existing website responsive?",
+        "answer": "Depending on the size and complexity of your existing site, converting it to a fully responsive design typically takes between 1 and 3 weeks."
+      },
+      {
+        "question": "Will a responsive design slow down my website on mobile devices?",
+        "answer": "Not with TechBeeps! We use responsive images (srcset), CSS modern layout techniques, and asset minification to ensure blazing-fast load times on mobile networks."
+      }
+    ]
+  }
+}

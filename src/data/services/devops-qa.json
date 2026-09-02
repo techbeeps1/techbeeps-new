@@ -1,0 +1,96 @@
+{
+  "slug": "devops-qa",
+  "title": "DevOps & QA Services",
+  "seo": {
+    "title": "DevOps & QA Services | TechBeeps",
+    "description": "Streamline your software delivery with automated CI/CD pipelines, robust QA testing, and resilient cloud infrastructure management.",
+    "keywords": [
+      "DevOps Services",
+      "QA Testing",
+      "CI/CD Pipeline Automation",
+      "Automated Testing",
+      "Infrastructure as Code",
+      "Performance Testing",
+      "Quality Assurance"
+    ]
+  },
+  "hero": {
+    "title": "Streamline Your Development with DevOps & QA Expertise",
+    "desc": "Accelerate release cycles, improve code quality, and ensure rock-solid stability with TechBeeps DevOps and Quality Assurance services. We combine automated CI/CD pipelines, Infrastructure as Code, and rigorous testing methodologies to deliver flawless digital products.",
+    "bgImage": "/services-bg.jpg",
+    "bgImageAlt": "TechBeeps DevOps & QA Background"
+  },
+  "offeringsSection": {
+    "title": "Our DevOps & QA Solutions",
+    "desc": "End-to-end DevOps automation and comprehensive software testing to ensure high reliability and rapid time-to-market.",
+    "items": [
+      {
+        "title": "CI/CD Pipeline Automation",
+        "desc": "Automated build, test, and deployment workflows using GitHub Actions, GitLab CI, Jenkins, and Docker to eliminate manual release errors.",
+        "icon": "TbSettingsAutomation"
+      },
+      {
+        "title": "Automated Software Testing",
+        "desc": "Comprehensive unit, integration, and end-to-end automated test suites using Cypress, Playwright, and Selenium for continuous verification.",
+        "icon": "TbDeviceDesktopCode"
+      },
+      {
+        "title": "Infrastructure as Code (IaC)",
+        "desc": "Provisioning and managing scalable, reproducible cloud environments using Terraform, Ansible, and Kubernetes clusters.",
+        "icon": "FaServer"
+      },
+      {
+        "title": "Manual & Exploratory QA Testing",
+        "desc": "Meticulous cross-browser and cross-device testing to uncover edge-case defects and ensure delightful user experiences.",
+        "icon": "TbTools"
+      },
+      {
+        "title": "Performance & Load Testing",
+        "desc": "Stress, load, and concurrency testing with JMeter and k6 to ensure your infrastructure scales smoothly during peak traffic.",
+        "icon": "TbGauge"
+      },
+      {
+        "title": "Security & Vulnerability Assessment",
+        "desc": "Automated static code analysis (SAST), dynamic testing (DAST), and compliance scanning for resilient, airtight applications.",
+        "icon": "FaShieldHalved"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Why Choose TechBeeps for DevOps & QA?",
+    "desc": "We bridge the gap between development and operations to foster agility, speed, and continuous software reliability.",
+    "bullets": [
+      "Faster Time-to-Market: Reduce deployment cycle times from weeks to minutes with zero-downtime releases.",
+      "Zero-Defect Quality: Shift-left testing catches bugs early in the development lifecycle.",
+      "Scalable Cloud Infrastructure: Automated autoscaling and self-healing systems via Kubernetes.",
+      "Continuous Observability: Real-time telemetry, centralized logging, and instant incident response."
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Commitment to Quality and Client Satisfaction"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "What is the primary benefit of implementing DevOps in our organization?",
+        "answer": "DevOps unites development and operations teams through automation, enabling faster software releases, reduced deployment failures, quicker bug fixes, and continuous product improvement."
+      },
+      {
+        "question": "What CI/CD tools and platforms do you support?",
+        "answer": "We have extensive experience configuring pipelines across GitHub Actions, GitLab CI/CD, Jenkins, CircleCI, AWS CodePipeline, and Azure DevOps."
+      },
+      {
+        "question": "What types of QA testing does TechBeeps provide?",
+        "answer": "Our QA offerings encompass functional testing, automated regression testing, API testing, performance and load testing, cross-browser/cross-device testing, security auditing, and accessibility validation."
+      },
+      {
+        "question": "How do you handle Infrastructure as Code (IaC)?",
+        "answer": "We use Terraform, AWS CloudFormation, and Ansible to define infrastructure declaratively, ensuring version control, reproducibility, and automated disaster recovery."
+      },
+      {
+        "question": "Can you integrate QA testing into our existing development workflow?",
+        "answer": "Yes! We seamlessly integrate automated testing stages into your pull request and deployment pipelines so that every commit is verified before reaching production."
+      }
+    ]
+  }
+}

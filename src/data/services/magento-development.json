@@ -1,0 +1,103 @@
+{
+  "slug": "magento-development",
+  "title": "Magento Development",
+  "seo": {
+    "title": "Magento Development Services | TechBeeps",
+    "description": "Professional Magento development services to create, customize, and scale enterprise eCommerce stores. Enhance performance, security, and boost online sales.",
+    "keywords": [
+      "Magento Development",
+      "Magento 2 Development",
+      "Magento Commerce",
+      "Magento Store Customization",
+      "Magento Migration",
+      "Enterprise Ecommerce"
+    ]
+  },
+  "hero": {
+    "title": "Magento Development",
+    "desc": "Explore the latest development services at our top-tier Magento Development Company. Improve your online presence by using custom ecommerce solutions made especially for your business needs. Our skilled developers ensure seamless integration, intuitive user interfaces, and optimal performance.",
+    "bgImage": "/services-bg.jpg",
+    "bgImageAlt": "TechBeeps Magento Development Background"
+  },
+  "offeringsSection": {
+    "title": "Magento Development Services With Custom Business Requirements",
+    "desc": "Enterprise-level Magento development and maintenance services tailored for high-volume retailers and global brands.",
+    "items": [
+      {
+        "title": "Custom Magento Store Development",
+        "desc": "End-to-end Adobe Commerce / Magento development with bespoke functionality, complex product catalogs, and tailored shopping journeys.",
+        "icon": "TbBuildingStore"
+      },
+      {
+        "title": "Magento 2 Migration & Upgrades",
+        "desc": "Smooth migration from Magento 1 or other platforms to Magento 2 with complete data retention, SEO preservation, and zero downtime.",
+        "icon": "TbArrowsExchange"
+      },
+      {
+        "title": "Custom Magento Theme Design",
+        "desc": "Responsive, brand-aligned UI/UX designs and PWA storefronts optimized for mobile shopping and maximum conversions.",
+        "icon": "TbPalette"
+      },
+      {
+        "title": "Magento Extension Development & Integration",
+        "desc": "Custom module development and third-party API integrations with ERPs, CRMs, payment processors, and shipping aggregators.",
+        "icon": "TbPuzzle"
+      },
+      {
+        "title": "Magento Speed & Performance Optimization",
+        "desc": "Varnish caching, Redis configuration, database indexing, and asset minification to ensure blazing-fast store speeds.",
+        "icon": "TbGauge"
+      },
+      {
+        "title": "Magento Support & Maintenance",
+        "desc": "Proactive security patching, extension updates, bug fixes, server monitoring, and continuous technical support.",
+        "icon": "TbTools"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Why Choose TechBeeps for Magento Development?",
+    "desc": "We empower enterprise retailers with robust, scalable, and secure Magento architecture.",
+    "bullets": [
+      "Enterprise Scalability: Capable of handling millions of SKUs, multi-store setups, and high concurrency.",
+      "Advanced Customization: Bespoke module architecture and personalized checkout experiences.",
+      "Seamless ERP & CRM Sync: Deep integrations with SAP, Salesforce, NetSuite, and Microsoft Dynamics.",
+      "Dedicated Magento Experts: Certified developers providing end-to-end development and 24/7 support."
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Commitment to Quality and Client Satisfaction"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "Why should I choose Magento over WooCommerce or Shopify?",
+        "answer": "Magento (Adobe Commerce) is built for medium-to-enterprise businesses requiring high scalability, complex multi-store/multi-currency setups, advanced inventory management, and deep ERP integrations that standard platforms cannot match."
+      },
+      {
+        "question": "How do you handle Magento 2 migration without losing SEO rankings?",
+        "answer": "We perform 1-to-1 301 URL redirects, maintain metadata structures, migrate all customer and order histories, and test extensively on staging servers to ensure zero loss in search engine rankings."
+      },
+      {
+        "question": "How can you improve the speed of our existing Magento store?",
+        "answer": "We optimize Magento stores through Varnish caching, Redis session management, Elasticsearch integration, image compression, database query optimization, and CDN implementation."
+      },
+      {
+        "question": "Can you build custom Magento extensions for our business?",
+        "answer": "Yes! We develop bespoke Magento 2 extensions tailored to your exact business rules, adhering strictly to Adobe Commerce coding standards and security practices."
+      },
+      {
+        "question": "Do you provide ongoing Magento security patching and upgrades?",
+        "answer": "Yes, we monitor and apply all official Adobe security patches, conduct regular vulnerability scans, and ensure your store remains secure and fully PCI-DSS compliant."
+      }
+    ]
+  },
+  "hireDeveloperSection": {
+    "title": "Hire Dedicated Magento Developers",
+    "desc": "Scale your eCommerce engineering capacity with certified Magento developers from TechBeeps. Get flexible engagement models, transparent communication, and top-tier code quality.",
+    "buttonText": "Hire Magento Developers",
+    "buttonUrl": "/contact-us",
+    "image": "/Migration.jpg",
+    "imageAlt": "TechBeeps Magento Developers"
+  }
+}

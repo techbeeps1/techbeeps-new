@@ -1,0 +1,103 @@
+{
+  "slug": "php-development",
+  "title": "PHP Development",
+  "seo": {
+    "title": "PHP Development Services | TechBeeps",
+    "description": "Professional PHP development services to build fast, secure, and scalable websites & web apps. Get custom PHP solutions tailored to your business needs.",
+    "keywords": [
+      "PHP Development",
+      "Custom PHP Development",
+      "PHP Web Development",
+      "PHP Frameworks",
+      "PHP CMS Development",
+      "Backend Development"
+    ]
+  },
+  "hero": {
+    "title": "PHP Development",
+    "desc": "Optimize your online presence with our expert PHP development services. Our proficient developers create scalable, secure, and efficient solutions crafted to suit your unique requirements. We assure a seamless journey from idea to execution, focusing on user-friendly designs and optimal performance.",
+    "bgImage": "/services-bg.jpg",
+    "bgImageAlt": "TechBeeps PHP Development Background"
+  },
+  "offeringsSection": {
+    "title": "End-to-End PHP Development Services",
+    "desc": "From custom web applications to robust enterprise portals, we provide full-cycle PHP development services.",
+    "items": [
+      {
+        "title": "Custom PHP Web Development",
+        "desc": "Bespoke web applications built with modern object-oriented PHP 8+, ensuring high performance, clean architecture, and long-term scalability.",
+        "icon": "FaPhp"
+      },
+      {
+        "title": "PHP Framework Solutions",
+        "desc": "Expertise across leading frameworks like Laravel, Symfony, CodeIgniter, and Yii to rapidly deliver structured, secure web apps.",
+        "icon": "TbDeviceDesktopCode"
+      },
+      {
+        "title": "Custom PHP CMS Solutions",
+        "desc": "Custom CMS development and extensions for WordPress, Drupal, and Joomla tailored to your editorial and content workflows.",
+        "icon": "TbApps"
+      },
+      {
+        "title": "PHP API & Web Services Development",
+        "desc": "High-speed RESTful and GraphQL API backends for seamless web, mobile, and third-party application integration.",
+        "icon": "TbApi"
+      },
+      {
+        "title": "PHP Migration & Version Upgrades",
+        "desc": "Upgrading legacy PHP 5.x/7.x applications to PHP 8.x with enhanced performance, modernized syntax, and resolved deprecations.",
+        "icon": "TbArrowsExchange"
+      },
+      {
+        "title": "PHP Support & Maintenance",
+        "desc": "24/7 security auditing, bug fixing, database query optimization, and server performance tuning for existing PHP platforms.",
+        "icon": "TbTools"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Why Opt For PHP Web Development Services?",
+    "desc": "We build secure, dynamic, and high-performing PHP web applications that scale with your business.",
+    "bullets": [
+      "Proven Track Record: 10+ years of delivering enterprise-grade PHP applications across diverse industries.",
+      "High Performance: Optimized PHP 8+ JIT compilation, OPcache, and database indexing for rapid load times.",
+      "Cross-Platform Compatibility: Seamless deployment across Linux, Unix, Apache, and Nginx environments.",
+      "End-to-End Security: Built-in protection against SQL injection, CSRF attacks, and XSS vulnerabilities."
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Commitment to Quality and Client Satisfaction"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "How much does it cost to hire a dedicated PHP developer?",
+        "answer": "The cost varies depending on project complexity, developer seniority, and engagement model. We offer flexible hourly, monthly, and fixed-price models to fit your budget."
+      },
+      {
+        "question": "Can you upgrade our existing PHP website to the latest PHP 8 version?",
+        "answer": "Yes! We audit your current codebase, update outdated dependencies, fix deprecated functions, and test thoroughly to ensure full compatibility with PHP 8.x."
+      },
+      {
+        "question": "Which PHP frameworks do your developers specialize in?",
+        "answer": "Our team has deep expertise in Laravel, Symfony, CodeIgniter, CakePHP, and Yii, as well as native custom PHP development."
+      },
+      {
+        "question": "How do you ensure the security of our PHP applications?",
+        "answer": "We enforce parameterized database queries (PDO), CSRF tokens, strict data validation, password hashing (bcrypt/argon2), and continuous security auditing."
+      },
+      {
+        "question": "Do you offer ongoing maintenance for PHP web applications?",
+        "answer": "Yes, we provide ongoing maintenance covering regular backups, security patch updates, server optimization, and on-demand feature enhancements."
+      }
+    ]
+  },
+  "hireDeveloperSection": {
+    "title": "Hire Dedicated PHP Developer",
+    "desc": "Hire experienced PHP developers from Techbeeps to craft custom, high-speed, and secure web solutions for your business.",
+    "buttonText": "Hire Dedicated PHP Developer",
+    "buttonUrl": "/contact-us",
+    "image": "/Migration.jpg",
+    "imageAlt": "TechBeeps PHP Developers"
+  }
+}

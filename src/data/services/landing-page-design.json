@@ -1,0 +1,95 @@
+{
+  "slug": "landing-page-design",
+  "title": "Landing Page Design",
+  "seo": {
+    "title": "Landing Page Design Services | TechBeeps",
+    "description": "High-converting landing page design services engineered for lead generation, PPC campaigns, and maximum conversion rates.",
+    "keywords": [
+      "Landing Page Design",
+      "High Converting Landing Page",
+      "PPC Landing Pages",
+      "Lead Generation Pages",
+      "Custom Landing Page Design",
+      "Conversion Rate Optimization"
+    ]
+  },
+  "hero": {
+    "title": "Landing Page Design Services",
+    "desc": "Turn traffic into paying customers with high-impact landing page design services. We craft visually stunning, fast-loading, and conversion-focused landing pages engineered for PPC campaigns, product launches, and lead generation.",
+    "bgImage": "/services-bg.jpg",
+    "bgImageAlt": "TechBeeps Landing Page Design Background"
+  },
+  "offeringsSection": {
+    "title": "What Do Our Landing Page Design Services Include?",
+    "desc": "Strategic UI/UX design, persuasive copywriting layout, and rapid performance optimization to drive conversions.",
+    "items": [
+      {
+        "title": "Custom Landing Page Design",
+        "desc": "Bespoke, brand-aligned visual design tailored to your specific campaign objectives, product offerings, and target demographic.",
+        "icon": "TbPalette"
+      },
+      {
+        "title": "Lead Generation Landing Pages",
+        "desc": "High-converting lead capture forms, compelling value propositions, and trust badges designed to maximize form completions.",
+        "icon": "FaArrowTrendUp"
+      },
+      {
+        "title": "PPC & Ad Campaign Landing Pages",
+        "desc": "Laser-focused landing pages built to align with Google Ads, Meta Ads, and LinkedIn campaigns for higher Quality Scores and lower CAC.",
+        "icon": "FaChartLine"
+      },
+      {
+        "title": "Mobile-Responsive Layouts",
+        "desc": "Pixel-perfect responsiveness ensuring snappy loading, intuitive touch targets, and easy readability on every mobile device.",
+        "icon": "TbDeviceMobileCheck"
+      },
+      {
+        "title": "A/B Testing & Optimization",
+        "desc": "Structured multivariate testing on headlines, CTA buttons, colors, and layout structures to continually lift conversion rates.",
+        "icon": "TbGauge"
+      },
+      {
+        "title": "CRM & Marketing Automation Sync",
+        "desc": "Direct integrations with HubSpot, Mailchimp, Zapier, Webhooks, and analytics tools for instant lead routing and attribution.",
+        "icon": "TbPlugConnected"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Choose Techbeeps for Your Landing Page Design Agency",
+    "desc": "Our landing pages combine eye-catching aesthetics with psychological conversion triggers to maximize your advertising ROI.",
+    "bullets": [
+      "Conversion-Centered Design: Strategic CTA placement, clear visual hierarchy, and compelling social proof.",
+      "Lightning-Fast Loading: Sub-second load times to prevent bounce and improve advertising performance.",
+      "100% Mobile Responsive: Flawless layout and frictionless interaction across all screen sizes.",
+      "Seamless Integrations: Direct sync with your CRM, email marketing tools, and analytics platforms."
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Commitment to Quality and Client Satisfaction"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "What is a landing page and how is it different from a homepage?",
+        "answer": "A landing page is a standalone web page created specifically for a marketing or advertising campaign. Unlike a homepage with multiple links and distractions, a landing page has a single, focused call-to-action (CTA) designed to convert visitors."
+      },
+      {
+        "question": "Why is having a custom landing page so important for ads?",
+        "answer": "Custom landing pages maintain message match with your ads, leading to higher relevancy, lower bounce rates, better Google Ads Quality Scores, lower cost-per-click, and substantially higher conversion rates."
+      },
+      {
+        "question": "How fast can you deliver a custom landing page?",
+        "answer": "We can design and build a high-converting custom landing page in as little as 3 to 7 business days, including full responsiveness and analytics integration."
+      },
+      {
+        "question": "Do you help with A/B testing our landing pages?",
+        "answer": "Yes! We set up A/B split tests on headlines, hero graphics, forms, and button placements to scientifically identify the highest-converting variations."
+      },
+      {
+        "question": "Can you integrate the landing page with our existing CRM and marketing tools?",
+        "answer": "Yes, we integrate with all popular CRMs and marketing platforms including Salesforce, HubSpot, Mailchimp, ActiveCampaign, Klaviyo, and Zapier."
+      }
+    ]
+  }
+}

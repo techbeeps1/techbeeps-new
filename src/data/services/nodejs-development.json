@@ -1,0 +1,103 @@
+{
+  "slug": "nodejs-development",
+  "title": "Node.js Development",
+  "seo": {
+    "title": "Node.js Development Services | TechBeeps",
+    "description": "Unlock high-performance, scalable, and secure web solutions with our Node.js development services. We build fast, reliable, and custom Node.js applications tailored to your business needs.",
+    "keywords": [
+      "Node.js Development",
+      "Node.js Development Company",
+      "RESTful APIs",
+      "Microservices Architecture",
+      "Real-Time Web Apps",
+      "Backend Development"
+    ]
+  },
+  "hero": {
+    "title": "Node JS Development",
+    "desc": "Discover outstanding Node.js development services tailored to boost your web applications. Our developers execute the full potential of Node.js, ensuring exceptional performance. We specialize in crafting customized Node.js solutions aligned with your unique business requirements.",
+    "bgImage": "/services-bg.jpg",
+    "bgImageAlt": "TechBeeps Node.js Development Background"
+  },
+  "offeringsSection": {
+    "title": "A-list Node js Development Services for Varied Project Demands",
+    "desc": "High-throughput backend architectures, microservices, and real-time streaming applications built by expert Node.js engineers.",
+    "items": [
+      {
+        "title": "Custom Node.js Web App Development",
+        "desc": "High-performance, event-driven web applications designed for speed, high scalability, and seamless user experiences.",
+        "icon": "FaNodeJs"
+      },
+      {
+        "title": "RESTful API & Microservices Development",
+        "desc": "Secure, lightweight, and scalable API endpoints and microservices engineered for seamless communication between systems.",
+        "icon": "TbApi"
+      },
+      {
+        "title": "Real-Time Application Development",
+        "desc": "Low-latency real-time applications including live chat, video streaming, collaborative tools, and financial dashboards with WebSockets.",
+        "icon": "FaCommentDots"
+      },
+      {
+        "title": "Node.js Migration & Cloud Deployment",
+        "desc": "Upgrading legacy backend systems to modern Node.js environments with containerized deployment on AWS, Azure, or GCP.",
+        "icon": "TbArrowsExchange"
+      },
+      {
+        "title": "Serverless Node.js Applications",
+        "desc": "Cost-efficient, auto-scaling serverless backends built with AWS Lambda, GCP Cloud Functions, and event-driven architectures.",
+        "icon": "TbCloudCode"
+      },
+      {
+        "title": "Node.js Maintenance & Support",
+        "desc": "Proactive performance monitoring, security patching, memory leak profiling, and 24/7 technical support.",
+        "icon": "TbTools"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Why Opt For Node JS Development Services?",
+    "desc": "Leverage the asynchronous, event-driven power of Node.js for lightning-fast execution and massive scalability.",
+    "bullets": [
+      "Non-Blocking I/O: High concurrency and fast response times even under heavy user loads.",
+      "Full-Stack JavaScript: Unified language across frontend and backend for rapid development.",
+      "Microservices Ready: Modular, decoupled architecture that grows seamlessly with your business.",
+      "Enterprise Security: Robust authentication, rate limiting, and data encryption protocols."
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Commitment to Quality and Client Satisfaction"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "Why are Node.js developers in high demand?",
+        "answer": "Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices."
+      },
+      {
+        "question": "Is Node.js suitable for enterprise-scale applications?",
+        "answer": "Yes! Major enterprises like Netflix, Uber, PayPal, and LinkedIn rely on Node.js for its ability to handle millions of simultaneous requests with minimal server resource consumption."
+      },
+      {
+        "question": "What databases pair best with Node.js?",
+        "answer": "Node.js works seamlessly with both SQL databases (PostgreSQL, MySQL) and NoSQL databases (MongoDB, Redis, DynamoDB) depending on project requirements."
+      },
+      {
+        "question": "Can you migrate our existing PHP or Python backend to Node.js?",
+        "answer": "Yes, we have extensive experience refactoring legacy backend monolithic systems into modern, modular Node.js microservices with zero operational downtime."
+      },
+      {
+        "question": "How do you ensure high security in Node.js applications?",
+        "answer": "We implement Helmet security headers, rate limiting, JWT authentication, input validation, automated npm audit vulnerability checks, and role-based access control (RBAC)."
+      }
+    ]
+  },
+  "hireDeveloperSection": {
+    "title": "Why Hire Node Js Developer From Techbeeps?",
+    "desc": "Hire experienced Node.js developers who can build robust backends, real-time apps, and high-performance APIs tailored to your specifications.",
+    "buttonText": "Hire Node.js Developer",
+    "buttonUrl": "/contact-us",
+    "image": "/Migration.jpg",
+    "imageAlt": "TechBeeps Node.js Developers"
+  }
+}

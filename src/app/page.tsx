@@ -4,7 +4,7 @@ import Image from "next/image";
 import { BsArrowRightCircle, BsCheckAll } from "react-icons/bs";
 import Header from "./components/header/Header";
 import Footer from "./components/Footer";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, PanInfo } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { IoArrowForwardOutline } from "react-icons/io5";
 import gsap from "gsap";
@@ -27,60 +27,201 @@ if (typeof window !== "undefined") {
 export default function Home() {
   const cards = [
     {
-      id: "ui-1",
-      title: "UI/UX Design",
-      desc: "At TechBeeps Services, we create stunning, user-focused designs.",
-      image: "/ui_ux_card.png",
-      url: "/services/ui-ux-design",
-    },
-    {
-      id: "mobile-2",
-      title: "Mobile App Development",
-      desc: "We offer full-cycle mobile app development services, which means that.",
-      image: "/mobile_app_dev_card.png",
-      url: "/services/mobile-app-development",
-    },
-    {
-      id: "web-3",
-      title: "Web Development",
-      desc: "Get the best online presence through our customized web development.",
-      image: "/web_dev_card.png",
-      url: "/services/web-development",
-    },
-    {
-      id: "ai-4",
+      id: "ai-solutions",
       title: "AI Solutions",
-      desc: "At TechBeeps, we are transforming the way businesses use technology.",
+      desc: "Transform your business with intelligent AI agents, custom LLM integrations, and process automation.",
       image: "/ai_solution_card.png",
       url: "/services/ai-solutions",
     },
     {
-      id: "shopify-5",
+      id: "ui-ux-design",
+      title: "UI/UX Design",
+      desc: "At TechBeeps Services, we create stunning, intuitive, and user-focused designs.",
+      image: "/ui_ux_card.png",
+      url: "/services/ui-ux-design",
+    },
+    {
+      id: "web-development",
+      title: "Web Development",
+      desc: "Get the best online presence through our customized, high-performance web development.",
+      image: "/web_dev_card.png",
+      url: "/services/web-development",
+    },
+    {
+      id: "mobile-app-dev",
+      title: "Mobile App Development",
+      desc: "We offer full-cycle mobile app development services for iOS and Android.",
+      image: "/mobile_app_dev_card.png",
+      url: "/services/mobile-app-development",
+    },
+    {
+      id: "shopify-dev",
       title: "Shopify Development",
-      desc: "Upgrade your online presence with Best Shopify development company.",
+      desc: "Upgrade your online presence with custom Shopify development and bespoke themes.",
       image: "/shopify_dev_card.png",
       url: "/services/shopify-development",
+    },
+    {
+      id: "wordpress-dev",
+      title: "WordPress Development",
+      desc: "Custom WordPress websites, themes, and plugin development built for scale and security.",
+      image: "/wordpress_dev_card.jpg",
+      url: "/services/wordpress-development",
+    },
+    {
+      id: "laravel-dev",
+      title: "Laravel Development",
+      desc: "Enterprise-grade PHP web applications, robust REST APIs, and scalable backend architectures.",
+      image: "/laravel_dev_card.jpg",
+      url: "/services/laravel-development",
+    },
+    {
+      id: "python-dev",
+      title: "Python Development",
+      desc: "From web backends to AI automation, we deliver tailored Python, Django, and FastAPI solutions.",
+      image: "/python_dev_card.png",
+      url: "/services/python-development",
+    },
+    {
+      id: "cloud-services",
+      title: "Cloud Services & Migration",
+      desc: "Strengthen your business with cloud architecture, zero-downtime migration, and AWS/Azure management.",
+      image: "/cloud_services_card.jpg",
+      url: "/services/cloud-services",
+    },
+    {
+      id: "devops-qa",
+      title: "DevOps & QA Services",
+      desc: "Automate CI/CD pipelines, ensure zero-defect software releases, and manage cloud infrastructure.",
+      image: "/devops_qa_card.jpg",
+      url: "/services/devops-qa",
+    },
+    {
+      id: "woocommerce-dev",
+      title: "WooCommerce Development",
+      desc: "Custom WooCommerce online stores, tailored plugins, and high-conversion shopping cart experiences.",
+      image: "/woocommerce_dev_card.jpg",
+      url: "/services/woocommerce-development",
+    },
+    {
+      id: "magento-dev",
+      title: "Magento Development",
+      desc: "Enterprise Adobe Commerce and Magento 2 store development, migration, and custom module architecture.",
+      image: "/magento_dev_card.jpg",
+      url: "/services/magento-development",
+    },
+    {
+      id: "nodejs-dev",
+      title: "Node.js Development",
+      desc: "High-throughput asynchronous backends, microservices, and real-time collaborative web applications.",
+      image: "/nodejs_dev_card.jpg",
+      url: "/services/nodejs-development",
+    },
+    {
+      id: "php-dev",
+      title: "PHP Development",
+      desc: "Custom PHP 8+ web development, CMS solutions, and database optimization built for speed and security.",
+      image: "/php_dev_card.jpg",
+      url: "/services/php-development",
+    },
+    {
+      id: "prestashop-dev",
+      title: "PrestaShop Development",
+      desc: "Custom PrestaShop store design, bespoke module development, and seamless checkout optimization.",
+      image: "/prestashop_card.jpg",
+      url: "/services/prestashop-development",
+    },
+    {
+      id: "angularjs-dev",
+      title: "AngularJS Development",
+      desc: "Dynamic single-page applications (SPAs), component architecture, and legacy migration services.",
+      image: "/angular_dev_card.jpg",
+      url: "/services/angularjs-development",
+    },
+    {
+      id: "whatsapp-automation",
+      title: "WhatsApp Automation",
+      desc: "24/7 AI-powered customer support, order updates, and marketing workflows via WhatsApp Business API.",
+      image: "/whatsapp_automation_card.jpg",
+      url: "/services/whatsapp-automation",
+    },
+    {
+      id: "accessibility-expertise",
+      title: "Accessibility Expertise",
+      desc: "Ensure full WCAG 2.1 and ADA compliance, screen reader support, and inclusive digital experiences.",
+      image: "/accessibility_card.jpg",
+      url: "/services/accessibility-expertise",
+    },
+    {
+      id: "landing-page-design",
+      title: "Landing Page Design",
+      desc: "High-impact, conversion-focused landing pages engineered for PPC campaigns and lead generation.",
+      image: "/landing_page_card.jpg",
+      url: "/services/landing-page-design",
+    },
+    {
+      id: "ecommerce-dev",
+      title: "Ecommerce Website Development",
+      desc: "Scalable multi-vendor platforms, custom shopping carts, and seamless payment gateway integrations.",
+      image: "/ecommerce_card.png",
+      url: "/services/ecommerce-development",
+    },
+    {
+      id: "responsive-web-design",
+      title: "Responsive Web Design",
+      desc: "Mobile-first, fluid grid web designs that deliver pixel-perfect experiences across all device screens.",
+      image: "/responsive_design_card.png",
+      url: "/services/responsive-web-design",
     },
   ];
 
   const [index, setIndex] = useState(0);
-  const visibleCards = 3;
+  const sliderContainerRef = useRef<HTMLDivElement>(null);
+  const [cardStride, setCardStride] = useState(388);
 
-  // 🔥 AUTOPLAY
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev >= cards.length - visibleCards ? 0 : prev + 1));
-    }, 3000); // speed change here
-
-    return () => clearInterval(interval);
+    const updateDimensions = () => {
+      if (sliderContainerRef.current) {
+        const isMobile = window.innerWidth < 640;
+        if (isMobile) {
+          const containerWidth = sliderContainerRef.current.offsetWidth;
+          setCardStride(containerWidth + 24);
+        } else {
+          setCardStride(388);
+        }
+      }
+    };
+    updateDimensions();
+    // Run again after initial render layout settles
+    const timer = setTimeout(updateDimensions, 100);
+    window.addEventListener("resize", updateDimensions);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("resize", updateDimensions);
+    };
   }, []);
 
+  const maxIndex = cards.length - 1;
+
   const next = () => {
-    setIndex((prev) => (prev >= cards.length - visibleCards ? 0 : prev + 1));
+    setIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
   };
 
   const prev = () => {
-    setIndex((prev) => (prev <= 0 ? 0 : prev - 1));
+    setIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+  };
+
+  const handleDragEnd = (_e: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+    const swipeThreshold = 30;
+    const velocityThreshold = 150;
+
+    if (info.offset.x < -swipeThreshold || info.velocity.x < -velocityThreshold) {
+      // Swiped Left -> Move 1 slide forward
+      setIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+    } else if (info.offset.x > swipeThreshold || info.velocity.x > velocityThreshold) {
+      // Swiped Right -> Move 1 slide backward
+      setIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+    }
   };
 
   {
@@ -206,45 +347,51 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Slider */}
-          <div className="overflow-hidden">
+            {/* Slider */}
+          <div
+            ref={sliderContainerRef}
+            data-lenis-prevent
+            className="overflow-hidden cursor-grab active:cursor-grabbing touch-pan-y"
+          >
             <motion.div
-              className="flex gap-6"
-              animate={{ x: -index * 320 }}
+              className="flex gap-6 select-none"
+              drag="x"
+              dragConstraints={{ left: -(cards.length - 1) * cardStride, right: 0 }}
+              dragElastic={0.08}
+              onDragEnd={handleDragEnd}
+              animate={{ x: -index * cardStride }}
               transition={{
-                type: "tween",
-                duration: 0.9,
-                ease: "easeInOut",
+                type: "spring",
+                damping: 25,
+                stiffness: 150,
               }}
             >
               {cards.map((card) => (
                 <div
-                  className="min-w-[85vw] sm:min-w-91 rounded-[15px] relative bg-[linear-gradient(180deg,#120D25_58%,#291D58_100%)] flex flex-col justify-between overflow-hidden group"
+                  key={card.id}
+                  className="service-slide-card w-full sm:w-91 min-w-full sm:min-w-91 max-w-full sm:max-w-91 h-[450px] rounded-[15px] relative bg-[linear-gradient(180deg,#120D25_58%,#291D58_100%)] flex flex-col justify-between overflow-hidden group shrink-0"
                 >
-                  <div className="space-y-3.75 mb-4 px-6 pt-8">
-                    <h3 className="text-[25px] leading-7.5 bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_42%,#FFFFFF_59%,#BE9FFF_100%)] bg-clip-text text-transparent">
+                  <div className="space-y-3.75 mb-2 px-6 pt-8 pointer-events-none">
+                    <h3 className="text-[25px] leading-7.5 bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_42%,#FFFFFF_59%,#BE9FFF_100%)] bg-clip-text text-transparent line-clamp-1">
                       {card.title}
                     </h3>
-                    <p className="leading-6.25 text-white/80">{card.desc}</p>
+                    <p className="leading-6.25 text-white/80 line-clamp-2">{card.desc}</p>
                   </div>
-                  <div className="w-full overflow-hidden">
-                    <div className="w-full relative">
-                      <Image
-                        src={card.image}
-                        alt={card.title}
-                        width={340}
-                        height={220}
-                        loading="lazy"
-                        sizes="(max-width: 640px) 85vw, 364px"
-                        style={{ mixBlendMode: "screen" }}
-                        className="mix-blend-screen w-full pointer-events-none drop-shadow-[0_10px_25px_rgba(151,149,255,0.3)]"
-                      />
-                    </div>
+                  <div className="w-full h-[270px] relative overflow-hidden flex items-end pointer-events-none">
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      fill
+                      draggable={false}
+                      sizes="(max-width: 640px) 100vw, 364px"
+                      style={{ mixBlendMode: "screen" }}
+                      className="mix-blend-screen object-cover object-center pointer-events-none drop-shadow-[0_10px_25px_rgba(151,149,255,0.3)] select-none"
+                    />
                   </div>
                   <Link
-                    onClick={next}
                     className="w-12.5 h-12.5 backdrop-blur-[10px] group/btn absolute bottom-3.75 left-3.75 cursor-pointer rounded-[10px] flex items-center justify-center bg-white/20 hover:bg-primary duration-400 z-10"
                     href={card.url}
+                    aria-label={`View details about ${card.title}`}
                   >
                     <IoArrowForwardOutline className="h-5.5 w-5.5 -rotate-45 text-white group-hover/btn:rotate-0 duration-400" />
                   </Link>

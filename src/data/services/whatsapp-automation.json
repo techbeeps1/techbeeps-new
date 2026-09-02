@@ -1,0 +1,91 @@
+{
+  "slug": "whatsapp-automation",
+  "title": "WhatsApp Automation",
+  "seo": {
+    "title": "WhatsApp Automation Services | TechBeeps",
+    "description": "Boost your business with AI-powered WhatsApp automation — deliver instant customer service, streamline operations, and increase conversions.",
+    "keywords": [
+      "WhatsApp Automation",
+      "WhatsApp Business API",
+      "WhatsApp Chatbot",
+      "AI WhatsApp Assistant",
+      "WhatsApp CRM Integration",
+      "Automated Customer Support"
+    ]
+  },
+  "hero": {
+    "title": "AI-Powered WhatsApp Automation for the Modern Business",
+    "desc": "Deliver instant customer service, streamline operations, and turn chats into conversions — powered by intelligent WhatsApp automation. We connect verified WhatsApp Business APIs with custom AI chatbots, CRM systems, and automated marketing workflows.",
+    "bgImage": "/services-bg.jpg",
+    "bgImageAlt": "TechBeeps WhatsApp Automation Background"
+  },
+  "offeringsSection": {
+    "title": "WhatsApp Automation Features",
+    "desc": "Automate your customer interactions, order updates, and marketing campaigns with verified WhatsApp Business solutions.",
+    "items": [
+      {
+        "title": "Smart AI Chatbots",
+        "desc": "Handle customer inquiries instantly with AI-driven, multilingual chatbots trained on your business knowledge base 24/7.",
+        "icon": "FaRobot"
+      },
+      {
+        "title": "Order & Booking Management",
+        "desc": "Allow customers to place orders, confirm reservations, track shipment updates, and make payments directly in WhatsApp.",
+        "icon": "TbShoppingCart"
+      },
+      {
+        "title": "Automated Notifications & Alerts",
+        "desc": "Send personalized abandoned cart reminders, booking confirmations, payment alerts, and broadcast announcements.",
+        "icon": "FaCommentDots"
+      },
+      {
+        "title": "CRM & ERP System Integration",
+        "desc": "Integrate WhatsApp with HubSpot, Salesforce, Zoho, Shopify, WooCommerce, and custom databases for unified lead management.",
+        "icon": "TbPlugConnected"
+      },
+      {
+        "title": "Real-Time Analytics & Reporting",
+        "desc": "Track message delivery rates, read receipts, customer response times, chatbot accuracy, and campaign ROI in real time.",
+        "icon": "FaChartLine"
+      },
+      {
+        "title": "Multilingual Messaging Support",
+        "desc": "Engage global customers in their preferred languages with intelligent real-time conversational translation.",
+        "icon": "TbWorld"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Why Choose WhatsApp Automation with TechBeeps?",
+    "desc": "Harness the world’s most popular messaging app to drive customer engagement, automated sales, and frictionless support.",
+    "bullets": [
+      "Deliver instant responses 24/7 to boost customer satisfaction and loyalty.",
+      "Generate, qualify, and nurture sales leads automatically through conversational flows.",
+      "100% verified official WhatsApp Business API integration with zero risk of account bans.",
+      "Save operational time and reduce support costs by up to 60% with automated workflows."
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Commitment to Quality and Client Satisfaction"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "What is WhatsApp Automation and how does it work?",
+        "answer": "WhatsApp Automation uses the official WhatsApp Business Cloud API combined with AI chatbots and webhook automations to handle customer conversations, send transactional messages, and route complex queries to live agents."
+      },
+      {
+        "question": "Is WhatsApp Automation safe and compliant with Meta policies?",
+        "answer": "Yes! We only use verified official Meta WhatsApp Business APIs, ensuring complete compliance with Meta terms and 100% protection against number blocking."
+      },
+      {
+        "question": "Can we integrate WhatsApp Automation with our existing CRM and eCommerce store?",
+        "answer": "Yes! We integrate WhatsApp seamlessly with Shopify, WooCommerce, HubSpot, Salesforce, Zoho, Google Sheets, and custom database webhooks."
+      },
+      {
+        "question": "Do you provide end-to-end setup and ongoing support?",
+        "answer": "Yes, we handle everything from Meta Business verification and API setup to chatbot conversation design, workflow testing, and 24/7 technical monitoring."
+      }
+    ]
+  }
+}

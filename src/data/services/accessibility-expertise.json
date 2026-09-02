@@ -1,0 +1,95 @@
+{
+  "slug": "accessibility-expertise",
+  "title": "Accessibility Expertise",
+  "seo": {
+    "title": "Accessibility Expertise Services | TechBeeps",
+    "description": "Empower everyone with accessible digital experiences. We ensure ADA & WCAG compliance, screen reader support, and inclusive web solutions.",
+    "keywords": [
+      "Accessibility Expertise",
+      "ADA Compliance",
+      "WCAG 2.1 Guidelines",
+      "Web Accessibility Services",
+      "Screen Reader Optimization",
+      "Inclusive UI UX"
+    ]
+  },
+  "hero": {
+    "title": "Accessibility Expertise That Empowers Everyone",
+    "desc": "At Techbeeps, we are committed to making the web accessible to everyone. Our accessibility expertise ensures your digital platforms meet WCAG and ADA standards, providing inclusive, user-friendly experiences for all users regardless of ability or device.",
+    "bgImage": "/services-bg.jpg",
+    "bgImageAlt": "TechBeeps Accessibility Expertise Background"
+  },
+  "offeringsSection": {
+    "title": "Our Accessibility Services",
+    "desc": "Comprehensive accessibility consulting, audits, and remediation to ensure digital inclusivity and compliance across all platforms.",
+    "items": [
+      {
+        "title": "Accessibility Audits & Assessments",
+        "desc": "Comprehensive evaluation of your website or application against WCAG 2.1 AA/AAA and ADA standards to identify and document accessibility barriers.",
+        "icon": "TbEyeCheck"
+      },
+      {
+        "title": "WCAG & ADA Compliance Remediation",
+        "desc": "Hands-on code and design fixes to rectify color contrast, keyboard accessibility, semantic tags, and ARIA roles for full legal compliance.",
+        "icon": "TbShieldCheck"
+      },
+      {
+        "title": "Screen Reader & Keyboard Optimization",
+        "desc": "Ensuring flawless navigation and usability with leading assistive technologies like JAWS, NVDA, and VoiceOver without requiring a mouse.",
+        "icon": "TbDeviceDesktopCode"
+      },
+      {
+        "title": "Inclusive UI/UX Design",
+        "desc": "Crafting visually stunning, accessible design systems with clear focus indicators, readable typography, and intuitive interactive elements.",
+        "icon": "TbPalette"
+      },
+      {
+        "title": "Assistive Tech Integration",
+        "desc": "Implementing advanced accessibility features including speech-to-text, accessible forms, descriptive alt texts, and closed captions.",
+        "icon": "TbAccessible"
+      },
+      {
+        "title": "Ongoing Accessibility Monitoring",
+        "desc": "Continuous automated and manual testing routines to ensure new features, updates, and content additions maintain strict accessibility standards.",
+        "icon": "TbGauge"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Why Accessibility Is Important for Your Business",
+    "desc": "Web accessibility is not just a regulatory requirement—it is a fundamental human right and a powerful catalyst for audience growth and brand trust.",
+    "bullets": [
+      "Broaden Market Reach: Reach millions of users with diverse abilities and assistive devices.",
+      "Mitigate Legal Risks: Ensure full compliance with ADA, Section 508, and WCAG standards.",
+      "Enhance SEO & Usability: Clean semantic HTML boosts search engine rankings and site speed.",
+      "Brand Reputation: Establish your brand as an inclusive, socially responsible digital leader."
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Commitment to Quality and Client Satisfaction"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "What is web accessibility and why does it matter?",
+        "answer": "Web accessibility ensures that websites, tools, and technologies are designed and developed so that people with disabilities can use them effectively, understand content, and navigate without barriers."
+      },
+      {
+        "question": "What are WCAG guidelines?",
+        "answer": "The Web Content Accessibility Guidelines (WCAG) are internationally recognized standards developed by the W3C. They outline criteria for making web content accessible across four core principles: Perceivable, Operable, Understandable, and Robust."
+      },
+      {
+        "question": "Can you make our existing website accessible without rebuilding it?",
+        "answer": "Yes! We conduct thorough accessibility audits and implement remediation directly into your existing codebase and design system to achieve full compliance without needing a complete redesign."
+      },
+      {
+        "question": "How do you test websites for accessibility?",
+        "answer": "We utilize a combination of automated testing tools (like axe-core and Lighthouse) and rigorous manual testing using real assistive devices, screen readers (NVDA, JAWS, VoiceOver), and keyboard-only navigation."
+      },
+      {
+        "question": "Will web accessibility improve our search engine optimization (SEO)?",
+        "answer": "Absolutely. Many accessibility best practices—such as semantic HTML5 tags, proper heading hierarchy, descriptive alt text, and fast load times—are direct ranking signals for major search engines like Google."
+      }
+    ]
+  }
+}

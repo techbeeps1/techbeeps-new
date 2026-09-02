@@ -1,0 +1,95 @@
+{
+  "slug": "ecommerce-development",
+  "title": "Ecommerce Website Development",
+  "seo": {
+    "title": "Ecommerce Website Development Services | TechBeeps",
+    "description": "Build high-converting, scalable eCommerce websites with custom shopping carts, secure payment gateways, and seamless user experiences.",
+    "keywords": [
+      "Ecommerce Website Development",
+      "Online Store Development",
+      "Custom Ecommerce Solutions",
+      "Shopping Cart Development",
+      "Multi-Vendor Marketplace",
+      "E-Commerce Platform"
+    ]
+  },
+  "hero": {
+    "title": "Ecommerce Website Development",
+    "desc": "Drive sales and delight customers with tailored eCommerce website development services. We build secure, high-performing, and mobile-friendly online stores that deliver frictionless shopping journeys and maximize revenue.",
+    "bgImage": "/services-bg.jpg",
+    "bgImageAlt": "TechBeeps Ecommerce Website Development Background"
+  },
+  "offeringsSection": {
+    "title": "End-to-End Ecommerce Website Development Services",
+    "desc": "From bespoke online stores to scalable multi-vendor marketplaces, we deliver complete eCommerce solutions.",
+    "items": [
+      {
+        "title": "Custom Ecommerce Development",
+        "desc": "Tailored online stores built around your brand identity, unique products, and business workflow for exceptional conversion rates.",
+        "icon": "TbShoppingCart"
+      },
+      {
+        "title": "Multi-Vendor Marketplace Solutions",
+        "desc": "Scalable platforms allowing multiple vendors to manage products, sales, commissions, and payouts seamlessly.",
+        "icon": "TbBuildingStore"
+      },
+      {
+        "title": "Secure Payment Gateway Integration",
+        "desc": "Frictionless checkout integrations with Stripe, PayPal, Razorpay, Authorize.Net, and local payment methods with PCI-DSS compliance.",
+        "icon": "TbPlugConnected"
+      },
+      {
+        "title": "Mobile Commerce & Responsive Storefronts",
+        "desc": "Mobile-first shopping experiences designed to convert smartphone and tablet shoppers into loyal repeat buyers.",
+        "icon": "TbDeviceMobileBolt"
+      },
+      {
+        "title": "Inventory & Order Management",
+        "desc": "Real-time stock synchronization, automated order fulfillment, logistics integrations, and unified merchant dashboards.",
+        "icon": "TbDatabase"
+      },
+      {
+        "title": "Ecommerce Speed Optimization & Security",
+        "desc": "Sub-second page load times, image CDN delivery, robust firewall protection, and regular security patching for high sales volume.",
+        "icon": "TbGauge"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Why Choose TechBeeps for Ecommerce Development?",
+    "desc": "We combine data-driven conversion strategies with state-of-the-art tech stacks to build stores that sell.",
+    "bullets": [
+      "High-Converting UX: Optimized product pages, intuitive search filters, and frictionless one-page checkouts.",
+      "Scalable Architecture: Easily handles millions of products and peak holiday traffic surges with zero lag.",
+      "Ironclad Security: PCI-DSS compliance, SSL encryption, and multi-layer fraud prevention.",
+      "Dedicated Support: Continuous feature updates, speed optimizations, and 24/7 technical support."
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Commitment to Quality and Client Satisfaction"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "Which eCommerce platforms do you specialize in?",
+        "answer": "We build custom eCommerce solutions using Shopify, WooCommerce, Magento, PrestaShop, as well as bespoke full-stack solutions with Next.js, Node.js, and Laravel."
+      },
+      {
+        "question": "How long does it take to develop a custom eCommerce website?",
+        "answer": "A standard custom store typically takes 3 to 6 weeks, while large-scale multi-vendor marketplaces or enterprise platforms may take 8 to 12 weeks depending on custom feature requirements."
+      },
+      {
+        "question": "Can you integrate third-party ERP, CRM, and shipping systems?",
+        "answer": "Yes, we seamlessly connect your eCommerce store with third-party ERPs, CRMs (Salesforce, HubSpot), inventory management systems, and shipping carriers (FedEx, DHL, UPS)."
+      },
+      {
+        "question": "Will our eCommerce website be optimized for mobile devices?",
+        "answer": "Every eCommerce website we build is designed mobile-first, ensuring smooth navigation, responsive product galleries, and easy touch-friendly checkouts across all smartphones and tablets."
+      },
+      {
+        "question": "How do you ensure transaction security on the website?",
+        "answer": "We implement SSL certificates, secure tokenized payment gateway APIs, PCI-DSS compliance standards, and automated vulnerability scanning to safeguard user and payment data."
+      }
+    ]
+  }
+}

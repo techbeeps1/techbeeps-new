@@ -1,0 +1,103 @@
+{
+  "slug": "woocommerce-development",
+  "title": "WooCommerce Development",
+  "seo": {
+    "title": "WooCommerce Development Services | TechBeeps",
+    "description": "Boost your online store with our expert WooCommerce development services. We create custom, scalable, and high-performance WooCommerce websites tailored to your business needs.",
+    "keywords": [
+      "WooCommerce Development",
+      "Custom WooCommerce Theme",
+      "WooCommerce Plugin Development",
+      "WooCommerce Store Setup",
+      "WooCommerce Migration",
+      "WordPress Ecommerce"
+    ]
+  },
+  "hero": {
+    "title": "WooCommerce Development",
+    "desc": "The WooCommerce website development service is widely used as the most reliable and flexible structure for eCommerce. As a leading WooCommerce Development Company, we create personalized online stores with high efficiency, seamless checkout, and custom capabilities tailored to your exact business needs.",
+    "bgImage": "/services-bg.jpg",
+    "bgImageAlt": "TechBeeps WooCommerce Development Background"
+  },
+  "offeringsSection": {
+    "title": "Explore Magic of Woocommerce Development Services",
+    "desc": "Unlock the full potential of your WordPress store with custom WooCommerce themes, plugins, and scalable architectures.",
+    "items": [
+      {
+        "title": "WooCommerce Theme Development",
+        "desc": "Custom, pixel-perfect WooCommerce theme development tailored to your brand identity, delivering fast and high-converting storefronts.",
+        "icon": "TbPalette"
+      },
+      {
+        "title": "WooCommerce Plugin Development & Customization",
+        "desc": "Developing bespoke plugins to extend WooCommerce capabilities, add custom payment options, and automate store processes.",
+        "icon": "TbPuzzle"
+      },
+      {
+        "title": "WooCommerce Custom Development",
+        "desc": "Tailored eCommerce solutions including custom product builders, subscription management, and multi-currency checkouts.",
+        "icon": "SiWoocommerce"
+      },
+      {
+        "title": "WooCommerce Migration Services",
+        "desc": "Seamless migration of your products, orders, and customer data from Shopify, Magento, or OpenCart to WooCommerce with zero data loss.",
+        "icon": "TbArrowsExchange"
+      },
+      {
+        "title": "WooCommerce Integration Services",
+        "desc": "Connecting WooCommerce with payment gateways (Stripe, PayPal), ERPs, CRM systems, and third-party logistics APIs.",
+        "icon": "TbPlugConnected"
+      },
+      {
+        "title": "WooCommerce Maintenance & Speed Support",
+        "desc": "Ongoing security patching, plugin updates, database optimization, and high-speed caching for maximum store uptime.",
+        "icon": "TbGauge"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Why Choose WooCommerce Development Services?",
+    "desc": "We build fast, secure, and conversion-focused WooCommerce stores designed for high sales volume.",
+    "bullets": [
+      "Reduced Code Overhead: Streamlined code architecture for rapid load times and better UX.",
+      "High Security: Secure payment gateway setups and built-in protection against fraud.",
+      "Seamless Scalability: Engineered to support thousands of SKUs and concurrent checkout sessions.",
+      "Ongoing Maintenance: Proactive WordPress core, plugin, and theme updates."
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Commitment to Quality and Client Satisfaction"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "What advantages does Custom WooCommerce Development offer over standard WooCommerce stores?",
+        "answer": "Custom WooCommerce development offers tailored branding, streamlined code without bloated plugins, custom checkout workflows, bespoke integrations, and significantly faster page load speeds."
+      },
+      {
+        "question": "How much do WooCommerce store development services cost?",
+        "answer": "Costs depend on the number of products, custom features, third-party integrations, and design complexity. We provide transparent, flexible pricing tailored to your project scope."
+      },
+      {
+        "question": "Why choose Techbeeps for WooCommerce development?",
+        "answer": "Techbeeps combines deep WordPress/WooCommerce engineering expertise with conversion-focused design, strict security standards, and dedicated ongoing support."
+      },
+      {
+        "question": "Can you migrate our store from Shopify or Magento to WooCommerce?",
+        "answer": "Yes! We migrate all products, customer records, order histories, and SEO redirects safely with minimal downtime and zero data loss."
+      },
+      {
+        "question": "How do you keep our WooCommerce store fast and secure?",
+        "answer": "We configure server-level caching, optimize database queries, implement CDN delivery, enforce SSL encryption, and routinely apply security updates."
+      }
+    ]
+  },
+  "hireDeveloperSection": {
+    "title": "Looking to Hire Woocommerce Web Developers?",
+    "desc": "Hire skilled WooCommerce developers from TechBeeps to build, scale, and optimize your online storefront with custom functionalities.",
+    "buttonText": "Hire WooCommerce Developer",
+    "buttonUrl": "/contact-us",
+    "image": "/Migration.jpg",
+    "imageAlt": "TechBeeps WooCommerce Developers"
+  }
+}

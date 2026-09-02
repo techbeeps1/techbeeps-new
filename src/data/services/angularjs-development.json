@@ -1,0 +1,103 @@
+{
+  "slug": "angularjs-development",
+  "title": "AngularJS Development",
+  "seo": {
+    "title": "AngularJS Development Services | TechBeeps",
+    "description": "Expert AngularJS development services to build dynamic, high-performing single-page web applications and scalable enterprise solutions.",
+    "keywords": [
+      "AngularJS Development",
+      "Angular Development Company",
+      "Single Page Applications",
+      "AngularJS Migration",
+      "Custom Angular Solutions",
+      "Front-End Web Development"
+    ]
+  },
+  "hero": {
+    "title": "AngularJS Development Company",
+    "desc": "Unlock the potential of your web applications with our top-notch AngularJS development services. Our skilled developers build fast, scalable, and secure front-end applications tailored to your business needs, delivering seamless digital experiences.",
+    "bgImage": "/services-bg.jpg",
+    "bgImageAlt": "TechBeeps AngularJS Development Background"
+  },
+  "offeringsSection": {
+    "title": "A-list AngularJS Development Services",
+    "desc": "We build responsive, dynamic, and future-ready web applications using proven AngularJS framework expertise.",
+    "items": [
+      {
+        "title": "Custom AngularJS Development",
+        "desc": "Tailored front-end solutions designed to solve complex business logic with clean, maintainable architecture and modern UI components.",
+        "icon": "SiAngular"
+      },
+      {
+        "title": "Single Page Application (SPA) Development",
+        "desc": "Lightning-fast single-page applications with smooth client-side routing, two-way data binding, and desktop-like responsiveness.",
+        "icon": "TbDeviceDesktopCode"
+      },
+      {
+        "title": "AngularJS Migration & Upgrade",
+        "desc": "Seamless migration of legacy AngularJS applications to the latest Angular versions or hybrid architectures with zero data loss.",
+        "icon": "TbArrowsExchange"
+      },
+      {
+        "title": "API Integration & Backend Connectivity",
+        "desc": "Effortless integration of RESTful APIs, GraphQL endpoints, and third-party microservices for real-time data synchronization.",
+        "icon": "TbApi"
+      },
+      {
+        "title": "Enterprise AngularJS Solutions",
+        "desc": "High-performance, scalable enterprise web applications engineered for heavy concurrent usage and robust security.",
+        "icon": "TbBuildingStore"
+      },
+      {
+        "title": "Maintenance & Code Optimization",
+        "desc": "Continuous performance profiling, bug fixing, dependency upgrades, and security auditing to keep your AngularJS apps running smoothly.",
+        "icon": "TbTools"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Why Choose Techbeeps for AngularJS Development?",
+    "desc": "Our experienced Angular developers bring deep engineering skills to build reliable, high-performance web applications.",
+    "bullets": [
+      "Modular Architecture: Component-driven codebases that make scaling and maintenance effortless.",
+      "High Performance: Fast rendering, optimized change detection, and responsive interfaces.",
+      "Secure & Robust: Industry-standard security practices protecting against XSS and injection attacks.",
+      "Full-Cycle Support: From initial architecture design to post-deployment support and upgrades."
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Commitment to Quality and Client Satisfaction"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "Why is AngularJS suitable for building Single Page Applications (SPAs)?",
+        "answer": "AngularJS provides built-in two-way data binding, dependency injection, and comprehensive routing capabilities, allowing developers to create rich, responsive single-page web applications without constant page reloads."
+      },
+      {
+        "question": "Can you help migrate our AngularJS application to modern Angular or React?",
+        "answer": "Yes! We specialize in legacy migration strategies, enabling smooth transitions to modern Angular, React, or Next.js with minimal downtime and zero data loss."
+      },
+      {
+        "question": "How do you ensure the security of AngularJS applications?",
+        "answer": "We implement strict Content Security Policies (CSP), sanitize inputs to prevent Cross-Site Scripting (XSS), implement secure authentication flows, and routinely audit third-party dependencies."
+      },
+      {
+        "question": "How do I hire dedicated AngularJS developers from Techbeeps?",
+        "answer": "You can choose from flexible engagement models including dedicated developers, fixed-price projects, or hourly time-and-material contracts tailored to your development schedule and budget."
+      },
+      {
+        "question": "Do you provide ongoing support after the project is deployed?",
+        "answer": "Yes, we offer comprehensive post-launch support and maintenance packages covering bug fixes, performance monitoring, feature enhancements, and version upgrades."
+      }
+    ]
+  },
+  "hireDeveloperSection": {
+    "title": "Hire Dedicated AngularJS Developers",
+    "desc": "Scale your web development team with skilled AngularJS engineers from Techbeeps. Get flexible engagement models, rapid onboarding, and top-tier code quality.",
+    "buttonText": "Hire Developers",
+    "buttonUrl": "/contact-us",
+    "image": "/Migration.jpg",
+    "imageAlt": "TechBeeps AngularJS Developers"
+  }
+}

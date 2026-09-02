@@ -1,0 +1,96 @@
+{
+  "slug": "cloud-services",
+  "title": "Cloud Services",
+  "seo": {
+    "title": "Cloud Services & Migration | TechBeeps",
+    "description": "Strengthen your business with cloud-first strategies, hassle-free migrations, serverless architectures, and reliable cloud management on AWS, Azure, and GCP.",
+    "keywords": [
+      "Cloud Services",
+      "Cloud Migration",
+      "AWS Consulting",
+      "Azure Cloud Solutions",
+      "Google Cloud Platform",
+      "Cloud Infrastructure Management",
+      "Serverless Architecture"
+    ]
+  },
+  "hero": {
+    "title": "Strengthen Your Business with Cloud-First Strategy and Hassle-Free Migration",
+    "desc": "Scale seamlessly, enhance security, and reduce infrastructure costs with TechBeeps Cloud Services. We empower businesses with comprehensive cloud consulting, architecture design, zero-downtime migration, and ongoing cloud management across AWS, Microsoft Azure, and Google Cloud.",
+    "bgImage": "/services-bg.jpg",
+    "bgImageAlt": "TechBeeps Cloud Services Background"
+  },
+  "offeringsSection": {
+    "title": "The Value Behind Our Cloud Solutions",
+    "desc": "From architecture planning to 24/7 infrastructure management, we help you leverage the full power of modern cloud ecosystems.",
+    "items": [
+      {
+        "title": "Cloud Strategy & Architecture Consulting",
+        "desc": "Designing resilient, scalable, and cost-effective multi-cloud and hybrid architectures tailored to your business goals.",
+        "icon": "TbCloudCode"
+      },
+      {
+        "title": "Zero-Downtime Cloud Migration",
+        "desc": "Seamlessly migrating legacy applications, databases, and workloads to AWS, Azure, or GCP with minimal disruption and zero data loss.",
+        "icon": "TbArrowsExchange"
+      },
+      {
+        "title": "Cloud Infrastructure Management",
+        "desc": "24/7 monitoring, auto-scaling, resource optimization, and patch management to ensure high availability and 99.99% uptime.",
+        "icon": "FaServer"
+      },
+      {
+        "title": "Cloud Security & Compliance",
+        "desc": "End-to-end encryption, IAM access controls, firewall configuration, and compliance with SOC 2, GDPR, and HIPAA standards.",
+        "icon": "FaShieldHalved"
+      },
+      {
+        "title": "Serverless & Microservices Solutions",
+        "desc": "Implementing event-driven serverless architectures with AWS Lambda, Google Cloud Functions, and containerized Docker environments.",
+        "icon": "TbBrain"
+      },
+      {
+        "title": "Cloud Cost Optimization",
+        "desc": "Auditing resource utilization, eliminating idle infrastructure, and optimizing cloud expenditure for maximum return on investment.",
+        "icon": "FaChartLine"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Why Choose TechBeeps for Cloud Services?",
+    "desc": "We combine deep cloud architecture expertise with agile automation to accelerate your digital transformation.",
+    "bullets": [
+      "Multi-Cloud Mastery: Certified engineers across AWS, Microsoft Azure, and Google Cloud Platform.",
+      "Guaranteed 99.99% Uptime: High availability architectures with automated failover and disaster recovery.",
+      "Cost Efficiency: Save up to 35% on monthly cloud bills through proactive resource rightsizing.",
+      "24/7 Proactive Monitoring: Continuous telemetry, log analysis, and rapid incident resolution."
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Commitment to Quality and Client Satisfaction"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "Which cloud platforms does TechBeeps support?",
+        "answer": "We provide full lifecycle services for all major cloud providers including Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), and hybrid on-premise cloud configurations."
+      },
+      {
+        "question": "How do you ensure zero downtime during cloud migration?",
+        "answer": "We utilize phased migration strategies, automated database replication, and rigorous staging validation to ensure seamless cutover without interrupting live operations."
+      },
+      {
+        "question": "How can cloud migration reduce our operational costs?",
+        "answer": "Cloud migration eliminates expensive on-premise hardware maintenance, enables pay-as-you-go pricing, and uses auto-scaling so you only pay for compute resources you actively use."
+      },
+      {
+        "question": "How do you handle cloud security and data compliance?",
+        "answer": "We enforce least-privilege IAM policies, TLS 1.3 encryption at rest and in transit, automated vulnerability patching, and compliance adherence for ISO 27001, GDPR, and SOC 2."
+      },
+      {
+        "question": "Do you offer ongoing cloud maintenance and monitoring after migration?",
+        "answer": "Yes! We provide 24/7 proactive cloud infrastructure management, automated backup routines, security monitoring, and regular performance tuning."
+      }
+    ]
+  }
+}

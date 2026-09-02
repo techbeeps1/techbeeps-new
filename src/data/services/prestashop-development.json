@@ -1,0 +1,103 @@
+{
+  "slug": "prestashop-development",
+  "title": "Prestashop Development",
+  "seo": {
+    "title": "Prestashop Development Services | TechBeeps",
+    "description": "Professional PrestaShop development services to build, customize, and optimize your online store. Enhance performance and boost your eCommerce sales.",
+    "keywords": [
+      "Prestashop Development",
+      "PrestaShop Store Design",
+      "PrestaShop Module Development",
+      "PrestaShop Migration",
+      "PrestaShop Customization",
+      "E-Commerce Development"
+    ]
+  },
+  "hero": {
+    "title": "Prestashop Development",
+    "desc": "Techbeeps is your trusted partner for PrestaShop web development services. With deep expertise in the PrestaShop platform, we specialize in building high-performing and visually appealing online stores that drive results. Our tailored solutions enable us to deliver feature-rich, user-friendly, and scalable PrestaShop eCommerce websites.",
+    "bgImage": "/services-bg.jpg",
+    "bgImageAlt": "TechBeeps PrestaShop Development Background"
+  },
+  "offeringsSection": {
+    "title": "We Offer PrestaShop Development Services",
+    "desc": "Custom storefronts, bespoke modules, and seamless shopping cart experiences powered by PrestaShop.",
+    "items": [
+      {
+        "title": "PrestaShop UI/UX & Store Design",
+        "desc": "Custom, modern storefront design built to reflect your brand identity, engage shoppers, and maximize conversion rates.",
+        "icon": "TbPalette"
+      },
+      {
+        "title": "PrestaShop Store Optimization",
+        "desc": "Database optimization, server caching, and image compression to ensure rapid page load speeds and higher search rankings.",
+        "icon": "TbGauge"
+      },
+      {
+        "title": "PrestaShop Theme Customization",
+        "desc": "Developing bespoke themes or customizing existing templates for responsive layouts and seamless mobile commerce.",
+        "icon": "TbDeviceDesktopCode"
+      },
+      {
+        "title": "PrestaShop Custom Module Development",
+        "desc": "Building custom PrestaShop modules for tailored checkout processes, custom payment options, and marketing automations.",
+        "icon": "TbPuzzle"
+      },
+      {
+        "title": "PrestaShop Shopping Cart Solutions",
+        "desc": "Streamlining checkout flows, integrating one-page checkout modules, and reducing cart abandonment.",
+        "icon": "TbShoppingCart"
+      },
+      {
+        "title": "PrestaShop Migration & Upgrades",
+        "desc": "Migrating your existing store to the latest PrestaShop version with full data retention and zero disruption.",
+        "icon": "TbArrowsExchange"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Benefits of PrestaShop for Your Online Store",
+    "desc": "PrestaShop offers lightweight, flexible, and feature-rich eCommerce capabilities designed for growth.",
+    "bullets": [
+      "Rich Module Ecosystem: Thousands of customizable modules for payments, shipping, and marketing.",
+      "Multi-Language & Multi-Currency: Sell globally with effortless localization and international currencies.",
+      "Cost-Effective Setup: Lower total cost of ownership with high customization flexibility.",
+      "Complete Ownership: Full control over your store database, themes, and customer relationships."
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Commitment to Quality and Client Satisfaction"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "What is PrestaShop development?",
+        "answer": "PrestaShop development involves designing, customizing, and optimizing online stores using the PrestaShop eCommerce platform. It covers everything from theme customization to plugin development and third-party integrations."
+      },
+      {
+        "question": "Why should I choose PrestaShop for my online store?",
+        "answer": "PrestaShop is an open-source, highly customizable eCommerce platform offering multi-language and multi-currency capabilities, lightweight performance, and comprehensive inventory management without high licensing fees."
+      },
+      {
+        "question": "Can you customize our existing PrestaShop store design?",
+        "answer": "Yes! We create custom themes, refine existing layouts, and enhance mobile responsiveness to provide an engaging, high-converting shopping experience."
+      },
+      {
+        "question": "Do you develop custom PrestaShop modules?",
+        "answer": "Yes, our certified developers build custom modules according to official PrestaShop architecture guidelines to add bespoke business logic and integrations."
+      },
+      {
+        "question": "Can you integrate third-party payment gateways and shipping APIs?",
+        "answer": "Yes, we integrate all major payment processors (Stripe, PayPal, Mollie) and shipping carriers (DHL, UPS, FedEx) seamlessly into your PrestaShop checkout."
+      }
+    ]
+  },
+  "hireDeveloperSection": {
+    "title": "Hire Dedicated PrestaShop Developers",
+    "desc": "Hire skilled PrestaShop developers from Techbeeps to build, customize, and optimize your online store with flexible hiring models.",
+    "buttonText": "Hire Developers",
+    "buttonUrl": "/contact-us",
+    "image": "/Migration.jpg",
+    "imageAlt": "TechBeeps PrestaShop Developers"
+  }
+}
