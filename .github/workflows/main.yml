@@ -24,7 +24,7 @@ jobs:
             node -v
             npm -v
 
-            cd /home/bookwindow/htdocs/bookwindow.in
+            cd /home/techbeepscom/htdocs/techbeeps.com
 
             echo "📥 Pulling latest code"
             git pull origin main
