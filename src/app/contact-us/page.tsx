@@ -213,6 +213,7 @@ export default function ContactUs() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close country dropdown on click outside
@@ -242,6 +243,10 @@ export default function ContactUs() {
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: "" }));
     }
+    if (submitStatus === "error") {
+      setSubmitStatus("idle");
+      setErrorMessage("");
+    }
   };
 
   const validateForm = () => {
@@ -267,21 +272,50 @@ export default function ContactUs() {
 
     setIsSubmitting(true);
     setSubmitStatus("idle");
+    setErrorMessage("");
 
     try {
-      // Simulate API submit call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setSubmitStatus("success");
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        company: "",
-        phone: "",
-        message: "",
+      const fullPhone = formData.phone.trim()
+        ? `${selectedCountry.code} ${formData.phone.trim()}`
+        : "";
+
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName.trim(),
+          lastName: formData.lastName.trim(),
+          email: formData.email.trim(),
+          company: formData.company.trim(),
+          phone: fullPhone,
+          message: formData.message.trim(),
+        }),
       });
-    } catch (error) {
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        setSubmitStatus("success");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          company: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        setSubmitStatus("error");
+        setErrorMessage(
+          data.message || "Failed to send message. Please try again."
+        );
+      }
+    } catch (error: any) {
+      console.error("Contact form submission error:", error);
       setSubmitStatus("error");
+      setErrorMessage("Network error. Please check your connection and try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -547,6 +581,14 @@ export default function ContactUs() {
                             <p className="text-red-400 text-xs mt-1.5 ml-1">{errors.message}</p>
                           )}
                         </div>
+
+                        {/* Error Message Alert */}
+                        {submitStatus === "error" && errorMessage && (
+                          <div className="p-3.5 rounded-[12px] bg-red-500/10 border border-red-500/30 text-red-300 text-xs sm:text-sm flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                            <span>{errorMessage}</span>
+                          </div>
+                        )}
 
                         {/* Submit Button */}
                         <button
