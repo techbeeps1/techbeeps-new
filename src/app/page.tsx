@@ -347,11 +347,10 @@ export default function Home() {
             </div>
           </div>
 
-            {/* Slider */}
+          {/* Slider */}
           <div
             ref={sliderContainerRef}
-            data-lenis-prevent
-            className="overflow-hidden cursor-grab active:cursor-grabbing touch-pan-y"
+            className="overflow-hidden "
           >
             <motion.div
               className="flex gap-6 select-none"

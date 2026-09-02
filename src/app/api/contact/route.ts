@@ -5,10 +5,10 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { firstName, lastName, email, company, phone, message } = body;
 
-    // Validate required fields
-    if (!firstName || !lastName || !email || !message) {
+    // Validate required fields: First Name, Mobile Number, Message, Email
+    if (!firstName || !email || !phone || !message) {
       return NextResponse.json(
-        { success: false, message: "Please fill in all required fields." },
+        { success: false, message: "Please fill in all required fields (First Name, Email, Mobile Number, and Message)." },
         { status: 400 }
       );
     }

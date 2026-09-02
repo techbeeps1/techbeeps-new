@@ -252,12 +252,17 @@ export default function ContactUs() {
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
     if (!formData.firstName.trim()) newErrors.firstName = "First name is required";
-    if (!formData.lastName.trim()) newErrors.lastName = "Last name is required";
     
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Please enter a valid email address";
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Mobile number is required";
+    } else if (formData.phone.trim().length < 6) {
+      newErrors.phone = "Please enter a valid mobile number";
     }
     
     if (!formData.message.trim()) newErrors.message = "Message is required";
@@ -480,7 +485,11 @@ export default function ContactUs() {
                         {/* Phone with Custom Flag Selector */}
                         <div className="relative" ref={dropdownRef}>
                           <div className={`flex items-center bg-[#1c1c1e] border rounded-[12px] transition-all duration-300 overflow-hidden ${
-                            showFlagDropdown ? "border-primary shadow-[0_0_15px_rgba(133,76,255,0.15)] bg-[#222225]" : "border-white/5 focus-within:border-primary/50"
+                            errors.phone
+                              ? "border-red-500/50"
+                              : showFlagDropdown
+                              ? "border-primary shadow-[0_0_15px_rgba(133,76,255,0.15)] bg-[#222225]"
+                              : "border-white/5 focus-within:border-primary/50"
                           }`}>
                             <button
                               type="button"
@@ -513,6 +522,9 @@ export default function ContactUs() {
                               onFocus={() => setShowFlagDropdown(false)}
                             />
                           </div>
+                          {errors.phone && (
+                            <p className="text-red-400 text-xs mt-1.5 ml-1">{errors.phone}</p>
+                          )}
 
                           {showFlagDropdown && (
                             <div data-lenis-prevent className="custom-scrollbar absolute top-full left-0 mt-2 bg-[#1c1c1e] border border-white/10 rounded-[12px] py-2 w-64 shadow-2xl z-50 max-h-60 overflow-y-auto">

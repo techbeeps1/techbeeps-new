@@ -30,11 +30,11 @@ function techbeeps_handle_contact_form(WP_REST_Request $request) {
     $phone      = sanitize_text_field($request->get_param('phone'));
     $message    = sanitize_textarea_field($request->get_param('message'));
 
-    // 2. Validate Required Fields
-    if (empty($first_name) || empty($last_name)) {
+    // 2. Validate Required Fields (First Name, Email, Mobile Number, Message)
+    if (empty($first_name)) {
         return new WP_REST_Response(array(
             'success' => false,
-            'message' => 'Please provide your full name (First and Last Name).'
+            'message' => 'Please enter your First Name.'
         ), 400);
     }
 
@@ -45,6 +45,13 @@ function techbeeps_handle_contact_form(WP_REST_Request $request) {
         ), 400);
     }
 
+    if (empty($phone)) {
+        return new WP_REST_Response(array(
+            'success' => false,
+            'message' => 'Please enter your Mobile Number.'
+        ), 400);
+    }
+
     if (empty($message)) {
         return new WP_REST_Response(array(
             'success' => false,
@@ -52,7 +59,7 @@ function techbeeps_handle_contact_form(WP_REST_Request $request) {
         ), 400);
     }
 
-    $full_name = trim($first_name . ' ' . $last_name);
+    $full_name = trim($first_name . (!empty($last_name) ? ' ' . $last_name : ''));
     $recipient = 'asif@techbeeps.com';
     $subject   = 'New Contact Inquiry: ' . $full_name . (!empty($company) ? ' (' . $company . ')' : '');
 
