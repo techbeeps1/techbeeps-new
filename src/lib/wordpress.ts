@@ -10,23 +10,46 @@ const WP_API_URL =
   "https://techbeeps.co.in/wp-json/wp/v2";
 
 /**
- * Strips HTML tags and decodes common HTML entities
+ * Strips HTML tags and decodes common HTML entities and escaped slashes
  */
 export function stripHtml(html: string = ""): string {
   if (!html) return "";
   return html
+    // Handle double-escaped WordPress quotes/entities first
+    .replace(/\\&#8217;/g, "'")
+    .replace(/\\&#8216;/g, "'")
+    .replace(/\\&#8220;/g, '"')
+    .replace(/\\&#8221;/g, '"')
+    .replace(/\\&#039;/g, "'")
+    .replace(/\\'/g, "'")
+    .replace(/\\"/g, '"')
+    // Remove HTML tags
     .replace(/<[^>]*>/g, "")
+    // Decode HTML entities
     .replace(/&nbsp;/g, " ")
     .replace(/&amp;/g, "&")
     .replace(/&quot;/g, '"')
     .replace(/&#039;/g, "'")
     .replace(/&#8217;/g, "'")
     .replace(/&#8216;/g, "'")
+    .replace(/&rsquo;/g, "'")
+    .replace(/&lsquo;/g, "'")
     .replace(/&#8220;/g, '"')
     .replace(/&#8221;/g, '"')
+    .replace(/&ldquo;/g, '"')
+    .replace(/&rdquo;/g, '"')
     .replace(/&#8211;/g, "–")
     .replace(/&#8212;/g, "—")
-    .replace(/\[&hellip;\]/g, "...")
+    .replace(/&ndash;/g, "–")
+    .replace(/&mdash;/g, "—")
+    .replace(/\[&hellip;\]/g, "")
+    .replace(/&hellip;/g, "...")
+    .replace(/&#8230;/g, "...")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&copy;/g, "©")
+    .replace(/&reg;/g, "®")
+    .replace(/\\/g, "")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -147,11 +170,19 @@ export function normalizePostForCard(post: WordPressPost): BlogCardData {
   const category = extractCategory(post);
   const tags = extractTags(post);
 
+  const rawExcerpt = stripHtml(post.excerpt?.rendered || post.content?.rendered || "");
+  let cleanExcerpt = rawExcerpt.replace(/\.\.\.$/, "").trim();
+  if (cleanExcerpt.length > 140) {
+    const truncated = cleanExcerpt.slice(0, 140);
+    const lastSpace = truncated.lastIndexOf(" ");
+    cleanExcerpt = (lastSpace > 100 ? truncated.slice(0, lastSpace) : truncated).trim() + "...";
+  }
+
   return {
     id: post.id,
     slug: post.slug,
     title: stripHtml(post.title?.rendered) || "Untitled Post",
-    excerpt: stripHtml(post.excerpt?.rendered || post.content?.rendered).slice(0, 160) + "...",
+    excerpt: cleanExcerpt,
     date: post.date,
     formattedDate: formatPostDate(post.date),
     readingTime: calculateReadingTime(post.content?.rendered),
