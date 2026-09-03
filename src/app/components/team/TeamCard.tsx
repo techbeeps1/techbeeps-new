@@ -24,7 +24,7 @@ export default function TeamCard({ member }: TeamCardProps) {
           alt={member.name}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover h-full w-full pointer-events-none absolute top-0 left-0 bottom-0 right-0 z-1 translate-x-1/2 scale-x-[2] opacity-0 blur-[10px] group-hover:blur-[0px] transition-all duration-500 ease group-hover:translate-x-0 group-hover:scale-x-100 group-hover:opacity-100"
+          className="object-cover object-top h-full w-full pointer-events-none absolute top-0 left-0 bottom-0 right-0 z-1 translate-x-1/2 scale-x-[2] opacity-0 blur-[10px] group-hover:blur-[0px] transition-all duration-500 ease group-hover:translate-x-0 group-hover:scale-x-100 group-hover:opacity-100"
         />
 
         {/* Animated Image Layer 2 (Sliding out during hover transition) */}

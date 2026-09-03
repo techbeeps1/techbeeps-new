@@ -421,7 +421,7 @@ export default async function TeamMemberDetailsPage({
                 <div className="rounded-[28px] bg-[#0c081e]/70 border border-white/10 p-6 sm:p-8 lg:p-10 backdrop-blur-xl">
                   <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 flex items-center gap-3">
                     <span className="w-2 h-6 rounded-full bg-[#854CFF]" />
-                    Professional Experience
+                    Education & Credentials
                   </h2>
                   <div className="relative pl-6 sm:pl-8 space-y-8 border-l border-white/10">
                     {member.details.experiences.map((exp, idx) => (
@@ -454,7 +454,7 @@ export default async function TeamMemberDetailsPage({
                 <div className="rounded-[28px] bg-[#0c081e]/70 border border-white/10 p-6 sm:p-8 lg:p-10 backdrop-blur-xl">
                   <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 flex items-center gap-3">
                     <span className="w-2 h-6 rounded-full bg-[#854CFF]" />
-                    Education & Credentials
+                    Professional Experience
                   </h2>
                   <div className="space-y-3">
                     {member.details.education.map((edu, idx) => (

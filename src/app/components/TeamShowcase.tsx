@@ -79,12 +79,7 @@ export default function TeamShowcase() {
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-[#a78bfa] bg-[#854CFF]/10 border border-[#854CFF]/20 mb-4">
             Expert Leadership & Engineers
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] text-white font-normal leading-[1.15] tracking-tight">
-            Meet the Minds Behind <br />
-            <span className="italic font-serif font-light text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-[#a78bfa] to-purple-300">
-              TechBeeps Solutions
-            </span>
-          </h2>
+
 
           {/* Department Filter Tabs */}
           <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
@@ -93,8 +88,8 @@ export default function TeamShowcase() {
                 key={dept}
                 onClick={() => setSelectedDept(dept)}
                 className={`px-4 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300 cursor-pointer ${selectedDept === dept
-                    ? "bg-[#854CFF] text-white shadow-[0_0_20px_rgba(133,76,255,0.4)] scale-105"
-                    : "bg-white/[0.05] text-white/70 hover:text-white hover:bg-white/[0.1] border border-white/5"
+                  ? "bg-[#854CFF] text-white shadow-[0_0_20px_rgba(133,76,255,0.4)] scale-105"
+                  : "bg-white/[0.05] text-white/70 hover:text-white hover:bg-white/[0.1] border border-white/5"
                   }`}
               >
                 {dept}

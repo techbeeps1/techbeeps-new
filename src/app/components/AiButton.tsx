@@ -10,7 +10,7 @@ interface AiButtonProps {
 
 export default function AiButton({
   className = "scale-[0.4] mr-[30px]",
-  href = "/services",
+  href = "/services/ai-solutions",
   onClick,
 }: AiButtonProps) {
   return (
