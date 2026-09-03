@@ -303,17 +303,19 @@ export default function HireDeveloperClient() {
     setErrorMessage("");
 
     try {
-      const fullPhone = formData.phone.trim()
-        ? `${selectedCountry.code} ${formData.phone.trim()}`
-        : "N/A";
-
-      const detailedMessage = `[Hire Developer Inquiry]
-Developer Role: ${formData.developerType}
-Engagement Model: ${formData.engagementModel}
-Preferred Contact Method: ${formData.contactMethod}
-Project Link: ${formData.projectLink || "None provided"}
-Project Requirements:
-${formData.message.trim()}`;
+      const rawPhone = formData.phone.trim();
+      let fullPhone = "N/A";
+      if (rawPhone) {
+        const countryCode = selectedCountry.code.trim();
+        const cleanCode = countryCode.replace(/^\+/, "");
+        if (rawPhone.startsWith("+")) {
+          fullPhone = rawPhone;
+        } else if (rawPhone.startsWith(cleanCode)) {
+          fullPhone = `+${rawPhone}`;
+        } else {
+          fullPhone = `${countryCode} ${rawPhone}`;
+        }
+      }
 
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -321,12 +323,17 @@ ${formData.message.trim()}`;
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          formType: "hire-developer",
           firstName: formData.firstName.trim(),
           lastName: formData.lastName.trim(),
           email: formData.email.trim(),
-          company: `Hiring: ${formData.developerType}`,
+          company: "",
           phone: fullPhone,
-          message: detailedMessage,
+          developerType: formData.developerType,
+          engagementModel: formData.engagementModel,
+          contactMethod: formData.contactMethod,
+          projectLink: formData.projectLink.trim(),
+          message: formData.message.trim(),
         }),
       });
 

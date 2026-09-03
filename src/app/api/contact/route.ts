@@ -3,12 +3,24 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { firstName, lastName, email, company, phone, message } = body;
+    const {
+      formType = "contact",
+      firstName,
+      lastName,
+      email,
+      company,
+      phone,
+      message,
+      developerType,
+      engagementModel,
+      contactMethod,
+      projectLink,
+    } = body;
 
-    // Validate required fields: First Name, Mobile Number, Message, Email
-    if (!firstName || !email || !phone || !message) {
+    // Validate required fields: First Name, Message, Email, Phone
+    if (!firstName || !email || !message) {
       return NextResponse.json(
-        { success: false, message: "Please fill in all required fields (First Name, Email, Mobile Number, and Message)." },
+        { success: false, message: "Please fill in all required fields (First Name, Email, and Message/Requirements)." },
         { status: 400 }
       );
     }
@@ -28,12 +40,17 @@ export async function POST(req: NextRequest) {
           Accept: "application/json",
         },
         body: JSON.stringify({
+          formType,
           firstName,
           lastName,
           email,
           company,
           phone,
           message,
+          developerType,
+          engagementModel,
+          contactMethod,
+          projectLink,
         }),
       });
 

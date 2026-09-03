@@ -279,9 +279,19 @@ export default function ContactUsClient() {
     setErrorMessage("");
 
     try {
-      const fullPhone = formData.phone.trim()
-        ? `${selectedCountry.code} ${formData.phone.trim()}`
-        : "";
+      const rawPhone = formData.phone.trim();
+      let fullPhone = "";
+      if (rawPhone) {
+        const countryCode = selectedCountry.code.trim();
+        const cleanCode = countryCode.replace(/^\+/, "");
+        if (rawPhone.startsWith("+")) {
+          fullPhone = rawPhone;
+        } else if (rawPhone.startsWith(cleanCode)) {
+          fullPhone = `+${rawPhone}`;
+        } else {
+          fullPhone = `${countryCode} ${rawPhone}`;
+        }
+      }
 
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -289,6 +299,7 @@ export default function ContactUsClient() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          formType: "contact",
           firstName: formData.firstName.trim(),
           lastName: formData.lastName.trim(),
           email: formData.email.trim(),
