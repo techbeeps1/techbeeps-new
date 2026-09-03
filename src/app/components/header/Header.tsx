@@ -342,14 +342,24 @@ export default function Header() {
                         <span className="hidden sm:inline">
                           Transforming businesses with scalable digital architectures.
                         </span>
-                        <Link
-                          href="/services"
-                          onClick={() => setServicesDropdownOpen(false)}
-                          className="group inline-flex items-center gap-1.5 text-primary hover:text-white font-semibold transition-colors ml-auto sm:ml-0"
-                        >
-                          <span>Explore All 21 Services</span>
-                          <IoArrowForwardOutline className="w-3.5 h-3.5 -rotate-45 group-hover:rotate-0 transition-transform duration-200" />
-                        </Link>
+                        <div className="flex items-center gap-3 ml-auto sm:ml-0">
+                          <Link
+                            href="/hire-developer"
+                            onClick={() => setServicesDropdownOpen(false)}
+                            className="group inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/20 hover:bg-primary text-white text-xs font-semibold transition-all"
+                          >
+                            <span>Hire Developers</span>
+                            <IoArrowForwardOutline className="w-3 h-3 -rotate-45 group-hover:rotate-0 transition-transform duration-200" />
+                          </Link>
+                          <Link
+                            href="/services"
+                            onClick={() => setServicesDropdownOpen(false)}
+                            className="group inline-flex items-center gap-1.5 text-primary hover:text-white font-semibold transition-colors"
+                          >
+                            <span>Explore All 21 Services</span>
+                            <IoArrowForwardOutline className="w-3.5 h-3.5 -rotate-45 group-hover:rotate-0 transition-transform duration-200" />
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </motion.div>
