@@ -1,0 +1,486 @@
+jQuery(document).ready(function ($) {
+    var freshNonce = ''
+    $.ajax({
+        url: replypilotChatbot.ajaxurl, // WordPress AJAX endpoint
+        method: 'POST',
+        dataType: 'json',
+        data: {
+            action: 'generate_nonce'
+        },
+        success: function (response) {
+            if (response.success) {
+                freshNonce = response.data.nonce;
+                initChatbot();
+            } else {
+                console.error('Failed to fetch nonce.');
+            }
+        },
+        error: function () {
+            console.error('Nonce fetch AJAX error.');
+        }
+
+
+    });
+    // ably code 
+    function replypilot_playNotification() {
+        const sound = document.getElementById('replypilot-notification-sound');
+        sound.play().catch(error => {
+        });
+    }
+    let originalTitle = document.title;
+    let blinkInterval;
+    function replypilot_blinkTab(newTitle) {
+        clearInterval(blinkInterval);
+        let visible = false;
+        blinkInterval = setInterval(() => {
+            document.title = visible ? originalTitle : newTitle;
+            visible = !visible;
+        }, 1000);
+        setTimeout(() => {
+            clearInterval(blinkInterval);
+            document.title = originalTitle;
+        }, 5000);
+    }
+    function loadAblyScript(callback) {
+        if (window.Ably) {
+            // Ably already loaded
+            if (callback) callback();
+            return;
+        }
+
+        const script = document.createElement('script');
+        script.src = replypilotChatbot.site_url + '/wp-content/plugins/replypilot-ai/assets/js/ably.min-1.js';
+        script.type = 'text/javascript';
+        script.onload = function () {
+            if (callback) callback();
+        };
+        document.head.appendChild(script);
+        let audioUnlocked = false;
+        const audio = document.createElement('audio');
+        audio.src = replypilotChatbot.site_url + '/wp-content/plugins/replypilot-ai/assets/notification.ogg';
+        audio.id = 'replypilot-notification-sound';
+        document.body.appendChild(audio);
+        document.addEventListener("click", () => {
+            if (audioUnlocked) return;
+            audio.play().then(() => {
+                audio.pause();
+                audio.currentTime = 0;
+            }).catch(() => { });
+            audioUnlocked = true;
+        });
+
+    }
+    function ably_chat_team(conversationId) {
+        if (ably_chat_team_id != "user" + conversationId) {
+            loadAblyScript(function () {
+                // Now you can safely use Ably
+                const messageInput = document.getElementById('replypilot-chatbot-user-input');
+                const CHANNEL_NAME = "user" + conversationId;
+                ably_chat_team_id = CHANNEL_NAME;
+                const CHANNEL_NAME1 = "admin" + conversationId;
+                const realtime = new Ably.Realtime('oaGuPg.irzUZQ:H4OfwSTWrUkN4NpNhX8e4QsJ9Td9xIdS2_5B6mU7k00');
+                const channel = realtime.channels.get(CHANNEL_NAME);
+                const channel1 = realtime.channels.get(CHANNEL_NAME1);
+                channel.subscribe("chat-message", function (message) {
+                    $('.replypilot-typing').remove();
+                    replypilot_playNotification();
+                    replypilot_blinkTab('💬 New Message');
+                    addMessage('bot', message.data, []);
+                });
+
+                channel1.subscribe("typing", function (message) {
+                    if (message.data == '0') {
+                        $(`#${typingId}`).remove();
+                    } else {
+                        typingId = typing_alert();
+                        scrollToBottom();
+                    }
+                });
+                // Typing detection
+                let typingTimeout;
+                let lastTypingTime = 0;
+                messageInput.addEventListener("input", function () {
+                    const now = Date.now();
+                    // Only send "typing" message every 4 seconds at most
+                    if (now - lastTypingTime > 4000) {
+                        channel.publish("typing", "t");
+                        lastTypingTime = now;
+                    }
+                    clearTimeout(typingTimeout);
+                    typingTimeout = setTimeout(() => {
+                        channel.publish("typing", "0");
+                    }, 4000);
+                });
+
+            });
+
+
+        }
+    }
+    function get_chatbot_Cookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    function delete_chatbot_Cookie(name) {
+        document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
+    // end ably code
+    function chatbotfetchMessages(conversation_id) {
+        if (!conversation_id) {
+            return;
+        }
+        fetch(replypilotChatbot.ajaxurl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams({
+                action: 'replypilot_get_chatbot_messages',
+                nonce: freshNonce,
+                conversation_id: conversation_id
+            })
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    dataset = data.data.messages;
+                    sessionStorage.setItem("replypilot_chatHistory", JSON.stringify(dataset));
+                    for (msgdata of dataset) {
+                        addMessage(msgdata.message_type, msgdata.content, undefined, msgdata.sent_at);
+                    }
+                } else {
+                    console.error(data.message);
+                }
+            });
+    }
+
+    // Chatbot state
+    var user_data_collection = replypilotChatbot.user_data_collection
+    var userid = get_chatbot_Cookie("replypilot_conversation_id");
+    var chat_with_team = get_chatbot_Cookie("replypilot_with_team");
+    let chatHistory = [];
+    let isOpen = userid ? true : false;
+    let conversationId = userid ? userid : null;
+    let userData = null;
+    var ably_chat_team_id = null;
+
+    // Open chatbot on toggle click
+    $('#replypilot-chatbot-toggle').on('click', function () {
+        if (!user_data_collection && !userid) {
+            userid = submitUserData(true);
+            isOpen = true
+        }
+    });
+    // Initialize chatbot
+    function initChatbot() {
+        if (chat_with_team == 'allowed') {
+            ably_chat_team(conversationId) 
+        }
+         $('#replypilot-chatbot-toggle').css('display', 'flex');
+        setTimeout(() => {
+            if (!localStorage.getItem('replypilot-popup-closed')) {
+                const popup = document.getElementById('replypilot-chat-popup');
+                popup.classList.remove('hidden');
+                popup.classList.add('show');
+            }
+        }, 1000); // 1-second delay
+
+        $('.replypilot-chat-popup ').on('click', function () {
+            $('#replypilot-chatbot-toggle').click()
+        });
+        $('.replypilot-chat-popup > span').on('click', function (e) {
+              e.stopPropagation(); // <-- Prevent bubble-up
+            $('.replypilot-chat-popup').removeClass('show').addClass('hidden');
+            localStorage.setItem('replypilot-popup-closed', 'true');
+        });
+        const history = JSON.parse(sessionStorage.getItem("replypilot_chatHistory"));
+        if (isOpen) {
+            if (history) {
+                for (msgdata of history) {
+                    addMessage(msgdata.message_type, msgdata.content, undefined, msgdata.sent_at);
+                }
+            } else {
+                chatbotfetchMessages(userid)
+            }
+        }
+
+        // Close button
+        $('#replypilot-chatbot-close').click(() => {
+            $('.replypilot-clearchat-dialogbox').show();
+            $('#replypilot-chatbot-messages').css('filter', 'blur(2px)');
+
+        });
+        $('#replypilot-cancel-chat').click(() => {
+            $('.replypilot-clearchat-dialogbox').hide();
+            $('#replypilot-chatbot-messages').css('filter', 'blur(0px)');
+        });
+        $('#replypilot-confirm-chat').click(() => {
+            $('.replypilot-clearchat-dialogbox').hide();
+            $('#replypilot-chatbot-messages').css('filter', 'blur(0px)');
+            if (conversationId) {
+                $.post(replypilotChatbot.ajaxurl, {
+                    action: 'replypilot_chatbot_end_conversation',
+                    conversation_id: conversationId,
+                    nonce: freshNonce
+                });
+                chatHistory = [];
+                conversationId = null;
+                userData = null;
+                userid = null;
+                isOpen = false;
+                sessionStorage.removeItem("replypilot_chatHistory");
+                $('#replypilot-chatbot-messages').empty();
+                delete_chatbot_Cookie("replypilot_conversation_id");
+                delete_chatbot_Cookie("replypilot_with_team");
+                $('#replypilot-chatbot-container').addClass('closed');
+            }
+        });
+
+        $('#replypilot-chatbot-minimize').click(() => {
+            $('#replypilot-chatbot-container').addClass('closed');
+            isOpen = !isOpen;
+        });
+
+        // Handle sending messages
+        $('#replypilot-chatbot-send').on('click', function () {
+            sendMessage();
+        });
+
+        // Textarea auto-resize and enter key
+        $('#replypilot-chatbot-user-input').on('input', function () {
+            this.style.height = '60px';
+        }).keypress(function (e) {
+            if (e.which == 13 && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // Show user data form if needed when opening
+        $(document).on('click', '#replypilot-chatbot-toggle', function () {
+            if (!isOpen && (!userData || !conversationId)) {
+                showUserDataForm();
+            } else {
+                toggleChatbot();
+            }
+        });
+
+        // Handle user data form submission
+        $('#replypilot-user-data-form-fields').submit(function (e) {
+            e.preventDefault();
+            submitUserData();
+        });
+
+        $('#replypilot-user-data-form-close').click(function () {
+            hideUserDataForm();
+        });
+    }
+
+
+    // Toggle chatbot open/close
+    function toggleChatbot(end = false) {
+        if (!isOpen && end) {
+            if (conversationId) {
+                $.post(replypilotChatbot.ajaxurl, {
+                    action: 'replypilot_chatbot_end_conversation',
+                    conversation_id: conversationId,
+                    nonce: freshNonce
+                });
+            }
+        } else {
+            $('#replypilot-chatbot-container').removeClass('closed');
+            $('#replypilot-chatbot-user-input').focus();
+        }
+        isOpen = !isOpen;
+    }
+
+    // Show user data form
+    function showUserDataForm() {
+        // Show form and hide chat
+        $('#replypilot-user-data-form').fadeToggle(100);
+        $('#replypilot-chatbot-container').fadeToggle(100);
+    }
+
+    // Hide user data form and show chat
+    function hideUserDataForm() {
+        $('#replypilot-user-data-form').fadeOut();
+        $('#replypilot-chatbot-container').fadeIn();
+    }
+
+    // Submit user data
+    function submitUserData(withOut) {
+        let name = $('#replypilot-user-name').val().trim();
+        let email = $('#replypilot-user-email').val().trim();
+        if (withOut) {
+            name = 'Visitor ';
+            email = 'visitor@email.com';
+        }
+
+        // Basic validation
+        if (replypilotChatbot.collectEmail && !isValidEmail(email)) {
+            alert('Please enter a valid email address');
+            return;
+        }
+        const typingId = typing_alert()
+        // Show loading state
+        $('#replypilot-user-data-submit').prop('disabled', true).text('Starting...');
+
+        // Send data to server
+        $.post(replypilotChatbot.ajaxurl, {
+            action: 'replypilot_chatbot_save_user_data',
+            name: name,
+            email: email,
+            nonce: freshNonce
+        }, function (response) {
+            if (response.success) {
+                conversationId = response.data.conversation_id;
+                userData = {
+                    name: name,
+                    email: email,
+                    conversation_id: conversationId
+                };
+
+                // Hide form and show chat
+                hideUserDataForm();
+                toggleChatbot();
+                $(`#${typingId}`).remove();
+                userid = response.data.conversation_id;
+                // Add welcome message
+                addMessage('bot', response.data.welcome_message, response.data.suggest);
+
+                // Focus input
+                $('#replypilot-chatbot-user-input').focus();
+            } else {
+                alert('Error: ' + response.data);
+                $('#replypilot-user-data-submit').prop('disabled', false).text('Start Chat');
+            }
+        }).fail(function (xhr) {
+            alert('Sorry, there was an error saving your information.');
+            console.error(xhr.responseText);
+            $('#replypilot-user-data-submit').prop('disabled', false).text('Start Chat');
+        });
+    }
+
+    // Email validation
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // Add message to chat
+    function addMessage(sender, message, services = [], data = null) {
+
+        if (!data) {
+            const history = JSON.parse(sessionStorage.getItem("replypilot_chatHistory")) || [];
+            history.push({ message_type: sender, content: message, sent_at: new Date() });
+            sessionStorage.setItem("replypilot_chatHistory", JSON.stringify(history));
+        }
+
+        message = message.replace(/\n/g, '<br>');
+        message = message.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>')
+        date = data ? new Date(data) : new Date();
+        const timestamp = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const messageClass = sender === 'user' ? 'replypilot-user-message' : 'replypilot-bot-message';
+        let buttonsHtml = '<div class="replypilot-service-buttons">';
+        services.forEach(service => {
+            buttonsHtml += `<div class="replypilot-service-btn" data-name="${service}"><strong>${service}</strong></div>`;
+        });
+        buttonsHtml += '</div>';
+        if (services.length === 0) {
+            buttonsHtml = '';
+        }
+        const messageHtml = `
+            <div class="replypilot-message ${messageClass}">
+                <div class="replypilot-message-content">${message}</div>
+                 ${buttonsHtml}
+                <div class="replypilot-message-time">${timestamp}</div>
+            </div>
+        `;
+        $('#replypilot-chatbot-messages').append(messageHtml);
+        scrollToBottom();
+    }
+
+    function typing_alert() {
+        $('.replypilot-typing').remove();
+        let typingId_alrt = 'replypilot-typing-' + Date.now();
+        $('#replypilot-chatbot-messages').append(`
+            <div id="${typingId_alrt}" class="replypilot-message replypilot-bot-message replypilot-typing">
+                <div class="message-content">
+                    <span class="replypilot-typing-dot"></span>
+                    <span class="replypilot-typing-dot"></span>
+                    <span class="replypilot-typing-dot"></span>
+                </div>
+            </div>
+        `);
+        return typingId_alrt;
+    }
+    // Send message to server
+    function sendMessage(selectedService = false) {
+        var chat_with_team = get_chatbot_Cookie("replypilot_with_team");
+        if (!conversationId) {
+            showUserDataForm();
+            return;
+        }
+
+
+        if (selectedService) {
+            var input = selectedService;
+        } else {
+            var input = $('#replypilot-chatbot-user-input').val().trim();
+            if (!input) return;
+        }
+
+        // Add user message to chat
+        addMessage('user', input);
+
+        $('#replypilot-chatbot-user-input').val('').css('height', '40px');
+
+        // Show typing indicator
+
+
+        if (input == 'Chat with team' || chat_with_team == 'allowed') {
+            var team_chat = 'allowed';
+            ably_chat_team(conversationId)
+
+        } else {
+            var typingId = typing_alert()
+            scrollToBottom();
+        }
+        // Send to server
+        $.post(replypilotChatbot.ajaxurl, {
+            action: 'replypilot_ai_chatbot_request',
+            message: input,
+            conversation_id: conversationId,
+            history: JSON.stringify(chatHistory),
+            nonce: freshNonce,
+            team_chat: team_chat ?? false
+        }, function (response) {
+
+            $(`#${typingId}`).remove();
+            if (response.success) {
+                if (response.data.response) {
+                    addMessage('bot', response.data.response, response.data.suggests);
+                    chatHistory = response.data.history;
+                }
+            } else {
+                addMessage('bot', `Error: ${response.data}`);
+            }
+        }).fail(function (xhr) {
+            $(`#${typingId}`).remove();
+            addMessage('bot', 'Sorry, there was an error processing your request.');
+            console.error(xhr.responseText);
+        });
+    }
+    // Scroll to bottom of chat
+    function scrollToBottom() {
+        const messages = $('#replypilot-chatbot-messages');
+        messages.scrollTop(messages[0].scrollHeight);
+    }
+    // Handle service button clicks
+    $('#replypilot-chatbot-messages').on("click", ".replypilot-service-btn", function () {
+        const serviceName = $(this).data("name");
+        sendMessage(serviceName);
+        $('#replypilot-chatbot-messages').find(".replypilot-service-btn").prop("disabled", true);
+    });
+    // Initialize
+
+
+});

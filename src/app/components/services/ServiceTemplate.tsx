@@ -242,7 +242,7 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
               <div className="pt-2">
                 <ButtonSwipUp
                   className="text-black hover:text-white bg-white w-50"
-                  url={hireDeveloperSection.buttonUrl || "/contact-us"}
+                  url={hireDeveloperSection.buttonUrl || "/hire-developer"}
                 >
                   {hireDeveloperSection.buttonText}
                   <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
