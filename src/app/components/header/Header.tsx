@@ -7,7 +7,7 @@ import {
   IoChevronDownOutline,
   IoArrowForwardOutline
 } from "react-icons/io5";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
@@ -379,14 +379,44 @@ export default function Header() {
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden lg:flex">
+        <div className="hidden lg:flex items-center gap-3">
+          <Link
+            href="https://wa.me/+918112269797"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat on WhatsApp"
+            className="group relative flex items-center justify-center w-11 h-11 rounded-full bg-[#25D366]/15 hover:bg-[#25D366] text-[#25D366] hover:text-white border border-[#25D366]/30 hover:border-[#25D366] shadow-[0_0_15px_rgba(37,211,102,0.2)] hover:shadow-[0_0_25px_rgba(37,211,102,0.5)] transition-all duration-300 hover:scale-105 shrink-0"
+          >
+            <FaWhatsapp className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+            
+            {/* Online Pulse Indicator */}
+            <span className="absolute -top-0.5 -right-0.5 flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#25D366] border-2 border-[#000]"></span>
+            </span>
+
+            {/* Tooltip */}
+            <span className="absolute -bottom-9 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-[#0b061d]/95 backdrop-blur-md text-white text-[11px] font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none border border-white/10 shadow-lg z-50">
+              Chat on WhatsApp
+            </span>
+          </Link>
+
           <ButtonSwipUp className="bg-white text-black hover:text-white" url={"tel:+91 141 452 3119"}>
             <PiPhoneCallLight className="h-5 w-5 " />+91 141 452 3119
           </ButtonSwipUp>
         </div>
 
-        {/* Mobile Right Controls: AI Highlight Button + Menu Toggle */}
+        {/* Mobile Right Controls: WhatsApp + AI Highlight Button + Menu Toggle */}
         <div className="flex items-center gap-1.5 lg:hidden">
+          <Link
+            href="https://wa.me/+918112269797"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat on WhatsApp"
+            className="w-9 h-9 rounded-full bg-[#25D366]/15 border border-[#25D366]/30 text-[#25D366] flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-all shadow-[0_0_10px_rgba(37,211,102,0.2)]"
+          >
+            <FaWhatsapp className="w-4 h-4" />
+          </Link>
           <div className="flex items-center justify-center w-10 h-10 overflow-visible">
             <AiButton className="scale-[0.38] mr-0" />
           </div>
@@ -603,10 +633,19 @@ export default function Header() {
 
               {/* Drawer Footer Socials */}
               <div className="relative z-10 space-y-4 pt-4 mt-auto border-t border-white/10 shrink-0">
-                {/* Mobile Call CTA */}
-                <div>
+                {/* Mobile Call & WhatsApp CTAs */}
+                <div className="grid grid-cols-2 gap-2.5">
+                  <Link
+                    href="https://wa.me/+918112269797"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 py-3 px-3 rounded-[50px] bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366] hover:text-white font-medium text-sm transition-all duration-300 shadow-[0_0_15px_rgba(37,211,102,0.15)]"
+                  >
+                    <FaWhatsapp className="w-4 h-4" />
+                    <span>WhatsApp</span>
+                  </Link>
                   <ButtonSwipUp
-                    className="w-full bg-white text-black hover:text-white justify-center text-sm"
+                    className="w-full bg-white text-black hover:text-white justify-center text-xs py-3"
                     url={"tel:+91 141 452 3119"}
                   >
                     <PiPhoneCallLight className="h-4 w-4" />
@@ -617,6 +656,7 @@ export default function Header() {
                 {/* Social icons row */}
                 <div className="flex items-center gap-3.5 justify-center">
                   {[
+                    { href: "https://wa.me/+918112269797", icon: <FaWhatsapp className="w-4 h-4 text-[#25D366]" /> },
                     { href: "https://www.facebook.com/techbeepss/", icon: <FaFacebookF className="w-4 h-4" /> },
                     { href: "https://x.com/techbeepss", icon: <FaXTwitter className="w-4 h-4" /> },
                     { href: "https://www.instagram.com/techbeeps/", icon: <FaInstagram className="w-4 h-4" /> },
