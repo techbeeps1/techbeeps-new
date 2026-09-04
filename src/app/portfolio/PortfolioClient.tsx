@@ -9,6 +9,17 @@ import TestimonialSlider from "../components/TestimonialSlider";
 import GsapTextAnimation from "../components/GsapTextAnimation";
 import ContentSwipUp from "../components/ContentSwipUp";
 
+import Link from "next/link";
+import { FiArrowUpRight } from "react-icons/fi";
+
+export interface Project {
+  title: string;
+  category: string;
+  tags: string[];
+  image: string;
+  link?: string;
+}
+
 const categories = [
   "All",
   "App Development",
@@ -20,43 +31,120 @@ const categories = [
   "WordPress",
 ];
 
-const projects = [
+const projects: Project[] = [
   {
     title: "My Mind And Me",
     category: "Next.js",
     tags: ["Web Development", "Next.js"],
     image: "/my-mind.jpg",
+    link: "",
   },
   {
     title: "Merger Lawyer",
     category: "Next.js",
     tags: ["Web Development", "Next.js"],
     image: "/merger-lawyer.jpg",
+    link: "",
   },
   {
     title: "Ananta Mobile App Development",
     category: "App Development",
     tags: ["App Development", "iOS & Android"],
     image: "/ananta-img.jpg",
+    link: "",
   },
   {
     title: "Techbeeps CRM",
     category: "Web Development",
     tags: ["Web Development", "CRM"],
     image: "/crm-img.jpg",
+    link: "",
   },
   {
-    title: "Staging Optimalrating",
+    title: "Optimalrating",
     category: "React.js",
     tags: ["React.js", "Mean Stack"],
     image: "/optimal-img.jpg",
+    link: "https://www.optimalrating.com/",
   },
   {
     title: "eCommerce Marketplace",
     category: "Shopify",
     tags: ["Shopify", "E-commerce"],
     image: "/indeshop-img.jpg",
+    link: "",
   },
+  {
+    title: "Anthology Magazine Website Development",
+    category: "WordPress",
+    tags: ["Web Development"],
+    image: "/anthology.jpg",
+    link: "https://anthology-magazine.com/",
+  },
+  {
+    title: "Charming Hotels USA",
+    category: "WordPress",
+    tags: ["Web Development"],
+    image: "/Charming-Hotel.jpg",
+    link: "https://charminghotelsusa.com/",
+  },
+  {
+    title: "Drinkhydrant Website",
+    category: "Shopify",
+    tags: ["Shopify"],
+    image: "/cover-image.webp",
+    link: "https://www.drinkhydrant.com/",
+  },
+  {
+    title: "Grass Florist",
+    category: "WordPress",
+    tags: ["Web Development"],
+    image: "/Flower-website-Tutorial.png",
+    link: "https://grassflorist.com/",
+  },
+  {
+    title: "Hamilton Weed Delivery",
+    category: "WordPress",
+    tags: ["Web Development"],
+    image: "/hamilton.jpg",
+    link: "https://hamiltonweeddelivery.co/",
+  },
+  {
+    title: "Magic Mushrooms",
+    category: "WordPress",
+    tags: ["Web Development"],
+    image: "/magic-mashroom.jpg",
+    link: "",
+  },
+  {
+    title: "Nabox Website",
+    category: "Shopify",
+    tags: ["Shopify"],
+    image: "/nabox-inner.png",
+    link: "https://nabox.com.br/",
+  },
+  {
+    title: "Surf Style Website",
+    category: "Shopify",
+    tags: ["Shopify"],
+    image: "/Surfstyle.webp",
+    link: "https://surfstyle.com/",
+  },
+  {
+    title: "The Makeupbar Website",
+    category: "Shopify",
+    tags: ["Shopify"],
+    image: "/makeupbar.png",
+    link: "https://the-makeupbar.com/",
+  },
+  {
+    title: "Yesdarling Website",
+    category: "Shopify",
+    tags: ["Shopify"],
+    image: "/yesdarling.png",
+    link: "https://yesdarling.net/",
+  },
+
 ];
 
 export default function PortfolioClient() {
@@ -115,8 +203,8 @@ export default function PortfolioClient() {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-[15px] py-[5px] rounded-xl text-sm md:text-base lg:text-lg font-medium transition-all duration-400 cursor-pointer outline-none focus:outline-none focus:ring-0 border ${activeCategory === cat
-                    ? "bg-primary text-white border-primary shadow-lg shadow-primary/20"
-                    : "bg-transparent text-white border-white/20 hover:bg-primary hover:text-white hover:border-primary"
+                  ? "bg-primary text-white border-primary shadow-lg shadow-primary/20"
+                  : "bg-transparent text-white border-white/20 hover:bg-primary hover:text-white hover:border-primary"
                   }`}
               >
                 {cat}
@@ -131,38 +219,65 @@ export default function PortfolioClient() {
             style={{ perspective: 1500 }}
           >
             <AnimatePresence mode="popLayout">
-              {filteredProjects.map((item, index) => (
-                <motion.div
-                  key={`${item.title}-${index}`}
-                  layout
-                  initial={{ opacity: 0, rotateX: -10, y: 50, scale: 0.95 }}
-                  animate={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, rotateX: 10, y: -50, scale: 0.95 }}
-                  transition={{
-                    duration: 0.6,
-                    ease: [0.16, 1, 0.3, 1],
-                    delay: index * 0.05
-                  }}
-                  className="w-full aspect-[4/3] relative rounded-[32px] overflow-hidden group border border-white/5 bg-[#120D25]"
-                >
-                  <div className="absolute inset-0 w-full h-full overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    />
-                  </div>
+              {filteredProjects.map((item, index) => {
+                const hasLink = Boolean(item.link && item.link.trim());
 
-                  <div className="absolute bottom-5 left-5 right-5 md:bottom-6 md:left-6 md:right-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-full py-4 px-6 md:py-4.5 md:px-8 flex justify-between items-center transition-all duration-500 group-hover:bg-black/60 group-hover:border-white/20">
-                    <div className="flex flex-col gap-0.5">
-                      <h3 className="text-white font-semibold text-lg md:text-[22px]">
-                        {item.title}
-                      </h3>
+                return (
+                  <motion.div
+                    key={`${item.title}-${index}`}
+                    layout
+                    initial={{ opacity: 0, rotateX: -10, y: 50, scale: 0.95 }}
+                    animate={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, rotateX: 10, y: -50, scale: 0.95 }}
+                    transition={{
+                      duration: 0.6,
+                      ease: [0.16, 1, 0.3, 1],
+                      delay: index * 0.05
+                    }}
+                    className="w-full aspect-[4/3] relative rounded-[32px] overflow-hidden group border border-white/5 bg-[#120D25]"
+                  >
+                    <div className="absolute inset-0 w-full h-full overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                      />
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+
+                    <div className="absolute bottom-5 left-5 right-5 md:bottom-6 md:left-6 md:right-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-full py-4 px-6 md:py-4.5 md:px-8 flex justify-between items-center transition-all duration-500 group-hover:bg-black/60 group-hover:border-white/20">
+                      <div className="flex flex-col gap-0.5">
+                        <h3 className="text-white font-semibold text-lg md:text-[22px]">
+                          {hasLink ? (
+                            <Link
+                              href={item.link!}
+                              target={item.link!.startsWith("http") ? "_blank" : undefined}
+                              rel={item.link!.startsWith("http") ? "noopener noreferrer" : undefined}
+                              className="hover:text-primary transition-colors duration-300"
+                            >
+                              {item.title}
+                            </Link>
+                          ) : (
+                            item.title
+                          )}
+                        </h3>
+                      </div>
+
+                      {hasLink && (
+                        <Link
+                          href={item.link!}
+                          target={item.link!.startsWith("http") ? "_blank" : undefined}
+                          rel={item.link!.startsWith("http") ? "noopener noreferrer" : undefined}
+                          className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center text-white transition-all duration-300 shrink-0 ml-3"
+                          aria-label={`Visit ${item.title}`}
+                        >
+                          <FiArrowUpRight className="text-base md:text-xl" />
+                        </Link>
+                      )}
+                    </div>
+                  </motion.div>
+                );
+              })}
             </AnimatePresence>
           </motion.div>
         </div>

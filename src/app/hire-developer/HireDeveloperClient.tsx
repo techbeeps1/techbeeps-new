@@ -594,7 +594,7 @@ export default function HireDeveloperClient() {
                     <div className="w-16 h-16 mx-auto rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-3xl">
                       <BsCheckCircleFill />
                     </div>
-                    <h4 className="text-2xl font-bold text-white">Inquiry Received Successfully!</h4>
+                    <h4 className="text-2xl font-bold text-white">Inquiry Submitted Successfully</h4>
                     <p className="text-gray-300 max-w-md mx-auto text-sm leading-relaxed">
                       Thank you for reaching out. Our engineering lead will review your requirements and reach out via your
                       preferred contact channel within <strong>24 business hours</strong> with developer profiles.
@@ -653,8 +653,8 @@ export default function HireDeveloperClient() {
                             key={method}
                             onClick={() => setFormData((prev) => ({ ...prev, contactMethod: method }))}
                             className={`py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all duration-300 cursor-pointer ${formData.contactMethod === method
-                                ? "bg-[#854CFF] text-white shadow-[0_0_20px_rgba(133,76,255,0.4)]"
-                                : "bg-white/[0.05] text-gray-300 hover:text-white hover:bg-white/[0.09] border border-white/10"
+                              ? "bg-[#854CFF] text-white shadow-[0_0_20px_rgba(133,76,255,0.4)]"
+                              : "bg-white/[0.05] text-gray-300 hover:text-white hover:bg-white/[0.09] border border-white/10"
                               }`}
                           >
                             {method === "Email" && <IoMailOutline className="w-4 h-4" />}
@@ -715,9 +715,8 @@ export default function HireDeveloperClient() {
                             {showCountryDropdown && (
                               <div
                                 data-lenis-prevent
-                                className={`absolute left-0 ${
-                                  openUpwards ? "bottom-full mb-2" : "top-full mt-2"
-                                } w-64 max-h-56 overflow-y-auto rounded-xl bg-[#1a1236] border border-white/15 shadow-[0_15px_40px_rgba(0,0,0,0.85)] z-50 p-1 custom-scrollbar`}
+                                className={`absolute left-0 ${openUpwards ? "bottom-full mb-2" : "top-full mt-2"
+                                  } w-64 max-h-56 overflow-y-auto rounded-xl bg-[#1a1236] border border-white/15 shadow-[0_15px_40px_rgba(0,0,0,0.85)] z-50 p-1 custom-scrollbar`}
                               >
                                 <div className="p-1 sticky top-0 bg-[#1a1236] z-10 border-b border-white/10 mb-1">
                                   <input
@@ -729,12 +728,12 @@ export default function HireDeveloperClient() {
                                     autoFocus
                                   />
                                 </div>
-                                {countries.filter(c => 
-                                  c.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                {countries.filter(c =>
+                                  c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                                   c.code.includes(searchQuery)
                                 ).length > 0 ? (
-                                  countries.filter(c => 
-                                    c.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                  countries.filter(c =>
+                                    c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                                     c.code.includes(searchQuery)
                                   ).map((country) => (
                                     <button
@@ -744,9 +743,8 @@ export default function HireDeveloperClient() {
                                         setSelectedCountry(country);
                                         setShowCountryDropdown(false);
                                       }}
-                                      className={`w-full text-left px-2.5 py-1.5 text-xs rounded-lg hover:bg-[#854CFF]/30 text-white flex items-center justify-between gap-2 transition-colors cursor-pointer ${
-                                        selectedCountry.id === country.id ? "bg-[#854CFF]/20 text-primary font-semibold" : "text-white/80"
-                                      }`}
+                                      className={`w-full text-left px-2.5 py-1.5 text-xs rounded-lg hover:bg-[#854CFF]/30 text-white flex items-center justify-between gap-2 transition-colors cursor-pointer ${selectedCountry.id === country.id ? "bg-[#854CFF]/20 text-primary font-semibold" : "text-white/80"
+                                        }`}
                                     >
                                       <div className="flex items-center gap-2 min-w-0 flex-1">
                                         <div className="w-4.5 h-4.5 rounded-full overflow-hidden border border-white/10 shrink-0 relative flex items-center justify-center bg-white/5">
@@ -775,9 +773,8 @@ export default function HireDeveloperClient() {
                             value={formData.phone}
                             onChange={handleChange}
                             placeholder="9876543210"
-                            className={`flex-1 px-4 py-3 rounded-xl bg-white/[0.05] border ${
-                              errors.phone ? "border-red-500" : "border-white/10"
-                            } text-white placeholder-gray-500 focus:outline-none focus:border-[#854CFF] transition-colors text-sm`}
+                            className={`flex-1 px-4 py-3 rounded-xl bg-white/[0.05] border ${errors.phone ? "border-red-500" : "border-white/10"
+                              } text-white placeholder-gray-500 focus:outline-none focus:border-[#854CFF] transition-colors text-sm`}
                           />
                         </div>
                         {errors.phone && <p className="text-xs text-red-400 mt-1">{errors.phone}</p>}
