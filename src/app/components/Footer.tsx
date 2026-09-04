@@ -74,15 +74,15 @@ export default function Footer() {
             <h3 className="bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_42%,#FFFFFF_59%,#BE9FFF_100%)] 
   bg-clip-text text-transparent text-[22px] font-medium mb-6">Connect</h3>
             <ul className="space-y-4">
-              <li className="grid grid-cols-[80px_1fr] text-[15px] leading-[24px] font-normal text-white hover:text-primary duration-300">
+              <li className="flex gap-5 text-[15px] leading-[24px] font-normal text-white hover:text-primary duration-300">
                 <span>Phone :</span>
                 <span> <Link href="tel:+911414523119">+91 141 452 3119</Link></span>
               </li>
-              <li className="grid grid-cols-[80px_1fr] text-[15px] leading-[24px] font-normal text-white hover:text-primary duration-300">
+              <li className="flex gap-5 text-[15px] leading-[24px] font-normal text-white hover:text-primary duration-300">
                 <span>Whatsapp :</span>
                 <span> <Link href="https://wa.me/+918112269797" aria-label="Whatsapp">+91 811 226 9797</Link></span>
               </li>
-              <li className="grid 2xl:grid-cols-[80px_1fr] md:grid-cols-[60px_1fr] grid-cols-[40px_1fr] text-[15px] leading-[24px] font-normal text-white hover:text-primary duration-300">
+              <li className="flex gap-5 text-[15px] leading-[24px] font-normal text-white hover:text-primary duration-300">
                 <span>Email :</span>
                 <Link href="mailto:tech.beeps@outlook.com"> tech.beeps@outlook.com</Link>
               </li>

@@ -189,7 +189,7 @@ export default function TestimonialSlider() {
         </h2>
 
         <ContentSwipUp className="max-w-[1000px] mx-auto  w-full">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
+          Hear directly from our global clients about how TechBeeps delivers scalable technology solutions, intuitive designs, and high-impact digital experiences that drive growth.
         </ContentSwipUp>
 
       </div>

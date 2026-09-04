@@ -57,7 +57,7 @@ export default function ButtonSwipUp({ className = '', url = "/", children }: { 
         href={url}
         onMouseEnter={handleMouse}
         onMouseLeave={handleMouse}
-        className={`${className} overflow-hidden relative hero-btn px-6 py-3.5 cursor-pointer flex justify-center items-center group hover:bg-transparent  duration-700 gap-2.5 rounded-[50px] `}>
+        className={`${className} overflow-hidden relative hero-btn sm:px-6 px-5 py-3.5 cursor-pointer flex justify-center items-center group hover:bg-transparent  duration-700 gap-2.5 rounded-[50px] `}>
 
         {children}
         <span

@@ -287,15 +287,15 @@ export default function HomeClient() {
             <ContentSwipUp className="md:text-[20px]">
               We help startups and enterprises build AI tools, Ecommerce platforms and scalable digital products.
             </ContentSwipUp>
-            <div className="flex flex-row items-center justify-center gap-4 sm:gap-7.5 mt-8 lg:mt-12.5">
-              <ButtonSwipUp className="bg-white sm:text-base text-[15px] text-black hover:text-white" url={"/contact-us"}>
+            <div className="flex flex-row items-center justify-center sm:gap-4 gap-2 sm:gap-7.5 mt-8 lg:mt-12.5">
+              <ButtonSwipUp className="bg-white  sm:text-[15px] text-xs text-black hover:text-white" url={"/contact-us"}>
                 Get Started
-                <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
+                <BsArrowRightCircle className="-rotate-45 sm:h-5 h-4 sm:w-5 w-4 duration-400 group-hover:rotate-0" />
               </ButtonSwipUp>
 
-              <ButtonSwipUp className="bg-transparent sm:text-base text-[15px] text-white hover:text-white border-primary border " url={"/services"}>
+              <ButtonSwipUp className="bg-transparent  sm:text-[15px] text-xs text-white hover:text-white border-primary border " url={"/services"}>
                 Our Services
-                <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
+                <BsArrowRightCircle className="-rotate-45 sm:h-5 h-4 sm:w-5 w-4 duration-400 group-hover:rotate-0" />
               </ButtonSwipUp>
             </div>
           </div>

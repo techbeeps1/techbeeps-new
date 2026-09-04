@@ -109,7 +109,7 @@ function techbeeps_handle_contact_form(WP_REST_Request $request) {
     }
 
     $full_name = trim($first_name . (!empty($last_name) ? ' ' . $last_name : ''));
-    $recipient = 'asif@techbeeps.com';
+    $recipient = 'info@techbeeps.com';
 
     // WhatsApp clean numbers
     $wa_digits = preg_replace('/[^\d]/', '', $clean_phone);

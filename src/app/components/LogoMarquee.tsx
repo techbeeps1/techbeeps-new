@@ -29,8 +29,7 @@ export default function LogoMarquee() {
           />
         </h2>
         <ContentSwipUp className="max-w-4xl mx-auto w-full">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. Lorem Ipsum is
-          simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
+          We partner with forward-thinking enterprises, high-growth startups, and visionary brands across the globe to build high-performance digital products and scalable solutions.
         </ContentSwipUp>
       </div>
 

@@ -236,11 +236,35 @@ export default function HireDeveloperClient() {
 
   const [selectedCountry, setSelectedCountry] = useState(countries[0]);
   const [showCountryDropdown, setShowCountryDropdown] = useState(false);
+  const [openUpwards, setOpenUpwards] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const calculateDropdownPosition = () => {
+    if (dropdownRef.current) {
+      const rect = dropdownRef.current.getBoundingClientRect();
+      const spaceBelow = window.innerHeight - rect.bottom;
+      const spaceAbove = rect.top;
+      const neededHeight = 240; // max dropdown height + margin
+
+      if (spaceBelow < neededHeight && spaceAbove > spaceBelow) {
+        setOpenUpwards(true);
+      } else {
+        setOpenUpwards(false);
+      }
+    }
+  };
+
+  const handleToggleDropdown = () => {
+    if (!showCountryDropdown) {
+      calculateDropdownPosition();
+    }
+    setShowCountryDropdown((prev) => !prev);
+  };
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -253,6 +277,22 @@ export default function HireDeveloperClient() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  useEffect(() => {
+    if (!showCountryDropdown) {
+      setSearchQuery("");
+      return;
+    }
+    const handleScrollResize = () => {
+      calculateDropdownPosition();
+    };
+    window.addEventListener("scroll", handleScrollResize, true);
+    window.addEventListener("resize", handleScrollResize);
+    return () => {
+      window.removeEventListener("scroll", handleScrollResize, true);
+      window.removeEventListener("resize", handleScrollResize);
+    };
+  }, [showCountryDropdown]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -580,9 +620,8 @@ export default function HireDeveloperClient() {
                           value={formData.firstName}
                           onChange={handleChange}
                           placeholder="e.g. John"
-                          className={`w-full px-4 py-3 rounded-xl bg-white/[0.05] border ${
-                            errors.firstName ? "border-red-500" : "border-white/10"
-                          } text-white placeholder-gray-500 focus:outline-none focus:border-[#854CFF] transition-colors text-sm`}
+                          className={`w-full px-4 py-3 rounded-xl bg-white/[0.05] border ${errors.firstName ? "border-red-500" : "border-white/10"
+                            } text-white placeholder-gray-500 focus:outline-none focus:border-[#854CFF] transition-colors text-sm`}
                         />
                         {errors.firstName && <p className="text-xs text-red-400 mt-1">{errors.firstName}</p>}
                       </div>
@@ -613,11 +652,10 @@ export default function HireDeveloperClient() {
                             type="button"
                             key={method}
                             onClick={() => setFormData((prev) => ({ ...prev, contactMethod: method }))}
-                            className={`py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all duration-300 cursor-pointer ${
-                              formData.contactMethod === method
+                            className={`py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all duration-300 cursor-pointer ${formData.contactMethod === method
                                 ? "bg-[#854CFF] text-white shadow-[0_0_20px_rgba(133,76,255,0.4)]"
                                 : "bg-white/[0.05] text-gray-300 hover:text-white hover:bg-white/[0.09] border border-white/10"
-                            }`}
+                              }`}
                           >
                             {method === "Email" && <IoMailOutline className="w-4 h-4" />}
                             {method === "WhatsApp" && <IoLogoWhatsapp className="w-4 h-4 text-emerald-400" />}
@@ -640,9 +678,8 @@ export default function HireDeveloperClient() {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="john@company.com"
-                          className={`w-full px-4 py-3 rounded-xl bg-white/[0.05] border ${
-                            errors.email ? "border-red-500" : "border-white/10"
-                          } text-white placeholder-gray-500 focus:outline-none focus:border-[#854CFF] transition-colors text-sm`}
+                          className={`w-full px-4 py-3 rounded-xl bg-white/[0.05] border ${errors.email ? "border-red-500" : "border-white/10"
+                            } text-white placeholder-gray-500 focus:outline-none focus:border-[#854CFF] transition-colors text-sm`}
                         />
                         {errors.email && <p className="text-xs text-red-400 mt-1">{errors.email}</p>}
                       </div>
@@ -652,8 +689,8 @@ export default function HireDeveloperClient() {
                           {formData.contactMethod === "WhatsApp"
                             ? "WhatsApp Number"
                             : formData.contactMethod === "Call"
-                            ? "Phone Number"
-                            : "Phone (Optional)"}{" "}
+                              ? "Phone Number"
+                              : "Phone (Optional)"}{" "}
                           {formData.contactMethod !== "Email" && <span className="text-[#854CFF]">*</span>}
                         </label>
                         <div className="flex gap-2 relative" ref={dropdownRef}>
@@ -661,29 +698,73 @@ export default function HireDeveloperClient() {
                           <div className="relative">
                             <button
                               type="button"
-                              onClick={() => setShowCountryDropdown(!showCountryDropdown)}
-                              className="h-full px-2.5 py-3 rounded-xl bg-white/[0.05] border border-white/10 text-white flex items-center gap-1 text-xs hover:border-[#854CFF] transition-colors"
+                              onClick={handleToggleDropdown}
+                              className="h-full px-2.5 py-3 rounded-xl bg-white/[0.05] border border-white/10 text-white flex items-center gap-1.5 text-xs hover:border-[#854CFF] transition-colors cursor-pointer select-none"
                             >
+                              <div className="w-4.5 h-4.5 rounded-full overflow-hidden border border-white/10 shrink-0 relative flex items-center justify-center bg-white/5">
+                                <img
+                                  src={`https://flagcdn.com/w40/${selectedCountry.id}.png`}
+                                  alt={`${selectedCountry.name} flag`}
+                                  className="w-full h-full object-cover scale-[1.1]"
+                                />
+                              </div>
                               <span>{selectedCountry.code}</span>
-                              <IoChevronDown className="w-3 h-3 text-gray-400" />
+                              <IoChevronDown className={`w-3 h-3 text-gray-400 transition-transform duration-200 ${showCountryDropdown ? "rotate-180 text-primary" : ""}`} />
                             </button>
 
                             {showCountryDropdown && (
-                              <div className="absolute left-0 top-full mt-1.5 w-52 max-h-48 overflow-y-auto rounded-xl bg-[#1a1236] border border-white/15 shadow-2xl z-50 p-1 custom-scrollbar">
-                                {countries.map((c) => (
-                                  <button
-                                    key={c.id}
-                                    type="button"
-                                    onClick={() => {
-                                      setSelectedCountry(c);
-                                      setShowCountryDropdown(false);
-                                    }}
-                                    className="w-full text-left px-3 py-1.5 text-xs rounded-lg hover:bg-[#854CFF]/30 text-white flex items-center justify-between"
-                                  >
-                                    <span className="truncate">{c.name}</span>
-                                    <span className="text-gray-400 text-[10px] shrink-0">{c.code}</span>
-                                  </button>
-                                ))}
+                              <div
+                                data-lenis-prevent
+                                className={`absolute left-0 ${
+                                  openUpwards ? "bottom-full mb-2" : "top-full mt-2"
+                                } w-64 max-h-56 overflow-y-auto rounded-xl bg-[#1a1236] border border-white/15 shadow-[0_15px_40px_rgba(0,0,0,0.85)] z-50 p-1 custom-scrollbar`}
+                              >
+                                <div className="p-1 sticky top-0 bg-[#1a1236] z-10 border-b border-white/10 mb-1">
+                                  <input
+                                    type="text"
+                                    placeholder="Search country or code..."
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    className="w-full bg-white/[0.06] text-white text-[11px] placeholder-white/40 border border-white/10 rounded-lg py-1 px-2 outline-none focus:border-[#854CFF]"
+                                    autoFocus
+                                  />
+                                </div>
+                                {countries.filter(c => 
+                                  c.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                  c.code.includes(searchQuery)
+                                ).length > 0 ? (
+                                  countries.filter(c => 
+                                    c.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                    c.code.includes(searchQuery)
+                                  ).map((country) => (
+                                    <button
+                                      key={`${country.code}-${country.id}`}
+                                      type="button"
+                                      onClick={() => {
+                                        setSelectedCountry(country);
+                                        setShowCountryDropdown(false);
+                                      }}
+                                      className={`w-full text-left px-2.5 py-1.5 text-xs rounded-lg hover:bg-[#854CFF]/30 text-white flex items-center justify-between gap-2 transition-colors cursor-pointer ${
+                                        selectedCountry.id === country.id ? "bg-[#854CFF]/20 text-primary font-semibold" : "text-white/80"
+                                      }`}
+                                    >
+                                      <div className="flex items-center gap-2 min-w-0 flex-1">
+                                        <div className="w-4.5 h-4.5 rounded-full overflow-hidden border border-white/10 shrink-0 relative flex items-center justify-center bg-white/5">
+                                          <img
+                                            src={`https://flagcdn.com/w40/${country.id}.png`}
+                                            alt={`${country.name} flag`}
+                                            className="w-full h-full object-cover scale-[1.1]"
+                                            loading="lazy"
+                                          />
+                                        </div>
+                                        <span className="truncate">{country.name}</span>
+                                      </div>
+                                      <span className="text-gray-400 text-[10px] shrink-0 ml-1">{country.code}</span>
+                                    </button>
+                                  ))
+                                ) : (
+                                  <div className="px-3 py-2 text-[11px] text-white/40 text-center">No countries found</div>
+                                )}
                               </div>
                             )}
                           </div>
@@ -781,9 +862,8 @@ export default function HireDeveloperClient() {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Briefly describe what you're building, key technical requirements, expected duration, and any specific experience needed..."
-                        className={`w-full px-4 py-3 rounded-xl bg-white/[0.05] border ${
-                          errors.message ? "border-red-500" : "border-white/10"
-                        } text-white placeholder-gray-500 focus:outline-none focus:border-[#854CFF] transition-colors text-sm resize-none`}
+                        className={`w-full px-4 py-3 rounded-xl bg-white/[0.05] border ${errors.message ? "border-red-500" : "border-white/10"
+                          } text-white placeholder-gray-500 focus:outline-none focus:border-[#854CFF] transition-colors text-sm resize-none`}
                       />
                       {errors.message && <p className="text-xs text-red-400 mt-1">{errors.message}</p>}
                     </div>

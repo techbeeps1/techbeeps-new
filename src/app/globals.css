@@ -191,7 +191,7 @@ to
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: continuousMarquee 30s linear infinite;
+  animation: continuousMarquee 45s linear infinite;
 }
 
 .animate-continuous-marquee:hover {

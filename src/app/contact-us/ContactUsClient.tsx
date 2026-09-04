@@ -209,12 +209,35 @@ export default function ContactUsClient() {
 
   const [selectedCountry, setSelectedCountry] = useState(countries.find(c => c.id === "us") || countries[0]);
   const [showFlagDropdown, setShowFlagDropdown] = useState(false);
+  const [openUpwards, setOpenUpwards] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const calculateDropdownPosition = () => {
+    if (dropdownRef.current) {
+      const rect = dropdownRef.current.getBoundingClientRect();
+      const spaceBelow = window.innerHeight - rect.bottom;
+      const spaceAbove = rect.top;
+      const neededHeight = 260; // max dropdown height + margin
+
+      if (spaceBelow < neededHeight && spaceAbove > spaceBelow) {
+        setOpenUpwards(true);
+      } else {
+        setOpenUpwards(false);
+      }
+    }
+  };
+
+  const handleToggleDropdown = () => {
+    if (!showFlagDropdown) {
+      calculateDropdownPosition();
+    }
+    setShowFlagDropdown((prev) => !prev);
+  };
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -231,7 +254,17 @@ export default function ContactUsClient() {
   useEffect(() => {
     if (!showFlagDropdown) {
       setSearchQuery("");
+      return;
     }
+    const handleScrollResize = () => {
+      calculateDropdownPosition();
+    };
+    window.addEventListener("scroll", handleScrollResize, true);
+    window.addEventListener("resize", handleScrollResize);
+    return () => {
+      window.removeEventListener("scroll", handleScrollResize, true);
+      window.removeEventListener("resize", handleScrollResize);
+    };
   }, [showFlagDropdown]);
 
   const handleChange = (
@@ -251,7 +284,7 @@ export default function ContactUsClient() {
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
     if (!formData.firstName.trim()) newErrors.firstName = "First name is required";
-    
+
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
@@ -263,9 +296,9 @@ export default function ContactUsClient() {
     } else if (formData.phone.trim().length < 6) {
       newErrors.phone = "Please enter a valid mobile number";
     }
-    
+
     if (!formData.message.trim()) newErrors.message = "Message is required";
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -431,9 +464,8 @@ export default function ContactUsClient() {
                               value={formData.firstName}
                               onChange={handleChange}
                               placeholder="First Name"
-                              className={`w-full bg-[#1c1c1e] text-white placeholder-white/30 border ${
-                                errors.firstName ? "border-red-500/50" : "border-white/5 focus:border-primary/50"
-                              } rounded-[12px] py-3.5 px-5 outline-none transition-all duration-300 text-sm`}
+                              className={`w-full bg-[#1c1c1e] text-white placeholder-white/30 border ${errors.firstName ? "border-red-500/50" : "border-white/5 focus:border-primary/50"
+                                } rounded-[12px] py-3.5 px-5 outline-none transition-all duration-300 text-sm`}
                             />
                             {errors.firstName && (
                               <p className="text-red-400 text-xs mt-1.5 ml-1">{errors.firstName}</p>
@@ -447,9 +479,8 @@ export default function ContactUsClient() {
                               value={formData.lastName}
                               onChange={handleChange}
                               placeholder="Last Name"
-                              className={`w-full bg-[#1c1c1e] text-white placeholder-white/30 border ${
-                                errors.lastName ? "border-red-500/50" : "border-white/5 focus:border-primary/50"
-                              } rounded-[12px] py-3.5 px-5 outline-none transition-all duration-300 text-sm`}
+                              className={`w-full bg-[#1c1c1e] text-white placeholder-white/30 border ${errors.lastName ? "border-red-500/50" : "border-white/5 focus:border-primary/50"
+                                } rounded-[12px] py-3.5 px-5 outline-none transition-all duration-300 text-sm`}
                             />
                             {errors.lastName && (
                               <p className="text-red-400 text-xs mt-1.5 ml-1">{errors.lastName}</p>
@@ -464,9 +495,8 @@ export default function ContactUsClient() {
                             value={formData.email}
                             onChange={handleChange}
                             placeholder="Email"
-                            className={`w-full bg-[#1c1c1e] text-white placeholder-white/30 border ${
-                              errors.email ? "border-red-500/50" : "border-white/5 focus:border-primary/50"
-                            } rounded-[12px] py-3.5 px-5 outline-none transition-all duration-300 text-sm`}
+                            className={`w-full bg-[#1c1c1e] text-white placeholder-white/30 border ${errors.email ? "border-red-500/50" : "border-white/5 focus:border-primary/50"
+                              } rounded-[12px] py-3.5 px-5 outline-none transition-all duration-300 text-sm`}
                           />
                           {errors.email && (
                             <p className="text-red-400 text-xs mt-1.5 ml-1">{errors.email}</p>
@@ -485,19 +515,17 @@ export default function ContactUsClient() {
                         </div>
 
                         <div className="relative" ref={dropdownRef}>
-                          <div className={`flex items-center bg-[#1c1c1e] border rounded-[12px] transition-all duration-300 overflow-hidden ${
-                            errors.phone
+                          <div className={`flex items-center bg-[#1c1c1e] border rounded-[12px] transition-all duration-300 overflow-hidden ${errors.phone
                               ? "border-red-500/50"
                               : showFlagDropdown
-                              ? "border-primary shadow-[0_0_15px_rgba(133,76,255,0.15)] bg-[#222225]"
-                              : "border-white/5 focus-within:border-primary/50"
-                          }`}>
+                                ? "border-primary shadow-[0_0_15px_rgba(133,76,255,0.15)] bg-[#222225]"
+                                : "border-white/5 focus-within:border-primary/50"
+                            }`}>
                             <button
                               type="button"
-                              onClick={() => setShowFlagDropdown(!showFlagDropdown)}
-                              className={`flex items-center gap-1.5 sm:gap-2.5 px-3 py-3 sm:px-4.5 sm:py-3.5 text-white border-r border-white/10 transition-all duration-300 cursor-pointer select-none ${
-                                showFlagDropdown ? "bg-primary/10 text-primary" : "hover:bg-white/5"
-                              }`}
+                              onClick={handleToggleDropdown}
+                              className={`flex items-center gap-1.5 sm:gap-2.5 px-3 py-3 sm:px-4.5 sm:py-3.5 text-white border-r border-white/10 transition-all duration-300 cursor-pointer select-none ${showFlagDropdown ? "bg-primary/10 text-primary" : "hover:bg-white/5"
+                                }`}
                             >
                               <div className="w-5.5 h-5.5 rounded-full overflow-hidden border border-white/10 shrink-0 relative flex items-center justify-center bg-white/5">
                                 <img
@@ -506,12 +534,10 @@ export default function ContactUsClient() {
                                   className="w-full h-full object-cover scale-[1.1]"
                                 />
                               </div>
-                              <span className={`text-sm font-semibold transition-colors duration-300 ${
-                                showFlagDropdown ? "text-primary" : "text-white"
-                              }`}>{selectedCountry.code}</span>
-                              <IoChevronDown className={`w-3 h-3 sm:w-3.5 sm:h-3.5 transition-transform duration-300 text-white/40 group-hover:text-white ${
-                                showFlagDropdown ? "rotate-180 text-primary" : ""
-                              }`} />
+                              <span className={`text-sm font-semibold transition-colors duration-300 ${showFlagDropdown ? "text-primary" : "text-white"
+                                }`}>{selectedCountry.code}</span>
+                              <IoChevronDown className={`w-3 h-3 sm:w-3.5 sm:h-3.5 transition-transform duration-300 text-white/40 group-hover:text-white ${showFlagDropdown ? "rotate-180 text-primary" : ""
+                                }`} />
                             </button>
                             <input
                               type="tel"
@@ -528,7 +554,11 @@ export default function ContactUsClient() {
                           )}
 
                           {showFlagDropdown && (
-                            <div data-lenis-prevent className="custom-scrollbar absolute top-full left-0 mt-2 bg-[#1c1c1e] border border-white/10 rounded-[12px] py-2 w-64 shadow-2xl z-50 max-h-60 overflow-y-auto">
+                            <div
+                              data-lenis-prevent
+                              className={`custom-scrollbar absolute ${openUpwards ? "bottom-full mb-2" : "top-full mt-2"
+                                } left-0 bg-[#1c1c1e] border border-white/10 rounded-[12px] py-2 w-64 shadow-[0_15px_40px_rgba(0,0,0,0.85)] z-50 max-h-60 overflow-y-auto`}
+                            >
                               <div className="px-3 pb-2 mb-2 border-b border-white/10 sticky top-0 bg-[#1c1c1e] z-10">
                                 <input
                                   type="text"
@@ -539,12 +569,12 @@ export default function ContactUsClient() {
                                   autoFocus
                                 />
                               </div>
-                              {countries.filter(c => 
-                                c.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                              {countries.filter(c =>
+                                c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                                 c.code.includes(searchQuery)
                               ).length > 0 ? (
-                                countries.filter(c => 
-                                  c.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                countries.filter(c =>
+                                  c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                                   c.code.includes(searchQuery)
                                 ).map((country) => (
                                   <button
@@ -554,9 +584,8 @@ export default function ContactUsClient() {
                                       setSelectedCountry(country);
                                       setShowFlagDropdown(false);
                                     }}
-                                    className={`flex items-center gap-3.5 w-full px-4 py-2 hover:bg-white/5 text-left text-sm transition-all duration-300 cursor-pointer ${
-                                      selectedCountry.id === country.id ? "bg-primary/5 text-primary font-semibold" : "text-white/80"
-                                    }`}
+                                    className={`flex items-center gap-3.5 w-full px-4 py-2 hover:bg-white/5 text-left text-sm transition-all duration-300 cursor-pointer ${selectedCountry.id === country.id ? "bg-primary/5 text-primary font-semibold" : "text-white/80"
+                                      }`}
                                   >
                                     <div className="w-5.5 h-5.5 rounded-full overflow-hidden border border-white/10 shrink-0 relative flex items-center justify-center bg-white/5">
                                       <img
@@ -584,9 +613,8 @@ export default function ContactUsClient() {
                             onChange={handleChange}
                             placeholder="Message"
                             rows={4}
-                            className={`w-full bg-[#1c1c1e] text-white placeholder-white/30 border ${
-                              errors.message ? "border-red-500/50" : "border-white/5 focus:border-primary/50"
-                            } rounded-[12px] py-3.5 px-5 outline-none transition-all duration-300 text-sm resize-none`}
+                            className={`w-full bg-[#1c1c1e] text-white placeholder-white/30 border ${errors.message ? "border-red-500/50" : "border-white/5 focus:border-primary/50"
+                              } rounded-[12px] py-3.5 px-5 outline-none transition-all duration-300 text-sm resize-none`}
                           />
                           {errors.message && (
                             <p className="text-red-400 text-xs mt-1.5 ml-1">{errors.message}</p>
