@@ -91,5 +91,14 @@
         "answer": "The security of your WordPress internet site depends on several factors, inclusive of how nicely you implement security features, the first-class of your hosting issuer, the subject matters and plugins you use, and the way regularly you replace and hold your website. While WordPress is a steady platform, it’s vital to take proactive steps to beautify the security of your website.You can beautify the safety of your WordPress website and reduce the danger of security breaches and records loss. However, it’s crucial to remain vigilant and proactive in tracking and keeping the safety of your website to live one step beforehand of capacity threats."
       }
     ]
+  },
+  "hireDeveloperSection": {
+    "title": "Hire Our Developer",
+    "subtitle": "Are You Looking for Experienced WordPress Developer Experts?",
+    "desc": "Our skilled WordPress developers build custom themes, Gutenberg blocks, bespoke plugins, and headless WordPress setups. We ensure clean code, outstanding PageSpeed scores, robust security, and easy content management.",
+    "buttonText": "Hire Developer",
+    "buttonUrl": "/hire-developer",
+    "image": "/Migration.jpg",
+    "imageAlt": "TechBeeps WordPress Developers"
   }
 }

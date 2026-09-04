@@ -29,8 +29,23 @@ function LenisGsapSync() {
       ScrollTrigger.refresh();
     }, 250);
 
+    // Automatically recalculate ScrollTrigger positions when page height changes (e.g., tab filters, accordion toggles)
+    let resizeTimer: NodeJS.Timeout;
+    const resizeObserver = new ResizeObserver(() => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100);
+    });
+
+    if (document.body) {
+      resizeObserver.observe(document.body);
+    }
+
     return () => {
       clearTimeout(refreshTimer);
+      clearTimeout(resizeTimer);
+      resizeObserver.disconnect();
       gsap.ticker.remove(updateTicker);
       lenis.off("scroll", ScrollTrigger.update);
     };

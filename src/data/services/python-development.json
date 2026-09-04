@@ -129,5 +129,14 @@
         "answer": "Improve the quality, security, and performance of your existing Python applications with expert consulting and comprehensive code reviews. We analyze your code structure, identify performance bottlenecks and security vulnerabilities, optimize database operations, evaluate architecture and design patterns, and recommend practical improvements. Our review process also focuses on testing strategies and best practices to create clean, secure, maintainable, and reliable Python applications."
       }
     ]
+  },
+  "hireDeveloperSection": {
+    "title": "Hire Our Developer",
+    "subtitle": "Are You Looking for Experienced Python Developer Experts?",
+    "desc": "Our expert Python developers bring deep expertise in Django, FastAPI, Flask, web scraping, data engineering, and AI/ML model deployment. We deliver clean, scalable, and secure backends engineered to handle high-traffic workloads effortlessly.",
+    "buttonText": "Hire Developer",
+    "buttonUrl": "/hire-developer",
+    "image": "/Migration.jpg",
+    "imageAlt": "TechBeeps Python Developers"
   }
 }

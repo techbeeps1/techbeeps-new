@@ -266,6 +266,21 @@ export default function HomeClient() {
 
   const [active, setActive] = useState("All");
 
+  useEffect(() => {
+    // Recalculate ScrollTrigger triggers when portfolio filter changes and layout recalculates
+    if (typeof window !== "undefined") {
+      ScrollTrigger.refresh();
+      const t1 = setTimeout(() => ScrollTrigger.refresh(), 100);
+      const t2 = setTimeout(() => ScrollTrigger.refresh(), 400);
+      const t3 = setTimeout(() => ScrollTrigger.refresh(), 850);
+      return () => {
+        clearTimeout(t1);
+        clearTimeout(t2);
+        clearTimeout(t3);
+      };
+    }
+  }, [active]);
+
   const filtered =
     active === "All"
       ? projects
@@ -428,7 +443,7 @@ export default function HomeClient() {
                 ))}
               </div>
               <motion.div layout className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-9.25" style={{ perspective: 1500 }}>
-                <AnimatePresence mode="popLayout">
+                <AnimatePresence mode="popLayout" onExitComplete={() => { if (typeof window !== "undefined") ScrollTrigger.refresh(); }}>
                   {filtered.map((item, index) => (
                     <motion.div
                       key={item.title}

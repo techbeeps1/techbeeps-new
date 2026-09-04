@@ -202,56 +202,60 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
         </div>
       </section>
 
-      {/* Hire Developer Section (Optional) */}
-      {hireDeveloperSection && (
-        <section className="bg-black text-white py-10">
-          <div className="max-w-[1320px] mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
-            {/* Left Image */}
-            <div className="flex-1 w-full">
-              <div className="relative shadow-2xl border border-white/5">
-                <Image
-                  src={hireDeveloperSection.image || "/Migration.jpg"}
-                  alt={hireDeveloperSection.imageAlt || "TechBeeps Developer"}
-                  width={621}
-                  height={414}
-                  className="w-full h-auto object-cover rounded-[20px]"
-                />
-                <div
-                  className="absolute inset-0 rounded-[20px] pointer-events-none"
-                  style={{
-                    background:
-                      "linear-gradient(270deg, #000000 2.88%, rgba(7, 7, 7, 0) 48.12%, #070707 98.14%)",
-                  }}
-                />
-              </div>
-            </div>
-
-            {/* Right Content */}
-            <div className="flex-1 space-y-10">
-              <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white">
-                  <br className="hidden md:block" />
-                  <GsapTextAnimation mainText={hireDeveloperSection.title} mainClass="flex flex-wrap" />
-                </h2>
-                {hireDeveloperSection.subtitle && (
-                  <h3 className="text-[22px] leading-[30px]">{hireDeveloperSection.subtitle}</h3>
-                )}
-                <p>{hireDeveloperSection.desc}</p>
-              </div>
-
-              <div className="pt-2">
-                <ButtonSwipUp
-                  className="text-black hover:text-white bg-white w-50"
-                  url={hireDeveloperSection.buttonUrl || "/hire-developer"}
-                >
-                  {hireDeveloperSection.buttonText}
-                  <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
-                </ButtonSwipUp>
-              </div>
+      {/* Hire Developer Section */}
+      <section className="bg-black text-white py-10">
+        <div className="max-w-[1320px] mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
+          {/* Left Image */}
+          <div className="flex-1 w-full">
+            <div className="relative shadow-2xl border border-white/5">
+              <Image
+                src={hireDeveloperSection?.image || "/Migration.jpg"}
+                alt={hireDeveloperSection?.imageAlt || `${service.title} Developer`}
+                width={621}
+                height={414}
+                className="w-full h-auto object-cover rounded-[20px]"
+              />
+              <div
+                className="absolute inset-0 rounded-[20px] pointer-events-none"
+                style={{
+                  background:
+                    "linear-gradient(270deg, #000000 2.88%, rgba(7, 7, 7, 0) 48.12%, #070707 98.14%)",
+                }}
+              />
             </div>
           </div>
-        </section>
-      )}
+
+          {/* Right Content */}
+          <div className="flex-1 space-y-10">
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white">
+                <br className="hidden md:block" />
+                <GsapTextAnimation
+                  mainText={hireDeveloperSection?.title || "Hire Our Developer"}
+                  mainClass="flex flex-wrap"
+                />
+              </h2>
+              <h3 className="text-[22px] leading-[30px]">
+                {hireDeveloperSection?.subtitle || `Are You Looking for Experienced ${service.title} Experts?`}
+              </h3>
+              <p>
+                {hireDeveloperSection?.desc ||
+                  `Our skilled ${service.title} developers bring deep expertise in building intelligent, custom solutions tailored to your needs. From smart automation to seamless integrations, we ensure clean code, reliable performance, and on-time delivery. Partner with us to future-proof your digital journey.`}
+              </p>
+            </div>
+
+            <div className="pt-2">
+              <ButtonSwipUp
+                className="text-black hover:text-white bg-white w-50"
+                url={hireDeveloperSection?.buttonUrl || "/hire-developer"}
+              >
+                Hire Developer
+                <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
+              </ButtonSwipUp>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Call To Action */}
       <CallToAction />

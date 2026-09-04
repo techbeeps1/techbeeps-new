@@ -1,7 +1,11 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { FiArrowUpRight } from "react-icons/fi";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "../components/header/Header";
 import Footer from "../components/Footer";
 import CallToAction from "../components/CallToAction";
@@ -9,8 +13,9 @@ import TestimonialSlider from "../components/TestimonialSlider";
 import GsapTextAnimation from "../components/GsapTextAnimation";
 import ContentSwipUp from "../components/ContentSwipUp";
 
-import Link from "next/link";
-import { FiArrowUpRight } from "react-icons/fi";
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 export interface Project {
   title: string;
@@ -150,6 +155,20 @@ const projects: Project[] = [
 export default function PortfolioClient() {
   const [activeCategory, setActiveCategory] = useState("All");
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      ScrollTrigger.refresh();
+      const t1 = setTimeout(() => ScrollTrigger.refresh(), 100);
+      const t2 = setTimeout(() => ScrollTrigger.refresh(), 400);
+      const t3 = setTimeout(() => ScrollTrigger.refresh(), 850);
+      return () => {
+        clearTimeout(t1);
+        clearTimeout(t2);
+        clearTimeout(t3);
+      };
+    }
+  }, [activeCategory]);
+
   const filteredProjects = activeCategory === "All"
     ? projects
     : projects.filter(
@@ -218,7 +237,7 @@ export default function PortfolioClient() {
             className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10"
             style={{ perspective: 1500 }}
           >
-            <AnimatePresence mode="popLayout">
+            <AnimatePresence mode="popLayout" onExitComplete={() => { if (typeof window !== "undefined") ScrollTrigger.refresh(); }}>
               {filteredProjects.map((item, index) => {
                 const hasLink = Boolean(item.link && item.link.trim());
 
