@@ -283,7 +283,6 @@ export default function HomeClient() {
             >
               <GsapTextAnimation mainText={"Build AI-Powered Digital Solutions For Modern Businesses"} textHighlightIndex={[1]} mainClass="flex flex-wrap justify-center " />
             </h1>
-
             <ContentSwipUp className="md:text-[20px]">
               We help startups and enterprises build AI tools, Ecommerce platforms and scalable digital products.
             </ContentSwipUp>
@@ -292,7 +291,6 @@ export default function HomeClient() {
                 Get Started
                 <BsArrowRightCircle className="-rotate-45 sm:h-5 h-4 sm:w-5 w-4 duration-400 group-hover:rotate-0" />
               </ButtonSwipUp>
-
               <ButtonSwipUp className="bg-transparent  sm:text-[15px] text-xs text-white hover:text-white border-primary border " url={"/services"}>
                 Our Services
                 <BsArrowRightCircle className="-rotate-45 sm:h-5 h-4 sm:w-5 w-4 duration-400 group-hover:rotate-0" />
@@ -300,9 +298,7 @@ export default function HomeClient() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Services */}
+      </section>     
       <section className="py-25 relative z-1 border-t border-white/12">
         <div className=" container mb-10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-5 mb-8.75">
@@ -334,9 +330,7 @@ export default function HomeClient() {
                 <IoArrowForwardOutline className="h-5.5 w-5.5 text-white" />
               </button>
             </div>
-          </div>
-
-          {/* Slider */}
+          </div>          
           <div
             ref={sliderContainerRef}
             className="overflow-hidden "
@@ -388,9 +382,7 @@ export default function HomeClient() {
             </motion.div>
           </div>
         </div>
-      </section>
-
-      {/* Portfolio */}
+      </section>     
       <section className="relative z-1 py-25 border-t border-white/12">
         <div className=" container">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-5 mb-8.75">
@@ -474,9 +466,7 @@ export default function HomeClient() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Development Service */}
+      </section>      
       <section className="border-t border-white/12 text-white py-25 relative z-1 overflow-hidden">
         <div className="max-w-[1320px] mx-auto px-4 text-center mb-10">
           <div className="space-y-6">
@@ -492,9 +482,7 @@ export default function HomeClient() {
           <DevelopmentSlider />
         </div>
       </section>
-
       <TestimonialSlider />
-
       <section className="border-t border-white/12 text-white py-25 relative z-1">
         <div className="max-w-[1320px] mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1 space-y-10">
@@ -536,9 +524,7 @@ export default function HomeClient() {
                 <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
               </ButtonSwipUp>
             </div>
-          </div>
-
-          {/* Right Image */}
+          </div>         
           <div className="flex-1 w-full">
             <div className="relative shadow-2xl border border-white/5">
               <Image
@@ -558,10 +544,8 @@ export default function HomeClient() {
           </div>
         </div>
       </section>
-
       <LogoMarquee />
       <CallToAction />
-
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div className="blur-circle absolute -left-[100px] -top-[100px] rounded-full opacity-[0.50] bg-[#504CFF] blur-[120px] md:w-[600px] md:h-[600px] w-[300px] h-[500px]"></div>
         <div className="blur-circle absolute -right-[100px] -bottom-[150px] rounded-full opacity-[0.50] bg-primary blur-[120px] md:w-[600px] md:h-[600px] w-[300px] h-[500px]"></div>

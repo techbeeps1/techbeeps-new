@@ -9,7 +9,6 @@ if (typeof window !== "undefined") {
 
 export default function GsapTextAnimation({ mainText, mainClass = '', textHighlightIndex = [] }: { mainText: string, textHighlightIndex?: number[], mainClass?: string }) {
   const heroRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     if (!heroRef.current) return;
 
@@ -34,7 +33,6 @@ export default function GsapTextAnimation({ mainText, mainClass = '', textHighli
         }
       }, heroRef);
     });
-
     return () => {
       cancelAnimationFrame(rafId);
       ctx?.revert();
@@ -42,7 +40,6 @@ export default function GsapTextAnimation({ mainText, mainClass = '', textHighli
   }, []);
   return (
     <span ref={heroRef} className={` ${mainClass}`} >
-
       {mainText.split(" ").map((word, wordIdx) => (
         word == '<br/>' ?
           <span key={word + wordIdx} className="sm:w-full w-auto  "></span>
@@ -53,7 +50,6 @@ export default function GsapTextAnimation({ mainText, mainClass = '', textHighli
               </span>
             ))}
           </span>
-
       ))}
     </span>
 

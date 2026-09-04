@@ -7,8 +7,6 @@ import shopifyData from "@/data/services/shopify-development.json";
 import pythonData from "@/data/services/python-development.json";
 import laravelData from "@/data/services/laravel-development.json";
 import wordPresData from "@/data/services/wordpress-development.json";
-
-// TechBeeps Services from HTML conversion
 import accessibilityData from "@/data/services/accessibility-expertise.json";
 import angularJsData from "@/data/services/angularjs-development.json";
 import cloudServicesData from "@/data/services/cloud-services.json";
@@ -23,8 +21,7 @@ import responsiveWebData from "@/data/services/responsive-web-design.json";
 import whatsappAutomationData from "@/data/services/whatsapp-automation.json";
 import woocommerceDevData from "@/data/services/woocommerce-development.json";
 
-const servicesMap: Record<string, ServiceData> = {
-  // Existing Services
+const servicesMap: Record<string, ServiceData> = {  
   "ai-solutions": aiSolutionsData as ServiceData,
   "mobile-app-development": mobileAppData as ServiceData,
   "ui-ux-design": uiUxData as ServiceData,
@@ -32,9 +29,7 @@ const servicesMap: Record<string, ServiceData> = {
   "shopify-development": shopifyData as ServiceData,
   "python-development": pythonData as ServiceData,
   "laravel-development": laravelData as ServiceData,
-  "wordpress-development": wordPresData as ServiceData,
-
-  // New Services
+  "wordpress-development": wordPresData as ServiceData,  
   "accessibility-expertise": accessibilityData as ServiceData,
   "angularjs-development": angularJsData as ServiceData,
   "cloud-services": cloudServicesData as ServiceData,
@@ -50,30 +45,17 @@ const servicesMap: Record<string, ServiceData> = {
   "woocommerce-development": woocommerceDevData as ServiceData,
 };
 
-/**
- * Retrieve service data by slug. Returns null if not found.
- */
 export function getServiceBySlug(slug: string): ServiceData | null {
   return servicesMap[slug] || null;
 }
-
-/**
- * Alias for getServiceBySlug.
- */
 export function getService(slug: string): ServiceData | null {
   return getServiceBySlug(slug);
 }
 
-/**
- * Retrieve all registered services.
- */
 export function getAllServices(): ServiceData[] {
   return Object.values(servicesMap);
 }
 
-/**
- * Retrieve all registered service slugs.
- */
 export function getAllServiceSlugs(): string[] {
   return Object.keys(servicesMap);
 }

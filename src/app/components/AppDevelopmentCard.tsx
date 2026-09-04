@@ -33,15 +33,12 @@ export default function AppDevelopmentCard({
             {category}
           </span>
         )}
-
         <h3 className="text-[22px] lg:text-[28px] font-bold leading-snug bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_45%,#FFFFFF_60%,#BE9FFF_100%)] bg-clip-text text-transparent">
           {title}
         </h3>
-
         <p className="text-gray-300 text-sm md:text-[15px] leading-[24px] font-normal">
           {desc}
         </p>
-
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-2 pt-2">
             {tags.map((tag, i) => (
@@ -69,8 +66,6 @@ export default function AppDevelopmentCard({
           />
         </div>
       </div>
-
-      {/* Action Button */}
       {href && (
         <Link
           href={href}

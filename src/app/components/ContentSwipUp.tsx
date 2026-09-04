@@ -6,13 +6,10 @@ import { ReactNode } from "react";
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
-
 export default function ContentSwipUp({ className = '', top = "85", children }: { className?: string, top?: string, children: ReactNode }) {
   const ContentRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     if (!ContentRef.current) return;
-
     let ctx: gsap.Context | undefined;
     const rafId = requestAnimationFrame(() => {
       ctx = gsap.context(() => {
@@ -30,7 +27,6 @@ export default function ContentSwipUp({ className = '', top = "85", children }: 
         });
       }, ContentRef);
     });
-
     return () => {
       cancelAnimationFrame(rafId);
       ctx?.revert();

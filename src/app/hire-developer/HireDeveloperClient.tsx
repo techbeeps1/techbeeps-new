@@ -249,8 +249,7 @@ export default function HireDeveloperClient() {
       const rect = dropdownRef.current.getBoundingClientRect();
       const spaceBelow = window.innerHeight - rect.bottom;
       const spaceAbove = rect.top;
-      const neededHeight = 240; // max dropdown height + margin
-
+      const neededHeight = 240;
       if (spaceBelow < neededHeight && spaceAbove > spaceBelow) {
         setOpenUpwards(true);
       } else {
@@ -407,11 +406,8 @@ export default function HireDeveloperClient() {
 
   return (
     <>
-      <Header />
-
-      {/* Hero Section */}
-      <section className="relative min-h-[75vh] flex items-end justify-center pb-[90px] pt-36 lg:pb-24 bg-[#05010f] overflow-hidden">
-        {/* Background Image & Ambient Lighting */}
+      <Header />      
+      <section className="relative min-h-[75vh] flex items-end justify-center pb-[90px] pt-36 lg:pb-24 bg-[#05010f] overflow-hidden">       
         <div className="absolute inset-0 z-0">
           <Image
             src="/services-bg.jpg"
@@ -421,14 +417,10 @@ export default function HireDeveloperClient() {
             className="object-cover object-top opacity-35"
           />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,#000000_0%,rgba(0,0,0,0.4)_30%,rgba(0,0,0,0)_60%,#000000_100%)]"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#05010f] via-transparent to-[#05010f]/80"></div>
-
-          {/* Ambient Glows */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#05010f] via-transparent to-[#05010f]/80"></div>          
           <div className="absolute top-10 left-1/4 w-[400px] lg:w-[650px] h-[350px] bg-[#854CFF] blur-[150px] opacity-25 pointer-events-none rounded-full" />
           <div className="absolute bottom-10 right-10 w-[350px] lg:w-[500px] h-[300px] bg-blue-600 blur-[150px] opacity-20 pointer-events-none rounded-full" />
-        </div>
-
-        {/* Hero Content Box */}
+        </div>        
         <div className="container relative z-10 px-4 mt-auto">
           <div className="backdrop-blur-[25px] rounded-[30px] p-6 md:p-10 lg:p-[48px] bg-white/[0.04] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
             <div className="flex items-center gap-3 mb-4">
@@ -446,9 +438,7 @@ export default function HireDeveloperClient() {
             <p className="text-base lg:text-[20px] leading-relaxed text-gray-300 max-w-4xl">
               Partner with experienced software engineers, AI specialists, and full-stack creators from TechBeeps.
               From agile MVPs to enterprise ecosystems, hire dedicated talent with flexible engagement and zero overheads.
-            </p>
-
-            {/* Quick Trust Highlights */}
+            </p>            
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 mt-8 border-t border-white/10">
               <div className="space-y-1">
                 <div className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-white to-[#a78bfa] bg-clip-text text-transparent">
@@ -478,15 +468,10 @@ export default function HireDeveloperClient() {
           </div>
         </div>
       </section>
-
-      {/* Logo Marquee */}
-      <LogoMarquee />
-
-      {/* Main Split Section: Value Proposition & Interactive Hiring Form */}
+      <LogoMarquee />      
       <section className="py-20 lg:py-28 bg-[#05010f] text-white relative">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
-            {/* Left Column: Why Hire Developers */}
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">           
             <div className="w-full lg:w-[48%] space-y-8">
               <div className="space-y-4">
                 <span className="inline-block px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase text-[#a78bfa] bg-[#854CFF]/10 border border-[#854CFF]/20">
@@ -505,9 +490,7 @@ export default function HireDeveloperClient() {
                   integrations, cross-platform mobile apps, or enterprise WordPress solutions, our developers possess
                   deep mastery over modern best practices, clean code standards, and agile delivery.
                 </p>
-              </div>
-
-              {/* Feature Highlights with Checkmarks */}
+              </div>              
               <div className="space-y-3.5 pt-2">
                 {[
                   "Dedicated senior developers aligned with your preferred timezone",
@@ -517,15 +500,14 @@ export default function HireDeveloperClient() {
                   "Zero recruitment overhead, zero long-term lock-in risks",
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3.5">
-                    <div className="w-6 h-6 rounded-full bg-[#854CFF]/20 border border-[#854CFF]/40 flex items-center justify-center shrink-0 mt-0.5">
+                   
+       <div className="w-6 h-6 rounded-full bg-[#854CFF]/20 border border-[#854CFF]/40 flex items-center justify-center shrink-0 mt-0.5">
                       <BsCheckAll className="text-[#a78bfa] w-4 h-4" />
                     </div>
                     <span className="text-sm lg:text-[15px] text-gray-200">{item}</span>
                   </div>
                 ))}
-              </div>
-
-              {/* Engagement Models Cards */}
+              </div>              
               <div className="pt-4 space-y-4">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
                   <BsClockHistory className="text-[#854CFF]" />
@@ -548,9 +530,7 @@ export default function HireDeveloperClient() {
                     </div>
                   ))}
                 </div>
-              </div>
-
-              {/* Image Banner */}
+              </div>              
               <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl pt-2">
                 <Image
                   src="/Migration.jpg"
@@ -564,16 +544,11 @@ export default function HireDeveloperClient() {
                   💡 <strong className="text-white">Pro Tip:</strong> You can test developer fit through a 1-week risk-free trial sprint.
                 </div>
               </div>
-            </div>
-
-            {/* Right Column: "Build Your Team" Form */}
+            </div>            
             <div className="w-full lg:w-[52%] sticky top-28">
-              <div className="relative rounded-[24px] p-6 sm:p-8 lg:p-10 bg-[linear-gradient(180deg,#120D25_0%,#1B1339_100%)] border border-white/15 shadow-[0_25px_60px_rgba(0,0,0,0.6)] overflow-hidden">
-                {/* Glow effects inside card */}
+              <div className="relative rounded-[24px] p-6 sm:p-8 lg:p-10 bg-[linear-gradient(180deg,#120D25_0%,#1B1339_100%)] border border-white/15 shadow-[0_25px_60px_rgba(0,0,0,0.6)] overflow-hidden">                
                 <div className="absolute -top-24 -right-24 w-52 h-52 bg-[#854CFF] blur-[90px] rounded-full opacity-30 pointer-events-none" />
-                <div className="absolute -bottom-24 -left-24 w-52 h-52 bg-blue-600 blur-[90px] rounded-full opacity-20 pointer-events-none" />
-
-                {/* Form Header */}
+                <div className="absolute -bottom-24 -left-24 w-52 h-52 bg-blue-600 blur-[90px] rounded-full opacity-20 pointer-events-none" />               
                 <div className="relative z-10 mb-8 border-b border-white/10 pb-6">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold text-[#a78bfa] bg-[#854CFF]/20 border border-[#854CFF]/30 mb-2">
                     <BsPeople className="w-3.5 h-3.5" />
@@ -584,7 +559,6 @@ export default function HireDeveloperClient() {
                     Share your requirements and get customized CVs of senior developers within 24 hours.
                   </p>
                 </div>
-
                 {submitStatus === "success" ? (
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -607,8 +581,7 @@ export default function HireDeveloperClient() {
                     </button>
                   </motion.div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="relative z-10 space-y-5">
-                    {/* Name Fields */}
+                  <form onSubmit={handleSubmit} className="relative z-10 space-y-5">                    
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
@@ -625,7 +598,6 @@ export default function HireDeveloperClient() {
                         />
                         {errors.firstName && <p className="text-xs text-red-400 mt-1">{errors.firstName}</p>}
                       </div>
-
                       <div>
                         <label className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
                           Last Name
@@ -639,9 +611,7 @@ export default function HireDeveloperClient() {
                           className="w-full px-4 py-3 rounded-xl bg-white/[0.05] border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-[#854CFF] transition-colors text-sm"
                         />
                       </div>
-                    </div>
-
-                    {/* Preferred Contact Method */}
+                    </div>                   
                     <div>
                       <label className="block text-xs font-semibold text-gray-300 mb-2 uppercase tracking-wider">
                         How should we contact you? <span className="text-[#854CFF]">*</span>
@@ -664,9 +634,7 @@ export default function HireDeveloperClient() {
                           </button>
                         ))}
                       </div>
-                    </div>
-
-                    {/* Email and Phone */}
+                    </div>                   
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
@@ -683,7 +651,6 @@ export default function HireDeveloperClient() {
                         />
                         {errors.email && <p className="text-xs text-red-400 mt-1">{errors.email}</p>}
                       </div>
-
                       <div>
                         <label className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
                           {formData.contactMethod === "WhatsApp"
@@ -693,8 +660,7 @@ export default function HireDeveloperClient() {
                               : "Phone (Optional)"}{" "}
                           {formData.contactMethod !== "Email" && <span className="text-[#854CFF]">*</span>}
                         </label>
-                        <div className="flex gap-2 relative" ref={dropdownRef}>
-                          {/* Country Selector */}
+                        <div className="flex gap-2 relative" ref={dropdownRef}>                         
                           <div className="relative">
                             <button
                               type="button"
@@ -711,7 +677,6 @@ export default function HireDeveloperClient() {
                               <span>{selectedCountry.code}</span>
                               <IoChevronDown className={`w-3 h-3 text-gray-400 transition-transform duration-200 ${showCountryDropdown ? "rotate-180 text-primary" : ""}`} />
                             </button>
-
                             {showCountryDropdown && (
                               <div
                                 data-lenis-prevent
@@ -766,7 +731,6 @@ export default function HireDeveloperClient() {
                               </div>
                             )}
                           </div>
-
                           <input
                             type="tel"
                             name="phone"
@@ -779,9 +743,7 @@ export default function HireDeveloperClient() {
                         </div>
                         {errors.phone && <p className="text-xs text-red-400 mt-1">{errors.phone}</p>}
                       </div>
-                    </div>
-
-                    {/* Developer Role / Tech Stack Selection */}
+                    </div>                    
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
@@ -803,7 +765,6 @@ export default function HireDeveloperClient() {
                           <IoChevronDown className="absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
                         </div>
                       </div>
-
                       <div>
                         <label className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
                           Engagement Model
@@ -831,9 +792,7 @@ export default function HireDeveloperClient() {
                           <IoChevronDown className="absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
                         </div>
                       </div>
-                    </div>
-
-                    {/* Project Link (Optional) */}
+                    </div>                    
                     <div>
                       <label className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
                         Existing Website / Figma / Repo Link <span className="text-gray-500 font-normal">(Optional)</span>
@@ -846,9 +805,7 @@ export default function HireDeveloperClient() {
                         placeholder="https://example.com or Figma URL"
                         className="w-full px-4 py-3 rounded-xl bg-white/[0.05] border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-[#854CFF] transition-colors text-sm"
                       />
-                    </div>
-
-                    {/* Message / Project Requirements */}
+                    </div>                   
                     <div>
                       <label className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
                         Project Scope & Requirements <span className="text-[#854CFF]">*</span>
@@ -863,16 +820,12 @@ export default function HireDeveloperClient() {
                           } text-white placeholder-gray-500 focus:outline-none focus:border-[#854CFF] transition-colors text-sm resize-none`}
                       />
                       {errors.message && <p className="text-xs text-red-400 mt-1">{errors.message}</p>}
-                    </div>
-
-                    {/* Error Banner */}
+                    </div>                    
                     {submitStatus === "error" && (
                       <div className="p-3.5 rounded-xl bg-red-500/15 border border-red-500/30 text-red-300 text-xs">
                         ⚠️ {errorMessage}
                       </div>
-                    )}
-
-                    {/* Submit Button */}
+                    )}                    
                     <div className="pt-2">
                       <button
                         type="submit"
@@ -901,9 +854,7 @@ export default function HireDeveloperClient() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Comprehensive Benefits Section */}
+      </section>      
       <section className="py-20 lg:py-28 bg-[#03000a] text-white border-t border-white/5 relative">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -918,7 +869,6 @@ export default function HireDeveloperClient() {
               excellence with guaranteed project momentum.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {hiringBenefits.map((b, idx) => {
               const IconComp = b.icon;
@@ -944,13 +894,9 @@ export default function HireDeveloperClient() {
             })}
           </div>
         </div>
-      </section>
-
-      {/* 4-Step Hiring Process Section */}
-      <section className="py-20 lg:py-28 bg-[#05010f] text-white relative overflow-hidden">
-        {/* Glow backdrop */}
+      </section>      
+      <section className="py-20 lg:py-28 bg-[#05010f] text-white relative overflow-hidden">        
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[350px] bg-[#854CFF]/10 blur-[140px] pointer-events-none rounded-full" />
-
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <span className="inline-block px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase text-[#a78bfa] bg-[#854CFF]/10 border border-[#854CFF]/20">
@@ -963,7 +909,6 @@ export default function HireDeveloperClient() {
               We streamline developer acquisition into an effortless, fast, and risk-free onboarding experience.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {hiringSteps.map((step, idx) => (
               <div
@@ -981,9 +926,7 @@ export default function HireDeveloperClient() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Tech Stack Matrix Section */}
+      </section>      
       <section className="py-20 lg:py-28 bg-[#03000a] text-white border-t border-white/5 relative">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -998,7 +941,6 @@ export default function HireDeveloperClient() {
               skills to elevate your codebase.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {techStackMatrix.map((matrix, idx) => {
               const IconComp = matrix.icon;
@@ -1013,7 +955,6 @@ export default function HireDeveloperClient() {
                     </div>
                     <h3 className="text-lg font-bold text-white">{matrix.category}</h3>
                   </div>
-
                   <div className="flex flex-wrap gap-2">
                     {matrix.skills.map((skill, sIdx) => (
                       <span
@@ -1029,9 +970,7 @@ export default function HireDeveloperClient() {
             })}
           </div>
         </div>
-      </section>
-
-      {/* Portfolio Showcase Banner */}
+      </section>      
       <section className="py-12 bg-[#05010f] text-white">
         <div className="container mx-auto px-4">
           <div className="relative rounded-[28px] p-8 lg:p-12 overflow-hidden bg-gradient-to-r from-[#170e33] via-[#24134e] to-[#120829] border border-white/15 flex flex-col md:flex-row items-center justify-between gap-8">
@@ -1045,16 +984,13 @@ export default function HireDeveloperClient() {
                 clients.
               </p>
             </div>
-
             <ButtonSwipUp className="text-black hover:text-white bg-white w-52 shrink-0" url="/portfolio">
               Explore Portfolio
               <BsArrowRightCircle className="-rotate-45 h-5 w-5 duration-400 group-hover:rotate-0" />
             </ButtonSwipUp>
           </div>
         </div>
-      </section>
-
-      {/* FAQ Section */}
+      </section>      
       <section className="py-20 lg:py-28 bg-[#05010f] text-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
@@ -1075,12 +1011,8 @@ export default function HireDeveloperClient() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Call To Action */}
-      <CallToAction />
-
-      {/* Global Footer */}
+      </section>     
+      <CallToAction />      
       <Footer />
     </>
   );

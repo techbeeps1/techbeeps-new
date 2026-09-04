@@ -18,10 +18,6 @@
     --foreground: #fff;
   }
 }
-html {
-  /* Scroll behavior managed by Lenis smooth scroll */
-}
-
 
 body {
   background: var(--background);
@@ -36,32 +32,25 @@ body {
   padding-right: 20px;
   width: 100%;
 }
-
-/* Custom premium scrollbar utility */
 .custom-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: rgba(133, 76, 255, 0.3) rgba(255, 255, 255, 0.02);
 }
-
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
 }
-
 .custom-scrollbar::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.02);
   border-radius: 10px;
 }
-
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(133, 76, 255, 0.35); /* primary brand color with opacity */
+  background: rgba(133, 76, 255, 0.35);
   border-radius: 10px;
   transition: background 0.3s ease;
 }
-
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(133, 76, 255, 0.6);
 }
-
 .radial-wrapper::before {
   content: "";
   position: absolute;
@@ -76,7 +65,6 @@ body {
   animation: radialZoom 4s ease-in-out infinite alternate;
   will-change: transform;
 }
-
 @keyframes radialZoom {
   from {
     transform: translate(-50%, -50%) scale(.4) translateZ(0);
@@ -85,7 +73,6 @@ body {
     transform: translate(-50%, -50%) scale(1.6) translateZ(0);
   }
 }
-
 .anistar {
   offset-path: path("M -50 0 A 50 50 0 0 1 50 0");
   offset-distance: 0%;
@@ -94,7 +81,6 @@ body {
   animation: starArc 3s cubic-bezier(.6,0,.4,1) infinite;
   will-change: transform, opacity;
 }
-
 .anistar2 {
   offset-path: path("M 0 0 A 30 40 0 0 1 0 -43");
   offset-distance: 0%;
@@ -108,9 +94,6 @@ body {
   will-change: transform;
   transform: translateZ(0);
 }
-
-  
-
 @keyframes starArc{
   0%{
     opacity:0;
@@ -125,7 +108,6 @@ body {
     offset-distance:50%;
   }
 }
-
 @keyframes starArc2{
   0%{
     opacity:0;
@@ -148,10 +130,8 @@ to
 
 }
 @keyframes rotateBorder
-{100%{transform:rotate(360deg);}
-}
+{100%{transform:rotate(360deg);}}
 
-/* Premium Gradient Border Card */
 .premium-gradient-border {
   position: relative;
   border: 1.5px solid transparent;
@@ -162,22 +142,17 @@ to
   box-shadow: 0 10px 40px -10px rgba(0, 240, 255, 0.1), 0 20px 50px -15px rgba(133, 76, 255, 0.08);
   transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
-
 .premium-gradient-border:hover {
   box-shadow: 0 12px 50px -5px rgba(0, 240, 255, 0.15), 0 25px 60px -10px rgba(133, 76, 255, 0.15);
   transform: translateY(-2px);
 }
-
-/* Hide scrollbar for slider track */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
-
-/* Infinite Seamless Marquee */
 @keyframes continuousMarquee {
   0% {
     transform: translate3d(0, 0, 0);
@@ -186,47 +161,37 @@ to
     transform: translate3d(-50%, 0, 0);
   }
 }
-
 .animate-continuous-marquee {
   display: flex;
   width: max-content;
   will-change: transform;
   animation: continuousMarquee 45s linear infinite;
 }
-
 .animate-continuous-marquee:hover {
   animation-play-state: paused;
 }
-
 .marquee-mask {
   mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
-
-/* 3D Card Flip & Blueprint Grid Utilities */
 .perspective-1000 {
   perspective: 1000px;
 }
-
 .preserve-3d {
   transform-style: preserve-3d;
 }
-
 .backface-hidden {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
-
 .tech-grid-bg {
   background-image: linear-gradient(to right, rgba(80, 76, 255, 0.12) 1px, transparent 1px),
                     linear-gradient(to bottom, rgba(80, 76, 255, 0.12) 1px, transparent 1px);
   background-size: 24px 24px;
 }
-
 .tech-grid-bg-dense {
   background-image: linear-gradient(to right, rgba(133, 76, 255, 0.18) 1px, transparent 1px),
                     linear-gradient(to bottom, rgba(133, 76, 255, 0.18) 1px, transparent 1px);

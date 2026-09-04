@@ -1,7 +1,3 @@
-/**
- * TechBeeps Global SEO & Schema.org (JSON-LD) Configuration
- */
-
 export const SITE_URL = "https://techbeeps.co.in";
 export const SITE_NAME = "TechBeeps Services";
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/services-bg.jpg`;

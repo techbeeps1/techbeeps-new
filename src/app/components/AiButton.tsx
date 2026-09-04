@@ -28,7 +28,6 @@ export default function AiButton({
               className="max-w-[70px] h-auto object-contain"
             />
           </span>
-
           <span className="absolute left-[7px] top-[-4px] anistar">
             <img
               src="/staricons.png"
@@ -36,7 +35,6 @@ export default function AiButton({
               className="max-w-[35px] object-contain"
             />
           </span>
-
           <span className="absolute right-[14px] top-[60px] anistar2">
             <img
               src="/staricons.png"

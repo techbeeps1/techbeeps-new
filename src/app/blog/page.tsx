@@ -95,19 +95,13 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           __html: JSON.stringify(breadcrumbsSchema),
         }}
       />
-      <Header />
-
-      {/* Hero Section */}
-      <BlogHero />
-
-      {/* Main Blog Grid Section */}
-      <section className="py-20 lg:py-28 bg-[#05010f] text-white relative z-10 overflow-hidden">
-        {/* Subtle Background Glows */}
+      <Header />     
+      <BlogHero />      
+      <section className="py-20 lg:py-28 bg-[#05010f] text-white relative z-10 overflow-hidden">        
         <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-[140px] pointer-events-none" />
         <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-[#504CFF]/10 rounded-full blur-[140px] pointer-events-none" />
 
-        <div className="container mx-auto px-4 relative z-10">
-          {/* Post count / active page info */}
+        <div className="container mx-auto px-4 relative z-10">          
           {totalPosts > 0 && (
             <div className="flex items-center justify-between gap-4 mb-10 pb-4 border-b border-white/10 text-xs sm:text-sm text-gray-400">
               <span>
@@ -115,12 +109,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                 <strong className="text-white">{totalPages}</strong> ({totalPosts} total {totalPosts === 1 ? "article" : "articles"})
               </span>
             </div>
-          )}
-
-          {/* Blog Cards Grid */}
-          <BlogGrid posts={cardsData} />
-
-          {/* Pagination Controls */}
+          )}          
+          <BlogGrid posts={cardsData} />          
           {totalPages > 1 && (
             <BlogPagination
               currentPage={currentPage}
@@ -129,14 +119,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             />
           )}
         </div>
-      </section>
-
-      {/* LogoMarquee */}
-      <LogoMarquee />
-
-      {/* Call To Action */}
+      </section>      
+      <LogoMarquee />      
       <CallToAction />
-
       <Footer />
     </>
   );

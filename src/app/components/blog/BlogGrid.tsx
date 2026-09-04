@@ -10,7 +10,6 @@ export interface BlogGridProps {
   posts: BlogCardData[];
   emptyMessage?: string;
 }
-
 export default function BlogGrid({
   posts,
   emptyMessage = "No blog articles found at this time. Please check back soon!",
@@ -32,7 +31,7 @@ export default function BlogGrid({
       </div>
     );
   }
-
+  
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {posts.map((post, index) => (

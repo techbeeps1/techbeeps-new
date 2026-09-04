@@ -9,7 +9,6 @@ import { BlogCardData } from "@/types/blog";
 export interface BlogCardProps {
   post: BlogCardData;
 }
-
 export default function BlogCard({ post }: BlogCardProps) {
   const {
     slug,
@@ -23,8 +22,7 @@ export default function BlogCard({ post }: BlogCardProps) {
   } = post;
 
   return (
-    <article className="group rounded-[20px] bg-[#120D25] shadow-[0_12px_35px_rgba(0,0,0,0.45)] flex flex-col justify-between overflow-hidden h-full">
-      {/* Top Featured Image with Blur Shift Hover Animation */}
+    <article className="group rounded-[20px] bg-[#120D25] shadow-[0_12px_35px_rgba(0,0,0,0.45)] flex flex-col justify-between overflow-hidden h-full">      
       <div className="relative w-full aspect-[16/10] overflow-hidden bg-[#0a0518]">
         <Link href={`/blog/${slug}`} className="block w-full h-full relative overflow-hidden" tabIndex={-1} aria-hidden="true">
           <Image
@@ -42,12 +40,9 @@ export default function BlogCard({ post }: BlogCardProps) {
             className="object-cover h-full w-full pointer-events-none blur-[0px] group-hover:opacity-0 group-hover:blur-[10px] group-hover:-translate-x-1/2 group-hover:scale-x-[2] transition-all duration-500 ease"
           />
         </Link>
-      </div>
-
-      {/* Card Body */}
+      </div>      
       <div className="p-6 flex flex-col flex-1 justify-between gap-5">
-        <div className="space-y-3.5">
-          {/* Category Pill & Date Row */}
+        <div className="space-y-3.5">         
           <div className="flex items-center gap-3 flex-wrap">
             {category && (
               <span className="inline-block text-xs font-semibold text-white bg-white/10 px-3.5 py-1 rounded-full">
@@ -59,9 +54,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                 {formattedDate}
               </span>
             )}
-          </div>
-
-          {/* Article Title with Underline on Hover */}
+          </div>          
           <h3 className="text-lg sm:text-xl font-bold leading-snug line-clamp-2">
             <Link
               href={`/blog/${slug}`}
@@ -70,20 +63,15 @@ export default function BlogCard({ post }: BlogCardProps) {
               {title}
             </Link>
           </h3>
-        </div>
-
-        {/* Card Footer: Read More on Left, Author on Right */}
-        <div className="pt-4 flex items-center justify-between gap-3 mt-auto">
-          {/* Read More Link with Arrow */}
+        </div>        
+        <div className="pt-4 flex items-center justify-between gap-3 mt-auto">         
           <Link
             href={`/blog/${slug}`}
             className="group/btn inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-primary transition-colors"
           >
             <span>Read More</span>
             <FaArrowRight className="w-3.5 h-3.5 -rotate-45 duration-500 group-hover/btn:rotate-0" />
-          </Link>
-
-          {/* Author Name */}
+          </Link>          
           <div className="flex items-center gap-2 text-xs text-gray-400">
             {authorAvatar ? (
               <Image

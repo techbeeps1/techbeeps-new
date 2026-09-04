@@ -14,12 +14,10 @@ export default function FaqAccordion({faqs}: {faqs: {question: string, answer: s
 
   return (
 
-<>
-        {/* FAQ List */}
+<>       
         <div className="space-y-4">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
-
             return (
               <div 
                 key={index}
@@ -39,9 +37,7 @@ export default function FaqAccordion({faqs}: {faqs: {question: string, answer: s
                   >
                     {isOpen ? <BsDash size={20} className="md:w-[22px] md:h-[22px]" /> : <BsPlus size={20} className="md:w-[22px] md:h-[22px]" />}
                   </div>
-                </button>
-                
-                {/* Smooth Dropdown Animation */}
+                </button> 
                 <AnimatePresence>
                   {isOpen && (
                     <motion.div

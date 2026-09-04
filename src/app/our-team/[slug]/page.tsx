@@ -22,7 +22,6 @@ import {
   FaLocationDot,
 } from "react-icons/fa6";
 import { FiMail } from "react-icons/fi";
-
 interface TeamMemberPageProps {
   params: Promise<{
     slug: string;
@@ -133,13 +132,11 @@ export default async function TeamMemberDetailsPage({
       />
       <Header />
 
-      <main className="bg-[#05010f] text-white min-h-screen pt-32 pb-24 overflow-hidden relative">
-        {/* Background Ambient Spotlights */}
+      <main className="bg-[#05010f] text-white min-h-screen pt-32 pb-24 overflow-hidden relative">        
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] lg:w-[900px] h-[500px] bg-[#854CFF]/15 blur-[140px] pointer-events-none rounded-full" />
         <div className="absolute top-1/3 -left-40 w-[400px] h-[400px] bg-blue-600/10 blur-[130px] pointer-events-none rounded-full" />
 
-        <div className="container relative z-10 px-4 mx-auto">
-          {/* Breadcrumbs & Back Navigation */}
+        <div className="container relative z-10 px-4 mx-auto">          
           <div className="flex items-center justify-between gap-4 mb-8 sm:mb-12">
             <Link
               href="/our-team"
@@ -161,13 +158,10 @@ export default async function TeamMemberDetailsPage({
               <span className="text-[#a78bfa] font-medium">{member.name}</span>
             </div>
           </div>
-
-          {/* Profile Overview Container */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-20">
-            {/* Left Column: Member Card & Quick Specs */}
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-20">           
             <div className="lg:col-span-5 xl:col-span-4">
-              <div className="rounded-[28px] bg-[#0c081e]/90 border border-white/10 p-5 sm:p-6 shadow-[0_20px_60px_rgba(0,0,0,0.6)] backdrop-blur-xl sticky top-28">
-                {/* Portrait Image */}
+              <div className="rounded-[28px] bg-[#0c081e]/90 border border-white/10 p-5 sm:p-6 shadow-[0_20px_60px_rgba(0,0,0,0.6)] backdrop-blur-xl sticky top-28">                
                 <div className="relative w-full aspect-[4/4.5] rounded-[22px] overflow-hidden bg-[#130f2e] mb-6 shadow-inner">
                   <Image
                     src={member.image}
@@ -177,12 +171,9 @@ export default async function TeamMemberDetailsPage({
                     sizes="(max-width: 1024px) 100vw, 400px"
                     className="object-cover object-top"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c081e]/90 via-transparent to-transparent" />
-
-                  {/* Badge */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c081e]/90 via-transparent to-transparent" />                 
                   <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                    <span className="px-3.5 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-[#854CFF]/90 text-white shadow-lg backdrop-blur-md">
-                      {member.department}
+                    <span className="px-3.5 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-[#854CFF]/90 text-white shadow-lg backdrop-blur-md">                      {member.department}
                     </span>
                     {member.experience && (
                       <span className="px-3 py-1 rounded-full text-xs font-medium bg-black/70 border border-white/10 text-blue-200">
@@ -190,9 +181,7 @@ export default async function TeamMemberDetailsPage({
                       </span>
                     )}
                   </div>
-                </div>
-
-                {/* Member Info */}
+                </div>                
                 <div className="space-y-4">
                   <div>
                     <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
@@ -201,9 +190,7 @@ export default async function TeamMemberDetailsPage({
                     <p className="text-base text-[#a78bfa] font-medium mt-1">
                       {member.role}
                     </p>
-                  </div>
-
-                  {/* Contact Info List */}
+                  </div>                  
                   <div className="pt-4 border-t border-white/10 space-y-3 text-sm text-white/80">
                     {member.email && (
                       <a
@@ -235,9 +222,7 @@ export default async function TeamMemberDetailsPage({
                         <span>{member.location}</span>
                       </div>
                     )}
-                  </div>
-
-                  {/* Social Profiles */}
+                  </div>                  
                   <div className="pt-4 border-t border-white/10">
                     <p className="text-xs uppercase tracking-wider text-white/40 mb-3 font-semibold">
                       Connect on Social
@@ -308,9 +293,7 @@ export default async function TeamMemberDetailsPage({
                         </a>
                       )}
                     </div>
-                  </div>
-
-                  {/* Get in Touch CTA button */}
+                  </div>                
                   <div className="pt-4">
                     <Link
                       href="/contact-us"
@@ -321,11 +304,8 @@ export default async function TeamMemberDetailsPage({
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Right Column: Detailed Biography, Expertise, Experience */}
-            <div className="lg:col-span-7 xl:col-span-8 space-y-8">
-              {/* Biography Section */}
+            </div>            
+            <div className="lg:col-span-7 xl:col-span-8 space-y-8">              
               <div className="rounded-[28px] bg-[#0c081e]/70 border border-white/10 p-6 sm:p-8 lg:p-10 backdrop-blur-xl">
                 <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center gap-3">
                   <span className="w-2 h-6 rounded-full bg-[#854CFF]" />
@@ -338,9 +318,7 @@ export default async function TeamMemberDetailsPage({
                   <p className="text-sm sm:text-base text-white/70 leading-relaxed font-light">
                     {member.bio}
                   </p>
-                )}
-
-                {/* Quick Stats Grid */}
+                )}                
                 {(member.details?.experienceYears || member.details?.completedProjects) && (
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-8 pt-6 border-t border-white/10">
                     {member.details?.experienceYears && (
@@ -373,9 +351,7 @@ export default async function TeamMemberDetailsPage({
                     </div>
                   </div>
                 )}
-              </div>
-
-              {/* Core Skills & Expertise */}
+              </div>             
               <div className="rounded-[28px] bg-[#0c081e]/70 border border-white/10 p-6 sm:p-8 lg:p-10 backdrop-blur-xl">
                 <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 flex items-center gap-3">
                   <span className="w-2 h-6 rounded-full bg-[#854CFF]" />
@@ -391,9 +367,7 @@ export default async function TeamMemberDetailsPage({
                     </span>
                   ))}
                 </div>
-              </div>
-
-              {/* Key Responsibilities (if available) */}
+              </div>              
               {member.details?.keyResponsibilities && member.details.keyResponsibilities.length > 0 && (
                 <div className="rounded-[28px] bg-[#0c081e]/70 border border-white/10 p-6 sm:p-8 lg:p-10 backdrop-blur-xl">
                   <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 flex items-center gap-3">
@@ -414,9 +388,7 @@ export default async function TeamMemberDetailsPage({
                     ))}
                   </div>
                 </div>
-              )}
-
-              {/* Experience Timeline (if available) */}
+              )}              
               {member.details?.experiences && member.details.experiences.length > 0 && (
                 <div className="rounded-[28px] bg-[#0c081e]/70 border border-white/10 p-6 sm:p-8 lg:p-10 backdrop-blur-xl">
                   <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 flex items-center gap-3">
@@ -425,10 +397,8 @@ export default async function TeamMemberDetailsPage({
                   </h2>
                   <div className="relative pl-6 sm:pl-8 space-y-8 border-l border-white/10">
                     {member.details.experiences.map((exp, idx) => (
-                      <div key={idx} className="relative group">
-                        {/* Timeline Bullet */}
+                      <div key={idx} className="relative group">                        
                         <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-[#854CFF] border-4 border-[#0c081e] group-hover:scale-125 transition-transform" />
-
                         <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
                           <h3 className="text-lg font-bold text-white">
                             {exp.role}
@@ -447,9 +417,7 @@ export default async function TeamMemberDetailsPage({
                     ))}
                   </div>
                 </div>
-              )}
-
-              {/* Education (if available) */}
+              )}             
               {member.details?.education && member.details.education.length > 0 && (
                 <div className="rounded-[28px] bg-[#0c081e]/70 border border-white/10 p-6 sm:p-8 lg:p-10 backdrop-blur-xl">
                   <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 flex items-center gap-3">
@@ -470,9 +438,7 @@ export default async function TeamMemberDetailsPage({
                 </div>
               )}
             </div>
-          </div>
-
-          {/* Meet Other Team Members Section */}
+          </div>          
           {otherMembers.length > 0 && (
             <div className="mt-20 pt-16 border-t border-white/10">
               <div className="text-center max-w-2xl mx-auto mb-12">
@@ -493,7 +459,6 @@ export default async function TeamMemberDetailsPage({
           )}
         </div>
       </main>
-
       <CallToAction />
       <Footer />
     </>

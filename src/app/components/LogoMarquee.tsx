@@ -2,7 +2,6 @@
 import Image from "next/image";
 import GsapTextAnimation from "./GsapTextAnimation";
 import ContentSwipUp from "./ContentSwipUp";
-
 const logos = [
   "/logo-1.png",
   "/logo-2.png",
@@ -15,9 +14,7 @@ const logos = [
   "/logo-9.png",
 ];
 
-// Repeating the array 4 times ensures sufficient width on any monitor for seamless 50% loop
 const repeatedLogos = [...logos, ...logos, ...logos, ...logos];
-
 export default function LogoMarquee() {
   return (
     <section className="py-25 border-y-1 border-white/12 text-white overflow-hidden relative z-1">
@@ -31,9 +28,7 @@ export default function LogoMarquee() {
         <ContentSwipUp className="max-w-4xl mx-auto w-full">
           We partner with forward-thinking enterprises, high-growth startups, and visionary brands across the globe to build high-performance digital products and scalable solutions.
         </ContentSwipUp>
-      </div>
-
-      {/* Marquee Wrapper with smooth edge fades */}
+      </div>      
       <div className="relative w-full overflow-hidden marquee-mask">
         <div className="flex animate-continuous-marquee items-center py-2">
           {repeatedLogos.map((logo, index) => (

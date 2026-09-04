@@ -22,8 +22,7 @@ export default function BlogPagination({
     }
     return `${basePath}?page=${pageNumber}`;
   };
-
-  // Generate page numbers with ellipses
+  
   const getPageNumbers = () => {
     const pages: (number | string)[] = [];
     const maxVisible = 5;
@@ -68,8 +67,7 @@ export default function BlogPagination({
     <nav
       aria-label="Blog pagination navigation"
       className="flex items-center justify-center gap-2 sm:gap-3 pt-12 lg:pt-16"
-    >
-      {/* Previous Button */}
+    >      
       {hasPrev ? (
         <Link
           href={createPageUrl(currentPage - 1)}
@@ -87,9 +85,7 @@ export default function BlogPagination({
           <IoChevronBackOutline className="w-4 h-4" />
           <span className="hidden sm:inline">Previous</span>
         </span>
-      )}
-
-      {/* Page Numbers */}
+      )}      
       <div className="flex items-center gap-1 sm:gap-2">
         {pages.map((p, idx) => {
           if (p === "...") {
@@ -121,9 +117,7 @@ export default function BlogPagination({
             </Link>
           );
         })}
-      </div>
-
-      {/* Next Button */}
+      </div>      
       {hasNext ? (
         <Link
           href={createPageUrl(currentPage + 1)}

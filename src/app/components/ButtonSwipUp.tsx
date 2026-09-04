@@ -2,12 +2,10 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { BsArrowRightCircle } from "react-icons/bs";
 import Link from "next/link";
 import { ReactNode } from "react";
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
+  gsap.registerPlugin(ScrollTrigger);}
 
 export default function ButtonSwipUp({ className = '', url = "/", children }: { className?: string, url?: string, children?: ReactNode }) {
   const buttonRef = useRef<HTMLDivElement>(null);

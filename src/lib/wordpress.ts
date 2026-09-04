@@ -9,23 +9,17 @@ const WP_API_URL =
   process.env.NEXT_PUBLIC_WORDPRESS_API_URL ||
   "https://techbeeps.co.in/wp-json/wp/v2";
 
-/**
- * Strips HTML tags and decodes common HTML entities and escaped slashes
- */
 export function stripHtml(html: string = ""): string {
   if (!html) return "";
-  return html
-    // Handle double-escaped WordPress quotes/entities first
+  return html    
     .replace(/\\&#8217;/g, "'")
     .replace(/\\&#8216;/g, "'")
     .replace(/\\&#8220;/g, '"')
     .replace(/\\&#8221;/g, '"')
     .replace(/\\&#039;/g, "'")
     .replace(/\\'/g, "'")
-    .replace(/\\"/g, '"')
-    // Remove HTML tags
-    .replace(/<[^>]*>/g, "")
-    // Decode HTML entities
+    .replace(/\\"/g, '"')  
+    .replace(/<[^>]*>/g, "")    
     .replace(/&nbsp;/g, " ")
     .replace(/&amp;/g, "&")
     .replace(/&quot;/g, '"')
@@ -54,9 +48,6 @@ export function stripHtml(html: string = ""): string {
     .trim();
 }
 
-/**
- * Formats ISO date string into readable format (e.g. "Sep 02, 2026")
- */
 export function formatPostDate(dateStr: string): string {
   if (!dateStr) return "";
   try {
@@ -70,10 +61,6 @@ export function formatPostDate(dateStr: string): string {
     return dateStr;
   }
 }
-
-/**
- * Calculates estimated reading time in minutes
- */
 export function calculateReadingTime(content: string = ""): string {
   const plainText = stripHtml(content);
   const words = plainText.split(/\s+/).filter(Boolean).length;
@@ -81,9 +68,6 @@ export function calculateReadingTime(content: string = ""): string {
   return `${minutes} min read`;
 }
 
-/**
- * Extracts featured image source URL and alt text with fallbacks
- */
 export function extractFeaturedMedia(post: WordPressPost): {
   url: string;
   alt: string;
@@ -94,9 +78,7 @@ export function extractFeaturedMedia(post: WordPressPost): {
       url: media.source_url,
       alt: media.alt_text || stripHtml(post.title?.rendered) || "Blog cover image",
     };
-  }
-
-  // Fallback branded illustrations based on post id
+  }  
   const fallbackImages = [
     "/web_dev_card.png",
     "/ai_solution_card.png",
@@ -116,9 +98,6 @@ export function extractFeaturedMedia(post: WordPressPost): {
   };
 }
 
-/**
- * Extracts primary category from embedded terms
- */
 export function extractCategory(post: WordPressPost): string {
   const terms = post._embedded?.["wp:term"]?.[0] as WPTerm[] | undefined;
   if (terms && terms.length > 0) {
@@ -127,9 +106,6 @@ export function extractCategory(post: WordPressPost): string {
   return "Tech Insights";
 }
 
-/**
- * Extracts tags from embedded terms
- */
 export function extractTags(post: WordPressPost): string[] {
   const terms = post._embedded?.["wp:term"]?.[1] as WPTerm[] | undefined;
   if (terms && terms.length > 0) {
@@ -138,9 +114,6 @@ export function extractTags(post: WordPressPost): string[] {
   return [];
 }
 
-/**
- * Extracts author name and avatar
- */
 export function extractAuthor(post: WordPressPost): {
   name: string;
   avatar?: string;

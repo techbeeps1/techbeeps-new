@@ -79,10 +79,8 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 export default function AboutUsClient() {
   return (
     <>
-      <Header />
-      {/* Hero Section */}
+      <Header />      
       <section className="relative min-h-screen flex items-end justify-center pb-[90px] pt-32 lg:pb-20 bg-[#05010f] overflow-hidden">
-        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/services-bg.jpg"
@@ -98,8 +96,6 @@ export default function AboutUsClient() {
           <div className="absolute bottom-0 lg:bottom-10 -left-20 lg:-left-40 bg-[#504CFF] blur-[120px] lg:blur-[190px] w-[300px] h-[300px] lg:w-[700px] lg:h-[500px] opacity-20 lg:opacity-30 pointer-events-none rounded-full"></div>
           <div className="absolute top-0 lg:top-20 -right-20 lg:-right-20 bg-primary blur-[120px] lg:blur-[190px] w-[300px] h-[300px] lg:w-[700px] lg:h-[500px] opacity-20 lg:opacity-30 pointer-events-none rounded-full"></div>
         </div>
-
-        {/* Content Box */}
         <div className="container relative z-10 px-4 mt-auto">
           <div className="backdrop-blur-[25px] rounded-[30px] p-6 md:p-8 lg:p-[40px] bg-[#868686]/10 ">
             <h1 className="text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[97px] text-white mb-4 lg:mb-6">
@@ -137,8 +133,7 @@ export default function AboutUsClient() {
 
       <section className="bg-black text-white py-20">
         <div className="container">
-          <div className=" flex flex-col lg:flex-row items-center gap-16">
-            {/* Left Content */}
+          <div className=" flex flex-col lg:flex-row items-center gap-16">            
             <div className="flex-1 space-y-10">
               <div className="space-y-6">
                 <h2
@@ -150,8 +145,7 @@ export default function AboutUsClient() {
                 </ContentSwipUp>
               </div>
             </div>
-
-            {/* Right Image */}
+        
             <div className="flex-1 w-full">
               <div className="relative shadow-2xl border border-white/5">
                 <Image
@@ -169,9 +163,7 @@ export default function AboutUsClient() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* TestimonialSlider */}
+      </section>     
       <TestimonialSlider />
 
       <CallToAction />

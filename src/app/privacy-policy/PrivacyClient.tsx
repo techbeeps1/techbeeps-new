@@ -59,7 +59,6 @@ export default function PrivacyClient() {
               <li><strong>Payment Information:</strong> Billing addresses, transaction identifiers, and invoicing details (credit card information is processed securely by PCI-compliant payment gateways).</li>
             </ul>
           </div>
-
           <div>
             <h4 className="text-white font-semibold text-base mb-2">B. Information Collected Automatically:</h4>
             <ul className="list-disc pl-6 space-y-1.5 text-white/80">
@@ -67,7 +66,6 @@ export default function PrivacyClient() {
               <li><strong>Usage Analytics:</strong> Pages visited, time spent per page, clickstream data, referral sources, and interaction logs.</li>
             </ul>
           </div>
-
           <div>
             <h4 className="text-white font-semibold text-base mb-2">C. Cookies & Tracking Technologies:</h4>
             <p>
@@ -236,11 +234,8 @@ export default function PrivacyClient() {
 
   return (
     <div className="bg-[#05010f] text-white min-h-screen">
-      <Header />
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-end justify-center pb-[90px] pt-32 lg:pb-20 bg-[#05010f] overflow-hidden">
-        {/* Background Image */}
+      <Header />     
+      <section className="relative min-h-screen flex items-end justify-center pb-[90px] pt-32 lg:pb-20 bg-[#05010f] overflow-hidden">        
         <div className="absolute inset-0 z-0">
           <Image
             src="/services-bg.jpg"
@@ -252,12 +247,9 @@ export default function PrivacyClient() {
           <div className="absolute inset-0 bg-[linear-gradient(90deg,#000000_0%,rgba(0, 0, 0, 0.18)_20%,rgba(0,0,0,0)_54%,#000000_100%)]"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-[#05010f]/80 via-transparent to-[#05010f]/80"></div>
           <div className="absolute inset-0 bg-black/20"></div>
-
           <div className="absolute bottom-0 lg:bottom-10 -left-20 lg:-left-40 bg-[#504CFF] blur-[120px] lg:blur-[190px] w-[300px] h-[300px] lg:w-[700px] lg:h-[500px] opacity-20 lg:opacity-30 pointer-events-none rounded-full"></div>
           <div className="absolute top-0 lg:top-20 -right-20 lg:-right-20 bg-primary blur-[120px] lg:blur-[190px] w-[300px] h-[300px] lg:w-[700px] lg:h-[500px] opacity-20 lg:opacity-30 pointer-events-none rounded-full"></div>
-        </div>
-
-        {/* Content Box */}
+        </div>        
         <div className="container relative z-10 px-4 mt-auto">
           <div className="backdrop-blur-[25px] rounded-[30px] p-6 md:p-8 lg:p-[40px] bg-[#868686]/10 ">
             <h1 className="text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[97px] text-white mb-4 lg:mb-6">
@@ -268,12 +260,9 @@ export default function PrivacyClient() {
             </ContentSwipUp>
           </div>
         </div>
-      </section>
-
-      {/* Main Content Area */}
+      </section>      
       <section className="py-12 md:py-20 bg-[#05010f] relative z-10">
-        <div className="container px-4 max-w-6xl mx-auto">
-          {/* Highlights */}
+        <div className="container px-4 max-w-6xl mx-auto">          
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
             <div className="p-4 rounded-2xl bg-[#111113] border border-white/5 flex items-center gap-3">
               <FiCheckCircle className="w-5 h-5 text-primary shrink-0" />
@@ -287,9 +276,7 @@ export default function PrivacyClient() {
               <FiCheckCircle className="w-5 h-5 text-primary shrink-0" />
               <span className="text-xs sm:text-sm text-white/80">GDPR & Global Standards Compliant</span>
             </div>
-          </div>
-
-          {/* 2-Column Grid: Quick Navigation + Content Sections */}
+          </div>         
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             <div className="lg:col-span-4 lg:sticky lg:top-28 bg-[#111113]/90 border border-white/10 rounded-[24px] p-5 backdrop-blur-xl shadow-xl space-y-2">
               <h3 className="text-xs font-bold uppercase tracking-wider text-primary mb-3 px-3">
@@ -333,7 +320,6 @@ export default function PrivacyClient() {
           </div>
         </div>
       </section>
-
       <CallToAction />
       <Footer />
     </div>

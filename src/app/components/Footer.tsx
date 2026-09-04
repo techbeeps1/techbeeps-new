@@ -6,11 +6,8 @@ import { FaXTwitter } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer className="bg-[linear-gradient(180deg,#05010f_0%,#854CFF8A_100%)] text-white pt-12 lg:pt-20 relative z-10">
-      <div className="container mx-auto px-4">
-        {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20">
-
-          {/* Logo & Description */}
+      <div className="container mx-auto px-4">       
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20">          
           <div className="space-y-6">
             <Image
               src="/techbeepsLogo.svg"
@@ -39,9 +36,7 @@ export default function Footer() {
                 <FaLinkedinIn className="w-4 h-4" />
               </Link>
             </div>
-          </div>
-
-          {/* Services */}
+          </div>          
           <div>
             <h3 className="bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_42%,#FFFFFF_59%,#BE9FFF_100%)] 
   bg-clip-text text-transparent text-[22px] font-medium mb-6">Services</h3>
@@ -53,9 +48,7 @@ export default function Footer() {
               <li><Link href="/services/web-development" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Web Development</Link></li>
               <li><Link href="/services/ui-ux-design" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">UI/UX Design</Link></li>
             </ul>
-          </div>
-
-          {/* Company */}
+          </div>          
           <div>
             <h3 className="bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_42%,#FFFFFF_59%,#BE9FFF_100%)] 
   bg-clip-text text-transparent text-[22px] font-medium mb-6">Company</h3>
@@ -67,9 +60,7 @@ export default function Footer() {
               <li><Link href="/our-team" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Team</Link></li>
               <li><Link href="/contact-us" className="text-white hover:text-primary text-[15px] leading-[24px] font-normal duration-300">Contact</Link></li>
             </ul>
-          </div>
-
-          {/* Connect */}
+          </div>          
           <div>
             <h3 className="bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_42%,#FFFFFF_59%,#BE9FFF_100%)] 
   bg-clip-text text-transparent text-[22px] font-medium mb-6">Connect</h3>
@@ -88,10 +79,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-        </div>
-
-        {/* Bottom Section */}
+        </div>        
         <div className="mt-16 py-5  border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white text-[13px]">
             2026 © Techbeeps Services. All Rights Reserved.

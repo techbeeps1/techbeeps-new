@@ -5,9 +5,7 @@ import { getAllBlogPostSlugs } from "@/lib/wordpress";
 import { SITE_URL } from "@/lib/seo-config";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const currentDate = new Date().toISOString();
-
-  // Static core routes
+  const currentDate = new Date().toISOString();  
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: `${SITE_URL}`,

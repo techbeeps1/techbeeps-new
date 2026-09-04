@@ -44,7 +44,7 @@ const projects: Project[] = [
     category: "Next.js",
     tags: ["Web Development", "Next.js"],
     image: "/merger-lawyer.jpg",
-    link: "",
+    link: "https://mergerlawyer.com/",
   },
   {
     title: "Ananta Mobile App Development",
@@ -72,7 +72,7 @@ const projects: Project[] = [
     category: "Shopify",
     tags: ["Shopify", "E-commerce"],
     image: "/indeshop-img.jpg",
-    link: "",
+    link: "https://www.indeshop.nl/",
   },
   {
     title: "Anthology Magazine Website Development",

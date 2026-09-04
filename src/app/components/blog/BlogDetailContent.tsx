@@ -1,13 +1,9 @@
 import { IoPricetagOutline } from "react-icons/io5";
-
 interface BlogDetailContentProps {
   contentHtml: string;
   tags?: string[];
 }
 
-/**
- * Clean WordPress raw HTML from escaped slashes, harsh legacy styling, and format CTA banners & columns
- */
 function sanitizeContentHtml(rawHtml: string = ""): string {
   if (!rawHtml) return "";
 
@@ -21,11 +17,9 @@ function sanitizeContentHtml(rawHtml: string = ""): string {
     .replace(/&quot;/g, "")
     .replace(/\\"/g, '"')
     .replace(/\\'/g, "'")
-    .replace(/\\/g, "")
-    // Fix legacy WordPress contact links to modern site route
+    .replace(/\\/g, "")    
     .replace(/https?:\/\/(www\.)?techbeeps\.co\.in\/contacts?\/?/gi, "/contact-us");
-
-  // Transform harsh legacy pre/pullquote CTA blocks into stunning branded CTA cards
+  
   clean = clean.replace(
     /<pre[^>]*class="[^"]*(?:wp-block-pullquote|is-style-solid-color|wp-block-preformatted)[^"]*"[^>]*>[\s\S]*?<a\s+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>[\s\S]*?<\/pre>/gi,
     (match, href, innerText) => {
@@ -50,7 +44,6 @@ function sanitizeContentHtml(rawHtml: string = ""): string {
     }
   );
 
-  // Remove harsh legacy background styles that override dark theme
   clean = clean.replace(/style="[^"]*background-color:\s*#[0-9a-fA-F]+[^"]*"/gi, "");
   clean = clean.replace(/style="[^"]*padding-left:\s*\d+px;?[^"]*"/gi, "");
 
@@ -64,8 +57,7 @@ export default function BlogDetailContent({
   const sanitizedHtml = sanitizeContentHtml(contentHtml);
 
   return (
-    <div className="space-y-12">
-      {/* WordPress HTML Article Body */}
+    <div className="space-y-12">      
       <div
         className="blog-content-body max-w-none text-gray-200 text-base sm:text-lg leading-[1.85] space-y-6
           [&>p]:text-gray-300 [&>p]:leading-[1.9] [&>p]:mb-6
@@ -95,9 +87,7 @@ export default function BlogDetailContent({
           [&_.wp-block-gallery_figure]:my-0
           [&_.wp-block-gallery_img]:w-full [&_.wp-block-gallery_img]:h-full [&_.wp-block-gallery_img]:object-cover [&_.wp-block-gallery_img]:rounded-2xl [&_.wp-block-gallery_img]:my-0"
         dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
-      />
-
-      {/* Article Tags Footer */}
+      />      
       {tags && tags.length > 0 && (
         <div className="pt-8 border-t border-white/10">
           <div className="flex items-center gap-2 mb-4 text-xs font-bold uppercase tracking-wider text-gray-400">

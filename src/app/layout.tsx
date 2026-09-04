@@ -101,8 +101,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${roboto.variable} ${roboto.className} min-h-screen flex flex-col font-sans`}>
-        {/* Google Tag Manager (noscript) */}
+      <body className={`${roboto.variable} ${roboto.className} min-h-screen flex flex-col font-sans`}>       
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-T8Z2S4P"
@@ -110,9 +109,7 @@ export default function RootLayout({
             width="0"
             style={{ display: "none", visibility: "hidden" }}
           />
-        </noscript>
-
-        {/* Google Tag Manager (GTM) */}
+        </noscript>      
         <Script
           id="google-tag-manager"
           strategy="afterInteractive"
@@ -123,9 +120,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-T8Z2S4P');`,
           }}
-        />
-
-        {/* Google Analytics 4 (GA4: G-9TCQ4CH4KS) */}
+        />       
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-9TCQ4CH4KS"
           strategy="afterInteractive"
@@ -142,7 +137,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             `,
           }}
         />
-
         <SmoothScroll>
           {children}
         </SmoothScroll>
