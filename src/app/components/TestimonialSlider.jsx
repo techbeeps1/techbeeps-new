@@ -6,42 +6,50 @@ import ContentSwipUp from './ContentSwipUp';
 const testimonials = [
   {
     id: 1,
-    quote: "\"Great to work with as we've done several times now. Always great job on our WordPress-websites. Highly recommended!\"",
-    name: "Sarah Jenkins",
-    handle: "sarahj_design [United States]",
-    image: "/avtar.jpg",
+    quote: "\"This seller is a master at his craft. I am a professional artist of 13 years and finding someone at this level is rare. I was very impressed with the communication and process and ability to produce results to my liking. I am beyond happy. I would 20/10 1000% recommend techbeeps to my friends, and I would buy from him again. I am so pleased with the experience I had with this seller, I would love to credit his development of my website. You can tell he pours his passion into his work and that level of dedication is what breeds success. If you want top of the line work, hire this seller.\"",
+    name: "Evan",
+    handle: "[United States]",
+    image: "/female.avif",
     stars: 5
   },
   {
     id: 2,
-    quote: "\"The team at TechBeeps delivered beyond our expectations. The communication was flawless and the final product is stunning.\"",
-    name: "Michael Chen",
-    handle: "mchen_tech [Canada]",
-    image: "/avtar.jpg",
+    quote: "\"What really made Techbeeps Services stand out was how they mixed their tech skills with a personal touch.\"",
+    name: "Jane",
+    handle: "[South Africa]",
+    image: "/female.avif",
     stars: 5
   },
   {
     id: 3,
-    quote: "\"Absolutely brilliant service. They transformed our outdated platform into a modern, lightning-fast application. Will hire again!\"",
-    name: "Emma Thompson",
-    handle: "emmat_creates [United Kingdom]",
-    image: "/avtar.jpg",
+    quote: "\"Yaseen exceeded our expectations, all tasks were completed on time with professionalism and efficiency. I really enjoyed the collaboration.\"",
+    name: "Karine Pinas",
+    handle: "[Netherland]",
+    image: "/KarinePinas.png",
     stars: 4
   },
   {
     id: 4,
-    quote: "\"A truly professional experience from start to finish. They understand complex requirements and translate them into simple solutions.\"",
-    name: "David Rodriguez",
-    handle: "davidrod_dev [Spain]",
-    image: "/avtar.jpg",
+    quote: "\"Techbeeps Services provided exceptional service! I was truly impressed with the quick turnaround time and the outstanding results. They have professional, knowledgeable, and experienced team. They went above and beyond to ensure everything was done correctly. I highly recommend Yaseen and Techbeeps Services for anyone seeking reliable and efficient service.\"",
+    name: "Bedros Der Garabedian",
+    handle: "[Netherland]",
+    image: "/male.jpg",
     stars: 5
   },
   {
     id: 5,
-    quote: "\"Highly skilled developers with a keen eye for design. They don't just write code; they craft exceptional user experiences.\"",
-    name: "Aisha Patel",
-    handle: "apatel_innovates [Australia]",
-    image: "/avtar.jpg",
+    quote: "\"Great to work with as we’ve done several times now. Always great job on our WordPress-websites. Highly recommended!\"",
+    name: "Carin Elvhammar",
+    handle: "Norrlandsgruppen [Sweden]",
+    image: "/female.avif",
+    stars: 5
+  },
+  {
+    id: 6,
+    quote: "\"The sellers communication is better than a majority of the sellers we have encountered. We have decided add techbeeps to our list of “goto” developers for future projects involving PHP, Javascript, CSS, HTML. Highly recommend techbeeps to others who have web development needs.\"",
+    name: "ZPE",
+    handle: "Teamzpe [United Kingdom]",
+    image: "/female.avif",
     stars: 5
   }
 ];
