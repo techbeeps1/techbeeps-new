@@ -38,6 +38,7 @@ export default function ButtonSwipUp({ className = '', url = "/", children }: { 
             start: "top 90%",
             toggleActions: "play none none none",
             once: true,
+            invalidateOnRefresh: true,
           },
         });
       }, buttonRef);

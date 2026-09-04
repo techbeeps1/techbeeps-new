@@ -7,8 +7,8 @@ import Footer from "../components/Footer";
 import CallToAction from "../components/CallToAction";
 import GsapTextAnimation from "../components/GsapTextAnimation";
 import ContentSwipUp from "../components/ContentSwipUp";
-import { 
-  FiCheckCircle, 
+import {
+  FiCheckCircle,
   FiChevronRight,
   FiMail,
   FiPhone,
@@ -214,7 +214,7 @@ export default function PrivacyClient() {
             <div className="flex items-center gap-2 text-sm">
               <FiMail className="text-primary w-4 h-4" />
               <strong className="text-white">Email:</strong>
-              <Link href="mailto:info@techbeeps.co.in" className="text-primary hover:underline">info@techbeeps.co.in</Link> / <Link href="mailto:asif@techbeeps.com" className="text-primary hover:underline">asif@techbeeps.com</Link>
+              <Link href="mailto:tech.beeps@outlook.com" className="text-primary hover:underline">tech.beeps@outlook.com</Link>
             </div>
             <div className="flex items-center gap-2 text-sm">
               <FiPhone className="text-primary w-4 h-4" />
@@ -224,7 +224,7 @@ export default function PrivacyClient() {
             <div className="flex items-center gap-2 text-sm">
               <FiGlobe className="text-primary w-4 h-4" />
               <strong className="text-white">Website:</strong>
-              <Link href="https://techbeeps.co.in" className="text-primary hover:underline">https://techbeeps.co.in</Link>
+              <Link href="https://techbeeps.com" className="text-primary hover:underline">https://techbeeps.com</Link>
             </div>
           </div>
         </div>
@@ -288,11 +288,10 @@ export default function PrivacyClient() {
                     key={sec.id}
                     href={`#${sec.id}`}
                     onClick={() => setActiveTab(sec.id)}
-                    className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-xs sm:text-sm transition-all duration-200 ${
-                      activeTab === sec.id
+                    className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-xs sm:text-sm transition-all duration-200 ${activeTab === sec.id
                         ? "bg-primary text-white font-semibold shadow-md shadow-primary/20"
                         : "text-white/70 hover:text-white hover:bg-white/5"
-                    }`}
+                      }`}
                   >
                     <span className="truncate">{sec.title}</span>
                     <FiChevronRight className="w-3.5 h-3.5 opacity-60 shrink-0 ml-2" />

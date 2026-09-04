@@ -23,6 +23,7 @@ export default function ContentSwipUp({ className = '', top = "85", children }: 
             start: `top ${top}%`,
             toggleActions: "play none none none",
             once: true,
+            invalidateOnRefresh: true,
           },
         });
       }, ContentRef);

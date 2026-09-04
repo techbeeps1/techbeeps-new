@@ -28,6 +28,7 @@ export default function GsapTextAnimation({ mainText, mainClass = '', textHighli
               start: "top 90%",
               toggleActions: "play none none none",
               once: true,
+              invalidateOnRefresh: true,
             },
           });
         }

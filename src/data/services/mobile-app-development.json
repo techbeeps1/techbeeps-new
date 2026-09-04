@@ -4,7 +4,13 @@
   "seo": {
     "title": "Mobile App Development Services | TechBeeps",
     "description": "We specialize in building high-performing, scalable mobile apps using Android, iOS, Flutter, React Native, Java, and Kotlin.",
-    "keywords": ["Mobile App Development", "iOS Development", "Android Development", "Flutter", "React Native"]
+    "keywords": [
+      "Mobile App Development",
+      "iOS Development",
+      "Android Development",
+      "Flutter",
+      "React Native"
+    ]
   },
   "hero": {
     "title": "Mobile App Development",
@@ -71,5 +77,14 @@
         "answer": "Yes, we handle the submission process and ensure your app meets all guidelines for publishing on the App Store and Google Play."
       }
     ]
+  },
+  "hireDeveloperSection": {
+    "title": "Hire Our Developer",
+    "subtitle": "Are You Looking for Experienced Mobile App Developer Experts?",
+    "desc": "Our skilled mobile app developers bring deep expertise in React Native, Flutter, iOS (Swift), and Android (Kotlin) applications. From engaging UI/UX to secure API backends, we deliver high-performance apps that drive user retention and business growth.",
+    "buttonText": "Hire Developer",
+    "buttonUrl": "/hire-developer",
+    "image": "/Migration.jpg",
+    "imageAlt": "TechBeeps Mobile App Developers"
   }
 }

@@ -7,8 +7,8 @@ import Footer from "../components/Footer";
 import CallToAction from "../components/CallToAction";
 import GsapTextAnimation from "../components/GsapTextAnimation";
 import ContentSwipUp from "../components/ContentSwipUp";
-import { 
-  FiCheckCircle, 
+import {
+  FiCheckCircle,
   FiChevronRight
 } from "react-icons/fi";
 
@@ -204,9 +204,10 @@ export default function TermsClient() {
             Questions or inquiries about the Terms and Conditions should be directed to our legal and support team at:
           </p>
           <div className="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2">
-            <p><strong className="text-white">Email:</strong> <Link href="mailto:info@techbeeps.co.in" className="text-primary hover:underline">info@techbeeps.co.in</Link> / <Link href="mailto:asif@techbeeps.com" className="text-primary hover:underline">asif@techbeeps.com</Link></p>
-            <p><strong className="text-white">Website:</strong> <Link href="https://techbeeps.co.in" className="text-primary hover:underline">https://techbeeps.co.in</Link></p>
+            <p><strong className="text-white">Email:</strong> <Link href="mailto:info@techbeeps.co.in" className="text-primary hover:underline">tech.beeps@outlook.com</Link></p>
             <p><strong className="text-white">Phone:</strong> <Link href="tel:+911414523119" className="text-primary hover:underline">+91 141 452 3119</Link></p>
+            <p><strong className="text-white">Website:</strong> <Link href="https://techbeeps.co.in" className="text-primary hover:underline">https://techbeeps.com</Link></p>
+
           </div>
         </div>
       ),
@@ -269,11 +270,10 @@ export default function TermsClient() {
                     key={sec.id}
                     href={`#${sec.id}`}
                     onClick={() => setActiveTab(sec.id)}
-                    className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-xs sm:text-sm transition-all duration-200 ${
-                      activeTab === sec.id
+                    className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-xs sm:text-sm transition-all duration-200 ${activeTab === sec.id
                         ? "bg-primary text-white font-semibold shadow-md shadow-primary/20"
                         : "text-white/70 hover:text-white hover:bg-white/5"
-                    }`}
+                      }`}
                   >
                     <span className="truncate">{sec.title}</span>
                     <FiChevronRight className="w-3.5 h-3.5 opacity-60 shrink-0 ml-2" />
