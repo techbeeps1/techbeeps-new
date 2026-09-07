@@ -79,7 +79,7 @@ export const portfolioProjects: Project[] = [
     title: "Charming Hotels USA",
     category: "WordPress",
     tags: ["Web Development"],
-    image: "/charming-hotel.jpg",
+    image: "/Charming-Hotel.jpg",
     link: "https://charminghotelsusa.com/",
     description: "Custom tailored design and scalable code architectures.",
   },
