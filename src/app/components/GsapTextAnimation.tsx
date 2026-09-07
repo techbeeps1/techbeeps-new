@@ -7,7 +7,17 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-export default function GsapTextAnimation({ mainText, mainClass = '', textHighlightIndex = [] }: { mainText: string, textHighlightIndex?: number[], mainClass?: string }) {
+export default function GsapTextAnimation({
+  mainText,
+  mainClass = "",
+  textHighlightIndex = [],
+  wordClass = "mr-[0.33em]",
+}: {
+  mainText: string;
+  textHighlightIndex?: number[];
+  mainClass?: string;
+  wordClass?: string;
+}) {
   const heroRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!heroRef.current) return;
@@ -40,19 +50,25 @@ export default function GsapTextAnimation({ mainText, mainClass = '', textHighli
     };
   }, []);
   return (
-    <span ref={heroRef} className={` ${mainClass}`} >
-      {mainText.split(" ").map((word, wordIdx) => (
-        word == '<br/>' ?
-          <span key={word + wordIdx} className="sm:w-full w-auto  "></span>
-          : <span key={word + wordIdx} className={`mr-2 flex overflow-hidden ${textHighlightIndex.includes(wordIdx) ? 'text-primary' : ""}`}>
+    <span ref={heroRef} className={` ${mainClass}`}>
+      {mainText.split(" ").map((word, wordIdx) =>
+        word == "<br/>" ? (
+          <span key={word + wordIdx} className="sm:w-full w-auto"></span>
+        ) : (
+          <span
+            key={word + wordIdx}
+            className={`${wordClass} flex overflow-hidden ${
+              textHighlightIndex.includes(wordIdx) ? "text-primary" : ""
+            }`}
+          >
             {word.split("").map((char, charIdx) => (
-              <span key={charIdx + word} className="hero-char ">
+              <span key={charIdx + word} className="hero-char">
                 {char}
               </span>
             ))}
           </span>
-      ))}
+        )
+      )}
     </span>
-
   );
 }
