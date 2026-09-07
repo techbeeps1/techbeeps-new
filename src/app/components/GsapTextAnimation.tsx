@@ -28,7 +28,6 @@ export default function GsapTextAnimation({ mainText, mainClass = '', textHighli
               start: "top 90%",
               toggleActions: "play none none none",
               once: true,
-              invalidateOnRefresh: true,
             },
           });
         }
@@ -44,7 +43,7 @@ export default function GsapTextAnimation({ mainText, mainClass = '', textHighli
       {mainText.split(" ").map((word, wordIdx) => (
         word == '<br/>' ?
           <span key={word + wordIdx} className="sm:w-full w-auto  "></span>
-          : <span key={word + wordIdx} className={`mr-2 flex overflow-hidden ${textHighlightIndex.includes(wordIdx) ? 'text-primary' : ""}`}>
+          : <span key={word + wordIdx} className={`mr-3 flex overflow-hidden ${textHighlightIndex.includes(wordIdx) ? 'text-primary' : ""}`}>
             {word.split("").map((char, charIdx) => (
               <span key={charIdx + word} className="hero-char ">
                 {char}

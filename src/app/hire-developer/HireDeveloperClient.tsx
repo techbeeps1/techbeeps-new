@@ -429,7 +429,7 @@ export default function HireDeveloperClient() {
                 Top 1% Dedicated Tech Talent
               </span>
             </div>
-            <h1 className="text-3xl md:text-5xl lg:text-[70px] font-bold leading-tight lg:leading-[82px] text-white mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[97px] text-white mb-4 lg:mb-6">
               <GsapTextAnimation
                 mainText="Hire Dedicated Developers To Build & Scale Your Next Big Idea"
                 mainClass="flex flex-wrap"
