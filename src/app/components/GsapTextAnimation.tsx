@@ -7,7 +7,17 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-export default function GsapTextAnimation({ mainText, mainClass = '', textHighlightIndex = [] }: { mainText: string, textHighlightIndex?: number[], mainClass?: string }) {
+export default function GsapTextAnimation({
+  mainText,
+  mainClass = "",
+  textHighlightIndex = [],
+  wordClass = "mr-[0.33em]",
+}: {
+  mainText: string;
+  textHighlightIndex?: number[];
+  mainClass?: string;
+  wordClass?: string;
+}) {
   const heroRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!heroRef.current) return;
@@ -45,13 +55,13 @@ export default function GsapTextAnimation({ mainText, mainClass = '', textHighli
           <span key={word + wordIdx} className="sm:w-full w-auto  "></span>
           : <span key={word + wordIdx} className={`mr-3 flex overflow-hidden ${textHighlightIndex.includes(wordIdx) ? 'text-primary' : ""}`}>
             {word.split("").map((char, charIdx) => (
-              <span key={charIdx + word} className="hero-char ">
+              <span key={charIdx + word} className="hero-char">
                 {char}
               </span>
             ))}
           </span>
-      ))}
+        )
+      )}
     </span>
-
   );
 }
