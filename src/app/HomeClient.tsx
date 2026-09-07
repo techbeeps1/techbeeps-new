@@ -14,6 +14,7 @@ import ButtonSwipUp from "./components/ButtonSwipUp";
 import ContentSwipUp from "./components/ContentSwipUp";
 import Link from "next/link";
 import HeroLiningBackground from "./components/HeroLiningBackground";
+import { portfolioProjects } from "@/data/portfolio";
 
 // Dynamic chunking for below-the-fold heavy components (SSR preserved for SEO & zero visual shift)
 const DevelopmentSlider = dynamic(() => import("./components/DevelopmentSlider"), { ssr: true });
@@ -225,44 +226,13 @@ export default function HomeClient() {
   const categories = [
     "All",
     "App Development",
+    "Next.js",
     "Web Development",
-    "Mean Stack",
     "Shopify",
     "React.js",
   ];
 
-  const projects = [
-    {
-      title: "Techbeeps CRM",
-      category: "Web Development",
-      image: "/portfolio-img-1.jpg",
-    },
-    {
-      title: "Empowering Legal Solutions",
-      category: "Web Development",
-      image: "/portfolio-img-2.jpg",
-    },
-    {
-      title: "Ananta Mobile App Development",
-      category: "App Development",
-      image: "/portfolio-img-3.jpg",
-    },
-    {
-      title: "Optimal Rating",
-      category: "Mean Stack",
-      image: "/portfolio-img-4.jpg",
-    },
-    {
-      title: "eCommerce Marketplace",
-      category: "Shopify",
-      image: "/portfolio-img-5.jpg",
-    },
-    {
-      title: "Passamani & Letang PLLC",
-      category: "React.js",
-      image: "/portfolio-img-6.jpg",
-    },
-  ];
+  const homeProjects = portfolioProjects.slice(0, 6);
 
   const [active, setActive] = useState("All");
 
@@ -283,8 +253,12 @@ export default function HomeClient() {
 
   const filtered =
     active === "All"
-      ? projects
-      : projects.filter((item) => item.category === active);
+      ? homeProjects
+      : homeProjects.filter(
+          (item) =>
+            item.category === active ||
+            (item.tags && item.tags.includes(active))
+        );
 
   return (
     <>
@@ -436,46 +410,82 @@ export default function HomeClient() {
               </div>
               <motion.div layout className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-9.25" style={{ perspective: 1500 }}>
                 <AnimatePresence mode="popLayout" onExitComplete={() => { if (typeof window !== "undefined") ScrollTrigger.refresh(); }}>
-                  {filtered.map((item, index) => (
-                    <motion.div
-                      key={item.title}
-                      layout
-                      initial={{ opacity: 0, rotateX: -15, y: 40, scale: 0.95, filter: "blur(10px)" }}
-                      animate={{ opacity: 1, rotateX: 0, y: 0, scale: 1, filter: "blur(0px)" }}
-                      exit={{ opacity: 0, rotateX: 15, y: -40, scale: 0.95, filter: "blur(10px)" }}
-                      transition={{
-                        duration: 0.8,
-                        ease: [0.16, 1, 0.3, 1],
-                        delay: index * 0.08
-                      }}
-                      className="transform-gpu bg-white/6 rounded-[10px]"
-                      style={{ transformStyle: "preserve-3d" }}
-                    >
-                      <div className="relative group ">
-                        <Image
-                          src={item.image}
-                          alt={item.title}
-                          width={400}
-                          height={260}
-                          loading="lazy"
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                          className="w-full h-auto object-cover rounded-[10px]"
-                        />
-                      </div>
-                      <div className="mt-6.25 space-y-4 px-[20px] pb-[20px]">
-                        <h3 className="font-semibold text-[20px]">
-                          {item.title}
-                        </h3>
-                        <p>Custom tailored design and scalable code architectures.</p>
-
-                        <div className="flex gap-2 flex-wrap">
-                          <span className="text-sm bg-white/9 px-4.5 py-2 rounded-md">
-                            {item.category}
-                          </span>
+                  {filtered.map((item, index) => {
+                    const hasLink = Boolean(item.link && item.link.trim());
+                    return (
+                      <motion.div
+                        key={item.title}
+                        layout
+                        initial={{ opacity: 0, rotateX: -15, y: 40, scale: 0.95, filter: "blur(10px)" }}
+                        animate={{ opacity: 1, rotateX: 0, y: 0, scale: 1, filter: "blur(0px)" }}
+                        exit={{ opacity: 0, rotateX: 15, y: -40, scale: 0.95, filter: "blur(10px)" }}
+                        transition={{
+                          duration: 0.8,
+                          ease: [0.16, 1, 0.3, 1],
+                          delay: index * 0.08
+                        }}
+                        className="transform-gpu bg-white/6 rounded-[10px] overflow-hidden group flex flex-col justify-between"
+                        style={{ transformStyle: "preserve-3d" }}
+                      >
+                        <div>
+                          <div className="relative group overflow-hidden rounded-t-[10px] aspect-[16/11]">
+                            {hasLink ? (
+                              <Link
+                                href={item.link!}
+                                target={item.link!.startsWith("http") ? "_blank" : undefined}
+                                rel={item.link!.startsWith("http") ? "noopener noreferrer" : undefined}
+                                className="block relative w-full h-full overflow-hidden"
+                                aria-label={`View live project: ${item.title}`}
+                              >
+                                <Image
+                                  src={item.image}
+                                  alt={item.title}
+                                  fill
+                                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                  className="object-cover rounded-t-[10px] transition-transform duration-500 group-hover:scale-105"
+                                />
+                              </Link>
+                            ) : (
+                              <Image
+                                src={item.image}
+                                alt={item.title}
+                                fill
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                className="object-cover rounded-t-[10px] transition-transform duration-500 group-hover:scale-105"
+                              />
+                            )}
+                          </div>
+                          <div className="mt-6.25 space-y-4 px-[20px]">
+                            <h3 className="font-semibold text-[20px]">
+                              {hasLink ? (
+                                <Link
+                                  href={item.link!}
+                                  target={item.link!.startsWith("http") ? "_blank" : undefined}
+                                  rel={item.link!.startsWith("http") ? "noopener noreferrer" : undefined}
+                                  className="hover:text-primary transition-colors duration-300"
+                                >
+                                  {item.title}
+                                </Link>
+                              ) : (
+                                item.title
+                              )}
+                            </h3>
+                            <p className="text-white/80">
+                              {item.description || "Custom tailored design and scalable code architectures."}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    </motion.div>
-                  ))}
+
+                        <div className="px-[20px] pb-[20px] pt-4">
+                          <div className="flex gap-2 flex-wrap">
+                            <span className="text-sm bg-white/9 px-4.5 py-2 rounded-md">
+                              {item.category}
+                            </span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
                 </AnimatePresence>
               </motion.div>
             </div>

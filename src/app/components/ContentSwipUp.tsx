@@ -15,7 +15,7 @@ export default function ContentSwipUp({ className = '', top = "85", children }: 
       ctx = gsap.context(() => {
         gsap.from(ContentRef.current, {
           y: 25,
-          opacity: 0.2,
+          opacity: 0,
           duration: 0.8,
           ease: "power4.out",
           scrollTrigger: {
