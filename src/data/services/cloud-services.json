@@ -37,17 +37,20 @@
       {
         "title": "Cloud Infrastructure Management",
         "desc": "24/7 monitoring, auto-scaling, resource optimization, and patch management to ensure high availability and 99.99% uptime.",
-        "icon": "FaServer"
+        "icon": "FaServer",
+        "url": "/services/devops-qa"
       },
       {
         "title": "Cloud Security & Compliance",
         "desc": "End-to-end encryption, IAM access controls, firewall configuration, and compliance with SOC 2, GDPR, and HIPAA standards.",
-        "icon": "FaShieldHalved"
+        "icon": "FaShieldHalved",
+        "url": "/services/devops-qa"
       },
       {
         "title": "Serverless & Microservices Solutions",
         "desc": "Implementing event-driven serverless architectures with AWS Lambda, Google Cloud Functions, and containerized Docker environments.",
-        "icon": "TbBrain"
+        "icon": "TbBrain",
+        "url": "/services/nodejs-development"
       },
       {
         "title": "Cloud Cost Optimization",

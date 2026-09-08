@@ -26,17 +26,20 @@
       {
         "title": "Custom PHP Web Development",
         "desc": "Bespoke web applications built with modern object-oriented PHP 8+, ensuring high performance, clean architecture, and long-term scalability.",
-        "icon": "FaPhp"
+        "icon": "FaPhp",
+        "url": "/services/web-development"
       },
       {
         "title": "PHP Framework Solutions",
         "desc": "Expertise across leading frameworks like Laravel, Symfony, CodeIgniter, and Yii to rapidly deliver structured, secure web apps.",
-        "icon": "TbDeviceDesktopCode"
+        "icon": "TbDeviceDesktopCode",
+        "url": "/services/laravel-development"
       },
       {
         "title": "Custom PHP CMS Solutions",
         "desc": "Custom CMS development and extensions for WordPress, Drupal, and Joomla tailored to your editorial and content workflows.",
-        "icon": "TbApps"
+        "icon": "TbApps",
+        "url": "/services/wordpress-development"
       },
       {
         "title": "PHP API & Web Services Development",

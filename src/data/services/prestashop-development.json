@@ -26,7 +26,8 @@
       {
         "title": "PrestaShop UI/UX & Store Design",
         "desc": "Custom, modern storefront design built to reflect your brand identity, engage shoppers, and maximize conversion rates.",
-        "icon": "TbPalette"
+        "icon": "TbPalette",
+        "url": "/services/ui-ux-design"
       },
       {
         "title": "PrestaShop Store Optimization",
@@ -36,7 +37,8 @@
       {
         "title": "PrestaShop Theme Customization",
         "desc": "Developing bespoke themes or customizing existing templates for responsive layouts and seamless mobile commerce.",
-        "icon": "TbDeviceDesktopCode"
+        "icon": "TbDeviceDesktopCode",
+        "url": "/services/responsive-web-design"
       },
       {
         "title": "PrestaShop Custom Module Development",
@@ -46,7 +48,8 @@
       {
         "title": "PrestaShop Shopping Cart Solutions",
         "desc": "Streamlining checkout flows, integrating one-page checkout modules, and reducing cart abandonment.",
-        "icon": "TbShoppingCart"
+        "icon": "TbShoppingCart",
+        "url": "/services/ecommerce-development"
       },
       {
         "title": "PrestaShop Migration & Upgrades",

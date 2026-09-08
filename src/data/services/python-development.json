@@ -15,7 +15,7 @@
   },
   "hero": {
     "title": "Driving Business Growth with Scalable Python Solutions",
-    "desc": "From robust web development to intelligent AI-powered automation, we deliver customized Python solutions designed to streamline operations, drive innovation, and accelerate your business growth in today’s digital landscape.",
+    "desc": "From robust web development to intelligent AI-powered automation, we deliver customized Python solutions designed to streamline operations, drive innovation, and accelerate your business growth in today's digital landscape.",
     "bgImage": "/services-bg.jpg",
     "bgImageAlt": "TechBeeps Python Development Background"
   },
@@ -27,6 +27,7 @@
         "title": "Web Application Development",
         "desc": "Custom web applications using Django, Flask, and FastAPI frameworks for optimal performance and scalability.",
         "icon": "FaGlobe",
+        "url": "/services/web-development",
         "points": [
           "E-commerce platforms",
           "Content management systems",
@@ -47,6 +48,7 @@
         "title": "Data Science & Machine Learning",
         "desc": "Advanced analytics, predictive modeling, and AI solutions to unlock insights from your data.",
         "icon": "FaBrain",
+        "url": "/services/ai-solutions",
         "points": [
           "Predictive analytics",
           "Machine learning models",
@@ -67,6 +69,7 @@
         "title": "Cloud-Based Python Solutions",
         "desc": "Scalable cloud deployments on AWS, Azure, and GCP with containerization and microservices.",
         "icon": "FaCloud",
+        "url": "/services/cloud-services",
         "points": [
           "Cloud migration",
           "Containerization",

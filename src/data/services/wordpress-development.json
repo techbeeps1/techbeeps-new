@@ -34,17 +34,18 @@
       },
       {
         "title": "Custom WordPress Plugin Development",
-        "desc": "Extend your website’s capabilities with custom WordPress plugins built for your specific needs. Our solutions add advanced functionality while maintaining security, performance, and compatibility.",
+        "desc": "Extend your website's capabilities with custom WordPress plugins built for your specific needs. Our solutions add advanced functionality while maintaining security, performance, and compatibility.",
         "icon": "TbPuzzle"
       },
       {
         "title": "WooCommerce Development",
         "desc": "Create a powerful and conversion-focused online store with WooCommerce. We develop secure, responsive, and easy-to-manage eCommerce solutions designed to deliver a smooth shopping experience.",
-        "icon": "TbShoppingCart"
+        "icon": "TbShoppingCart",
+        "url": "/services/woocommerce-development"
       },
       {
         "title": "WordPress Speed Optimization",
-        "desc": "Improve your website’s loading speed and overall performance with professional optimization. We identify performance issues and optimize images, code, caching, and other key elements for a faster user experience.",
+        "desc": "Improve your website's loading speed and overall performance with professional optimization. We identify performance issues and optimize images, code, caching, and other key elements for a faster user experience.",
         "icon": "TbGauge"
       },
       {
@@ -72,15 +73,15 @@
     "faqs": [
       {
         "question": "How long will it take to complete my WordPress development project?",
-        "answer": "The time required for WordPress development depends on the project’s size, complexity, and features. A basic website can typically be completed within 2–4 weeks. Custom designs, advanced features, and integrations may require additional development time. Our experienced team ensures an efficient development process without compromising quality."
+        "answer": "The time required for WordPress development depends on the project's size, complexity, and features. A basic website can typically be completed within 2–4 weeks. Custom designs, advanced features, and integrations may require additional development time. Our experienced team ensures an efficient development process without compromising quality."
       },
       {
-        "question": "How do I monitor the WordPress project’s development?",
+        "question": "How do I monitor the WordPress project's development?",
         "answer": "To effectively monitor the development of a WordPress project, it is essential to define the project scope and objectives, create a comprehensive project plan, use project management tools, schedule regular check-ins and status updates, use a version control system like Git, implement a robust testing and quality assurance process, involve clients or stakeholders in the development process, maintain targeted documentation of project requirements, specifications,andprogressupdates, By using these strategies and employing relevant tools, you may successfully demonstrate the development of your WordPress project and stay on schedule."
       },
       {
         "question": "How can I hire WordPress developers?",
-        "answer": "Hiring Word Press builders for your project calls for careful consideration and planning to make certain you discover the right candidates with the necessary capabilities and enjoy them. When comparing applicants, recall carrying out technical checks or coding challenges to evaluate their Word Press development abilities, problem-solving abilities, and familiarity with Word Press great practices. Conduct thorough interviews to evaluate candidates’ technical skills, experience, verbal exchange skills, and cultural suitability with your group."
+        "answer": "Hiring Word Press builders for your project calls for careful consideration and planning to make certain you discover the right candidates with the necessary capabilities and enjoy them. When comparing applicants, recall carrying out technical checks or coding challenges to evaluate their Word Press development abilities, problem-solving abilities, and familiarity with Word Press great practices. Conduct thorough interviews to evaluate candidates' technical skills, experience, verbal exchange skills, and cultural suitability with your group."
       },
       {
         "question": "What WordPress Development Services does Techbeeps Company Offer?",
@@ -88,7 +89,7 @@
       },
       {
         "question": "How secure is my WordPress website going to be?",
-        "answer": "The security of your WordPress internet site depends on several factors, inclusive of how nicely you implement security features, the first-class of your hosting issuer, the subject matters and plugins you use, and the way regularly you replace and hold your website. While WordPress is a steady platform, it’s vital to take proactive steps to beautify the security of your website.You can beautify the safety of your WordPress website and reduce the danger of security breaches and records loss. However, it’s crucial to remain vigilant and proactive in tracking and keeping the safety of your website to live one step beforehand of capacity threats."
+        "answer": "The security of your WordPress internet site depends on several factors, inclusive of how nicely you implement security features, the first-class of your hosting issuer, the subject matters and plugins you use, and the way regularly you replace and hold your website. While WordPress is a steady platform, it's vital to take proactive steps to beautify the security of your website.You can beautify the safety of your WordPress website and reduce the danger of security breaches and records loss. However, it's crucial to remain vigilant and proactive in tracking and keeping the safety of your website to live one step beforehand of capacity threats."
       }
     ]
   },

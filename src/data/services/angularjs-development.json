@@ -26,7 +26,8 @@
       {
         "title": "Custom AngularJS Development",
         "desc": "Tailored front-end solutions designed to solve complex business logic with clean, maintainable architecture and modern UI components.",
-        "icon": "SiAngular"
+        "icon": "SiAngular",
+        "url": "/services/web-development"
       },
       {
         "title": "Single Page Application (SPA) Development",
@@ -41,12 +42,14 @@
       {
         "title": "API Integration & Backend Connectivity",
         "desc": "Effortless integration of RESTful APIs, GraphQL endpoints, and third-party microservices for real-time data synchronization.",
-        "icon": "TbApi"
+        "icon": "TbApi",
+        "url": "/services/nodejs-development"
       },
       {
         "title": "Enterprise AngularJS Solutions",
         "desc": "High-performance, scalable enterprise web applications engineered for heavy concurrent usage and robust security.",
-        "icon": "TbBuildingStore"
+        "icon": "TbBuildingStore",
+        "url": "/services/web-development"
       },
       {
         "title": "Maintenance & Code Optimization",
