@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { FaFacebookF, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -35,7 +36,7 @@ export default function BlogShareBar({ title, url }: BlogShareBarProps) {
       </div>
 
       <div className="flex items-center flex-wrap gap-2.5">       
-        <a
+        <Link
           href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -43,8 +44,8 @@ export default function BlogShareBar({ title, url }: BlogShareBarProps) {
           className="w-10 h-10 rounded-xl bg-white/10 hover:bg-black border border-white/10 hover:border-white/30 flex items-center justify-center text-gray-200 hover:text-white transition-all duration-300 shadow-sm"
         >
           <FaXTwitter className="w-4 h-4" />
-        </a>       
-        <a
+        </Link>       
+        <Link
           href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -52,8 +53,8 @@ export default function BlogShareBar({ title, url }: BlogShareBarProps) {
           className="w-10 h-10 rounded-xl bg-white/10 hover:bg-[#0077b5] border border-white/10 hover:border-white/30 flex items-center justify-center text-gray-200 hover:text-white transition-all duration-300 shadow-sm"
         >
           <FaLinkedinIn className="w-4 h-4" />
-        </a>        
-        <a
+        </Link>        
+        <Link
           href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -61,8 +62,8 @@ export default function BlogShareBar({ title, url }: BlogShareBarProps) {
           className="w-10 h-10 rounded-xl bg-white/10 hover:bg-[#1877f2] border border-white/10 hover:border-white/30 flex items-center justify-center text-gray-200 hover:text-white transition-all duration-300 shadow-sm"
         >
           <FaFacebookF className="w-4 h-4" />
-        </a>        
-        <a
+        </Link>        
+        <Link
           href={`https://api.whatsapp.com/send?text=${encodedTitle}%20${encodedUrl}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -70,7 +71,7 @@ export default function BlogShareBar({ title, url }: BlogShareBarProps) {
           className="w-10 h-10 rounded-xl bg-white/10 hover:bg-[#25D366] border border-white/10 hover:border-white/30 flex items-center justify-center text-gray-200 hover:text-white transition-all duration-300 shadow-sm"
         >
           <FaWhatsapp className="w-4 h-4" />
-        </a>        
+        </Link>        
         <button
           onClick={handleCopy}
           aria-label="Copy link to clipboard"

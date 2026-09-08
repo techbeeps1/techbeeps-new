@@ -1,11 +1,11 @@
 import { Metadata } from "next";
-import Header from "../components/header/Header";
-import Footer from "../components/Footer";
-import CallToAction from "../components/CallToAction";
-import LogoMarquee from "../components/LogoMarquee";
-import BlogHero from "../components/blog/BlogHero";
-import BlogGrid from "../components/blog/BlogGrid";
-import BlogPagination from "../components/blog/BlogPagination";
+import Header from "@/app/components/header/Header";
+import Footer from "@/app/components/Footer";
+import CallToAction from "@/app/components/CallToAction";
+import LogoMarquee from "@/app/components/LogoMarquee";
+import BlogHero from "@/app/components/blog/BlogHero";
+import BlogGrid from "@/app/components/blog/BlogGrid";
+import BlogPagination from "@/app/components/blog/BlogPagination";
 import { getBlogPosts, normalizePostForCard } from "@/lib/wordpress";
 
 import {

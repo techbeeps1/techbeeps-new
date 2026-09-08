@@ -134,11 +134,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         }}
       />
       <Header />
-      <section className="relative pt-32 pb-14 lg:pt-40 lg:pb-20 bg-[#05010f] text-white overflow-hidden">        
+      <section className="relative pt-32 pb-14 lg:pt-40 lg:pb-20 bg-[#05010f] text-white overflow-hidden">
         <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] lg:w-[1000px] h-[550px] bg-primary/20 blur-[170px] pointer-events-none rounded-full" />
         <div className="absolute top-1/3 -left-32 w-[450px] h-[450px] bg-[#504CFF]/20 blur-[160px] pointer-events-none rounded-full" />
         <div className="absolute top-1/2 -right-32 w-[450px] h-[450px] bg-primary/15 blur-[160px] pointer-events-none rounded-full" />
-        <div className="container mx-auto px-4 relative z-10">         
+        <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-8 sm:mb-12 pb-4 border-b border-white/10">
             <Link
               href="/blog"
@@ -163,8 +163,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {normalized.category || "Article"}
               </span>
             </nav>
-          </div>          
-          <div className="max-w-4xl mx-auto text-center space-y-6">          
+          </div>
+          <div className=" text-center space-y-6">
             <div className="flex flex-wrap items-center justify-center gap-3">
               {normalized.category && (
                 <span className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-primary to-[#7033FF] px-4 py-1.5 rounded-full shadow-lg border border-white/20 backdrop-blur-md">
@@ -183,14 +183,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   {normalized.formattedDate}
                 </span>
               )}
-            </div>            
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold leading-[1.2] tracking-tight bg-[linear-gradient(90deg,#9795FF_0%,#FFFFFF_45%,#FFFFFF_60%,#BE9FFF_100%)] bg-clip-text text-transparent">
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[97px] text-white mb-4 lg:mb-6">
               <GsapTextAnimation mainText={normalized.title} mainClass="flex flex-wrap justify-center" />
-            </h1>            
+            </h1>
             <div className="pt-2 flex items-center justify-center gap-3">
               {normalized.authorAvatar ? (
                 <Image
-                  src={normalized.authorAvatar}
+                  src={"/techbeeps-icon.svg"}
                   alt={normalized.authorName}
                   width={40}
                   height={40}
@@ -210,10 +210,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </span>
               </div>
             </div>
-          </div>          
+          </div>
           {normalized.featuredImage && (
-            <div className="relative mt-12 sm:mt-16 w-full max-w-5xl mx-auto">             
-              <div className="absolute -inset-2 sm:-inset-3 bg-gradient-to-r from-primary/40 via-[#504CFF]/30 to-primary/40 rounded-[28px] sm:rounded-[36px] blur-2xl opacity-60 pointer-events-none" />              
+            <div className="relative mt-12 sm:mt-16 w-full max-w-5xl mx-auto">
+              <div className="absolute -inset-2 sm:-inset-3 bg-gradient-to-r from-primary/40 via-[#504CFF]/30 to-primary/40 rounded-[28px] sm:rounded-[36px] blur-2xl opacity-60 pointer-events-none" />
               <div className="relative aspect-[16/9] sm:aspect-[2/1] w-full rounded-[24px] sm:rounded-[32px] overflow-hidden border border-white/20 shadow-[0_25px_70px_rgba(0,0,0,0.85)] bg-[#0c0721]">
                 <Image
                   src={normalized.featuredImage}
@@ -228,23 +228,23 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           )}
         </div>
-      </section>      
+      </section>
       <section className="py-12 lg:py-20 bg-[#05010f] text-white relative z-10 border-t border-white/5">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">            
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             <main className="lg:col-span-8 space-y-12">
               <BlogDetailContent
                 contentHtml={post.content.rendered}
                 tags={normalized.tags}
-              />              
+              />
               <div className="p-6 sm:p-8 rounded-[24px] bg-[linear-gradient(180deg,#120D25_0%,#181033_100%)] border border-white/10 backdrop-blur-xl flex flex-col sm:flex-row items-center sm:items-start gap-5 shadow-lg">
                 {normalized.authorAvatar ? (
                   <Image
-                    src={normalized.authorAvatar}
+                    src={"/techbeeps-icon.svg"}
                     alt={normalized.authorName}
                     width={64}
                     height={64}
-                    className="rounded-2xl border border-white/20 object-cover shrink-0 shadow-md"
+                    className=" object-cover shrink-0"
                   />
                 ) : (
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-[#504CFF] border border-white/20 flex items-center justify-center text-xl font-bold text-white shrink-0 shadow-md">
@@ -264,8 +264,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     TechBeeps Insights publishes in-depth engineering breakdowns, AI strategies, and modern cloud & software architecture solutions.
                   </p>
                 </div>
-              </div>              
-              <BlogShareBar title={normalized.title} url={currentUrl} />              
+              </div>
+              <BlogShareBar title={normalized.title} url={currentUrl} />
               <div className="pt-2">
                 <Link
                   href="/blog"
@@ -275,9 +275,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <span>Back to All Articles</span>
                 </Link>
               </div>
-            </main>            
+            </main>
             <aside className="lg:col-span-4 space-y-8">
-              <div className="sticky top-28 space-y-8">               
+              <div className="sticky top-28 space-y-8">
                 <div className="p-6 sm:p-8 rounded-[24px] bg-gradient-to-br from-[#291D58] to-[#120D25] border border-primary/40 backdrop-blur-xl shadow-[0_15px_40px_rgba(133,76,255,0.25)] space-y-5 relative overflow-hidden">
                   <div className="absolute -top-16 -right-16 w-36 h-36 bg-primary/35 rounded-full blur-[50px] pointer-events-none" />
                   <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-white bg-primary px-3 py-1 rounded-full shadow">
@@ -312,7 +312,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       <BsArrowRightCircle className="-rotate-45 h-4 w-4 duration-300 group-hover:rotate-0" />
                     </ButtonSwipUp>
                   </div>
-                </div>               
+                </div>
                 <div className="p-6 rounded-[24px] bg-white/[0.04] border border-white/10 backdrop-blur-xl space-y-3.5">
                   <div className="flex items-center gap-2 text-primary font-semibold text-sm">
                     <IoSparklesOutline className="w-4 h-4" />
@@ -332,8 +332,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </aside>
           </div>
         </div>
-      </section>     
-      <RelatedPosts posts={relatedPosts} />     
+      </section>
+      <RelatedPosts posts={relatedPosts} />
       <CallToAction />
       <Footer />
     </>

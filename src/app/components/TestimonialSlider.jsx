@@ -60,11 +60,19 @@ const testimonials = [
     handle: "Teamzpe [United Kingdom]",
     image: "/female.avif",
     stars: 5
+  },
+  {
+    id: 7,
+    quote: "After five years of working with Techbeeps, I can say without hesitation that they are one of the best decisions we've made for our digital presence. Over the course of our partnership, we've collaborated on dozens of WordPress websites, and every single time, they have delivered.",
+    name: "John Rotgers",
+    handle: "Netherlands",
+    image: "/john.png",
+    stars: 5
   }
 ];
 
 export default function TestimonialSlider() {
-  const originalLength = testimonials.length;  
+  const originalLength = testimonials.length;
   const extendedTestimonials = [...testimonials, ...testimonials, ...testimonials];
   const [currentIndex, setCurrentIndex] = useState(originalLength);
   const windowWidth = useSyncExternalStore(subscribeResize, getWindowWidth, getServerWidth);
@@ -90,7 +98,7 @@ export default function TestimonialSlider() {
       const itemWidth = cardWidth + marginRight;
       const baseOffset = (windowWidth - cardWidth) / 2;
       return { itemWidth, cardWidth, marginRight, baseOffset };
-    }    
+    }
     const cardWidth = 540;
     const marginRight = 24;
     const itemWidth = cardWidth + marginRight;
@@ -110,7 +118,7 @@ export default function TestimonialSlider() {
     setIsInstant(false);
     isTransitioningRef.current = true;
     setCurrentIndex((prev) => prev - 1);
-  }, []);  
+  }, []);
   useEffect(() => {
     if (isHovered || isDragging) return;
     const timer = setInterval(() => {
@@ -119,18 +127,18 @@ export default function TestimonialSlider() {
       }
     }, 5500);
     return () => clearInterval(timer);
-  }, [isHovered, isDragging, handleNext]);  
-  const handleTransitionEnd = (e) => {    
+  }, [isHovered, isDragging, handleNext]);
+  const handleTransitionEnd = (e) => {
     if (e.target !== trackRef.current || e.propertyName !== 'transform') return;
     isTransitioningRef.current = false;
-    if (currentIndex >= originalLength * 2) {      
+    if (currentIndex >= originalLength * 2) {
       setIsInstant(true);
       setCurrentIndex((prev) => ((prev % originalLength) + originalLength));
-    } else if (currentIndex < originalLength) {     
+    } else if (currentIndex < originalLength) {
       setIsInstant(true);
       setCurrentIndex((prev) => ((prev % originalLength) + originalLength));
     }
-  };  
+  };
   useEffect(() => {
     if (isInstant) {
       const frame = requestAnimationFrame(() => {
@@ -140,7 +148,7 @@ export default function TestimonialSlider() {
       });
       return () => cancelAnimationFrame(frame);
     }
-  }, [isInstant]);  
+  }, [isInstant]);
   const handlePointerDown = (e) => {
     if (e.button !== 0 && e.pointerType === 'mouse') return;
     isDraggingRef.current = true;
@@ -149,7 +157,7 @@ export default function TestimonialSlider() {
     setDragOffset(0);
     try {
       e.currentTarget.setPointerCapture(e.pointerId);
-    } catch {     
+    } catch {
     }
   };
   const handlePointerMove = (e) => {
@@ -163,7 +171,7 @@ export default function TestimonialSlider() {
     setIsDragging(false);
     try {
       e.currentTarget.releasePointerCapture(e.pointerId);
-    } catch {      
+    } catch {
     }
     const delta = dragOffset;
     setDragOffset(0);
@@ -187,8 +195,8 @@ export default function TestimonialSlider() {
   };
   const activeDotIndex = ((currentIndex % originalLength) + originalLength) % originalLength;
   return (
-    <section className="border-t border-white/12 py-25 overflow-hidden relative z-1 font-sans">      
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/10 blur-[140px] pointer-events-none rounded-full" />      
+    <section className="border-t border-white/12 py-25 overflow-hidden relative z-1 font-sans">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/10 blur-[140px] pointer-events-none rounded-full" />
       <div className="max-w-6xl mx-auto px-4 text-center mb-16 relative z-20">
         <h2 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white mb-5">
           <GsapTextAnimation mainText={"What Our Clients Say <br/> About TechBeeps"} mainClass="flex flex-wrap justify-center" />
@@ -197,12 +205,12 @@ export default function TestimonialSlider() {
         <ContentSwipUp className="max-w-[850px] mx-auto w-full">
           Hear directly from our global clients about how TechBeeps delivers scalable technology solutions, intuitive designs, and high-impact digital experiences that drive growth.
         </ContentSwipUp>
-      </div>      
+      </div>
       <div
         className="relative w-full"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-      >       
+      >
         <div className="w-full select-none py-4 overflow-visible touch-pan-y">
           <div
             ref={trackRef}
@@ -217,7 +225,7 @@ export default function TestimonialSlider() {
               willChange: 'transform'
             }}
             className="flex items-stretch cursor-grab active:cursor-grabbing select-none"
-          >            
+          >
             {extendedTestimonials.map((t, idx) => (
               <div
                 key={idx}
@@ -227,10 +235,10 @@ export default function TestimonialSlider() {
                   minHeight: '330px',
                   marginRight: `${marginRight}px`
                 }}
-              >                
-                <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-40 group-hover:opacity-100 transition-opacity duration-500" />                
+              >
+                <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute -top-20 -left-20 w-44 h-44 bg-primary/20 rounded-full blur-3xl pointer-events-none group-hover:bg-primary/35 transition-all duration-500" />
-                <div className="absolute -bottom-20 -right-20 w-44 h-44 bg-violet-600/10 rounded-full blur-3xl pointer-events-none" />                
+                <div className="absolute -bottom-20 -right-20 w-44 h-44 bg-violet-600/10 rounded-full blur-3xl pointer-events-none" />
                 <div className="relative z-10 flex items-center justify-between gap-4 pb-5 border-b border-white/[0.07]">
                   <div className="flex items-center gap-3.5">
                     <div className="relative w-12 h-12 md:w-13 md:h-13 rounded-full p-[2px] bg-gradient-to-tr from-primary via-purple-400 to-indigo-500 shrink-0 shadow-[0_0_15px_rgba(133,76,255,0.35)]">
@@ -251,7 +259,7 @@ export default function TestimonialSlider() {
                         <span>{t.handle}</span>
                       </p>
                     </div>
-                  </div>                  
+                  </div>
                   <div className="flex gap-1 text-[#FFB800] drop-shadow-[0_2px_8px_rgba(255,184,0,0.45)] shrink-0">
                     {[...Array(t.stars)].map((_, i) => (
                       <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -259,12 +267,12 @@ export default function TestimonialSlider() {
                       </svg>
                     ))}
                   </div>
-                </div>                
+                </div>
                 <div className="relative z-10 pt-5 flex-1 flex items-start">
                   <p className="text-[#E2DEEE] group-hover:text-white text-[15px] md:text-[16px] leading-[27px] font-normal transition-colors duration-300">
                     &ldquo;{t.quote}&rdquo;
                   </p>
-                </div>                
+                </div>
                 <div className="absolute right-6 bottom-4 select-none pointer-events-none text-white/[0.03] group-hover:text-primary/[0.08] transition-colors duration-500">
                   <svg width="65" height="65" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
@@ -274,7 +282,7 @@ export default function TestimonialSlider() {
             ))}
           </div>
         </div>
-      </div>      
+      </div>
       <div className="flex items-center justify-center gap-5 mt-10 z-20 relative">
         <button
           onClick={handlePrev}
@@ -282,7 +290,7 @@ export default function TestimonialSlider() {
           className="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-primary text-white duration-300 transition-all border border-white/10 hover:border-primary cursor-pointer shadow-lg active:scale-95"
         >
           <IoArrowBackOutline className="w-4.5 h-4.5" />
-        </button>        
+        </button>
         <div className="flex items-center gap-2">
           {Array.from({ length: originalLength }).map((_, idx) => (
             <button

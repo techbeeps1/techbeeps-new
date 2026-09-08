@@ -28,21 +28,23 @@ export default function LogoMarquee() {
         <ContentSwipUp className="max-w-4xl mx-auto w-full">
           We partner with forward-thinking enterprises, high-growth startups, and visionary brands across the globe to build high-performance digital products and scalable solutions.
         </ContentSwipUp>
-      </div>      
+      </div>
       <div className="relative w-full overflow-hidden marquee-mask">
         <div className="flex animate-continuous-marquee items-center py-2">
           {repeatedLogos.map((logo, index) => (
             <div
               key={index}
-              className="flex-shrink-0 px-8 md:px-14 flex items-center justify-center opacity-75 hover:opacity-100 transition-opacity duration-300"
+              className="flex-shrink-0 px-6 sm:px-10 md:px-14 flex items-center justify-center"
             >
-              <Image
-                src={logo}
-                alt={`Company Logo ${(index % logos.length) + 1}`}
-                width={150}
-                height={60}
-                className="lg:w-auto lg:h-auto w-[150px] h-[60px] object-contain brightness-90 hover:brightness-100 transition-all duration-300"
-              />
+              <div className="h-10 sm:h-12 md:h-14 lg:h-16 flex items-center justify-center">
+                <Image
+                  src={logo}
+                  alt={`Company Logo ${(index % logos.length) + 1}`}
+                  width={220}
+                  height={80}
+                  className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto max-w-[140px] sm:max-w-[180px] md:max-w-[220px] object-contain"
+                />
+              </div>
             </div>
           ))}
         </div>
