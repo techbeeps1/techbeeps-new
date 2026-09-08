@@ -371,11 +371,11 @@ export default function ContactUsClient() {
 
   return (
     <>
-      <Header />      
-      <section className="relative min-h-screen flex items-end justify-center pb-[90px] pt-32 lg:pb-20 bg-[#05010f] overflow-hidden">        
+      <Header />
+      <section className="relative min-h-screen flex items-end justify-center pb-[90px] pt-32 lg:pb-20 bg-[#05010f] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/services-bg.jpg"
+            src="/contact.jpg"
             alt="TechBeeps Contact Us Hero Background"
             fill
             priority
@@ -386,7 +386,7 @@ export default function ContactUsClient() {
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="absolute bottom-0 lg:bottom-10 -left-20 lg:-left-40 bg-[#504CFF] blur-[120px] lg:blur-[190px] w-[300px] h-[300px] lg:w-[700px] lg:h-[500px] opacity-20 lg:opacity-30 pointer-events-none rounded-full"></div>
           <div className="absolute top-0 lg:top-20 -right-20 lg:-right-20 bg-primary blur-[120px] lg:blur-[190px] w-[300px] h-[300px] lg:w-[700px] lg:h-[500px] opacity-20 lg:opacity-30 pointer-events-none rounded-full"></div>
-        </div>       
+        </div>
         <div className="container relative z-10 px-4 mt-auto">
           <div className="backdrop-blur-[25px] rounded-[30px] p-6 md:p-8 lg:p-[40px] bg-[#868686]/10 ">
             <h1 className="text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[97px] text-white mb-4 lg:mb-6">
@@ -397,12 +397,12 @@ export default function ContactUsClient() {
             </ContentSwipUp>
           </div>
         </div>
-      </section>      
+      </section>
       <section className="py-12 md:py-20 lg:py-28 bg-[#05010f] text-white relative z-10">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#854CFF] blur-[150px] w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px] opacity-10 pointer-events-none rounded-full"></div>
 
         <div className="container px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">            
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
             <div className="lg:col-span-7 bg-[#111113] border border-white/5 rounded-[24px] md:rounded-[30px] p-5 sm:p-8 lg:p-10 shadow-2xl relative overflow-hidden flex flex-col justify-between lg:min-h-[580px] min-h-0">
               <AnimatePresence mode="wait">
                 {submitStatus === "success" ? (
@@ -503,10 +503,10 @@ export default function ContactUsClient() {
                         </div>
                         <div className="relative" ref={dropdownRef}>
                           <div className={`flex items-center bg-[#1c1c1e] border rounded-[12px] transition-all duration-300 overflow-hidden ${errors.phone
-                              ? "border-red-500/50"
-                              : showFlagDropdown
-                                ? "border-primary shadow-[0_0_15px_rgba(133,76,255,0.15)] bg-[#222225]"
-                                : "border-white/5 focus-within:border-primary/50"
+                            ? "border-red-500/50"
+                            : showFlagDropdown
+                              ? "border-primary shadow-[0_0_15px_rgba(133,76,255,0.15)] bg-[#222225]"
+                              : "border-white/5 focus-within:border-primary/50"
                             }`}>
                             <button
                               type="button"
@@ -632,7 +632,7 @@ export default function ContactUsClient() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>           
+            </div>
             <div className="lg:col-span-5 bg-[#111113] border border-white/5 rounded-[24px] md:rounded-[30px] p-5 sm:p-8 lg:p-10 shadow-2xl flex flex-col justify-start space-y-8 md:space-y-10 lg:min-h-[580px] min-h-0">
               <div>
                 <h3 className="text-[24px] font-bold text-white mb-8 md:mb-10">

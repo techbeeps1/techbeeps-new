@@ -79,11 +79,11 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 export default function AboutUsClient() {
   return (
     <>
-      <Header />      
+      <Header />
       <section className="relative min-h-screen flex items-end justify-center pb-[90px] pt-32 lg:pb-20 bg-[#05010f] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/services-bg.jpg"
+            src="/about-banner1.jpg"
             alt="TechBeeps About Us Hero Background"
             fill
             priority
@@ -133,7 +133,7 @@ export default function AboutUsClient() {
 
       <section className="bg-black text-white py-20">
         <div className="container">
-          <div className=" flex flex-col lg:flex-row items-center gap-16">            
+          <div className=" flex flex-col lg:flex-row items-center gap-16">
             <div className="flex-1 space-y-10">
               <div className="space-y-6">
                 <h2
@@ -145,7 +145,7 @@ export default function AboutUsClient() {
                 </ContentSwipUp>
               </div>
             </div>
-        
+
             <div className="flex-1 w-full">
               <div className="relative shadow-2xl border border-white/5">
                 <Image
@@ -163,7 +163,7 @@ export default function AboutUsClient() {
             </div>
           </div>
         </div>
-      </section>     
+      </section>
       <TestimonialSlider />
 
       <CallToAction />

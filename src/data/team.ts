@@ -70,7 +70,7 @@ export const teamMembers: TeamMember[] = [
     name: "Mizbahuddin Qasim",
     role: "Senior Fullstack Developer",
     department: "Fullstack Developer",
-    image: "/mizbah.png",
+    image: "/qasim2.jpg",
     bio: "Senior Web Developer at TechBeeps Services with 8+ years of experience building modern, responsive, and high-performance websites. Skilled in HTML, CSS, JavaScript, PHP, WordPress, PrestaShop, Shopify, and Laravel. Passionate about clean code, creative solutions, and delivering seamless digital experiences across all devices.",
     experience: "8+ Years",
     location: "India",
@@ -97,7 +97,7 @@ export const teamMembers: TeamMember[] = [
     name: "Gurjeet Singh",
     role: "Fullstack Developer",
     department: "Fullstack Developer",
-    image: "/guri.png",
+    image: "/guri2.png",
     bio: "Web Developer and Python enthusiast with 2+ years of experience. Specializing in HTML, CSS, JavaScript, PHP, Python, and WordPress development. Creating modern, responsive, and user-friendly websites, applications, and automation solutions.",
     experience: "2+ Years",
     location: "India",
@@ -151,7 +151,7 @@ export const teamMembers: TeamMember[] = [
     name: "Asif Ansar",
     role: "Frontend Developer",
     department: "Web Developer",
-    image: "/asif.png",
+    image: "/asif2.png",
     bio: "A skilled Web Designer with 2 years of hands-on experience in HTML, CSS, Bootstrap, and Shopify, specializing in WordPress development. Expertise in page builders such as Elementor, WPBakery, and Divi Builder.",
     experience: "2+ Years",
     location: "India",
@@ -178,7 +178,7 @@ export const teamMembers: TeamMember[] = [
     name: "Karmjeet Singh",
     role: "Web Developer",
     department: "Web Developer",
-    image: "/karmjeet.png",
+    image: "/karm.webp",
     bio: "Passionate Web Developer experienced in building responsive, user-friendly websites and web applications. Skilled in HTML, CSS, JavaScript, jQuery, PHP, and WordPress, with a focus on clean and efficient code.",
     experience: "2+ Years",
     location: "India",
@@ -205,7 +205,7 @@ export const teamMembers: TeamMember[] = [
     name: "Jigyasa Verma",
     role: "QA Engineer",
     department: "Quality Assurance",
-    image: "/jigyasa.png",
+    image: "/jigyasa2.png",
     bio: "Manual QA Tester with 1+ years of experience testing web and mobile applications with a strong focus on quality. Skilled in functional, UI, cross-browser/device testing, test case execution, and accurate bug reporting.",
     experience: "1+ Years",
     location: "India",
@@ -223,6 +223,34 @@ export const teamMembers: TeamMember[] = [
         "Creating and executing comprehensive manual test cases.",
         "Performing cross-browser, cross-device, and responsive UI validation.",
         "Working closely with developers in Agile sprints for rapid defect resolution."
+      ]
+    }
+  },
+  {
+    id: "team-8",
+    slug: "ram-sharma",
+    name: "Ram Sharma",
+    role: "Business Development manager",
+    department: "Business Development",
+    image: "/ramSharma.webp",
+    bio: "Ram Sharma is a results-driven Business Development Manager with a strong focus on client acquisition, relationship management, and business growth. He specializes in identifying new opportunities, building long-term client relationships, developing effective business strategies, and collaborating with teams to deliver successful outcomes. With a proactive approach and strong communication skills, he is committed to driving sustainable growth and creating lasting value for clients and the organization.",
+    experience: "8+ Years",
+    location: "India",
+    email: "contact@techbeeps.com",
+    skills: ["CRM & Sales Pipeline Management", "Business Development & Growth Strategy", "Client Relationship Management", "Communication & Interpersonal Skills"],
+    socials: {
+      linkedin: "https://www.linkedin.com/company/techbeeps/",
+      email: "mailto:contact@techbeeps.com",
+    },
+    details: {
+      overview: "Results-driven Business Development Manager focused on building strong client relationships, identifying new business opportunities, and driving sustainable revenue growth through strategic planning and effective communication.",
+      experienceYears: "8+ Years",
+      completedProjects: "100+",
+      keyResponsibilities: [
+        "Identifying and developing new business opportunities through market research and lead generation.",
+        "Building and maintaining strong relationships with clients, partners, and key stakeholders.",
+        "Preparing business proposals, presentations, and strategies to convert prospects into long-term clients.",
+        "Collaborating with internal teams to ensure smooth project delivery and client satisfaction."
       ]
     }
   },
