@@ -144,7 +144,7 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
               {promiseSection.bullets && promiseSection.bullets.length > 0 && (
                 <ul className="space-y-5">
                   {promiseSection.bullets.map((bullet, bIdx) => (
-                    <li key={bIdx} className="flex gap-4 items-start">
+                    <li key={bIdx} className="flex gap-4 items-center">
                       <BsCheckAll className="text-primary w-[40px] h-[40px] shrink-0 mt-0.5" />
                       <p>{bullet}</p>
                     </li>
@@ -181,7 +181,7 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
       {/* FAQ Section */}
       <section className="py-[100px] bg-[#05010f] text-white">
         <div className="container">
-          <div className="mb-16 flex flex-col lg:flex-row gap-10 lg:gap-16">
+          <div className=" flex flex-col lg:flex-row gap-10 lg:gap-16">
             <div className="w-full lg:w-[40%] flex flex-col gap-8">
               <h2 className="text-3xl md:text-4xl lg:text-[50px] leading-tight lg:leading-[60px] text-white">
                 <GsapTextAnimation
@@ -191,7 +191,7 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
               </h2>
               <div className="relative overflow-hidden">
                 <Image
-                  src="/faq-img.jpg"
+                  src="/faq-left-img.jpg"
                   alt="Frequently Asked Questions"
                   width={600}
                   height={450}
