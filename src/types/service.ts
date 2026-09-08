@@ -4,6 +4,7 @@ export interface ServiceCardItem {
   icon?: string;
   image?: string;
   points?: string[];
+  url?: string;
 }
 
 export interface ServiceHero {

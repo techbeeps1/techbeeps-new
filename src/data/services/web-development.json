@@ -25,17 +25,20 @@
       {
         "title": "PHP",
         "desc": "PHP is a powerful scripting language that creates dynamic web content. PHP is a flexible and simple programming language that is widely used in PHP Development Services . It can adapt to diverse needs. The community support is extensive. We make sure websites work well for many different uses.",
-        "icon": "FaPhp"
+        "icon": "FaPhp",
+        "url": "/services/php-development"
       },
       {
         "title": "Laravel",
         "desc": "Laravel, a prominent PHP web application framework, prioritizes elegance and simplicity. It has streamlined features for routing, caching, and authentication. This facilitates efficient and expressive web development. Laravel Development Services is a sophisticated choice. It seamlessly meets modern demands. It ensures a smooth development experience with its comprehensive tools and features.",
-        "icon": "FaLaravel"
+        "icon": "FaLaravel",
+        "url": "/services/laravel-development"
       },
       {
         "title": "NodeJs",
         "desc": "Node.js, leveraging the V8 JavaScript engine, revolutionizes server-side JavaScript execution. Its event-driven, non-blocking architecture enhances scalability and real-time application performance. Our Node.js Development services is ideal for building efficient and responsive web applications. It drives innovation in modern web development, ensuring optimal performance and responsiveness.",
-        "icon": "FaNodeJs"
+        "icon": "FaNodeJs",
+        "url": "/services/nodejs-development"
       }
     ]
   },

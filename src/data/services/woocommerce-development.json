@@ -26,12 +26,14 @@
       {
         "title": "WooCommerce Theme Development",
         "desc": "Custom, pixel-perfect WooCommerce theme development tailored to your brand identity, delivering fast and high-converting storefronts.",
-        "icon": "TbPalette"
+        "icon": "TbPalette",
+        "url": "/services/wordpress-development"
       },
       {
         "title": "WooCommerce Plugin Development & Customization",
         "desc": "Developing bespoke plugins to extend WooCommerce capabilities, add custom payment options, and automate store processes.",
-        "icon": "TbPuzzle"
+        "icon": "TbPuzzle",
+        "url": "/services/wordpress-development"
       },
       {
         "title": "WooCommerce Custom Development",
@@ -41,7 +43,8 @@
       {
         "title": "WooCommerce Migration Services",
         "desc": "Seamless migration of your products, orders, and customer data from Shopify, Magento, or OpenCart to WooCommerce with zero data loss.",
-        "icon": "TbArrowsExchange"
+        "icon": "TbArrowsExchange",
+        "url": "/services/shopify-development"
       },
       {
         "title": "WooCommerce Integration Services",

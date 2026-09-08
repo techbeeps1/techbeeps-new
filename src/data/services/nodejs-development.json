@@ -26,7 +26,8 @@
       {
         "title": "Custom Node.js Web App Development",
         "desc": "High-performance, event-driven web applications designed for speed, high scalability, and seamless user experiences.",
-        "icon": "FaNodeJs"
+        "icon": "FaNodeJs",
+        "url": "/services/web-development"
       },
       {
         "title": "RESTful API & Microservices Development",
@@ -41,12 +42,14 @@
       {
         "title": "Node.js Migration & Cloud Deployment",
         "desc": "Upgrading legacy backend systems to modern Node.js environments with containerized deployment on AWS, Azure, or GCP.",
-        "icon": "TbArrowsExchange"
+        "icon": "TbArrowsExchange",
+        "url": "/services/cloud-services"
       },
       {
         "title": "Serverless Node.js Applications",
         "desc": "Cost-efficient, auto-scaling serverless backends built with AWS Lambda, GCP Cloud Functions, and event-driven architectures.",
-        "icon": "TbCloudCode"
+        "icon": "TbCloudCode",
+        "url": "/services/cloud-services"
       },
       {
         "title": "Node.js Maintenance & Support",

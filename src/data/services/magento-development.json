@@ -26,17 +26,20 @@
       {
         "title": "Custom Magento Store Development",
         "desc": "End-to-end Adobe Commerce / Magento development with bespoke functionality, complex product catalogs, and tailored shopping journeys.",
-        "icon": "TbBuildingStore"
+        "icon": "TbBuildingStore",
+        "url": "/services/ecommerce-development"
       },
       {
         "title": "Magento 2 Migration & Upgrades",
         "desc": "Smooth migration from Magento 1 or other platforms to Magento 2 with complete data retention, SEO preservation, and zero downtime.",
-        "icon": "TbArrowsExchange"
+        "icon": "TbArrowsExchange",
+        "url": "/services/ecommerce-development"
       },
       {
         "title": "Custom Magento Theme Design",
         "desc": "Responsive, brand-aligned UI/UX designs and PWA storefronts optimized for mobile shopping and maximum conversions.",
-        "icon": "TbPalette"
+        "icon": "TbPalette",
+        "url": "/services/ui-ux-design"
       },
       {
         "title": "Magento Extension Development & Integration",

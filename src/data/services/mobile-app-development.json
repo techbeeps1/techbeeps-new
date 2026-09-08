@@ -29,17 +29,19 @@
       {
         "title": "Mobile App Design",
         "desc": "We believe that a great mobile app starts with great design. Our team of designers is skilled in creating beautiful and intuitive mobile app designs that are tailored to your brand and business needs.",
-        "icon": "TbPalette"
+        "icon": "TbPalette",
+        "url": "/services/ui-ux-design"
       },
       {
         "title": "Scalable Mobile Apps",
-        "desc": "Our mobile apps are designed to grow with your business. We use the latest technologies and development practices to ensure that your app is scalable and can handle any increase in traffic or functionality. This means that you won’t have to worry about rebuilding your app from scratch as your business grows.",
+        "desc": "Our mobile apps are designed to grow with your business. We use the latest technologies and development practices to ensure that your app is scalable and can handle any increase in traffic or functionality. This means that you won't have to worry about rebuilding your app from scratch as your business grows.",
         "icon": "TbDeviceMobileUp"
       },
       {
         "title": "Mobile App Testing ",
         "desc": "Before launching your mobile app, we conduct extensive testing to ensure that everything is functioning as it should be. We test for performance, security, and functionality to make sure that your mobile app is ready to go live and provide your users with an exceptional experience.",
-        "icon": "TbDeviceMobileCheck"
+        "icon": "TbDeviceMobileCheck",
+        "url": "/services/devops-qa"
       },
       {
         "title": "Interactive Mobile Apps",
@@ -48,7 +50,7 @@
       },
       {
         "title": "High-Performing Mobile Apps",
-        "desc": "We understand that your mobile app is a crucial part of your business, and that’s why we focus on creating mobile apps that are optimized for speed and performance. Our mobile apps are designed to load quickly, which not only improves the user experience but also helps with search engine optimization (SEO).",
+        "desc": "We understand that your mobile app is a crucial part of your business, and that's why we focus on creating mobile apps that are optimized for speed and performance. Our mobile apps are designed to load quickly, which not only improves the user experience but also helps with search engine optimization (SEO).",
         "icon": "TbDeviceMobileBolt"
       }
     ]
@@ -70,7 +72,7 @@
       },
       {
         "question": "How much does app development cost?",
-        "answer": "Costs vary depending on the app’s features, platform, design, and complexity. After discussing your requirements, we provide a clear and transparent quote."
+        "answer": "Costs vary depending on the app's features, platform, design, and complexity. After discussing your requirements, we provide a clear and transparent quote."
       },
       {
         "question": "Do you help with publishing the app on the App Store and Google Play?",
