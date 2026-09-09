@@ -25,7 +25,7 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
       <section className="relative min-h-screen flex items-end justify-center pb-[90px] pt-32 lg:pb-20 bg-[#05010f] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src={hero.bgImage || "/services-bg.jpg"}
+            src={hero.bgImage || "/service-bg-banner.jpg"}
             alt={hero.bgImageAlt || `${hero.title} Background`}
             fill
             priority

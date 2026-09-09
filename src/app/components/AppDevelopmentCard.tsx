@@ -23,8 +23,8 @@ export default function AppDevelopmentCard({
 }: AppDevelopmentCardProps) {
   return (
     <div
-      className={`group relative overflow-hidden rounded-[24px] bg-[linear-gradient(135deg,#1f1647_0%,#0d0722_100%)] p-6 lg:p-8 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-xl transition-all duration-500 hover:border-[#9795FF]/40 hover:shadow-[0_20px_50px_rgba(151,149,255,0.15)] flex flex-col sm:flex-row justify-between gap-6 items-center ${className}`}
-    >      
+      className={`group relative h-full overflow-hidden rounded-[24px] bg-[linear-gradient(135deg,#1f1647_0%,#0d0722_100%)] p-6 lg:p-8 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-xl transition-all duration-500 hover:border-[#9795FF]/40 hover:shadow-[0_20px_50px_rgba(151,149,255,0.15)] flex flex-col sm:flex-row justify-between gap-6 items-center ${className}`}
+    >
       <div className="absolute -top-24 -left-24 w-60 h-60 bg-primary/20 rounded-full blur-[90px] pointer-events-none transition-opacity duration-700 group-hover:opacity-100 opacity-50" />
       <div className="absolute -bottom-24 -right-24 w-60 h-60 bg-[#9795FF]/20 rounded-full blur-[90px] pointer-events-none transition-opacity duration-700 group-hover:opacity-100 opacity-50" />
       <div className="w-full sm:w-[55%] space-y-4 relative z-10">
