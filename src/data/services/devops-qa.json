@@ -73,23 +73,23 @@
     "faqs": [
       {
         "question": "What is the primary benefit of implementing DevOps in our organization?",
-        "answer": "DevOps unites development and operations teams through automation, enabling faster software releases, reduced deployment failures, quicker bug fixes, and continuous product improvement."
+        "answer": "DevOps improves delivery speed, automation, collaboration, scalability, and overall software reliability."
       },
       {
         "question": "What CI/CD tools and platforms do you support?",
-        "answer": "We have extensive experience configuring pipelines across GitHub Actions, GitLab CI/CD, Jenkins, CircleCI, AWS CodePipeline, and Azure DevOps."
+        "answer": "We work with tools such as GitHub Actions, GitLab CI, Jenkins, Docker, and Kubernetes."
       },
       {
         "question": "What types of QA testing does TechBeeps provide?",
-        "answer": "Our QA offerings encompass functional testing, automated regression testing, API testing, performance and load testing, cross-browser/cross-device testing, security auditing, and accessibility validation."
+        "answer": "We provide automated, manual, functional, performance, security, and end-to-end testing."
       },
       {
         "question": "How do you handle Infrastructure as Code (IaC)?",
-        "answer": "We use Terraform, AWS CloudFormation, and Ansible to define infrastructure declaratively, ensuring version control, reproducibility, and automated disaster recovery."
+        "answer": "We use tools like Terraform and Ansible to create scalable, consistent, and easily managed infrastructure."
       },
       {
         "question": "Can you integrate QA testing into our existing development workflow?",
-        "answer": "Yes! We seamlessly integrate automated testing stages into your pull request and deployment pipelines so that every commit is verified before reaching production."
+        "answer": "Yes. We integrate automated and manual testing into your development and CI/CD workflow to identify issues early."
       }
     ]
   }

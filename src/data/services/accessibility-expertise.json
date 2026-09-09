@@ -72,23 +72,23 @@
     "faqs": [
       {
         "question": "What is web accessibility and why does it matter?",
-        "answer": "Web accessibility ensures that websites, tools, and technologies are designed and developed so that people with disabilities can use them effectively, understand content, and navigate without barriers."
+        "answer": "Web accessibility ensures websites are usable by everyone, including people with disabilities, while improving usability and inclusivity."
       },
       {
         "question": "What are WCAG guidelines?",
-        "answer": "The Web Content Accessibility Guidelines (WCAG) are internationally recognized standards developed by the W3C. They outline criteria for making web content accessible across four core principles: Perceivable, Operable, Understandable, and Robust."
+        "answer": "WCAG provides accessibility guidelines that help make websites and digital content accessible to people with different abilities."
       },
       {
         "question": "Can you make our existing website accessible without rebuilding it?",
-        "answer": "Yes! We conduct thorough accessibility audits and implement remediation directly into your existing codebase and design system to achieve full compliance without needing a complete redesign."
+        "answer": "Yes. We can audit and improve your existing website through accessibility fixes without requiring a complete rebuild."
       },
       {
         "question": "How do you test websites for accessibility?",
-        "answer": "We utilize a combination of automated testing tools (like axe-core and Lighthouse) and rigorous manual testing using real assistive devices, screen readers (NVDA, JAWS, VoiceOver), and keyboard-only navigation."
+        "answer": "We use automated tools, manual testing, keyboard navigation, and screen readers such as JAWS, NVDA, and VoiceOver."
       },
       {
         "question": "Will web accessibility improve our search engine optimization (SEO)?",
-        "answer": "Absolutely. Many accessibility best practices—such as semantic HTML5 tags, proper heading hierarchy, descriptive alt text, and fast load times—are direct ranking signals for major search engines like Google."
+        "answer": "Yes. Accessible websites use better structure and semantic content, which can improve usability, performance, and SEO."
       }
     ]
   }

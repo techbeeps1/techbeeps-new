@@ -72,23 +72,23 @@
     "faqs": [
       {
         "question": "What is a landing page and how is it different from a homepage?",
-        "answer": "A landing page is a standalone web page created specifically for a marketing or advertising campaign. Unlike a homepage with multiple links and distractions, a landing page has a single, focused call-to-action (CTA) designed to convert visitors."
+        "answer": " A landing page is designed for a specific campaign or goal, while a homepage provides an overall introduction to your business and website."
       },
       {
         "question": "Why is having a custom landing page so important for ads?",
-        "answer": "Custom landing pages maintain message match with your ads, leading to higher relevancy, lower bounce rates, better Google Ads Quality Scores, lower cost-per-click, and substantially higher conversion rates."
+        "answer": "A custom landing page matches your ad messaging, improves user experience, and can increase conversions and campaign performance."
       },
       {
         "question": "How fast can you deliver a custom landing page?",
-        "answer": "We can design and build a high-converting custom landing page in as little as 3 to 7 business days, including full responsiveness and analytics integration."
+        "answer": "The timeline depends on the design, content, integrations, and project requirements. We provide a clear delivery timeline before starting."
       },
       {
         "question": "Do you help with A/B testing our landing pages?",
-        "answer": "Yes! We set up A/B split tests on headlines, hero graphics, forms, and button placements to scientifically identify the highest-converting variations."
+        "answer": "Yes. We test elements such as headlines, CTAs, layouts, and content to identify what performs best and improve conversions."
       },
       {
         "question": "Can you integrate the landing page with our existing CRM and marketing tools?",
-        "answer": "Yes, we integrate with all popular CRMs and marketing platforms including Salesforce, HubSpot, Mailchimp, ActiveCampaign, Klaviyo, and Zapier."
+        "answer": "Yes. We can integrate landing pages with CRMs, email marketing platforms, analytics tools, and automation systems."
       }
     ]
   }

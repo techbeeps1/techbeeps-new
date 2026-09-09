@@ -75,23 +75,23 @@
     "faqs": [
       {
         "question": "Why is AngularJS suitable for building Single Page Applications (SPAs)?",
-        "answer": "AngularJS provides built-in two-way data binding, dependency injection, and comprehensive routing capabilities, allowing developers to create rich, responsive single-page web applications without constant page reloads."
+        "answer": "AngularJS enables dynamic, responsive, and fast single-page applications with smooth navigation and efficient data handling."
       },
       {
         "question": "Can you help migrate our AngularJS application to modern Angular or React?",
-        "answer": "Yes! We specialize in legacy migration strategies, enabling smooth transitions to modern Angular, React, or Next.js with minimal downtime and zero data loss."
+        "answer": "Yes. We help migrate legacy AngularJS applications to modern Angular or React with minimal disruption and data loss."
       },
       {
         "question": "How do you ensure the security of AngularJS applications?",
-        "answer": "We implement strict Content Security Policies (CSP), sanitize inputs to prevent Cross-Site Scripting (XSS), implement secure authentication flows, and routinely audit third-party dependencies."
+        "answer": "We follow secure coding practices and implement security measures to protect applications from common vulnerabilities such as XSS and injection attacks."
       },
       {
         "question": "How do I hire dedicated AngularJS developers from Techbeeps?",
-        "answer": "You can choose from flexible engagement models including dedicated developers, fixed-price projects, or hourly time-and-material contracts tailored to your development schedule and budget."
+        "answer": "You can contact us with your project requirements, and we’ll provide suitable AngularJS developers based on your needs."
       },
       {
         "question": "Do you provide ongoing support after the project is deployed?",
-        "answer": "Yes, we offer comprehensive post-launch support and maintenance packages covering bug fixes, performance monitoring, feature enhancements, and version upgrades."
+        "answer": "Yes. We provide ongoing maintenance, bug fixes, performance optimization, security updates, and technical support."
       }
     ]
   },

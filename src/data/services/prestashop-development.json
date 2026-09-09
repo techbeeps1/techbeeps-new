@@ -75,23 +75,23 @@
     "faqs": [
       {
         "question": "What is PrestaShop development?",
-        "answer": "PrestaShop development involves designing, customizing, and optimizing online stores using the PrestaShop eCommerce platform. It covers everything from theme customization to plugin development and third-party integrations."
+        "answer": "PrestaShop development involves building, customizing, and optimizing online stores using the PrestaShop platform."
       },
       {
         "question": "Why should I choose PrestaShop for my online store?",
-        "answer": "PrestaShop is an open-source, highly customizable eCommerce platform offering multi-language and multi-currency capabilities, lightweight performance, and comprehensive inventory management without high licensing fees."
+        "answer": "PrestaShop is flexible, cost-effective, and highly customizable, making it suitable for businesses of different sizes."
       },
       {
-        "question": "Can you customize our existing PrestaShop store design?",
-        "answer": "Yes! We create custom themes, refine existing layouts, and enhance mobile responsiveness to provide an engaging, high-converting shopping experience."
+        "question": "Can you customize my PrestaShop store design?",
+        "answer": "Yes. We customize existing themes or create unique designs that match your brand and business requirements."
       },
       {
-        "question": "Do you develop custom PrestaShop modules?",
-        "answer": "Yes, our certified developers build custom modules according to official PrestaShop architecture guidelines to add bespoke business logic and integrations."
+        "question": "Do you provide PrestaShop plugin/module development?",
+        "answer": "Yes. We develop custom modules to add new features and functionality to your PrestaShop store."
       },
       {
-        "question": "Can you integrate third-party payment gateways and shipping APIs?",
-        "answer": "Yes, we integrate all major payment processors (Stripe, PayPal, Mollie) and shipping carriers (DHL, UPS, FedEx) seamlessly into your PrestaShop checkout."
+        "question": "Can you integrate third-party tools with PrestaShop?",
+        "answer": "Yes. We integrate payment gateways, CRMs, ERP systems, shipping services, and other third-party tools."
       }
     ]
   },

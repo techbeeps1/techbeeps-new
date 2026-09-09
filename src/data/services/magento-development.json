@@ -74,24 +74,24 @@
     "title": "Frequently Asked Questions",
     "faqs": [
       {
-        "question": "Why should I choose Magento over WooCommerce or Shopify?",
-        "answer": "Magento (Adobe Commerce) is built for medium-to-enterprise businesses requiring high scalability, complex multi-store/multi-currency setups, advanced inventory management, and deep ERP integrations that standard platforms cannot match."
+        "question": "Why should I choose Magento over WooCommerce?",
+        "answer": "Magento is ideal for businesses that need advanced features, high scalability, multi-store support, and extensive customization."
       },
       {
-        "question": "How do you handle Magento 2 migration without losing SEO rankings?",
-        "answer": "We perform 1-to-1 301 URL redirects, maintain metadata structures, migrate all customer and order histories, and test extensively on staging servers to ensure zero loss in search engine rankings."
+        "question": "Why Choose Techbeeps as a Magento Development Company?",
+        "answer": "We provide customized, scalable, secure, and high-performance Magento solutions backed by experienced developers and ongoing support."
       },
       {
-        "question": "How can you improve the speed of our existing Magento store?",
-        "answer": "We optimize Magento stores through Varnish caching, Redis session management, Elasticsearch integration, image compression, database query optimization, and CDN implementation."
+        "question": "We are looking for the best eCommerce platform to start our business, any solution for this?",
+        "answer": "Yes. We help you choose the right eCommerce platform based on your business goals, budget, features, and future growth plans."
       },
       {
-        "question": "Can you build custom Magento extensions for our business?",
-        "answer": "Yes! We develop bespoke Magento 2 extensions tailored to your exact business rules, adhering strictly to Adobe Commerce coding standards and security practices."
+        "question": "Are you into enterprise-level project development?",
+        "answer": "Yes. We develop scalable enterprise-level Magento solutions designed to handle complex business requirements and high traffic."
       },
       {
-        "question": "Do you provide ongoing Magento security patching and upgrades?",
-        "answer": "Yes, we monitor and apply all official Adobe security patches, conduct regular vulnerability scans, and ensure your store remains secure and fully PCI-DSS compliant."
+        "question": "Can I further implement features in your Marketplace solution?",
+        "answer": "Yes. We can add custom features, integrations, and extensions to enhance your Magento marketplace according to your business needs."
       }
     ]
   },

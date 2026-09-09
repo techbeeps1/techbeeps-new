@@ -74,24 +74,24 @@
     "title": "Frequently Asked Questions",
     "faqs": [
       {
-        "question": "Why are Node.js developers in high demand?",
-        "answer": "Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices."
+        "question": "What can you build with Node.js?",
+        "answer": "We build high-performance web applications, REST APIs, real-time applications, microservices, and scalable backend solutions."
       },
       {
-        "question": "Is Node.js suitable for enterprise-scale applications?",
-        "answer": "Yes! Major enterprises like Netflix, Uber, PayPal, and LinkedIn rely on Node.js for its ability to handle millions of simultaneous requests with minimal server resource consumption."
+        "question": "Why should I choose Node.js for my project?",
+        "answer": "Node.js offers fast performance, real-time capabilities, and excellent scalability, making it ideal for modern web applications."
       },
       {
         "question": "What databases pair best with Node.js?",
         "answer": "Node.js works seamlessly with both SQL databases (PostgreSQL, MySQL) and NoSQL databases (MongoDB, Redis, DynamoDB) depending on project requirements."
       },
       {
-        "question": "Can you migrate our existing PHP or Python backend to Node.js?",
-        "answer": "Yes, we have extensive experience refactoring legacy backend monolithic systems into modern, modular Node.js microservices with zero operational downtime."
+        "question": "Do you provide Node.js API development services?",
+        "answer": "Yes. We develop secure, scalable REST APIs and backend services that integrate seamlessly with web and mobile applications."
       },
       {
         "question": "How do you ensure high security in Node.js applications?",
-        "answer": "We implement Helmet security headers, rate limiting, JWT authentication, input validation, automated npm audit vulnerability checks, and role-based access control (RBAC)."
+        "answer": "We ensure application security through secure coding practices, data encryption, authentication, regular security testing, and timely updates to protect against potential vulnerabilities."
       }
     ]
   },

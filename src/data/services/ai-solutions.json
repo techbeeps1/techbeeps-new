@@ -4,7 +4,13 @@
   "seo": {
     "title": "AI Solutions & Custom AI Development | TechBeeps",
     "description": "Transform your business with intelligent AI development solutions across web platforms, SaaS applications, and WordPress plugins by TechBeeps.",
-    "keywords": ["AI Solutions", "Custom AI Development", "WordPress AI Plugins", "LLM Integration", "AI Automation"]
+    "keywords": [
+      "AI Solutions",
+      "Custom AI Development",
+      "WordPress AI Plugins",
+      "LLM Integration",
+      "AI Automation"
+    ]
   },
   "hero": {
     "title": "AI Solutions",
@@ -50,24 +56,28 @@
     "title": "Our AI Development Process",
     "faqs": [
       {
-        "question": "Discovery & Requirement Analysis",
-        "answer": "We begin by understanding your business goals, user challenges, and system requirements to identify the best-fit AI solution."
+        "question": "What types of AI solutions do you develop?",
+        "answer": "We develop AI chatbots, automation tools, AI-powered analytics, custom AI applications, and intelligent workflows."
       },
       {
-        "question": "Selecting the Right AI Model",
-        "answer": "Based on your use case, we choose the most suitable AI model or API—such as OpenAI, Claude, or Gemini—to ensure optimal performance and scalability."
+        "question": "Can you integrate AI into our existing website or application?",
+        "answer": "Yes. We integrate AI solutions into existing websites, SaaS platforms, eCommerce stores, and business applications."
       },
       {
-        "question": "Custom AI Solution Development",
-        "answer": "Our experienced developers build your solution—be it a web application, WordPress plugin, or custom integration—aligned with your business logic and user needs."
+        "question": "Can you develop custom AI solutions for our business?",
+        "answer": "Yes. We build customized AI solutions based on your business goals, data, and specific requirements."
       },
       {
-        "question": "Testing, Tuning & Validation",
-        "answer": "We conduct thorough testing, validate the AI responses, and fine-tune the model integration to ensure accuracy, reliability, and security."
+        "question": "Which AI models and APIs do you work with?",
+        "answer": "We work with modern AI models and APIs to build secure, scalable, and business-focused AI solutions."
       },
       {
-        "question": "Deployment & Ongoing Support",
-        "answer": "Once ready, we deploy your AI-powered solution with complete documentation and offer continuous support, updates, and maintenance to keep things running smoothly."
+        "question": "How do you ensure the accuracy and reliability of AI solutions?",
+        "answer": "We use testing, tuning, validation, and continuous monitoring to improve AI performance and reliability."
+      },
+      {
+        "question": "Do you provide AI solution maintenance and support?",
+        "answer": "Yes. We provide ongoing support, updates, performance optimization, and improvements after deployment."
       }
     ]
   },
