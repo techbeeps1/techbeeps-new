@@ -74,24 +74,24 @@
     "title": "Frequently Asked Questions",
     "faqs": [
       {
-        "question": "How much does it cost to hire a dedicated PHP developer?",
-        "answer": "The cost varies depending on project complexity, developer seniority, and engagement model. We offer flexible hourly, monthly, and fixed-price models to fit your budget."
+        "question": " How much does it cost to hire a dedicated PHP developer?",
+        "answer": "The cost depends on the developer’s experience, project requirements, and engagement model. We offer flexible options based on your needs."
       },
       {
         "question": "Can you upgrade our existing PHP website to the latest PHP 8 version?",
-        "answer": "Yes! We audit your current codebase, update outdated dependencies, fix deprecated functions, and test thoroughly to ensure full compatibility with PHP 8.x."
+        "answer": "Yes. We can upgrade your existing PHP application to PHP 8 while improving performance, security, and compatibility."
       },
       {
         "question": "Which PHP frameworks do your developers specialize in?",
-        "answer": "Our team has deep expertise in Laravel, Symfony, CodeIgniter, CakePHP, and Yii, as well as native custom PHP development."
+        "answer": "Our developers work with popular frameworks including Laravel, Symfony, CodeIgniter, and Yii."
       },
       {
         "question": "How do you ensure the security of our PHP applications?",
-        "answer": "We enforce parameterized database queries (PDO), CSRF tokens, strict data validation, password hashing (bcrypt/argon2), and continuous security auditing."
+        "answer": "We follow secure coding practices, regular security testing, and protection against common vulnerabilities such as SQL injection, CSRF, and XSS."
       },
       {
         "question": "Do you offer ongoing maintenance for PHP web applications?",
-        "answer": "Yes, we provide ongoing maintenance covering regular backups, security patch updates, server optimization, and on-demand feature enhancements."
+        "answer": "Yes. We provide ongoing maintenance, bug fixing, security updates, performance optimization, and technical support."
       }
     ]
   },

@@ -75,23 +75,23 @@
     "faqs": [
       {
         "question": "What advantages does Custom WooCommerce Development offer over standard WooCommerce stores?",
-        "answer": "Custom WooCommerce development offers tailored branding, streamlined code without bloated plugins, custom checkout workflows, bespoke integrations, and significantly faster page load speeds."
+        "answer": "Custom WooCommerce development offers greater flexibility, unique features, better scalability, and solutions tailored to your business needs."
       },
       {
         "question": "How much do WooCommerce store development services cost?",
-        "answer": "Costs depend on the number of products, custom features, third-party integrations, and design complexity. We provide transparent, flexible pricing tailored to your project scope."
+        "answer": "The cost depends on your store's features, customization, integrations, and overall requirements. We provide a tailored quote based on your project."
       },
       {
         "question": "Why choose Techbeeps for WooCommerce development?",
-        "answer": "Techbeeps combines deep WordPress/WooCommerce engineering expertise with conversion-focused design, strict security standards, and dedicated ongoing support."
+        "answer": "We provide customized, scalable, secure, and high-performance WooCommerce solutions backed by experienced developers and ongoing support."
       },
       {
         "question": "Can you migrate our store from Shopify or Magento to WooCommerce?",
-        "answer": "Yes! We migrate all products, customer records, order histories, and SEO redirects safely with minimal downtime and zero data loss."
+        "answer": "Yes. We provide seamless migration of products, customers, orders, and other store data with minimal disruption."
       },
       {
         "question": "How do you keep our WooCommerce store fast and secure?",
-        "answer": "We configure server-level caching, optimize database queries, implement CDN delivery, enforce SSL encryption, and routinely apply security updates."
+        "answer": "We use security best practices, regular updates, performance optimization, caching, and database optimization to keep your store fast and secure."
       }
     ]
   },

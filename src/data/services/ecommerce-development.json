@@ -72,23 +72,23 @@
     "faqs": [
       {
         "question": "Which eCommerce platforms do you specialize in?",
-        "answer": "We build custom eCommerce solutions using Shopify, WooCommerce, Magento, PrestaShop, as well as bespoke full-stack solutions with Next.js, Node.js, and Laravel."
+        "answer": "We work with platforms such as Shopify, WooCommerce, Magento, PrestaShop, and OpenCart based on your business needs."
       },
       {
         "question": "How long does it take to develop a custom eCommerce website?",
-        "answer": "A standard custom store typically takes 3 to 6 weeks, while large-scale multi-vendor marketplaces or enterprise platforms may take 8 to 12 weeks depending on custom feature requirements."
+        "answer": "The timeline depends on the website's features, integrations, and complexity. We provide a clear timeline based on your requirements."
       },
       {
         "question": "Can you integrate third-party ERP, CRM, and shipping systems?",
-        "answer": "Yes, we seamlessly connect your eCommerce store with third-party ERPs, CRMs (Salesforce, HubSpot), inventory management systems, and shipping carriers (FedEx, DHL, UPS)."
+        "answer": "Yes. We integrate ERP, CRM, payment, shipping, and other third-party systems for seamless business operations."
       },
       {
         "question": "Will our eCommerce website be optimized for mobile devices?",
-        "answer": "Every eCommerce website we build is designed mobile-first, ensuring smooth navigation, responsive product galleries, and easy touch-friendly checkouts across all smartphones and tablets."
+        "answer": "Yes. We build responsive, mobile-friendly storefronts that provide a smooth shopping experience across all devices."
       },
       {
         "question": "How do you ensure transaction security on the website?",
-        "answer": "We implement SSL certificates, secure tokenized payment gateway APIs, PCI-DSS compliance standards, and automated vulnerability scanning to safeguard user and payment data."
+        "answer": "We use SSL encryption, secure payment gateways, security best practices, and regular updates to protect transactions and customer data."
       }
     ]
   }

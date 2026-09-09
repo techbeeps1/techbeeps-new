@@ -76,23 +76,23 @@
     "faqs": [
       {
         "question": "Which cloud platforms does TechBeeps support?",
-        "answer": "We provide full lifecycle services for all major cloud providers including Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), and hybrid on-premise cloud configurations."
+        "answer": "We support major cloud platforms including AWS, Microsoft Azure, and Google Cloud."
       },
       {
         "question": "How do you ensure zero downtime during cloud migration?",
-        "answer": "We utilize phased migration strategies, automated database replication, and rigorous staging validation to ensure seamless cutover without interrupting live operations."
+        "answer": "We use careful planning, testing, and phased migration strategies to minimize disruption and ensure business continuity."
       },
       {
         "question": "How can cloud migration reduce our operational costs?",
-        "answer": "Cloud migration eliminates expensive on-premise hardware maintenance, enables pay-as-you-go pricing, and uses auto-scaling so you only pay for compute resources you actively use."
+        "answer": "Cloud migration can reduce infrastructure costs through resource optimization, auto-scaling, and efficient cloud management."
       },
       {
         "question": "How do you handle cloud security and data compliance?",
-        "answer": "We enforce least-privilege IAM policies, TLS 1.3 encryption at rest and in transit, automated vulnerability patching, and compliance adherence for ISO 27001, GDPR, and SOC 2."
+        "answer": "We use encryption, access controls, firewalls, and security best practices to protect data and support compliance requirements."
       },
       {
         "question": "Do you offer ongoing cloud maintenance and monitoring after migration?",
-        "answer": "Yes! We provide 24/7 proactive cloud infrastructure management, automated backup routines, security monitoring, and regular performance tuning."
+        "answer": "Yes. We provide 24/7 monitoring, performance optimization, security updates, and ongoing cloud infrastructure management."
       }
     ]
   }

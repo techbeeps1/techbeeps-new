@@ -104,32 +104,28 @@
     "title": "Frequently Asked Questions",
     "faqs": [
       {
-        "question": "Web Application Development",
-        "answer": "We build secure, high-performance, and scalable web applications using modern Python frameworks. Our solutions are tailored to your unique business requirements, whether you need a custom web application, e-commerce platform, content management system, or a progressive web app. We focus on creating seamless user experiences, reliable functionality, and flexible architectures that support long-term business growth."
+        "question": "What can you build with Python?",
+        "answer": "We develop web applications, APIs, automation tools, AI/ML solutions, and scalable backend systems using Python."
       },
       {
-        "question": "API Development & Integration",
-        "answer": "We develop secure, scalable, and high-performance APIs that enable seamless communication between applications and services. From RESTful APIs and GraphQL implementations to third-party integrations and comprehensive API documentation, we create reliable solutions that enhance functionality and improve system connectivity. Our expertise includes integrating payment gateways, social media platforms, cloud services, analytics tools, and other essential business systems to build a connected and efficient digital ecosystem."
-      },
-      {
-        "question": "Data Science & Machine Learning",
-        "answer": "We turn complex data into meaningful, actionable insights through advanced data analytics and machine learning solutions. Our services include predictive modeling, intelligent machine learning algorithms, data visualization, and custom analytical solutions that help businesses identify trends, make informed decisions, optimize processes, and drive measurable growth."
+        "question": "Which Python frameworks do you use?",
+        "answer": "We work with popular frameworks like Django, Flask, and FastAPI based on your project requirements."
       },
       {
         "question": "Do you provide API integration and migration services?",
-        "answer": "Yes, we handle legacy backend migrations to modern Python microservices, third-party API integrations, and secure payment / webhook implementations."
+        "answer": "Yes. We integrate APIs and migrate existing applications to Python while ensuring smooth performance and minimal disruption."
       },
       {
-        "question": "Automation & Scripting",
-        "answer": "Streamline your business operations with smart automation and scripting solutions that reduce manual work, minimize errors, and improve overall efficiency. We create customized automation systems to handle repetitive tasks, simplify data migration and processing, automate scheduled workflows, generate reports, manage emails and files, and optimize day-to-day business processes. Our solutions are designed to save valuable time, improve accuracy, and help your team focus on more productive and business-critical activities."
+        "question": "Can you automate business processes using Python?",
+        "answer": " Yes. We create custom automation solutions to reduce repetitive tasks and improve business efficiency."
       },
       {
-        "question": "Cloud-Based Python Solutions",
-        "answer": "Deploy and manage scalable Python applications in the cloud with modern, reliable, and flexible infrastructure. We build cloud-ready solutions using containerization and microservices architecture to ensure better performance, scalability, and easier maintenance. Our approach enables applications to handle growing workloads efficiently with automated scaling and streamlined cloud deployment."
+        "question": "Can you develop AI and machine learning solutions with Python?",
+        "answer": "Yes. We develop AI/ML solutions for predictive analytics, data processing, and intelligent automation."
       },
       {
-        "question": "Python Consulting & Code Review",
-        "answer": "Improve the quality, security, and performance of your existing Python applications with expert consulting and comprehensive code reviews. We analyze your code structure, identify performance bottlenecks and security vulnerabilities, optimize database operations, evaluate architecture and design patterns, and recommend practical improvements. Our review process also focuses on testing strategies and best practices to create clean, secure, maintainable, and reliable Python applications."
+        "question": "Do you provide Python application maintenance and support?",
+        "answer": "Yes. We provide ongoing maintenance, security updates, performance optimization, and technical support."
       }
     ]
   },

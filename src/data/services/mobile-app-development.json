@@ -59,24 +59,24 @@
     "title": "Frequently Asked Questions",
     "faqs": [
       {
-        "question": "What is included in your app development services?",
-        "answer": "We provide end-to-end app development solutions, including strategy, UI/UX design, coding, testing, deployment, and ongoing maintenance."
+        "question": " What does your mobile app development service include?",
+        "answer": "We handle app design, development, testing, deployment, and ongoing support based on your requirements."
       },
       {
         "question": "Do you build apps for both iOS and Android?",
-        "answer": "Yes, we develop native apps for iOS and Android, as well as cross-platform apps that work seamlessly on both."
+        "answer": "Yes. We develop apps for both iOS and Android using technologies like Flutter, React Native, Swift, and Kotlin."
       },
       {
         "question": "How long does it take to develop a mobile app?",
-        "answer": "The timeline depends on the complexity and features of the app. Simple apps may take 6–8 weeks, while more advanced applications can take several months."
+        "answer": "The timeline depends on the app's features and complexity. Most projects take a few weeks to several months."
       },
       {
-        "question": "How much does app development cost?",
-        "answer": "Costs vary depending on the app's features, platform, design, and complexity. After discussing your requirements, we provide a clear and transparent quote."
+        "question": "How much does mobile app development cost?",
+        "answer": "The cost depends on the app's features, design, technology, and development requirements. We provide a tailored quote after understanding your project."
       },
       {
         "question": "Do you help with publishing the app on the App Store and Google Play?",
-        "answer": "Yes, we handle the submission process and ensure your app meets all guidelines for publishing on the App Store and Google Play."
+        "answer": "Yes. We can assist with the submission and publishing process for both the App Store and Google Play."
       }
     ]
   },

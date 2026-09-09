@@ -71,20 +71,24 @@
     "title": "Frequently Asked Questions",
     "faqs": [
       {
-        "question": "What is WhatsApp Automation and how does it work?",
-        "answer": "WhatsApp Automation uses the official WhatsApp Business Cloud API combined with AI chatbots and webhook automations to handle customer conversations, send transactional messages, and route complex queries to live agents."
+        "question": " What is WhatsApp automation and how can it help my business?",
+        "answer": "WhatsApp automation helps businesses automate customer communication, follow-ups, notifications, and routine tasks."
       },
       {
-        "question": "Is WhatsApp Automation safe and compliant with Meta policies?",
-        "answer": "Yes! We only use verified official Meta WhatsApp Business APIs, ensuring complete compliance with Meta terms and 100% protection against number blocking."
+        "question": "Can you build AI-powered WhatsApp chatbots?",
+        "answer": "Yes. We build AI-powered chatbots that can understand customer queries and provide automated, real-time responses."
       },
       {
-        "question": "Can we integrate WhatsApp Automation with our existing CRM and eCommerce store?",
-        "answer": "Yes! We integrate WhatsApp seamlessly with Shopify, WooCommerce, HubSpot, Salesforce, Zoho, Google Sheets, and custom database webhooks."
+        "question": "Can WhatsApp automation integrate with my existing CRM or website?",
+        "answer": "Yes. We can integrate WhatsApp automation with CRMs, websites, APIs, and other business systems."
       },
       {
-        "question": "Do you provide end-to-end setup and ongoing support?",
-        "answer": "Yes, we handle everything from Meta Business verification and API setup to chatbot conversation design, workflow testing, and 24/7 technical monitoring."
+        "question": "Can I automate customer notifications and follow-ups on WhatsApp?",
+        "answer": "Yes. You can automate order updates, reminders, notifications, follow-ups, and other customer communications."
+      },
+      {
+        "question": "Is WhatsApp automation suitable for small businesses?",
+        "answer": "Yes. WhatsApp automation can help businesses of all sizes save time, improve customer engagement, and handle repetitive communication efficiently."
       }
     ]
   }
