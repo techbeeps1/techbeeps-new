@@ -287,9 +287,9 @@ export default function TestimonialSlider() {
         <button
           onClick={handlePrev}
           aria-label="Previous testimonial"
-          className="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-primary text-white duration-300 transition-all border border-white/10 hover:border-primary cursor-pointer shadow-lg active:scale-95"
+          className="w-12.5 h-12.5 rounded-[10px] flex items-center justify-center bg-white/20 hover:bg-primary text-white duration-400 transition-all cursor-pointer active:scale-95"
         >
-          <IoArrowBackOutline className="w-4.5 h-4.5" />
+          <IoArrowBackOutline className="w-5 h-5" />
         </button>
         <div className="flex items-center gap-2">
           {Array.from({ length: originalLength }).map((_, idx) => (
@@ -305,9 +305,9 @@ export default function TestimonialSlider() {
         <button
           onClick={handleNext}
           aria-label="Next testimonial"
-          className="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-primary text-white duration-300 transition-all border border-white/10 hover:border-primary cursor-pointer shadow-lg active:scale-95"
+          className="w-12.5 h-12.5 rounded-[10px] flex items-center justify-center bg-white/20 hover:bg-primary text-white duration-400 transition-all cursor-pointer active:scale-95"
         >
-          <IoArrowForwardOutline className="w-4.5 h-4.5" />
+          <IoArrowForwardOutline className="w-5 h-5" />
         </button>
       </div>
     </section>
