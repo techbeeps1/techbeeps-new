@@ -157,7 +157,7 @@ export default function PrivacyClient() {
             </div>
           </div>
           <p className="text-xs text-white/60">
-            To exercise any of these rights, please email us at <Link href="mailto:info@techbeeps.co.in" className="text-primary hover:underline">info@techbeeps.co.in</Link>. We respond to all verified requests within 30 days.
+            To exercise any of these rights, please email us at <Link href="mailto:info@techbeeps.com" className="text-primary hover:underline">info@techbeeps.com</Link>. We respond to all verified requests within 30 days.
           </p>
         </div>
       ),
