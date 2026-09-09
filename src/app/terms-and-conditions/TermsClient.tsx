@@ -204,9 +204,9 @@ export default function TermsClient() {
             Questions or inquiries about the Terms and Conditions should be directed to our legal and support team at:
           </p>
           <div className="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2">
-            <p><strong className="text-white">Email:</strong> <Link href="mailto:info@techbeeps.co.in" className="text-primary hover:underline">tech.beeps@outlook.com</Link></p>
+            <p><strong className="text-white">Email:</strong> <Link href="mailto:info@techbeeps.com" className="text-primary hover:underline">info@techbeeps.com</Link></p>
             <p><strong className="text-white">Phone:</strong> <Link href="tel:+911414523119" className="text-primary hover:underline">+91 141 452 3119</Link></p>
-            <p><strong className="text-white">Website:</strong> <Link href="https://techbeeps.co.in" className="text-primary hover:underline">https://techbeeps.com</Link></p>
+            <p><strong className="text-white">Website:</strong> <Link href="https://techbeeps.com" className="text-primary hover:underline">https://techbeeps.com</Link></p>
 
           </div>
         </div>

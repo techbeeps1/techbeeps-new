@@ -51,7 +51,7 @@ export default function ContactUsPage() {
       name: "TechBeeps Services",
       image: `${SITE_URL}/services-bg.jpg`,
       telephone: "+91-141-452-3119",
-      email: "info@techbeeps.co.in",
+      email: "info@techbeeps.com",
       address: {
         "@type": "PostalAddress",
         streetAddress: "207, Pinkcity-2, Main Kalwar Rd, Jhotwara",

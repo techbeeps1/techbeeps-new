@@ -382,7 +382,7 @@ export default function HireDeveloperClient() {
         });
       } else {
         setSubmitStatus("error");
-        setErrorMessage(data.message || "Failed to submit request. Please try again or email info@techbeeps.co.in.");
+        setErrorMessage(data.message || "Failed to submit request. Please try again or email info@techbeeps.com.");
       }
     } catch (err: any) {
       console.error("Submission error:", err);

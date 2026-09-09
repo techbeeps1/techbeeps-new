@@ -1,4 +1,4 @@
-export const SITE_URL = "https://techbeeps.co.in";
+export const SITE_URL = "https://techbeeps.com";
 export const SITE_NAME = "TechBeeps Services";
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/services-bg.jpg`;
 
@@ -17,7 +17,7 @@ export const ORGANIZATION_SCHEMA = {
   image: `${SITE_URL}/services-bg.jpg`,
   description:
     "Leading IT & software development company offering bespoke web development, mobile app solutions, UI/UX design, cloud engineering, and AI digital transformation services.",
-  email: "info@techbeeps.co.in",
+  email: "info@techbeeps.com",
   telephone: "+91-141-452-3119",
   address: {
     "@type": "PostalAddress",
@@ -37,7 +37,7 @@ export const ORGANIZATION_SCHEMA = {
       "@type": "ContactPoint",
       telephone: "+91-141-452-3119",
       contactType: "customer service",
-      email: "info@techbeeps.co.in",
+      email: "info@techbeeps.com",
       availableLanguage: ["English", "Hindi"],
       areaServed: ["IN", "US", "GB", "AE", "CA", "AU"],
     },
