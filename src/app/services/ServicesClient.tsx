@@ -163,11 +163,11 @@ const servicesData = [
 export default function ServicesClient() {
   return (
     <>
-      <Header />      
-      <section className="relative min-h-screen flex items-end justify-center pb-[90px] pt-32 lg:pb-20 bg-[#05010f] overflow-hidden">       
+      <Header />
+      <section className="relative min-h-screen flex items-end justify-center pb-[90px] pt-32 lg:pb-20 bg-[#05010f] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/services-bg.jpg"
+            src="/service-bg-banner.jpg"
             alt="TechBeeps Services Hero Background"
             fill
             priority
@@ -178,7 +178,7 @@ export default function ServicesClient() {
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="absolute bottom-0 lg:bottom-10 -left-20 lg:-left-40 bg-[#504CFF] blur-[120px] lg:blur-[190px] w-[300px] h-[300px] lg:w-[700px] lg:h-[500px] opacity-20 lg:opacity-30 pointer-events-none rounded-full"></div>
           <div className="absolute top-0 lg:top-20 -right-20 lg:-right-20 bg-primary blur-[120px] lg:blur-[190px] w-[300px] h-[300px] lg:w-[700px] lg:h-[500px] opacity-20 lg:opacity-30 pointer-events-none rounded-full"></div>
-        </div>       
+        </div>
         <div className="container relative z-10 px-4 mt-auto">
           <div className="backdrop-blur-[25px] rounded-[30px] p-6 md:p-8 lg:p-[40px] bg-[#868686]/10 ">
             <h1 className="text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[97px] text-white mb-4 lg:mb-6">
@@ -189,7 +189,7 @@ export default function ServicesClient() {
             </ContentSwipUp>
           </div>
         </div>
-      </section>     
+      </section>
       <section className="py-20 lg:py-[100px] bg-[#05010f] text-white">
         <div className="container px-4 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
