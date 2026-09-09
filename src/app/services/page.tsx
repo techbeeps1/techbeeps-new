@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/services-bg.jpg",
+        url: "/service-bg-banner.jpg",
         width: 1200,
         height: 630,
         alt: "TechBeeps All Services",
