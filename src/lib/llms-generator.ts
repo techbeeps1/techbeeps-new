@@ -88,8 +88,10 @@ export async function generateLlmsTxt(): Promise<string> {
     lines.push("");
     portfolioProjects.slice(0, 10).forEach((proj) => {
       const link = proj.link && proj.link.startsWith("http") ? proj.link : `${SITE_URL}/portfolio`;
-      const desc = proj.description || proj.category;
-      lines.push(`- [${proj.title}](${link}): ${proj.category} - ${desc} (Tags: ${proj.tags.join(", ")})`);
+      const catStr = Array.isArray(proj.category) ? proj.category.join(", ") : proj.category;
+      const desc = proj.description || catStr;
+      const tagsStr = proj.tags && proj.tags.length > 0 ? ` (Tags: ${proj.tags.join(", ")})` : "";
+      lines.push(`- [${proj.title}](${link}): ${catStr} - ${desc}${tagsStr}`);
     });
   }
 

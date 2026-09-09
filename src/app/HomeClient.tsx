@@ -14,7 +14,7 @@ import ButtonSwipUp from "./components/ButtonSwipUp";
 import ContentSwipUp from "./components/ContentSwipUp";
 import Link from "next/link";
 import HeroLiningBackground from "./components/HeroLiningBackground";
-import { portfolioProjects } from "@/data/portfolio";
+import { portfolioProjects, portfolioCategories, isProjectInCategory } from "@/data/portfolio";
 
 // Dynamic chunking for below-the-fold heavy components (SSR preserved for SEO & zero visual shift)
 const DevelopmentSlider = dynamic(() => import("./components/DevelopmentSlider"), { ssr: true });
@@ -223,16 +223,7 @@ export default function HomeClient() {
     }
   };
 
-  const categories = [
-    "All",
-    "App Development",
-    "Next.js",
-    "Web Development",
-    "Shopify",
-    "React.js",
-  ];
-
-  const homeProjects = portfolioProjects.slice(0, 6);
+  const categories = portfolioCategories;
 
   const [active, setActive] = useState("All");
 
@@ -251,14 +242,11 @@ export default function HomeClient() {
     }
   }, [active]);
 
-  const filtered =
+  const filtered = (
     active === "All"
-      ? homeProjects
-      : homeProjects.filter(
-          (item) =>
-            item.category === active ||
-            (item.tags && item.tags.includes(active))
-        );
+      ? portfolioProjects
+      : portfolioProjects.filter((item) => isProjectInCategory(item, active))
+  ).slice(0, 6);
 
   return (
     <>
@@ -479,7 +467,7 @@ export default function HomeClient() {
                         <div className="px-[20px] pb-[20px] pt-4">
                           <div className="flex gap-2 flex-wrap">
                             <span className="text-sm bg-white/9 px-4.5 py-2 rounded-md">
-                              {item.category}
+                              {Array.isArray(item.category) ? item.category.join(", ") : item.category}
                             </span>
                           </div>
                         </div>

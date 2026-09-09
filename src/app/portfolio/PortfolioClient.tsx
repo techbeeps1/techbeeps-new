@@ -17,7 +17,7 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-import { portfolioCategories as categories, portfolioProjects as projects, Project } from "@/data/portfolio";
+import { portfolioCategories as categories, portfolioProjects as projects, isProjectInCategory, Project } from "@/data/portfolio";
 export type { Project };
 
 export default function PortfolioClient() {
@@ -39,11 +39,7 @@ export default function PortfolioClient() {
 
   const filteredProjects = activeCategory === "All"
     ? projects
-    : projects.filter(
-      (project) =>
-        project.category === activeCategory ||
-        project.tags.includes(activeCategory)
-    );
+    : projects.filter((project) => isProjectInCategory(project, activeCategory));
 
   return (
     <>
@@ -100,73 +96,87 @@ export default function PortfolioClient() {
           </div>
 
           {/* Portfolio Grid with Framer Motion Layout Animations */}
-          <motion.div
-            layout
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10"
-            style={{ perspective: 1500 }}
-          >
-            <AnimatePresence mode="popLayout" onExitComplete={() => { if (typeof window !== "undefined") ScrollTrigger.refresh(); }}>
-              {filteredProjects.map((item, index) => {
-                const hasLink = Boolean(item.link && item.link.trim());
+          {filteredProjects.length === 0 ? (
+            <div className="text-center py-20 bg-white/5 rounded-3xl border border-white/10 p-8">
+              <p className="text-lg text-white/70">
+                No projects found under <span className="text-primary font-semibold">{activeCategory}</span> yet.
+              </p>
+              <button
+                onClick={() => setActiveCategory("All")}
+                className="mt-4 px-6 py-2.5 rounded-full bg-primary text-white text-sm hover:opacity-90 transition-opacity cursor-pointer"
+              >
+                View All Projects
+              </button>
+            </div>
+          ) : (
+            <motion.div
+              layout
+              className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10"
+              style={{ perspective: 1500 }}
+            >
+              <AnimatePresence mode="popLayout" onExitComplete={() => { if (typeof window !== "undefined") ScrollTrigger.refresh(); }}>
+                {filteredProjects.map((item, index) => {
+                  const hasLink = Boolean(item.link && item.link.trim());
 
-                return (
-                  <motion.div
-                    key={`${item.title}-${index}`}
-                    layout
-                    initial={{ opacity: 0, rotateX: -10, y: 50, scale: 0.95 }}
-                    animate={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, rotateX: 10, y: -50, scale: 0.95 }}
-                    transition={{
-                      duration: 0.6,
-                      ease: [0.16, 1, 0.3, 1],
-                      delay: index * 0.05
-                    }}
-                    className="w-full aspect-[4/3] relative rounded-[32px] overflow-hidden group border border-white/5 bg-[#120D25]"
-                  >
-                    <div className="absolute inset-0 w-full h-full overflow-hidden">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                      />
-                    </div>
-
-                    <div className="absolute bottom-5 left-5 right-5 md:bottom-6 md:left-6 md:right-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-full py-4 px-6 md:py-4.5 md:px-8 flex justify-between items-center transition-all duration-500 group-hover:bg-black/60 group-hover:border-white/20">
-                      <div className="flex flex-col gap-0.5">
-                        <h3 className="text-white font-semibold text-lg md:text-[22px]">
-                          {hasLink ? (
-                            <Link
-                              href={item.link!}
-                              target={item.link!.startsWith("http") ? "_blank" : undefined}
-                              rel={item.link!.startsWith("http") ? "noopener noreferrer" : undefined}
-                              className="hover:text-primary transition-colors duration-300"
-                            >
-                              {item.title}
-                            </Link>
-                          ) : (
-                            item.title
-                          )}
-                        </h3>
+                  return (
+                    <motion.div
+                      key={item.title}
+                      layout
+                      initial={{ opacity: 0, rotateX: -10, y: 50, scale: 0.95 }}
+                      animate={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, rotateX: 10, y: -50, scale: 0.95 }}
+                      transition={{
+                        duration: 0.6,
+                        ease: [0.16, 1, 0.3, 1],
+                        delay: index * 0.05
+                      }}
+                      className="w-full aspect-[4/3] relative rounded-[32px] overflow-hidden group border border-white/5 bg-[#120D25]"
+                    >
+                      <div className="absolute inset-0 w-full h-full overflow-hidden">
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          fill
+                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        />
                       </div>
 
-                      {hasLink && (
-                        <Link
-                          href={item.link!}
-                          target={item.link!.startsWith("http") ? "_blank" : undefined}
-                          rel={item.link!.startsWith("http") ? "noopener noreferrer" : undefined}
-                          className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center text-white transition-all duration-300 shrink-0 ml-3"
-                          aria-label={`Visit ${item.title}`}
-                        >
-                          <FiArrowUpRight className="text-base md:text-xl" />
-                        </Link>
-                      )}
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </AnimatePresence>
-          </motion.div>
+                      <div className="absolute bottom-5 left-5 right-5 md:bottom-6 md:left-6 md:right-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-full py-4 px-6 md:py-4.5 md:px-8 flex justify-between items-center transition-all duration-500 group-hover:bg-black/60 group-hover:border-white/20">
+                        <div className="flex flex-col gap-0.5">
+                          <h3 className="text-white font-semibold text-lg md:text-[22px]">
+                            {hasLink ? (
+                              <Link
+                                href={item.link!}
+                                target={item.link!.startsWith("http") ? "_blank" : undefined}
+                                rel={item.link!.startsWith("http") ? "noopener noreferrer" : undefined}
+                                className="hover:text-primary transition-colors duration-300"
+                              >
+                                {item.title}
+                              </Link>
+                            ) : (
+                              item.title
+                            )}
+                          </h3>
+                        </div>
+
+                        {hasLink && (
+                          <Link
+                            href={item.link!}
+                            target={item.link!.startsWith("http") ? "_blank" : undefined}
+                            rel={item.link!.startsWith("http") ? "noopener noreferrer" : undefined}
+                            className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center text-white transition-all duration-300 shrink-0 ml-3"
+                            aria-label={`Visit ${item.title}`}
+                          >
+                            <FiArrowUpRight className="text-base md:text-xl" />
+                          </Link>
+                        )}
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </AnimatePresence>
+            </motion.div>
+          )}
         </div>
       </section>
 

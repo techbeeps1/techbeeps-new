@@ -1,13 +1,24 @@
+export type PortfolioCategory =
+  | "All"
+  | "App Development"
+  | "Next.js"
+  | "Web Development"
+  | "Shopify"
+  | "React.js"
+  | "Figma"
+  | "WordPress";
+
 export interface Project {
   title: string;
-  category: string;
-  tags: string[];
+  // Category can be a single category (e.g. "WordPress") or multiple categories (e.g. ["WordPress", "Web Development"])
+  category: PortfolioCategory | string | (PortfolioCategory | string)[];
+  tags?: string[];
   image: string;
   link?: string;
   description?: string;
 }
 
-export const portfolioCategories = [
+export const portfolioCategories: string[] = [
   "All",
   "App Development",
   "Next.js",
@@ -16,7 +27,31 @@ export const portfolioCategories = [
   "React.js",
   "Figma",
   "WordPress",
+  "Magento",
 ];
+
+/**
+ * Helper to check if a project matches the selected category filter.
+ * Supports single category string ("WordPress") or array (["WordPress", "Web Development"]).
+ * Case-insensitive comparison with whitespace trimming.
+ */
+export function isProjectInCategory(project: Project, categoryName: string): boolean {
+  if (!categoryName || categoryName.trim().toLowerCase() === "all") return true;
+
+  const target = categoryName.trim().toLowerCase();
+
+  if (Array.isArray(project.category)) {
+    return project.category.some(
+      (cat) => typeof cat === "string" && cat.trim().toLowerCase() === target
+    );
+  }
+
+  if (typeof project.category === "string") {
+    return project.category.trim().toLowerCase() === target;
+  }
+
+  return false;
+}
 
 export const portfolioProjects: Project[] = [
   {
@@ -61,8 +96,8 @@ export const portfolioProjects: Project[] = [
   },
   {
     title: "eCommerce Marketplace",
-    category: "Shopify",
-    tags: ["Shopify", "E-commerce"],
+    category: "Magento",
+    tags: ["Magento", "E-commerce"],
     image: "/indeshop-img.jpg",
     link: "https://www.indeshop.nl/",
     description: "Custom tailored design and scalable code architectures.",
