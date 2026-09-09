@@ -53,7 +53,7 @@ export default function PortfolioClient() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/services-bg.jpg"
+            src="/portfolio-banner1.jpg"
             alt="TechBeeps Portfolio Hero Background"
             fill
             priority

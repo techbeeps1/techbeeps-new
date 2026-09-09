@@ -32,7 +32,7 @@ export const portfolioProjects: Project[] = [
     category: "Next.js",
     tags: ["Web Development", "Next.js"],
     image: "/merger-lawyer.jpg",
-    link: "https://mergerlawyer.com/",
+
     description: "Custom tailored design and scalable code architectures.",
   },
   {
@@ -40,7 +40,7 @@ export const portfolioProjects: Project[] = [
     category: "App Development",
     tags: ["App Development", "iOS & Android"],
     image: "/ananta-img.jpg",
-    link: "",
+
     description: "Custom tailored design and scalable code architectures.",
   },
   {
@@ -48,7 +48,7 @@ export const portfolioProjects: Project[] = [
     category: "Web Development",
     tags: ["Web Development", "CRM"],
     image: "/crm-img.jpg",
-    link: "",
+
     description: "Custom tailored design and scalable code architectures.",
   },
   {
@@ -112,7 +112,7 @@ export const portfolioProjects: Project[] = [
     category: "WordPress",
     tags: ["Web Development"],
     image: "/magicmashrooms.jpg",
-    link: "",
+
     description: "Custom tailored design and scalable code architectures.",
   },
   {
