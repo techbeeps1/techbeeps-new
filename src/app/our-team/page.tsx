@@ -42,14 +42,15 @@ export default function OurTeamPage() {
   const teamMembers = getAllTeamMembers();
 
   const teamCollectionSchema = {
-    "@context": "https://schema.org",
     "@type": "AboutPage",
     "@id": `${SITE_URL}/our-team#webpage`,
     url: `${SITE_URL}/our-team`,
     name: "TechBeeps Engineering Team & Leadership",
     description:
       "Meet the leadership, software developers, and architects at TechBeeps Services.",
-    publisher: ORGANIZATION_SCHEMA,
+    publisher: {
+      "@id": `${SITE_URL}/#organization`,
+    },
     mainEntity: {
       "@type": "ItemList",
       itemListElement: teamMembers.map((member, index) => ({
@@ -72,13 +73,10 @@ export default function OurTeamPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(teamCollectionSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbsSchema),
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [teamCollectionSchema, breadcrumbsSchema],
+          }),
         }}
       />
       <OurTeamClient />

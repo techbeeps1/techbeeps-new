@@ -39,14 +39,15 @@ export const metadata: Metadata = {
 
 export default function TermsAndConditionsPage() {
   const termsSchema = {
-    "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${SITE_URL}/terms-and-conditions#webpage`,
     url: `${SITE_URL}/terms-and-conditions`,
     name: "TechBeeps Terms and Conditions",
     description:
       "Official Terms and Conditions of TechBeeps Services covering deliverables, client obligations, billing, and governing law.",
-    publisher: ORGANIZATION_SCHEMA,
+    publisher: {
+      "@id": `${SITE_URL}/#organization`,
+    },
   };
 
   const breadcrumbsSchema = createBreadcrumbsSchema([
@@ -59,13 +60,10 @@ export default function TermsAndConditionsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(termsSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbsSchema),
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [termsSchema, breadcrumbsSchema],
+          }),
         }}
       />
       <TermsClient />

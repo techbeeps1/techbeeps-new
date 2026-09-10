@@ -86,13 +86,10 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(blogSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbsSchema),
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [blogSchema, breadcrumbsSchema],
+          }),
         }}
       />
       <Header />     

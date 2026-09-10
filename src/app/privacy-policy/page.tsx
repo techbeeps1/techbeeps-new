@@ -39,14 +39,15 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   const privacySchema = {
-    "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${SITE_URL}/privacy-policy#webpage`,
     url: `${SITE_URL}/privacy-policy`,
     name: "TechBeeps Privacy Policy",
     description:
       "Official Privacy Policy of TechBeeps Services outlining data protection, cookies, user rights, and security policies.",
-    publisher: ORGANIZATION_SCHEMA,
+    publisher: {
+      "@id": `${SITE_URL}/#organization`,
+    },
   };
 
   const breadcrumbsSchema = createBreadcrumbsSchema([
@@ -59,13 +60,10 @@ export default function PrivacyPolicyPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(privacySchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbsSchema),
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [privacySchema, breadcrumbsSchema],
+          }),
         }}
       />
       <PrivacyClient />

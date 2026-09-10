@@ -39,14 +39,15 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   const aboutSchema = {
-    "@context": "https://schema.org",
     "@type": "AboutPage",
     "@id": `${SITE_URL}/about-us#webpage`,
     url: `${SITE_URL}/about-us`,
     name: "About TechBeeps Services",
     description:
       "Learn about TechBeeps Services, our mission, seasoned engineering team, and our decade-long commitment to delivering transformative web and mobile solutions.",
-    mainEntity: ORGANIZATION_SCHEMA,
+    mainEntity: {
+      "@id": `${SITE_URL}/#organization`,
+    },
   };
 
   const breadcrumbsSchema = createBreadcrumbsSchema([
@@ -59,13 +60,10 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(aboutSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbsSchema),
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [aboutSchema, breadcrumbsSchema],
+          }),
         }}
       />
       <AboutUsClient />
