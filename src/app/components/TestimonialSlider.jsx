@@ -12,64 +12,7 @@ const subscribeResize = (callback) => {
 const getWindowWidth = () => (typeof window !== 'undefined' ? window.innerWidth : 1200);
 const getServerWidth = () => 1200;
 
-const testimonials = [
-  {
-    id: 1,
-    quote: "This seller is a master at his craft. I am a professional artist of 13 years and finding someone at this level is rare. I was very impressed with the communication, process, and ability to produce results to my liking. I would 1000% recommend TechBeeps to my friends, and I would buy from them again. Top of the line work!",
-    name: "Evan",
-    handle: "United States",
-    image: "/female.avif",
-    stars: 5
-  },
-  {
-    id: 2,
-    quote: "What really made TechBeeps Services stand out was how they mixed their deep technical skills with a genuine personal touch. Seamless communication and quality delivery throughout the project.",
-    name: "Jane",
-    handle: "South Africa",
-    image: "/female.avif",
-    stars: 5
-  },
-  {
-    id: 3,
-    quote: "Yaseen and the TechBeeps team exceeded our expectations. All tasks were completed on time with outstanding professionalism and efficiency. I really enjoyed the collaboration.",
-    name: "Karine Pinas",
-    handle: "Netherlands",
-    image: "/KarinePinas.png",
-    stars: 5
-  },
-  {
-    id: 4,
-    quote: "TechBeeps Services provided exceptional service! I was truly impressed with the quick turnaround time and the outstanding results. They have a professional, knowledgeable, and experienced team that goes above and beyond.",
-    name: "Bedros Der Garabedian",
-    handle: "Netherlands",
-    image: "/male.jpg",
-    stars: 5
-  },
-  {
-    id: 5,
-    quote: "Great to work with as we’ve done several times now. Always great job on our WordPress websites and digital infrastructure. Highly recommended partner for any modern business!",
-    name: "Carin Elvhammar",
-    handle: "Norrlandsgruppen [Sweden]",
-    image: "/female.avif",
-    stars: 5
-  },
-  {
-    id: 6,
-    quote: "Their communication is better than a majority of the sellers we have encountered. TechBeeps is our go-to developer team for future projects involving PHP, Javascript, React, and custom web development.",
-    name: "ZPE",
-    handle: "Teamzpe [United Kingdom]",
-    image: "/female.avif",
-    stars: 5
-  },
-  {
-    id: 7,
-    quote: "After five years of working with Techbeeps, I can say without hesitation that they are one of the best decisions we've made for our digital presence. Over the course of our partnership, we've collaborated on dozens of WordPress websites, and every single time, they have delivered.",
-    name: "John Rotgers",
-    handle: "Netherlands",
-    image: "/john.png",
-    stars: 5
-  }
-];
+import { testimonials } from "@/data/testimonials";
 
 export default function TestimonialSlider() {
   const originalLength = testimonials.length;

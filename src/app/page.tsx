@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import HomeClient from "./HomeClient";
-import { SITE_URL, ORGANIZATION_SCHEMA, WEBSITE_SCHEMA } from "@/lib/seo-config";
+import { SITE_URL, COMPLETE_HOME_SCHEMA } from "@/lib/seo-config";
 
 export const metadata: Metadata = {
   title: "TechBeeps Services | Custom Software, Web & Mobile App Development",
@@ -34,34 +34,12 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const homeSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      ORGANIZATION_SCHEMA,
-      WEBSITE_SCHEMA,
-      {
-        "@type": "WebPage",
-        "@id": `${SITE_URL}/#webpage`,
-        url: SITE_URL,
-        name: "TechBeeps Services - Software & Digital Engineering",
-        isPartOf: {
-          "@id": `${SITE_URL}/#website`,
-        },
-        about: {
-          "@id": `${SITE_URL}/#organization`,
-        },
-        description:
-          "Transform your business with cutting-edge web development, mobile applications, cloud engineering, and AI digital transformation services.",
-      },
-    ],
-  };
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(homeSchema),
+          __html: JSON.stringify(COMPLETE_HOME_SCHEMA),
         }}
       />
       <HomeClient />

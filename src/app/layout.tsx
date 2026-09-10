@@ -10,7 +10,7 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
-import { ORGANIZATION_SCHEMA, WEBSITE_SCHEMA, SITE_URL } from "@/lib/seo-config";
+import { SITE_URL } from "@/lib/seo-config";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -88,17 +88,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="antialiased">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(ORGANIZATION_SCHEMA),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(WEBSITE_SCHEMA),
-          }}
+        <link
+          rel="alternate"
+          type="text/markdown"
+          href="https://techbeeps.com/llms.txt"
+          title="LLM Context File"
         />
       </head>
       <body className={`${roboto.variable} ${roboto.className} min-h-screen flex flex-col font-sans`}>       

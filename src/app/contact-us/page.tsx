@@ -39,7 +39,6 @@ export const metadata: Metadata = {
 
 export default function ContactUsPage() {
   const contactSchema = {
-    "@context": "https://schema.org",
     "@type": "ContactPage",
     "@id": `${SITE_URL}/contact-us#webpage`,
     url: `${SITE_URL}/contact-us`,
@@ -47,35 +46,7 @@ export default function ContactUsPage() {
     description:
       "Contact TechBeeps Services for software development, AI solutions, and mobile app development.",
     mainEntity: {
-      "@type": "LocalBusiness",
-      name: "TechBeeps Services",
-      image: `${SITE_URL}/services-bg.jpg`,
-      telephone: "+91-141-452-3119",
-      email: "info@techbeeps.com",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "207, Pinkcity-2, Main Kalwar Rd, Jhotwara",
-        addressLocality: "Jaipur",
-        addressRegion: "Rajasthan",
-        postalCode: "302012",
-        addressCountry: "IN",
-      },
-      priceRange: "$$",
-      openingHoursSpecification: [
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-          ],
-          opens: "09:00",
-          closes: "19:00",
-        },
-      ],
+      "@id": `${SITE_URL}/#organization`,
     },
   };
 
@@ -89,13 +60,10 @@ export default function ContactUsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(contactSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbsSchema),
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [contactSchema, breadcrumbsSchema],
+          }),
         }}
       />
       <ContactUsClient />

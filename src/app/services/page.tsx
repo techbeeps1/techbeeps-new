@@ -42,14 +42,15 @@ export default function ServicesPage() {
   const allServices = getAllServices();
 
   const servicesCollectionSchema = {
-    "@context": "https://schema.org",
     "@type": "CollectionPage",
     "@id": `${SITE_URL}/services#webpage`,
     url: `${SITE_URL}/services`,
     name: "TechBeeps Engineering & Software Services",
     description:
       "Comprehensive list of digital transformation and development services offered by TechBeeps Services.",
-    publisher: ORGANIZATION_SCHEMA,
+    publisher: {
+      "@id": `${SITE_URL}/#organization`,
+    },
     mainEntity: {
       "@type": "ItemList",
       itemListElement: allServices.map((service, index) => ({
@@ -72,13 +73,10 @@ export default function ServicesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(servicesCollectionSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbsSchema),
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [servicesCollectionSchema, breadcrumbsSchema],
+          }),
         }}
       />
       <ServicesClient />

@@ -39,14 +39,15 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   const portfolioSchema = {
-    "@context": "https://schema.org",
     "@type": "CollectionPage",
     "@id": `${SITE_URL}/portfolio#webpage`,
     url: `${SITE_URL}/portfolio`,
     name: "TechBeeps Featured Projects & Case Studies",
     description:
       "Case studies and live project portfolio developed by TechBeeps Services.",
-    publisher: ORGANIZATION_SCHEMA,
+    publisher: {
+      "@id": `${SITE_URL}/#organization`,
+    },
     mainEntity: {
       "@type": "ItemList",
       itemListElement: [
@@ -106,13 +107,10 @@ export default function PortfolioPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(portfolioSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbsSchema),
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [portfolioSchema, breadcrumbsSchema],
+          }),
         }}
       />
       <PortfolioClient />

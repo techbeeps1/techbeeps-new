@@ -121,13 +121,10 @@ export default async function TeamMemberDetailsPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(personSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbsSchema),
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [personSchema, breadcrumbsSchema],
+          }),
         }}
       />
       <Header />

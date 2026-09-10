@@ -38,18 +38,14 @@ export const metadata: Metadata = {
 
 export default function HireDeveloperPage() {
   const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Service",
     "@id": `${SITE_URL}/hire-developer#service`,
     url: `${SITE_URL}/hire-developer`,
     name: "Hire Dedicated Developers - TechBeeps Services",
     description:
       "Hire skilled, vetted software developers for AI solutions, full-stack web development, mobile applications, and enterprise IT projects.",
     provider: {
-      "@type": "Organization",
-      name: "TechBeeps Services",
-      url: SITE_URL,
-      logo: `${SITE_URL}/techbeepsLogo.svg`,
+      "@id": `${SITE_URL}/#organization`,
     },
     areaServed: "Worldwide",
     hasOfferCatalog: {
@@ -98,13 +94,10 @@ export default function HireDeveloperPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbsSchema),
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [serviceSchema, breadcrumbsSchema],
+          }),
         }}
       />
       <HireDeveloperClient />

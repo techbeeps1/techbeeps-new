@@ -98,13 +98,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [serviceSchema, breadcrumbSchema],
+          }),
         }}
       />
       <ServiceTemplate service={service} />
