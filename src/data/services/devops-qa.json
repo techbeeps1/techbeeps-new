@@ -17,7 +17,7 @@
   "hero": {
     "title": "Streamline Your Development with DevOps & QA Expertise",
     "desc": "Accelerate release cycles, improve code quality, and ensure rock-solid stability with TechBeeps DevOps and Quality Assurance services. We combine automated CI/CD pipelines, Infrastructure as Code, and rigorous testing methodologies to deliver flawless digital products.",
-    "bgImage": "/services-bg.jpg",
+    "bgImage": "/service-bg-banner.jpg",
     "bgImageAlt": "TechBeeps DevOps & QA Background"
   },
   "offeringsSection": {

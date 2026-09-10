@@ -17,7 +17,7 @@
   "hero": {
     "title": "Strengthen Your Business with Cloud-First Strategy and Hassle-Free Migration",
     "desc": "Scale seamlessly, enhance security, and reduce infrastructure costs with TechBeeps Cloud Services. We empower businesses with comprehensive cloud consulting, architecture design, zero-downtime migration, and ongoing cloud management across AWS, Microsoft Azure, and Google Cloud.",
-    "bgImage": "/services-bg.jpg",
+    "bgImage": "/service-bg-banner.jpg",
     "bgImageAlt": "TechBeeps Cloud Services Background"
   },
   "offeringsSection": {

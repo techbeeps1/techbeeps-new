@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "Our Services | TechBeeps Services",
     description:
       "21+ professional software engineering and digital transformation services.",
-    images: ["/services-bg.jpg"],
+    images: ["/service-bg-banner.jpg"],
   },
 };
 

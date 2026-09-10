@@ -16,7 +16,7 @@
   "hero": {
     "title": "UI/UX Design Services",
     "desc": "At TechBeeps Services, we create intelligent, user-focused digital experiences that blend stunning design with high performance.Using a data-driven and AI-powered approach, we design fast, intuitive, and scalable websites and apps tailored to your users.Our solutions enhance engagement, improve usability, and drive real business growth.",
-    "bgImage": "/services-bg.jpg",
+    "bgImage": "/service-bg-banner.jpg",
     "bgImageAlt": "TechBeeps UI/UX Design Services Background"
   },
   "offeringsSection": {

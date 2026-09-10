@@ -16,7 +16,7 @@
   "hero": {
     "title": "Magento Development",
     "desc": "Explore the latest development services at our top-tier Magento Development Company. Improve your online presence by using custom ecommerce solutions made especially for your business needs. Our skilled developers ensure seamless integration, intuitive user interfaces, and optimal performance.",
-    "bgImage": "/services-bg.jpg",
+    "bgImage": "/service-bg-banner.jpg",
     "bgImageAlt": "TechBeeps Magento Development Background"
   },
   "offeringsSection": {

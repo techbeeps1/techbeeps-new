@@ -16,7 +16,7 @@
   "hero": {
     "title": "Node JS Development",
     "desc": "Discover outstanding Node.js development services tailored to boost your web applications. Our developers execute the full potential of Node.js, ensuring exceptional performance. We specialize in crafting customized Node.js solutions aligned with your unique business requirements.",
-    "bgImage": "/services-bg.jpg",
+    "bgImage": "/service-bg-banner.jpg",
     "bgImageAlt": "TechBeeps Node.js Development Background"
   },
   "offeringsSection": {

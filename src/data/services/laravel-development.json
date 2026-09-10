@@ -15,7 +15,7 @@
   "hero": {
     "title": "Laravel Development",
     "desc": "We are a leading Laravel development company in the USA, delivering custom, scalable, and high-performance web solutions tailored to your business needs. From developing innovative web applications and AI-powered solutions to building robust enterprise-grade platforms, our experienced Laravel team can turn your ideas into powerful digital products. We focus on secure, optimized, and user-friendly solutions that enhance performance, drive growth, and maximize your ROI.",
-    "bgImage": "/services-bg.jpg",
+    "bgImage": "/service-bg-banner.jpg",
     "bgImageAlt": "TechBeeps Laravel Development Background"
   },
   "offeringsSection": {

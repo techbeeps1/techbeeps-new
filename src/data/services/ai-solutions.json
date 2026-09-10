@@ -15,7 +15,7 @@
   "hero": {
     "title": "AI Solutions",
     "desc": "At TechBeeps, we are transforming the way businesses use technology by delivering innovative and intelligent AI development solutions across a wide range of platforms. In today’s fast-paced digital world, automation, personalization, and smart decision-making are essential. That’s why we specialize in building custom AI-powered tools that integrate seamlessly into your existing systems—whether they are web platforms, SaaS applications, or eCommerce stores",
-    "bgImage": "/services-bg.jpg",
+    "bgImage": "/service-bg-banner.jpg",
     "bgImageAlt": "TechBeeps AI Solutions Services Background"
   },
   "offeringsSection": {

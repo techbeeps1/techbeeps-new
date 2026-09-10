@@ -16,7 +16,7 @@
   "hero": {
     "title": "PHP Development",
     "desc": "Optimize your online presence with our expert PHP development services. Our proficient developers create scalable, secure, and efficient solutions crafted to suit your unique requirements. We assure a seamless journey from idea to execution, focusing on user-friendly designs and optimal performance.",
-    "bgImage": "/services-bg.jpg",
+    "bgImage": "/service-bg-banner.jpg",
     "bgImageAlt": "TechBeeps PHP Development Background"
   },
   "offeringsSection": {

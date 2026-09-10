@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   const canonicalUrl = `${SITE_URL}/services/${slug}`;
   const ogImage = service.hero.bgImage
     ? `${SITE_URL}${service.hero.bgImage}`
-    : `${SITE_URL}/services-bg.jpg`;
+    : `${SITE_URL}/service-bg-banner.jpg`;
 
   return {
     title,
