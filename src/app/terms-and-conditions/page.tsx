@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/services-bg.jpg",
+        url: "/term-banner.jpg",
         width: 1200,
         height: 630,
         alt: "TechBeeps Terms and Conditions",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Terms and Conditions | TechBeeps Services",
     description:
       "Review the terms and conditions governing TechBeeps services and website.",
-    images: ["/services-bg.jpg"],
+    images: ["/term-banner.jpg"],
   },
 };
 

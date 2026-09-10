@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/services-bg.jpg",
+        url: "/privacy-banner.jpg",
         width: 1200,
         height: 630,
         alt: "TechBeeps Privacy Policy",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Privacy Policy | TechBeeps Services",
     description:
       "Understand how TechBeeps safeguards your data and privacy.",
-    images: ["/services-bg.jpg"],
+    images: ["/privacy-banner.jpg"],
   },
 };
 
