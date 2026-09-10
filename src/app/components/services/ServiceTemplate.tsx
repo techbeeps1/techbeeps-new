@@ -241,10 +241,10 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
                   mainClass="flex flex-wrap"
                 />
               </h2>
-              <h3 className="text-[22px] leading-[30px]">
+              <h3 className="text-[22px] leading-[30px] text-white">
                 {hireDeveloperSection?.subtitle || `Are You Looking for Experienced ${service.title} Experts?`}
               </h3>
-              <p>
+              <p className="text-white">
                 {hireDeveloperSection?.desc ||
                   `Our skilled ${service.title} developers bring deep expertise in building intelligent, custom solutions tailored to your needs. From smart automation to seamless integrations, we ensure clean code, reliable performance, and on-time delivery. Partner with us to future-proof your digital journey.`}
               </p>
