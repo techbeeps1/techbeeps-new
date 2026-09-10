@@ -23,6 +23,7 @@ import woocommerceDevData from "@/data/services/woocommerce-development.json";
 import cmsDevData from "@/data/services/cms-development.json";
 import mvpDevData from "@/data/services/mvp-development.json";
 import saasDevData from "@/data/services/saas-development.json";
+import crmDevData from "@/data/services/crm-development.json";
 
 const servicesMap: Record<string, ServiceData> = {  
   "ai-solutions": aiSolutionsData as ServiceData,
@@ -49,6 +50,7 @@ const servicesMap: Record<string, ServiceData> = {
   "cms-development": cmsDevData as ServiceData,
   "mvp-development": mvpDevData as ServiceData,
   "saas-development": saasDevData as ServiceData,
+  "crm-development": crmDevData as ServiceData,
 };
 
 export function getServiceBySlug(slug: string): ServiceData | null {

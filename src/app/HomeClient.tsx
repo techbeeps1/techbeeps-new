@@ -50,6 +50,13 @@ export default function HomeClient() {
       url: "/services/web-development",
     },
     {
+      id: "crm-development",
+      title: "CRM Development",
+      desc: "Bespoke CRM software, intelligent intake portals, and sales automation systems engineered for growth.",
+      image: "/crm-img.jpg",
+      url: "/services/crm-development",
+    },
+    {
       id: "mobile-app-dev",
       title: "Mobile App Development",
       desc: "We offer full-cycle mobile app development services for iOS and Android.",

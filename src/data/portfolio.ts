@@ -83,8 +83,15 @@ export const portfolioProjects: Project[] = [
     category: "Web Development",
     tags: ["Web Development", "CRM"],
     image: "/crm-img.jpg",
-
     description: "Custom tailored design and scalable code architectures.",
+  },
+  {
+    title: "Universal Movers Intake & CRM Portal",
+    category: ["Web Development", "React.js"],
+    tags: ["CRM", "React.js", "Lead Intake"],
+    image: "/crm-img.jpg",
+    link: "https://universal-movers-front.vercel.app/intake",
+    description: "Multi-step moving intake workflow, dynamic estimate generation, and automated lead management CRM portal.",
   },
   {
     title: "Optimalrating",
