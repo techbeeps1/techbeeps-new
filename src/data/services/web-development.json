@@ -15,7 +15,7 @@
   "hero": {
     "title": "Web Development",
     "desc": "Boost your online presence with our customized web development solutions. Our experts use the latest technology to create user-friendly, responsive, and high-performing websites. With innovative designs and smooth functionality, we help attract more users and drive business growth.",
-    "bgImage": "/services-bg.jpg",
+    "bgImage": "/service-bg-banner.jpg",
     "bgImageAlt": "TechBeeps Web Development Background"
   },
   "offeringsSection": {

@@ -16,7 +16,7 @@
   "hero": {
     "title": "Responsive Web Design Services",
     "desc": "Techbeeps is a top Responsive Web Design Services firm. We excel at creating flexible, creative, and pixel-perfect web designs that adjust seamlessly across all screen sizes and devices, guaranteeing superior user experience and higher search rankings.",
-    "bgImage": "/services-bg.jpg",
+    "bgImage": "/service-bg-banner.jpg",
     "bgImageAlt": "TechBeeps Responsive Web Design Background"
   },
   "offeringsSection": {

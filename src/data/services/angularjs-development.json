@@ -16,7 +16,7 @@
   "hero": {
     "title": "AngularJS Development Company",
     "desc": "Unlock the potential of your web applications with our top-notch AngularJS development services. Our skilled developers build fast, scalable, and secure front-end applications tailored to your business needs, delivering seamless digital experiences.",
-    "bgImage": "/services-bg.jpg",
+    "bgImage": "/service-bg-banner.jpg",
     "bgImageAlt": "TechBeeps AngularJS Development Background"
   },
   "offeringsSection": {

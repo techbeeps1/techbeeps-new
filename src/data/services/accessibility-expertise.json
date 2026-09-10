@@ -16,7 +16,7 @@
   "hero": {
     "title": "Accessibility Expertise That Empowers Everyone",
     "desc": "At Techbeeps, we are committed to making the web accessible to everyone. Our accessibility expertise ensures your digital platforms meet WCAG and ADA standards, providing inclusive, user-friendly experiences for all users regardless of ability or device.",
-    "bgImage": "/services-bg.jpg",
+    "bgImage": "/service-bg-banner.jpg",
     "bgImageAlt": "TechBeeps Accessibility Expertise Background"
   },
   "offeringsSection": {

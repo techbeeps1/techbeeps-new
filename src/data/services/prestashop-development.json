@@ -16,7 +16,7 @@
   "hero": {
     "title": "Prestashop Development",
     "desc": "Techbeeps is your trusted partner for PrestaShop web development services. With deep expertise in the PrestaShop platform, we specialize in building high-performing and visually appealing online stores that drive results. Our tailored solutions enable us to deliver feature-rich, user-friendly, and scalable PrestaShop eCommerce websites.",
-    "bgImage": "/services-bg.jpg",
+    "bgImage": "/service-bg-banner.jpg",
     "bgImageAlt": "TechBeeps PrestaShop Development Background"
   },
   "offeringsSection": {

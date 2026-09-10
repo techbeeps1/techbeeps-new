@@ -1,0 +1,124 @@
+{
+  "slug": "crm-development",
+  "title": "CRM Development",
+  "seo": {
+    "title": "Custom CRM Development Services | TechBeeps",
+    "description": "Transform sales and customer relationships with custom CRM development. TechBeeps builds scalable CRM software, intelligent customer intake portals, and automated sales pipelines.",
+    "keywords": [
+      "CRM Development",
+      "Custom CRM Development",
+      "Customer Intake Portals",
+      "CRM Software Development",
+      "Sales Pipeline Automation",
+      "HubSpot Integration",
+      "Salesforce Customization",
+      "Lead Management Systems",
+      "Enterprise CRM Solutions"
+    ]
+  },
+  "hero": {
+    "title": "Custom CRM Development Services",
+    "desc": "Accelerate business growth and streamline customer interactions with tailored CRM solutions. At TechBeeps, we architect bespoke CRM software, high-converting customer intake portals, automated lead pipelines, and enterprise integrations engineered to optimize sales velocity and maximize customer retention.",
+    "bgImage": "/service-bg-banner.jpg",
+    "bgImageAlt": "TechBeeps Custom CRM Development Services Background"
+  },
+  "offeringsSection": {
+    "title": "Tailored CRM Development Solutions",
+    "desc": "We build scalable, cloud-native CRM systems and customer onboarding portals that empower your teams, automate repetitive workflows, and deliver unified customer experiences.",
+    "items": [
+      {
+        "title": "Custom CRM Software Development",
+        "desc": "Bespoke CRM architectures built from the ground up to match your unique sales funnels, custom data models, and team workflows without costly per-user license fees.",
+        "icon": "TbUsers"
+      },
+      {
+        "title": "Customer Intake & Lead Capture Portals",
+        "desc": "High-converting digital intake workflows, multi-step booking forms, real-time estimate calculators, and automated lead qualification systems designed for high conversion.",
+        "icon": "TbForms"
+      },
+      {
+        "title": "Sales Pipeline & Workflow Automation",
+        "desc": "Automate routine tasks, lead distribution, trigger-based follow-ups, contract generation, and deal stage transitions to accelerate your team's sales cycle.",
+        "icon": "TbSettingsAutomation"
+      },
+      {
+        "title": "CRM Integration & API Connectivity",
+        "desc": "Seamlessly connect your CRM with third-party ERPs, WhatsApp Business API, payment gateways (Stripe/PayPal), VoIP phone systems, and email marketing platforms.",
+        "icon": "TbPlugConnected"
+      },
+      {
+        "title": "Client Portals & Self-Service Dashboards",
+        "desc": "Interactive, branded customer portals for transparent project tracking, document uploads, live quote approvals, invoices, and secure customer communication.",
+        "icon": "TbDeviceDesktopCode"
+      },
+      {
+        "title": "Mobile CRM Application Development",
+        "desc": "Responsive, native-feeling mobile CRM applications for iOS and Android, enabling your field teams and sales agents to manage leads and update statuses on the go.",
+        "icon": "TbDeviceMobileCode",
+        "url": "/services/mobile-app-development"
+      },
+      {
+        "title": "Cloud Migration & Database Architecture",
+        "desc": "Zero-downtime data migration from legacy spreadsheets, monolithic databases, or outdated CRMs into high-speed PostgreSQL, MongoDB, or cloud database clusters.",
+        "icon": "TbDatabase",
+        "url": "/services/cloud-services"
+      },
+      {
+        "title": "Enterprise CRM Security & Role-Based Access",
+        "desc": "Implement granular user permission matrices, multi-factor authentication (MFA), end-to-end data encryption, and compliance with GDPR, HIPAA, and SOC 2 standards.",
+        "icon": "FaShieldHalved"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Why Choose TechBeeps for Custom CRM Development?",
+    "desc": "We engineer intuitive, high-velocity CRM solutions specifically aligned with your operations, eliminating bloat and delivering actionable customer intelligence.",
+    "bullets": [
+      "100% Bespoke Architecture: Engineered around your exact sales cycles, team hierarchies, and operational intake funnels.",
+      "Cost-Effective Ownership: Own your codebase and database completely without recurring per-seat subscription overheads.",
+      "Intelligent Lead Pipelines: Real-time lead scoring, automated routing, and instant WhatsApp/SMS notification triggers.",
+      "Bank-Grade Security: Robust data encryption at rest and in transit, complete audit logging, and role-based permissions.",
+      "Agile Delivery & Scalability: Rapid iterative delivery with continuous automated QA and modular cloud architectures built to scale."
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps CRM Development Quality and Client Commitment"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "What is custom CRM development?",
+        "answer": "Custom CRM development is the process of building tailored Customer Relationship Management software specifically designed for your company's workflows, data requirements, and customer lifecycle. Unlike generic off-the-shelf tools, a custom CRM gives you full ownership, zero per-user monthly subscription fees, and complete flexibility to integrate with your existing software stack."
+      },
+      {
+        "question": "Why should I choose a custom CRM over Salesforce or HubSpot?",
+        "answer": "Off-the-shelf platforms like Salesforce and HubSpot often carry steep monthly per-seat costs, complex interfaces filled with unused features, and restrictive customization limits. A custom CRM gives your team an interface built specifically for your daily tasks, complete data privacy and ownership, seamless integration with custom APIs and intake forms, and lower long-term total cost of ownership (TCO)."
+      },
+      {
+        "question": "Can you build customer intake forms and automated quoting portals?",
+        "answer": "Yes! We specialize in developing interactive customer intake portals (such as moving logistics intake forms, service booking portals, and consultation funnels). These systems capture user details step-by-step, calculate instant dynamic quotes, store lead data securely in the CRM, and trigger automated confirmations via email and WhatsApp."
+      },
+      {
+        "question": "How long does it take to develop a custom CRM system?",
+        "answer": "A core custom CRM MVP or specialized customer intake portal typically takes 4 to 8 weeks to design, develop, test, and deploy. Comprehensive enterprise CRM platforms with complex role hierarchies, automated billing, and multi-system integrations generally take 8 to 14 weeks. We work in agile bi-weekly sprints so you can test features continuously."
+      },
+      {
+        "question": "Can you integrate our CRM with WhatsApp, telephony, and payment gateways?",
+        "answer": "Absolutely. We routinely integrate CRMs with WhatsApp Business API for instant customer chats, VoIP services (Twilio, RingCentral) for click-to-call recording, payment gateways (Stripe, Razorpay, PayPal) for automatic invoicing, and accounting software (QuickBooks, Xero)."
+      },
+      {
+        "question": "How do you protect customer data and ensure privacy compliance?",
+        "answer": "We enforce bank-grade security protocols across all CRM applications, including AES-256 data encryption at rest, TLS 1.3 encryption in transit, strict Role-Based Access Control (RBAC), multi-factor authentication (MFA), IP whitelisting, and compliance with GDPR and relevant data protection regulations."
+      }
+    ]
+  },
+  "hireDeveloperSection": {
+    "title": "Hire Dedicated CRM Developers",
+    "subtitle": "Build Scalable CRM and Intake Systems with Expert Developers",
+    "desc": "Scale your sales and customer operations with our dedicated full-stack CRM engineers. Our specialists bring deep expertise in React, Next.js, Node.js, Python, Laravel, database modeling, and third-party API integrations to build high-performance custom CRM platforms.",
+    "buttonText": "Hire Developer",
+    "buttonUrl": "/hire-developer",
+    "image": "/Migration.jpg",
+    "imageAlt": "TechBeeps Dedicated CRM Developers"
+  }
+}

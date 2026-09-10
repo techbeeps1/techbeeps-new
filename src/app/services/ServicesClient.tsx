@@ -33,6 +33,13 @@ const servicesData = [
     url: "/services/web-development",
   },
   {
+    title: "CRM Development",
+    desc: "Bespoke CRM software, intelligent intake portals, and sales automation systems engineered for growth.",
+    tags: ["Custom CRM", "Intake Portals", "Pipeline Automation"],
+    image: "/crm-img.jpg",
+    url: "/services/crm-development",
+  },
+  {
     title: "Mobile App Development",
     desc: "We offer full-cycle mobile app development services for iOS and Android with native performance.",
     tags: ["React Native", "Flutter", "iOS & Android"],

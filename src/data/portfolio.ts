@@ -83,9 +83,9 @@ export const portfolioProjects: Project[] = [
     category: "Web Development",
     tags: ["Web Development", "CRM"],
     image: "/crm-img.jpg",
-
     description: "Custom tailored design and scalable code architectures.",
   },
+
   {
     title: "Optimalrating",
     category: "React.js",

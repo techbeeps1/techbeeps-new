@@ -18,6 +18,7 @@ import AiButton from "../AiButton";
 
 const servicesList = [
   { title: "AI Solutions", href: "/services/ai-solutions" },
+  { title: "CRM Development", href: "/services/crm-development" },
   { title: "UI/UX Design", href: "/services/ui-ux-design" },
   { title: "Web Development", href: "/services/web-development" },
   { title: "Mobile App Development", href: "/services/mobile-app-development" },
@@ -236,6 +237,7 @@ export default function Header() {
                           <ul className="space-y-0.5">
                             {[
                               { title: "Web Development", href: "/services/web-development" },
+                              { title: "CRM Development", href: "/services/crm-development" },
                               { title: "Mobile App Development", href: "/services/mobile-app-development" },
                               { title: "SaaS Development", href: "/services/saas-development" },
                               { title: "MVP Development", href: "/services/mvp-development" },
@@ -343,7 +345,7 @@ export default function Header() {
                             onClick={() => setServicesDropdownOpen(false)}
                             className="group inline-flex items-center gap-1.5 text-primary hover:text-white font-semibold transition-colors"
                           >
-                            <span>Explore All 21 Services</span>
+                            <span>Explore All 25 Services</span>
                             <IoArrowForwardOutline className="w-3.5 h-3.5 -rotate-45 group-hover:rotate-0 transition-transform duration-200" />
                           </Link>
                         </div>

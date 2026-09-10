@@ -15,7 +15,7 @@
   "hero": {
     "title": "Mobile App Development",
     "desc": "We specialize in building high-performing, scalable mobile apps using Android, iOS, Flutter, React Native, Java, and Kotlin. Our experienced team delivers customized solutions designed to meet your business goals, from simple apps to complex enterprise platforms. At TechBeeps Services, we focus on seamless functionality, modern design, and exceptional user experiences.",
-    "bgImage": "/services-bg.jpg",
+    "bgImage": "/service-bg-banner.jpg",
     "bgImageAlt": "TechBeeps Mobile App Development Background"
   },
   "offeringsSection": {

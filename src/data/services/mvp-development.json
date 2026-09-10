@@ -86,23 +86,23 @@
     "faqs": [
       {
         "question": "What are MVP development services?",
-        "answer": "MVP (Minimum Viable Product) development services involve designing and building a functional product version with core essential features. This allows startups and businesses to test market viability, validate user interest, and gather actionable feedback with minimal cost and time investment."
+        "answer": "MVP development services focus on building a product with essential features to validate your idea and gather real user feedback."
       },
       {
         "question": "How much does MVP development cost?",
-        "answer": "The cost of developing an MVP varies based on scope, technical complexity, third-party integrations, and UI/UX requirements. Typical MVPs range from a few thousand dollars to comprehensive multi-platform solutions, and we provide transparent milestone-based quotes tailored to your budget."
+        "answer": "The cost depends on the MVP's features, complexity, technology, design, and integration requirements."
       },
       {
         "question": "Why is MVP development important for startups?",
-        "answer": "MVP development is crucial because it validates business hypotheses with actual users early on, significantly lowers upfront financial risk, prevents building unnecessary features, speeds up time-to-market, and provides concrete metrics needed to attract investors."
+        "answer": "An MVP helps startups validate their idea, understand user needs, reduce development costs, and minimize business risks."
       },
       {
         "question": "How long does it take to build an MVP?",
-        "answer": "The development timeline depends on product scope and complexity. A focused single-purpose MVP can be developed in 4 to 8 weeks, while more complex platforms with custom backend architectures and third-party integrations typically take 8 to 16 weeks."
+        "answer": "The timeline depends on the product's features and complexity. Most MVP projects can be completed within a few weeks to a few months."
       },
       {
         "question": "How do I choose the right MVP development company?",
-        "answer": "When selecting an MVP development partner, evaluate their experience in agile/lean product development, UI/UX design capabilities, transparent communication practices, technical expertise across modern stacks, and proven track record of launching scalable digital products."
+        "answer": "Consider their experience, technical expertise, portfolio, development approach, and ability to understand your business goals."
       }
     ]
   },

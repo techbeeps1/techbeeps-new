@@ -52,6 +52,10 @@ import {
   TbAccessible,
   TbShieldCheck,
   TbBrandWhatsapp,
+  TbUsers,
+  TbForms,
+  TbChartDots,
+  TbReportAnalytics,
 } from "react-icons/tb";
 import {
   SiShopify,
@@ -125,6 +129,10 @@ const iconRegistry: Record<string, IconType> = {
   TbAccessible,
   TbShieldCheck,
   TbBrandWhatsapp,
+  TbUsers,
+  TbForms,
+  TbChartDots,
+  TbReportAnalytics,
   SiShopify,
   SiNextdotjs,
   SiFlutter,
