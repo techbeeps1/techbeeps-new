@@ -175,6 +175,27 @@ export default function HomeClient() {
       image: "/responsive_design_card.png",
       url: "/services/responsive-web-design",
     },
+    {
+      id: "cms-dev",
+      title: "CMS Development",
+      desc: "Custom content management systems, headless architectures, and editorial workflows.",
+      image: "/landing_page_card.jpg",
+      url: "/services/cms-development",
+    },
+    {
+      id: "mvp-dev",
+      title: "MVP Development",
+      desc: "Rapid prototyping, lean product development, and market validation for high-growth startups.",
+      image: "/mobile_app_dev_card.png",
+      url: "/services/mvp-development",
+    },
+    {
+      id: "saas-dev",
+      title: "SaaS Development",
+      desc: "Scalable multi-tenant cloud applications, subscription billing, and enterprise SaaS architectures.",
+      image: "/cloud_services_card.jpg",
+      url: "/services/saas-development",
+    },
   ];
 
   const [index, setIndex] = useState(0);

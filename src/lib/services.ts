@@ -20,6 +20,9 @@ import prestashopDevData from "@/data/services/prestashop-development.json";
 import responsiveWebData from "@/data/services/responsive-web-design.json";
 import whatsappAutomationData from "@/data/services/whatsapp-automation.json";
 import woocommerceDevData from "@/data/services/woocommerce-development.json";
+import cmsDevData from "@/data/services/cms-development.json";
+import mvpDevData from "@/data/services/mvp-development.json";
+import saasDevData from "@/data/services/saas-development.json";
 
 const servicesMap: Record<string, ServiceData> = {  
   "ai-solutions": aiSolutionsData as ServiceData,
@@ -43,6 +46,9 @@ const servicesMap: Record<string, ServiceData> = {
   "responsive-web-design": responsiveWebData as ServiceData,
   "whatsapp-automation": whatsappAutomationData as ServiceData,
   "woocommerce-development": woocommerceDevData as ServiceData,
+  "cms-development": cmsDevData as ServiceData,
+  "mvp-development": mvpDevData as ServiceData,
+  "saas-development": saasDevData as ServiceData,
 };
 
 export function getServiceBySlug(slug: string): ServiceData | null {

@@ -158,6 +158,27 @@ const servicesData = [
     image: "/responsive_design_card.png",
     url: "/services/responsive-web-design",
   },
+  {
+    title: "CMS Development",
+    desc: "Custom content management systems, headless architectures, and streamlined editorial workflows.",
+    tags: ["WordPress", "Webflow", "Custom CMS"],
+    image: "/landing_page_card.jpg",
+    url: "/services/cms-development",
+  },
+  {
+    title: "MVP Development",
+    desc: "Rapid prototyping, lean product development, and market validation for high-growth startups.",
+    tags: ["Rapid MVP", "Lean Startup", "Prototyping"],
+    image: "/mobile_app_dev_card.png",
+    url: "/services/mvp-development",
+  },
+  {
+    title: "SaaS Development",
+    desc: "Scalable multi-tenant cloud applications, subscription billing, and enterprise SaaS architectures.",
+    tags: ["SaaS Architecture", "Multi-Tenant", "Cloud Native"],
+    image: "/cloud_services_card.jpg",
+    url: "/services/saas-development",
+  },
 ];
 
 export default function ServicesClient() {

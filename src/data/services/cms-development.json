@@ -1,0 +1,117 @@
+{
+  "slug": "cms-development",
+  "title": "CMS Development",
+  "seo": {
+    "title": "CMS Development Services | TechBeeps",
+    "description": "Boost your online presence with expert CMS development services. TechBeeps builds custom, scalable, and user-friendly content management systems tailored to your business needs.",
+    "keywords": [
+      "CMS Development",
+      "Custom CMS Development",
+      "WordPress Development",
+      "Webflow Development",
+      "Wix Development",
+      "Bubble.io Development",
+      "Content Management System"
+    ]
+  },
+  "hero": {
+    "title": "CMS Development Services",
+    "desc": "Empower your business with flexible, scalable, and secure Content Management Systems. At TechBeeps, we specialize in building bespoke CMS solutions that give you full control over your digital content, streamline editorial workflows, and deliver seamless digital experiences.",
+    "bgImage": "/service-bg-banner.jpg",
+    "bgImageAlt": "TechBeeps CMS Development Services Background"
+  },
+  "offeringsSection": {
+    "title": "Custom CMS Development Solutions",
+    "desc": "Leading CMS development company delivering custom solutions for your web projects. Unlock the full potential of modern content management with our expert engineering team.",
+    "items": [
+      {
+        "title": "WordPress Development",
+        "desc": "Build powerful, scalable, and user-friendly WordPress websites with bespoke themes, tailored plugins, and enterprise security tailored to your business goals.",
+        "icon": "FaWordpress",
+        "url": "/services/wordpress-development"
+      },
+      {
+        "title": "Webflow Development",
+        "desc": "Create visually stunning, high-performance websites with clean semantic code, flexible CMS collections, and dynamic animations built on Webflow.",
+        "icon": "TbDeviceDesktopCode"
+      },
+      {
+        "title": "Wix Development",
+        "desc": "Fast, versatile, and feature-rich Wix websites engineered with custom Wix Velo scripting, database collections, and seamless third-party app integrations.",
+        "icon": "TbPalette"
+      },
+      {
+        "title": "Bubble.io No-Code Development",
+        "desc": "Accelerate digital product delivery with Bubble.io, building powerful database-driven web applications and interactive portals without long coding cycles.",
+        "icon": "TbPuzzle"
+      },
+      {
+        "title": "Custom MVC CMS Architecture",
+        "desc": "Tailor-made CMS platforms engineered with robust MVC architecture, bespoke database design, and dedicated admin dashboards for total workflow control.",
+        "icon": "FaCode"
+      },
+      {
+        "title": "CMS Integration & API Solutions",
+        "desc": "Seamlessly connect your CMS with third-party CRMs, ERPs, payment gateways, marketing automation tools, and analytics platforms.",
+        "icon": "TbPlugConnected"
+      },
+      {
+        "title": "Enterprise CMS Security & Auth",
+        "desc": "Implement multi-factor authentication, granular role-based permissions, data encryption, and regular vulnerability audits to keep your content safe.",
+        "icon": "FaShieldHalved"
+      },
+      {
+        "title": "Comprehensive Testing & QA",
+        "desc": "Rigorous unit, integration, performance, and cross-browser testing ensuring zero bugs, rapid page speeds, and flawless user experiences across all devices.",
+        "icon": "TbEyeCheck"
+      }
+    ]
+  },
+  "promiseSection": {
+    "title": "Why Choose TechBeeps for Custom CMS Development?",
+    "desc": "Our custom CMS development thrives on a refined engineering toolkit. We combine innovative frameworks, intuitive interfaces, and robust security protocols to craft high-performance digital platforms.",
+    "bullets": [
+      "Custom Architecture: CMS platforms engineered precisely around your editorial workflows and business goals.",
+      "Enhanced Security: Enterprise-grade authentication, SSL configuration, and proactive vulnerability protection.",
+      "High Performance: Optimized database queries, caching strategies, and fast loading speeds for better SEO.",
+      "Controlled Agile Delivery: Transparent sprint cycles, continuous stakeholder feedback, and on-time milestone delivery.",
+      "Flexible Engagement Models: Choose between dedicated teams, controlled agile sprints, or time and material billing."
+    ],
+    "image": "/promise.jpg",
+    "imageAlt": "TechBeeps Commitment to CMS Quality and Client Satisfaction"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "What is CMS development?",
+        "answer": "A Content Management System (CMS) is software that enables businesses to create, edit, organize, and publish digital content on websites without requiring deep technical coding knowledge. CMS platforms like WordPress, Webflow, and custom headless CMSs provide intuitive interfaces, multi-user collaboration, and robust digital asset management."
+      },
+      {
+        "question": "What is CMS in business development?",
+        "answer": "In business development, a CMS serves as the operational foundation for digital marketing, customer acquisition, and brand authority. It allows marketing and sales teams to rapidly publish landing pages, update product catalogs, run A/B tests, and maintain active blogs to attract and convert prospects."
+      },
+      {
+        "question": "Why choose TechBeeps as your CMS development company?",
+        "answer": "TechBeeps brings deep full-stack expertise, building custom CMS solutions with responsive UI, rock-solid security, high scalability, and seamless CRM/ERP integrations. We offer end-to-end services from UI/UX design and backend development to ongoing maintenance and SEO optimization under one roof."
+      },
+      {
+        "question": "How much does it cost to develop a custom CMS?",
+        "answer": "The cost of developing a custom CMS depends on scope, required integrations, and complexity. Basic custom implementations typically range from $10,000 to $50,000, while enterprise-grade multi-platform CMS systems with custom workflows, migrations, and real-time APIs range higher. We provide transparent, detailed estimates after reviewing your specific requirements."
+      },
+      {
+        "question": "Which CMS platform is suitable for my business?",
+        "answer": "The ideal CMS depends on your business goals, team workflow, and technical requirements. WordPress is excellent for versatile content, SEO, and plugin ecosystems; Webflow is ideal for visually rich, designer-led sites; Bubble.io fits rapid interactive web apps; and custom MVC/headless CMS architectures are best suited for enterprise-scale platforms requiring specialized data structures."
+      }
+    ]
+  },
+  "hireDeveloperSection": {
+    "title": "Hire CMS Developers",
+    "subtitle": "Transform your digital platform with our skilled CMS developers",
+    "desc": "Boost your project with our experienced CMS engineers. Our team specializes in custom themes, bespoke plugin architecture, headless CMS setups, and end-to-end performance optimization to deliver outstanding digital experiences.",
+    "buttonText": "Hire Developer",
+    "buttonUrl": "/hire-developer",
+    "image": "/Migration.jpg",
+    "imageAlt": "TechBeeps CMS Developers"
+  }
+}

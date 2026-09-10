@@ -6,10 +6,34 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: "*",
+        allow: ["/", "/llms.txt", "/llms-full.txt"],
+      },
+      {
+        userAgent: "GPTBot",
         allow: "/",
-        disallow: ["/api/"],
+      },
+      {
+        userAgent: "OAI-SearchBot",
+        allow: "/",
+      },
+      {
+        userAgent: "ClaudeBot",
+        allow: "/",
+      },
+      {
+        userAgent: "PerplexityBot",
+        allow: "/",
+      },
+      {
+        userAgent: "Google-Extended",
+        allow: "/",
+      },
+      {
+        userAgent: "Bingbot",
+        allow: "/",
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }
+
