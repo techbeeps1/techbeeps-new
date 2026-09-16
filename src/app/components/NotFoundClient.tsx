@@ -256,7 +256,7 @@ export default function NotFoundClient() {
                   </div>
 
                   <p className="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-2">
-                    Oops! Page Not Found
+                    Not a dead end. Just a wrong turn
                   </p>
                 </motion.div>
 
