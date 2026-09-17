@@ -7,7 +7,7 @@ export const teamMembers: TeamMember[] = [
     name: "Yaseen Ahmad",
     role: "Chief Executive Officer",
     department: "CEO",
-    image: "/yaseen.png",
+    image: "/yaseen_1.png",
     bio: "We offer solutions with modern technology for applications we can run on the internet. I first analyze the scope and provide a comprehensive business approach to design and develop web applications. I focus on delivering key outcomes, building amazing teams and quickly adapting to new learnings.",
     experience: "13+ Years",
     location: "India / Jaipur",
