@@ -156,7 +156,7 @@ export default function Header() {
 
   return (
     <header className="w-full py-7.5 absolute top-0 z-50">
-      <div className="container flex justify-between items-center relative z-50">        
+      <div className="container flex justify-between items-center relative z-50">
         <Link href="/">
           <Image
             src="/techbeepsLogo.svg"
@@ -166,7 +166,7 @@ export default function Header() {
             priority
             className="w-[130px] sm:w-[245px] h-auto"
           />
-        </Link>        
+        </Link>
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-6 text-white text-[15px]">
             <li><AiButton /></li>
@@ -187,7 +187,7 @@ export default function Header() {
                 Our Team
                 <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary rounded-full transition-all duration-300 group-hover:w-full"></span>
               </Link>
-            </li>            
+            </li>
             <li
               className="relative"
               ref={dropdownRef}
@@ -215,7 +215,7 @@ export default function Header() {
                     className={`w-3.5 h-3.5 transition-transform duration-300 ${servicesDropdownOpen ? "rotate-180 text-primary scale-110" : "text-white/70 group-hover:text-primary"}`}
                   />
                 </button>
-              </div>              
+              </div>
               <AnimatePresence>
                 {servicesDropdownOpen && (
                   <motion.div
@@ -225,10 +225,10 @@ export default function Header() {
                     exit="hidden"
                     className="absolute top-full -left-52 xl:-left-72 pt-3 w-[860px] xl:w-[920px] z-50 pointer-events-auto"
                   >
-                    <div className="relative rounded-2xl bg-[#0b061d]/95 backdrop-blur-2xl border border-white/10 p-6 shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_35px_rgba(133,76,255,0.25)] overflow-hidden">                      
-                      <div className="absolute top-0 left-6 right-6 h-[1.5px] bg-gradient-to-r from-transparent via-primary/80 to-transparent pointer-events-none" />                     
-                      <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-80 h-28 bg-primary/20 blur-3xl pointer-events-none rounded-full" />                      
-                      <div className="grid grid-cols-3 gap-6 relative z-10">                        
+                    <div className="relative rounded-2xl bg-[#0b061d]/95 backdrop-blur-2xl border border-white/10 p-6 shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_35px_rgba(133,76,255,0.25)] overflow-hidden">
+                      <div className="absolute top-0 left-6 right-6 h-[1.5px] bg-gradient-to-r from-transparent via-primary/80 to-transparent pointer-events-none" />
+                      <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-80 h-28 bg-primary/20 blur-3xl pointer-events-none rounded-full" />
+                      <div className="grid grid-cols-3 gap-6 relative z-10">
                         <div className="space-y-2">
                           <div className="text-[12px] font-bold uppercase tracking-wider text-primary border-b border-white/10 pb-2 mb-2 flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
@@ -262,7 +262,7 @@ export default function Header() {
                               </li>
                             ))}
                           </ul>
-                        </div>                        
+                        </div>
                         <div className="space-y-2">
                           <div className="text-[12px] font-bold uppercase tracking-wider text-primary border-b border-white/10 pb-2 mb-2 flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
@@ -294,7 +294,7 @@ export default function Header() {
                               </li>
                             ))}
                           </ul>
-                        </div>                        
+                        </div>
                         <div className="space-y-2">
                           <div className="text-[12px] font-bold uppercase tracking-wider text-primary border-b border-white/10 pb-2 mb-2 flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
@@ -326,7 +326,7 @@ export default function Header() {
                             ))}
                           </ul>
                         </div>
-                      </div>                      
+                      </div>
                       <div className="border-t border-white/10 pt-4 mt-5 flex items-center justify-between text-xs text-gray-400 relative z-10">
                         <span className="hidden sm:inline">
                           Transforming businesses with scalable digital architectures.
@@ -375,7 +375,7 @@ export default function Header() {
               </Link>
             </li>
           </ul>
-        </nav>        
+        </nav>
         <div className="hidden lg:flex items-center gap-3">
           <Link
             href="https://wa.me/+918112269797"
@@ -384,11 +384,11 @@ export default function Header() {
             aria-label="Chat on WhatsApp"
             className="group relative flex items-center justify-center w-11 h-11 rounded-full bg-[#25D366]/15 hover:bg-[#25D366] text-[#25D366] hover:text-white border border-[#25D366]/30 hover:border-[#25D366] shadow-[0_0_15px_rgba(37,211,102,0.2)] hover:shadow-[0_0_25px_rgba(37,211,102,0.5)] transition-all duration-300 hover:scale-105 shrink-0"
           >
-            <FaWhatsapp className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />            
+            <FaWhatsapp className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
             <span className="absolute -top-0.5 -right-0.5 flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-[#25D366] border-2 border-[#000]"></span>
-            </span>            
+            </span>
             <span className="absolute -bottom-9 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-[#0b061d]/95 backdrop-blur-md text-white text-[11px] font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none border border-white/10 shadow-lg z-50">
               Chat on WhatsApp
             </span>
@@ -396,7 +396,7 @@ export default function Header() {
           <ButtonSwipUp className="bg-white text-black hover:text-white" url={"tel:+91 141 452 3119"}>
             <PiPhoneCallLight className="h-5 w-5 " />+91 141 452 3119
           </ButtonSwipUp>
-        </div>       
+        </div>
         <div className="flex items-center gap-1.5 lg:hidden">
           <Link
             href="https://wa.me/+918112269797"
@@ -423,14 +423,14 @@ export default function Header() {
       {/* Offcanvas Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
-          <>            
+          <>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
               className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 lg:hidden cursor-pointer"
-            />            
+            />
             <motion.div
               data-lenis-prevent
               initial={{ x: "100%" }}
@@ -438,9 +438,9 @@ export default function Header() {
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 250 }}
               className="fixed inset-y-0 right-0 w-full sm:max-w-[420px] h-[100dvh] max-h-[100dvh] bg-[#0c071e]/98 backdrop-blur-2xl border-l border-white/10 shadow-2xl z-50 flex flex-col p-6 sm:p-8 lg:hidden overflow-y-auto overscroll-contain custom-scrollbar touch-pan-y"
-            >              
+            >
               <div className="absolute top-1/4 right-0 bg-[#854CFF] blur-[120px] w-64 h-64 opacity-15 rounded-full pointer-events-none"></div>
-              <div className="absolute bottom-0 left-0 bg-primary blur-[120px] w-48 h-48 opacity-10 rounded-full pointer-events-none"></div>             
+              <div className="absolute bottom-0 left-0 bg-primary blur-[120px] w-48 h-48 opacity-10 rounded-full pointer-events-none"></div>
               <div className="flex justify-between items-center relative z-10 shrink-0 pb-4 border-b border-white/5">
                 <Link href="/" onClick={() => setIsOpen(false)}>
                   <Image
@@ -458,7 +458,7 @@ export default function Header() {
                 >
                   <IoCloseOutline className="w-6 h-6" />
                 </button>
-              </div>              
+              </div>
               <motion.nav
                 data-lenis-prevent
                 variants={containerVariants}
@@ -466,7 +466,7 @@ export default function Header() {
                 animate="visible"
                 className="py-4 relative z-10 flex-1"
               >
-                <ul className="flex flex-col gap-2.5 text-left">                  
+                <ul className="flex flex-col gap-2.5 text-left">
                   <motion.li variants={menuVariants}>
                     <Link
                       href="/services/ai-solutions"
@@ -480,7 +480,7 @@ export default function Header() {
                         AI Solutions
                       </span>
                     </Link>
-                  </motion.li>                  
+                  </motion.li>
                   <motion.li variants={menuVariants}>
                     <Link
                       href="/"
@@ -492,7 +492,7 @@ export default function Header() {
                         <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-primary rounded-full transition-all duration-300 group-hover:w-full"></span>
                       </span>
                     </Link>
-                  </motion.li>                 
+                  </motion.li>
                   <motion.li variants={menuVariants}>
                     <Link
                       href="/about-us"
@@ -504,7 +504,20 @@ export default function Header() {
                         <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-primary rounded-full transition-all duration-300 group-hover:w-full"></span>
                       </span>
                     </Link>
-                  </motion.li>                  
+
+                  </motion.li>
+                  <motion.li variants={menuVariants}>
+                    <Link
+                      href="/our-team"
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-center group py-2"
+                    >
+                      <span className="text-lg font-medium text-white group-hover:text-primary transition-all duration-300 relative tracking-wide">
+                        Our Team
+                        <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-primary rounded-full transition-all duration-300 group-hover:w-full"></span>
+                      </span>
+                    </Link>
+                  </motion.li>
                   <motion.li variants={menuVariants} className="flex flex-col">
                     <div className="flex items-center justify-between py-2 group">
                       <Link
@@ -525,7 +538,7 @@ export default function Header() {
                             }`}
                         />
                       </button>
-                    </div>                    
+                    </div>
                     <AnimatePresence initial={false}>
                       {mobileServicesOpen && (
                         <motion.div
@@ -557,7 +570,7 @@ export default function Header() {
                         </motion.div>
                       )}
                     </AnimatePresence>
-                  </motion.li>                  
+                  </motion.li>
                   <motion.li variants={menuVariants}>
                     <Link
                       href="/portfolio"
@@ -569,7 +582,7 @@ export default function Header() {
                         <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-primary rounded-full transition-all duration-300 group-hover:w-full"></span>
                       </span>
                     </Link>
-                  </motion.li>                  
+                  </motion.li>
                   <motion.li variants={menuVariants}>
                     <Link
                       href="/blog"
@@ -581,7 +594,7 @@ export default function Header() {
                         <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-primary rounded-full transition-all duration-300 group-hover:w-full"></span>
                       </span>
                     </Link>
-                  </motion.li>                  
+                  </motion.li>
                   <motion.li variants={menuVariants}>
                     <Link
                       href="/contact-us"
@@ -595,8 +608,8 @@ export default function Header() {
                     </Link>
                   </motion.li>
                 </ul>
-              </motion.nav>              
-              <div className="relative z-10 space-y-4 pt-4 mt-auto border-t border-white/10 shrink-0">                
+              </motion.nav>
+              <div className="relative z-10 space-y-4 pt-4 mt-auto border-t border-white/10 shrink-0">
                 <div className="flex justify-between gap-2.5">
                   <Link
                     href="https://wa.me/+918112269797"
@@ -614,10 +627,10 @@ export default function Header() {
                     <PiPhoneCallLight className="h-4 w-4" />
                     +91 141 452 3119
                   </ButtonSwipUp>
-                </div>                
+                </div>
                 <div className="flex items-center gap-3.5 justify-center">
                   {[
-                    
+
                     { href: "https://www.facebook.com/techbeepss/", icon: <FaFacebookF className="w-4 h-4" /> },
                     { href: "https://x.com/techbeepss", icon: <FaXTwitter className="w-4 h-4" /> },
                     { href: "https://www.instagram.com/techbeeps/", icon: <FaInstagram className="w-4 h-4" /> },

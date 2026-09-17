@@ -60,7 +60,7 @@ export const portfolioProjects: Project[] = [
     tags: ["Web Development", "Next.js"],
     image: "/my-mind.jpg",
     link: "",
-    description: "Custom tailored design and scalable code architectures.",
+    description: "A mental health platform offering assessment tools and innovative approaches to help people better understand and improve their mental well-being.",
   },
   {
     title: "Merger Lawyer",
@@ -68,7 +68,7 @@ export const portfolioProjects: Project[] = [
     tags: ["Web Development", "Next.js"],
     image: "/merger-lawyer.jpg",
 
-    description: "Custom tailored design and scalable code architectures.",
+    description: "A boutique M&A law firm helping founders and private companies navigate acquisitions, sales, and complex business transactions.",
   },
   {
     title: "Ananta Mobile App Development",
@@ -76,14 +76,14 @@ export const portfolioProjects: Project[] = [
     tags: ["App Development", "iOS & Android"],
     image: "/ananta-img.jpg",
 
-    description: "Custom tailored design and scalable code architectures.",
+    description: "Next.Js based web application which offers free assesment for those who want to seek Ayurverdic treatments.",
   },
   {
     title: "Techbeeps CRM",
     category: "Web Development",
     tags: ["Web Development", "CRM"],
     image: "/crm-img.jpg",
-    description: "Custom tailored design and scalable code architectures.",
+    description: "This CRM project was developed to provide businesses with a centralized platform to manage customer relationships.",
   },
 
   {
@@ -92,7 +92,7 @@ export const portfolioProjects: Project[] = [
     tags: ["React.js", "Mean Stack"],
     image: "/optimal-img.jpg",
     link: "https://www.optimalrating.com/",
-    description: "Custom tailored design and scalable code architectures.",
+    description: "A rating platform that helps users evaluate and compare businesses or services through ratings and insights.",
   },
   {
     title: "eCommerce Marketplace",
@@ -100,7 +100,7 @@ export const portfolioProjects: Project[] = [
     tags: ["Magento", "E-commerce"],
     image: "/indeshop-img.jpg",
     link: "https://www.indeshop.nl/",
-    description: "Custom tailored design and scalable code architectures.",
+    description: "An online store specializing in original gifts, wallets, bags, accessories, watches, and lifestyle products.",
   },
   {
     title: "Anthology Magazine Website Development",
@@ -108,7 +108,7 @@ export const portfolioProjects: Project[] = [
     tags: ["Web Development"],
     image: "/anthology.jpg",
     link: "https://anthology-magazine.com/",
-    description: "Custom tailored design and scalable code architectures.",
+    description: "Anthology is a modern, inspirational and beautifully designed magazine that features luxury goods and services such as exciting travel destinations",
   },
   {
     title: "Charming Hotels USA",
@@ -116,7 +116,7 @@ export const portfolioProjects: Project[] = [
     tags: ["Web Development"],
     image: "/Charming-Hotel.jpg",
     link: "https://charminghotelsusa.com/",
-    description: "Custom tailored design and scalable code architectures.",
+    description: "We analyze every qualifying hotel, inn, resort, lodge and bed & breakfast in our United States dataset, then publish only the properties with a reason to be remembered.",
   },
   {
     title: "Drinkhydrant Website",
@@ -124,7 +124,7 @@ export const portfolioProjects: Project[] = [
     tags: ["Shopify"],
     image: "/drink.jpg",
     link: "https://www.drinkhydrant.com/",
-    description: "Custom tailored design and scalable code architectures.",
+    description: "Everyday for both of us was plagued by classic burnout—frequent headaches, lack of focus, and low energy.",
   },
   {
     title: "Grass Florist",
@@ -132,7 +132,7 @@ export const portfolioProjects: Project[] = [
     tags: ["Web Development"],
     image: "/grassflorist.jpg",
     link: "https://grassflorist.com/",
-    description: "Custom tailored design and scalable code architectures.",
+    description: "At Grass Florist, we don’t just sell flowers; we create heartfelt experiences.",
   },
   {
     title: "Hamilton Weed Delivery",
@@ -156,7 +156,7 @@ export const portfolioProjects: Project[] = [
     tags: ["Shopify"],
     image: "/nabox.jpg",
     link: "https://nabox.com.br/",
-    description: "Custom tailored design and scalable code architectures.",
+    description: "Nabox is a Brazilian e-commerce brand that sells glass food storage containers with hermetic (airtight) lids.",
   },
   {
     title: "Surf Style Website",
@@ -164,7 +164,7 @@ export const portfolioProjects: Project[] = [
     tags: ["Shopify"],
     image: "/surfstyle.jpg",
     link: "https://surfstyle.com/",
-    description: "Custom tailored design and scalable code architectures.",
+    description: "Surf Style is a story of enduring friendship. From five separate paths that converged over twenty years ago, grew a new brand rooted in family, loyalty, legacy and good waves. ",
   },
   {
     title: "The Makeupbar Website",
@@ -172,7 +172,7 @@ export const portfolioProjects: Project[] = [
     tags: ["Shopify"],
     image: "/makeupbar.jpg",
     link: "https://the-makeupbar.com/",
-    description: "Custom tailored design and scalable code architectures.",
+    description: "The Makeup Bar brings a touch of luxury to your beauty routine with its premium textures, authentic shades, and effortless application.",
   },
   {
     title: "Yesdarling Website",
@@ -180,6 +180,13 @@ export const portfolioProjects: Project[] = [
     tags: ["Shopify"],
     image: "/yesdarling.jpg",
     link: "https://yesdarling.net/",
-    description: "Custom tailored design and scalable code architectures.",
+    description: "Yes Darling – A premier beauty studio in Orange County offering tailored skincare and permanent-makeup services.",
+  },
+  {
+    title: "Empowering Legal Solutions",
+    category: "Figma",
+    tags: ["Figma"],
+    image: "/ELS-2.jpg",
+    description: "A legal services website helping businesses navigate corporate transactions and achieve effective legal outcomes.",
   },
 ];
